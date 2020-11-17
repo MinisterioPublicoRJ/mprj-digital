@@ -1,13 +1,19 @@
-import './App.css';
+import React from 'react';
 
-function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../pages/home/Home';
+import Produto from '../pages/product/Product';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        HELLO I'M MPRJ DIGITAL CL
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="produto" element={<Produto/>} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
