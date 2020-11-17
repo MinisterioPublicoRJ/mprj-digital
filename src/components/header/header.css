@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+}
+.navbar-links{
+    display: flex;
+    margin-top: 20px;
+}
+.navbar-links a{
+    list-style: none;
+    text-decoration: none;
+}
