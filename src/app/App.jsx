@@ -1,13 +1,19 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Router from '../router/Router';
+import Navbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        HELLO I'M MPRJ DIGITAL CL
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Router />
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
