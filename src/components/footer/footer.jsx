@@ -1,4 +1,4 @@
 export default function Footer() {
-    return (<div>hello i'm Footer</div>)
+    return (<div>hello i'm footer</div>)
   }
   

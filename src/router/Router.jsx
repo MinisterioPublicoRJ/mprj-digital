@@ -1,1 +1,14 @@
-// the home of our future router!
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from '../pages/home/Home';
+import Produto from '../pages/product/Product';
+
+
+const Router = () => (
+    <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="produto" element={<Produto />} />
+    </Routes>
+);
+
+export default Router;

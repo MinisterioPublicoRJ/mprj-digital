@@ -1,4 +1,4 @@
 export default function Navbar() {
-    return (<div>hello i'm Navbar</div>)
+    return (<div>hello i'm navbar</div>)
   }
   
