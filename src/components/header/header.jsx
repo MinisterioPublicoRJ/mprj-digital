@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import './header.css';
+import Logo  from '../assets/logo';
 
 
 export default function Header() {
   return (
     <nav className="navbar">
-      <p>Logo</p>
+      <Logo  height={48} width={170} />
       <div className="navbar-links">
         <NavLink to="/">O que é o MPRJ Digital?</NavLink>
         <NavLink to="home">Parceiros</NavLink>
