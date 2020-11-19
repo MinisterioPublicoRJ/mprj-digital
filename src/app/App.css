@@ -1,4 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto';
+}
+
+h1 {
+  color: #263859;
+  display: inline;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+p {
+  color: #9DAFBD;
+  font-size: 14px;
+  text-align: justify;
 }

@@ -1,0 +1,46 @@
+.footer-outer {
+  background-color: #1D2933;
+  position: relative;
+  height: 90vh;
+}
+
+.footer-map {
+  background-image: url('../../assets/images/Map.png');
+  /* background-position: center; */
+  background-size: contain;
+  content: "";
+  /* height: 40%; */
+}
+
+.footer-floating {
+  background-color: white;
+  position: absolute;
+  height: 40vh;
+  width: 50%;
+  top: calc(50% - 20vh);
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu {
+
+}
+
+.footer-form-header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-form-header p {
+  width: 40%;
+}
+
+.footer-form-body {
+  display: flex;
+  flex: 2;
+  background-color: orange;
+}
