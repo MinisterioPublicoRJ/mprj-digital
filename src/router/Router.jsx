@@ -3,12 +3,11 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/home/Home';
 import Produto from '../pages/product/Product';
 
-
 const Router = () => (
-    <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="produto" element={<Produto />} />
-    </Routes>
+  <Routes>
+    <Route exact path="/" element={<Home />} />
+    <Route path="produto" element={<Produto />} />
+  </Routes>
 );
 
 export default Router;
