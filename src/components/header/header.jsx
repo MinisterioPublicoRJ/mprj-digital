@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './header.css';
-import Logo from '../assets/logo';
+import Logo from '../../assets/logo';
 import Mock from './mockProdutos';
 
 const mockProdutos = [
