@@ -18,7 +18,7 @@
 .navbar-links a{
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: var(--white);
     margin-left: 10px;
     margin-right: 10px;
     font-size: 16px;
@@ -40,7 +40,7 @@
 
 }
 .section-info-produtos{
-    background-color: #263859;
+    background-color: var(--backgroundBoxProdutos);
     border-radius: 5px 5px 5px 5px;
     width: 700px;
     height: 70px;
@@ -50,7 +50,7 @@
     justify-content: space-around;
 }
 .section-info-produtos{
-    color:#6B778D;
+    color: var(--darkBlueProdutos);
     font-size: 14px;
     font-family: 'Poppins', Mediun;
 }
@@ -67,7 +67,7 @@
 .section-explore {
     color: #D1DBE3;
     font-family: 'Roboto', regular;
-    font-size: 34px;
+    font-size: 30px;
 }
 .section-explore > h3{
     margin-left: 60px;

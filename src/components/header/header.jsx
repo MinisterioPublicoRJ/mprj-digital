@@ -9,7 +9,6 @@ const mockProdutos = [
   { id: 3, text3: 'Qualidade da Base' },
   { id: 4, text4: 'Qualidade da Base' },
 ];
-
 export default function Header() {
 
   return (
