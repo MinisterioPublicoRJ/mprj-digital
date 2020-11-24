@@ -1,2 +1,2 @@
-export { default as Home } from './home';
-export { default as Produto } from './product';
+export { default as Home } from './home/Home';
+export { default as Products } from './products/Products';
