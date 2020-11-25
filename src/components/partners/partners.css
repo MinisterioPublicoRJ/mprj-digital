@@ -1,0 +1,17 @@
+.section-parceiros{
+    text-align: center;
+    color: var(--white);
+    background: url(../../assets/bg.png);
+    min-height: 70vh;
+    margin: -8px;
+    font-family: 'Roboto', regular;
+
+}
+.section-parceiros > h3{
+    font-size: 30px;
+    font-size: 35px;
+    padding-top: 50px;
+}
+.section-parceiros > p{
+    font-size: 18px;
+}
