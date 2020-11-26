@@ -17,7 +17,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
     if (firstButtonNumber < 1) firstButtonNumber = 1;
 
     const buttonNumbers = [];
-    for (let i = firstButtonNumber; i < firstButtonNumber + 5 && i <= totalPages; i + 1) {
+    for (let i = firstButtonNumber; i < firstButtonNumber + 5 && i <= totalPages; i += 1) {
       buttonNumbers.push(i);
     }
 

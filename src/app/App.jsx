@@ -4,7 +4,7 @@ import '../themes/themes.css';
 import Router from '../router/Router';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
-import { Products } from '../pages';
+import Products from '../components/products/Products';
 
 const App = () => (
   <BrowserRouter>

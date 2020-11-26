@@ -1,9 +1,10 @@
 import React from 'react';
-import Pagination from '../../components/pagination/Pagination';
+import Pagination from '../pagination/Pagination';
+import './Products.css';
 
 export default function Products() {
-  function handlePageClick() {
-    return true;
+  function handlePageClick(number) {
+    return number;
   }
   return (
     <div className="products">
@@ -15,7 +16,11 @@ export default function Products() {
       <p className="products-text">
         Fique a vontade para explorar cada um deles, e não esqueça de mandar seu feedback
       </p>
-      <Pagination handlePageClick={handlePageClick} totalPages={5} currentPage={1} />
+      <Pagination
+        handlePageClick={(page) => handlePageClick(page)}
+        totalPages={5}
+        currentPage={1}
+      />
     </div>
   );
 }
