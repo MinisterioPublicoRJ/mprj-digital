@@ -1,3 +1,11 @@
 .products {
   height: 100vh;
+  text-align: center;
+  position: relative;
+  margin-left: 42vw;
+}
+
+.products .mainPagination {
+  bottom: 0;
+  position: absolute;
 }
