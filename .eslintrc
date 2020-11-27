@@ -1,25 +1,15 @@
 {
-  "extends": [
-    "prettier",
-    "airbnb",
-    "plugin:react/recommended"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["prettier", "airbnb", "plugin:react/recommended"],
+  "plugins": ["prettier"],
   "rules": {
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
-    "prettier/prettier": [
-      "error"
-    ],
+    "prettier/prettier": ["warn"],
+    "no-unused-vars": "warn",
     "class-methods-use-this": "off",
     "no-use-before-define": "off"
   },
