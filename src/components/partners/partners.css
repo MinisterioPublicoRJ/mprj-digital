@@ -1,17 +1,31 @@
 .section-parceiros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     color: var(--white);
     background: url(../../assets/bg.png);
-    min-height: 70vh;
+    min-height: 60vh;
     margin: -8px;
-    font-family: 'Roboto', regular;
+    font-family: var(--robotRegular);
+
 
 }
 .section-parceiros > h3{
     font-size: 30px;
     font-size: 35px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .section-parceiros > p{
     font-size: 18px;
+}
+.div-parceiros{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+.div-parceiros-imgs > img{
+    margin-left: 10px;
+    margin-right: 10px;
 }
