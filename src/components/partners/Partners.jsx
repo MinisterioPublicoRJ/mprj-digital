@@ -13,7 +13,7 @@ export default function Partners() {
       <div className="div-partners">
         {MOCKPARTNERS.map((i) => (
           <div className="div-partners-imgs" key={i.id}>
-            <img alt="Logo-partners" src={i.img} width="120" />
+            <img alt="Logo-parceiros" src={process.env.PUBLIC_URL + i.img} width="120" />
           </div>
         ))}
       </div>
