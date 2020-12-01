@@ -1,7 +1,6 @@
-.section-parceiros{
+.section-partners{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
     color: var(--white);
@@ -10,21 +9,21 @@
     margin: -8px;
     font-family: 'Roboto', regular;
 }
-.section-parceiros > h3{
-    font-size: 30px;
+.section-partners > h3{
     font-size: 54px;
 }
-.section-parceiros > p{
+.section-partners > p{
     font-size: 18px;
     max-width: 530px;
+    margin-top: -40px;
     color: var(--blueProdutos);
 }
-.div-parceiros{
+.div-partners{
     display: flex;
     flex-wrap: wrap;
     max-width: 700px;
 }
-.div-parceiros-imgs > img{
+.div-partners-imgs > img{
     margin-left: 10px;
     margin-right: 10px;
 }
