@@ -1,4 +1,6 @@
 .products {
+  width: 60%;
+  margin: auto;
   height: 100vh;
   text-align: center;
   position: relative;
@@ -6,5 +8,11 @@
 
 .products .mainPagination {
   margin-top: 42px;
+  display: inline-block;
+}
+
+.product {
+  width: 20%;
+  height: 100px;
   display: inline-block;
 }

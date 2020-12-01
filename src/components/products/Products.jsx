@@ -19,8 +19,11 @@ export default function Products() {
       <p className="products-text">
         Fique a vontade para explorar cada um deles, e não esqueça de mandar seu feedback
       </p>
+      <div className="products-filter-titles">
+        <div className="filter-title"> Todos os produtos </div>
+      </div>
+
       <div className="all-products">
-        Todos os produtos
         {PRODUCTS_CONSTANTS.map((product) => (
           <ProductItem
             key={product.id}
