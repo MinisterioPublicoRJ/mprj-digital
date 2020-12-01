@@ -1,0 +1,29 @@
+.section-partners{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--white);
+    background: url(../../assets/bg-parceiros.png);
+    min-height: 80vh;
+    margin: -8px;
+    font-family: 'Roboto', regular;
+}
+.section-partners > h3{
+    font-size: 54px;
+}
+.section-partners > p{
+    font-size: 18px;
+    max-width: 530px;
+    margin-top: -40px;
+    color: var(--blueProdutos);
+}
+.div-partners{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+.div-partners-imgs > img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
