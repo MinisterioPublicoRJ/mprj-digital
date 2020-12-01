@@ -5,7 +5,7 @@ export const MOCKPARTNERS = [
   },
   {
     id: 'cenpe',
-    img: '../../assets/cenpe.png',
+    img: '../../assets/cenpe.jsx',
   },
   {
     id: 'csi',

@@ -5,20 +5,19 @@
     flex-direction: column;
     text-align: center;
     color: var(--white);
-    background: url(../../assets/bg.png);
-    min-height: 60vh;
+    background: url(../../assets/bg-parceiros.png);
+    min-height: 80vh;
     margin: -8px;
-    font-family: var(--robotRegular);
-
-
+    font-family: 'Roboto', regular;
 }
 .section-parceiros > h3{
     font-size: 30px;
-    font-size: 35px;
-    padding-top: 20px;
+    font-size: 54px;
 }
 .section-parceiros > p{
     font-size: 18px;
+    max-width: 530px;
+    color: var(--blueProdutos);
 }
 .div-parceiros{
     display: flex;
