@@ -2,11 +2,11 @@
 /* COLORS */
 --backgroundBoxProdutos: #263859;
 --darkBlueProdutos: #6B778D;
+--blueProdutos: #9DAFBD;
 --white: #ffffff;
-
-
 
 /* FONTS */
 --robotDefault: Roboto;
+--robotRegular: 'Roboto', regular;
 --titleFont: Roboto;
 }

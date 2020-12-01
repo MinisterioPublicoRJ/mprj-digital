@@ -1,4 +1,5 @@
+import React from 'react';
+
 export default function Footer() {
-    return (<div>hello i'm footer</div>)
-  }
-  
+  return <div>hello eu sou footer</div>;
+}
