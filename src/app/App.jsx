@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import '../themes/themes.css';
-// import Router from '../router/Router';
+import Router from '../router/Router';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/footer';
 import Mprj from '../components/mprj/Mprj';
@@ -12,7 +12,7 @@ const App = () => (
     <Header />
     <Mprj />
     <Partners />
-    {/* <Router /> */}
+    <Router />
     <Footer />
   </BrowserRouter>
 );

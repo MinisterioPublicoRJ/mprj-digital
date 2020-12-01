@@ -5,35 +5,35 @@ export const MOCKPARTNERS = [
   },
   {
     id: 'cenpe',
-    img: '../../assets/cenpe.jsx',
+    img: '../../assets/cenpe.png',
   },
   {
     id: 'csi',
-    img: '../../assets/csi.svg',
+    img: '../../assets/cenpe.png',
   },
   {
     id: 'gate',
-    img: '../../assets/gate.svg',
+    img: '../../assets/gate.png',
   },
   {
     id: 'inova',
-    img: '../../assets/inova.svg',
+    img: '../../assets/inova.png',
   },
   {
     id: 'sgmp',
-    img: '../../assets/sgmp.svg',
+    img: '../../assets/sgmp.png',
   },
   {
     id: 'stic',
-    img: '../../assets/stic.svg',
+    img: '../../assets/stic.png',
   },
   {
     id: 'subadm',
-    img: '../../assets/subadm.svg',
+    img: '../../assets/subadm.png',
   },
   {
     id: 'subplan',
-    img: '../../assets/subplan.svg',
+    img: '../../assets/subplan.png',
   },
 ];
 export { MOCKPARTNERS as default };
