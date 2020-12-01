@@ -1,7 +1,7 @@
 export const MOCKPARTNERS = [
   {
     id: 'cadg',
-    img: '../../assets/cadg.png',
+    img: './cadg.png',
   },
   {
     id: 'cenpe',
