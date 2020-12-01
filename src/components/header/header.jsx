@@ -2,13 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.css';
 import Logo from '../../assets/logo';
-
-const mockProdutos = [
-  { id: 1, text1: 'Repositório' },
-  { id: 2, text2: 'Nome da Base' },
-  { id: 3, text3: 'Qualidade da Base' },
-  { id: 4, text4: 'Qualidade da Base' },
-];
+import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 
 export default function Header() {
   return (
@@ -35,12 +29,12 @@ export default function Header() {
         <button type="button">Painel Saneamento</button>
       </section>
       <section className="section-info-produtos">
-        {mockProdutos.map((mock) => (
-          <p key={mock.id} value={mock.id}>
-            {mock.text1}
-            {mock.text2}
-            {mock.text3}
-            {mock.text4}
+        {MOCKPRODUTOSHEADER.map((i) => (
+          <p key={i.id} value={i.id}>
+            {i.title1}
+            {i.title2}
+            {i.title3}
+            {i.title4}
           </p>
         ))}
         <button type="button">Conheça a Solução</button>
