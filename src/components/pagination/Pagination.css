@@ -28,3 +28,13 @@
   border-width: var(--selectorArrowSize);
   margin: 10px;
 }
+.pagination-number-button {
+  border: 0;
+  background: transparent;
+  color: #9dafbd;
+}
+.pagination-number-button.active {
+  font-weight: bold;
+  font-family: Roboto;
+  color: #263859;
+}

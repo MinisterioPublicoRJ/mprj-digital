@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 import './Pagination.css';
 
+import WhiteArrowLeft from '../../assets/WhiteArrowLeft';
+import WhiteArrowRight from '../../assets/WhiteArrowRight';
+
 const propTypes = {
   totalPages: PropTypes.number.isRequired,
   handlePageClick: PropTypes.func.isRequired,
@@ -39,7 +42,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
       <div className="btnPaginationItem">
         {currentPage > 1 ? (
           <button type="button" onClick={() => handlePageClick(currentPage - 1)}>
-            lista anterior...
+            {WhiteArrowLeft}
           </button>
         ) : null}
 
@@ -47,7 +50,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
 
         {currentPage < totalPages ? (
           <button type="button" onClick={() => handlePageClick(currentPage + 1)}>
-            ... próxima lista
+            {WhiteArrowRight}
           </button>
         ) : null}
       </div>

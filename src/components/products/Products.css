@@ -1,9 +1,10 @@
 .products {
-  width: 60%;
+  width: 80%;
   margin: auto;
   height: 100vh;
   text-align: center;
   position: relative;
+  font-family: Roboto;
 }
 
 .products .mainPagination {
@@ -11,8 +12,40 @@
   display: inline-block;
 }
 
-.product {
-  width: 20%;
-  height: 100px;
-  display: inline-block;
+.all-products {
+  display: flex;
+  flex-direction: row;
+  padding-top: 32px;
+  flex-wrap: wrap;
+}
+
+.products-title {
+  color: #263859;
+  margin: 12px 0;
+}
+
+.products p {
+  color: #9dafbd;
+  font-size: 18px;
+  margin: 4px 0px;
+}
+
+.products h1 {
+  font-size: 54px;
+}
+
+.products-filter-titles {
+  font-size: 14px;
+  display: flex;
+}
+
+.filter-title {
+  margin: 4px 0px 4px 37px;
+  color: #9dafbd;
+  background: transparent;
+  border: 0;
+}
+
+.filter-title.active {
+  color: #263859;
 }

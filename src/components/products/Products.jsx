@@ -20,7 +20,18 @@ export default function Products() {
         Fique a vontade para explorar cada um deles, e não esqueça de mandar seu feedback
       </p>
       <div className="products-filter-titles">
-        <div className="filter-title"> Todos os produtos </div>
+        <button type="button" className="filter-title active">
+          Todos os produtos
+        </button>
+        <button type="button" className="filter-title">
+          Painéis
+        </button>
+        <button type="button" className="filter-title">
+          Relatórios
+        </button>
+        <button type="button" className="filter-title">
+          Estudos
+        </button>
       </div>
 
       <div className="all-products">
@@ -35,7 +46,7 @@ export default function Products() {
       </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
-        totalPages={5}
+        totalPages={4}
         currentPage={1}
       />
     </div>
