@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-links a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', regular;
+}
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+#dropdown-basic-button{
+    background: transparent;
+    border: none !important;
+    color: var(--white);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', regular;
+}

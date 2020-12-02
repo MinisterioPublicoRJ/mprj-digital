@@ -1,25 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './header.css';
-import Logo from '../../assets/logo';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 
 export default function Header() {
   return (
     <header className="header">
-      <navbar className="navbar">
-        <Logo alt="logo" />
-        <section className="navbar-links">
-          <NavLink to="/" end>
-            O que é o MPRJ Digital?
-          </NavLink>
-          <NavLink to="home">Parceiros</NavLink>
-          <NavLink to="home">Produtos</NavLink>
-          <NavLink to="home">Repositórios</NavLink>
-          <NavLink to="home">Fale Conosco</NavLink>
-          <NavLink to="home">Dúvidas e Reclamações</NavLink>
-        </section>
-      </navbar>
       <section className="section-products">
         <button type="button">Ouvidoria</button>
         <button type="button">MPRJ Digital</button>

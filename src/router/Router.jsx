@@ -6,7 +6,7 @@ import Produto from '../pages/product/Product';
 const Router = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
-    <Route path="produto" element={<Produto />} />
+    <Route exact path="produto" element={<Produto />} />
   </Routes>
 );
 

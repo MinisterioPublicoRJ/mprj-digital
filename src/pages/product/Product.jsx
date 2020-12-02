@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Product() {
-  return <div>hello i`&apos`m produto</div>;
+export default function Produto() {
+  return <div>hello im home</div>;
 }
