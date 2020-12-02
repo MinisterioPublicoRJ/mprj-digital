@@ -20,7 +20,7 @@ export default function Header() {
           <NavLink to="home">Dúvidas e Reclamações</NavLink>
         </section>
       </navbar>
-      <section className="section-produtos">
+      <section className="section-products">
         <button type="button">Ouvidoria</button>
         <button type="button">MPRJ Digital</button>
         <button type="button">Farol</button>
@@ -28,7 +28,7 @@ export default function Header() {
         <button type="button">Integra</button>
         <button type="button">Painel Saneamento</button>
       </section>
-      <section className="section-info-produtos">
+      <section className="section-info-products">
         {MOCKPRODUTOSHEADER.map((i) => (
           <p key={i.id} value={i.id}>
             {i.title1}
@@ -48,6 +48,7 @@ export default function Header() {
               Iniciativa para exercer uma transparência efetiva na atuação do MPRJ, espaço único
               para a prestação de contas com a sociedade.
             </p>
+            <button type="button">Saiba mais</button>
           </div>
           <div className="section-explore-texts">
             <h3>Parceiros e Produtos</h3>
@@ -55,6 +56,10 @@ export default function Header() {
               Aqui você encontrará um leque de ferramentas e também todas as informações do setores
               envolvidos nesta iniciativa.
             </p>
+            <button type="button">Parceiros</button>
+            <button className="products-btn-left" type="button">
+              Produtos
+            </button>
           </div>
           <div className="section-explore-texts">
             <h3>Repositório de Dados</h3>
@@ -62,6 +67,7 @@ export default function Header() {
               Conheça, explore e baixe tudo o que for interessante para realizar suas pesquisas e
               estudos aqui no nosso repositório de dados.
             </p>
+            <button type="button">Acessar</button>
           </div>
         </div>
       </section>
