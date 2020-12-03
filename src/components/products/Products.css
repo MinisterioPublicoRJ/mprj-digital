@@ -8,7 +8,6 @@
 }
 
 .products .mainPagination {
-  margin-top: 42px;
   display: inline-block;
 }
 
@@ -25,6 +24,7 @@
 
 .products h1 {
   font-size: 54px;
+  font-weight: normal;
 }
 
 .products button {
