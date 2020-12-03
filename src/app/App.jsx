@@ -14,9 +14,9 @@ const App = () => (
     <Header />
     <Mprj />
     <Partners />
+    <Products />
     <Router />
     <OpenData />
-    <Products />
     <Footer />
   </BrowserRouter>
 );
