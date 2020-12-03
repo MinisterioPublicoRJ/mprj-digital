@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
 import './Products.css';
@@ -8,6 +8,8 @@ export default function Products() {
   function handlePageClick(page) {
     return page;
   }
+
+  const [productType, setProductType] = useState('');
 
   return (
     <div className="products">
@@ -20,29 +22,31 @@ export default function Products() {
         Fique a vontade para explorar cada um deles, e não esqueça de mandar seu feedback
       </p>
       <div className="products-filter-titles">
-        <button type="button" className="filter-title active">
+        <button type="button" onClick={() => setProductType('')} className="filter-title active">
           Todos os produtos
         </button>
-        <button type="button" className="filter-title">
+        <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
           Painéis
         </button>
-        <button type="button" className="filter-title">
+        <button type="button" onClick={() => setProductType('Relatório')} className="filter-title">
           Relatórios
         </button>
-        <button type="button" className="filter-title">
+        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
           Estudos
         </button>
       </div>
 
       <div className="all-products">
-        {PRODUCTS_CONSTANTS.map((product) => (
-          <ProductItem
-            key={product.id}
-            title={product.title}
-            text={product.text}
-            imgUrl={product.imgUrl}
-          />
-        ))}
+        {PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType)).map(
+          (product) => (
+            <ProductItem
+              key={product.id}
+              title={product.title}
+              text={product.text}
+              imgUrl={product.imgUrl}
+            />
+          ),
+        )}
       </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}

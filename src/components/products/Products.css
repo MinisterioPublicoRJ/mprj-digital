@@ -12,13 +12,6 @@
   display: inline-block;
 }
 
-.all-products {
-  display: flex;
-  flex-direction: row;
-  padding-top: 32px;
-  flex-wrap: wrap;
-}
-
 .products-title {
   color: #263859;
   margin: 12px 0;
@@ -34,9 +27,21 @@
   font-size: 54px;
 }
 
+.products button {
+  cursor: pointer;
+}
+
+.all-products {
+  display: flex;
+  flex-direction: row;
+  padding-top: 32px;
+  flex-wrap: wrap;
+}
+
 .products-filter-titles {
   font-size: 14px;
   display: flex;
+  margin-top: 37px;
 }
 
 .filter-title {

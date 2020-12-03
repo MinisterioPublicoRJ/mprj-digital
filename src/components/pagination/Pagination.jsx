@@ -42,7 +42,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
       <div className="btnPaginationItem">
         {currentPage > 1 ? (
           <button type="button" onClick={() => handlePageClick(currentPage - 1)}>
-            {WhiteArrowLeft}
+            <WhiteArrowLeft />
           </button>
         ) : null}
 
@@ -50,7 +50,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
 
         {currentPage < totalPages ? (
           <button type="button" onClick={() => handlePageClick(currentPage + 1)}>
-            {WhiteArrowRight}
+            <WhiteArrowRight />
           </button>
         ) : null}
       </div>
