@@ -7,6 +7,7 @@ import OpenData from '../components/openData/OpenData';
 import Footer from '../components/footer/footer';
 import Mprj from '../components/mprj/Mprj';
 import Partners from '../components/partners/Partners';
+import Products from '../components/products/Products';
 
 const App = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const App = () => (
     <Partners />
     <Router />
     <OpenData />
+    <Products />
     <Footer />
   </BrowserRouter>
 );
