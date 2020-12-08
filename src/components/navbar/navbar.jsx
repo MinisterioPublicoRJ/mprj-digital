@@ -24,9 +24,26 @@ export default function Navbar() {
           </Dropdown.Item>
         </DropdownButton>
         <DropdownButton className="dropdow-button" id="dropdown-basic-button" title="Produtos">
-          <Dropdown.Item href="#/action-1">Integra</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Farol</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Ouvidoria</Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/produto">Integra</NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/produto">Farol</NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/produto">Ouvidoria</NavLink>
+          </Dropdown.Item>
+        </DropdownButton>
+        <DropdownButton className="dropdow-button" id="dropdown-basic-button" title="Repositórios">
+          <Dropdown.Item>
+            <NavLink to="/produto">Integra</NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/produto">Farol</NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/produto">Ouvidoria</NavLink>
+          </Dropdown.Item>
         </DropdownButton>
         <NavLink to="home">Fale Conosco</NavLink>
         <NavLink to="home">Dúvidas e Reclamações</NavLink>
