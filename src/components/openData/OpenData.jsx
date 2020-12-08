@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './OpenData.css';
 import OPENDATA from './MockOpenData';
 import { normalizeString, camelizeString } from '../../utils';
+import Pagination from '../pagination/Pagination';
 
 
 export default function Product() {
@@ -15,6 +16,10 @@ export default function Product() {
 
   function handleFilterChoice(e){
     setFilterChoice(camelizeString(normalizeString(e.target.innerText)));
+  }
+
+  function handlePageClick(page) {
+    return page;
   }
 
   const filteredItens = OPENDATA.filter(item => {
@@ -102,6 +107,11 @@ export default function Product() {
           </button>
         </section>
       )}
+      <Pagination
+        handlePageClick={(page) => handlePageClick(page)}
+        totalPages={4}
+        currentPage={1}
+      />
     </div>
   );
 }
