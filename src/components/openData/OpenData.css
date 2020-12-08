@@ -1,0 +1,170 @@
+.openData {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-family: Roboto;
+}
+.openData-title {
+  text-align: center;
+}
+.openData-title h2 {
+  font: normal normal normal 54px/63px Roboto;
+  letter-spacing: -1px;
+  color: #263859;
+  opacity: 1;
+}
+.openData-title h3 {
+  font: normal normal normal 18px/26px Roboto;
+  letter-spacing: -0.5px;
+  color: #9dafbd;
+  opacity: 1;
+}
+.openData-search {
+  display: flex;
+}
+.openData-search input {
+  width: 263px;
+  height: 40px;
+  background: url(../../assets/search-lupa.svg) right / contain no-repeat;
+  border: 1px solid #d1dbe3;
+  border-radius: 4px;
+  opacity: 1;
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: -0.5px;
+  color: #9dafbd;
+  padding-left: 10px;
+}
+.openData-counter {
+  text-align: left;
+  font: normal normal bold 21px/16px Roboto;
+  letter-spacing: -0.48px;
+  color: #263859;
+  opacity: 1;
+  line-height: 42px;
+  margin-left: 3vw;
+}
+.openData-linkToPanel {
+  align-self: flex-end;
+  margin-top: -42px;
+}
+.openData-linkToPanel a {
+  text-decoration: underline;
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: -0.32px;
+  color: #9dafbd;
+  opacity: 1;
+  line-height: 42px;
+}
+.openData-filter {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  text-align: left;
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #9dafbd;
+  opacity: 1;
+}
+.openData-filter label {
+  text-align: left;
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #263859;
+  opacity: 1;
+  line-height: 40px;
+}
+.openData-filter li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-right: 4vw;
+}
+.openData-filter .li-active {
+  font-weight: bold;
+}
+.openData-item {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d1dbe3;
+  border-radius: 5px;
+  opacity: 1;
+  margin-bottom: 2vh;
+  font: normal normal normal 14px/16px Roboto;
+  color: #263859;
+}
+.openData-item > h4,
+description,
+owner,
+date,
+purpose,
+datatype,
+license {
+  padding-left: 2vw;
+}
+.openData-item h4 {
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal medium 18px/26px Roboto Mono;
+  letter-spacing: -0.5px;
+  color: #263859;
+  opacity: 1;
+}
+.openData-item description {
+  text-align: left;
+  font: normal normal normal 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: #9dafbd;
+  opacity: 1;
+  width: 48vw;
+  margin-bottom: 5vh;
+}
+.openData-item label {
+  text-align: left;
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: -0.32px;
+  color: #263859;
+  opacity: 1;
+  font-weight: bold;
+}
+.openData-score {
+  width: 50px;
+  height: 38px;
+  background: #4d8055 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 5px;
+  font: normal normal 500 16px/19px Roboto;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  position: absolute;
+  right: 12vw;
+  margin-top: 2vh;
+  text-align: center;
+  line-height: 38px;
+}
+.openData-item hr {
+  background: #d1dbe3 0% 0% no-repeat padding-box;
+  height: 1px;
+  color: #d1dbe3;
+  border: none;
+  opacity: 1;
+  width: 100%;
+}
+
+.openData-button {
+  width: 108px;
+  height: 38px;
+  background: #263859 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  font: normal normal medium 16px/19px Roboto;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  align-self: flex-end;
+  margin-top: -50px;
+  margin-bottom: 25px;
+  margin-right: 2vw;
+}

@@ -1,5 +1,5 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 
 export default function Footer() {
   return (
@@ -8,12 +8,15 @@ export default function Footer() {
       <div className="footer-floating">
         <div className="footer-form-header">
           <h1>Dúvidas e Reclamações?</h1>
-          <p>Espaço aberto para ouvir suas dúvidas e comentários a respeito da plataforma, dos produtos, ou de algum dado que está a disposição.</p>
+          <p>
+            Espaço aberto para ouvir suas dúvidas e comentários a respeito da plataforma, dos
+            produtos, ou de algum dado que está a disposição.
+          </p>
         </div>
         <form className="footer-form-body">
-          <input></input>
-          <input></input>
-          <input></input>
+          <input />
+          <input />
+          <input />
           <button>Enviar</button>
         </form>
       </div>

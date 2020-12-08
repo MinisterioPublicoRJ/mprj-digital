@@ -1,15 +1,7 @@
-import React from "react";
-import "./Home.css";
+import React from 'react';
+import './Home.css';
 
-import {
-  Footer,
-  Header,
-  MprjDigital,
-  NavBar,
-  Partners,
-  Products,
-  Repos
-} from "../../components";
+import { Footer, Header, MprjDigital, NavBar, Partners, Products, Repos } from '../../components';
 
 export default function Home() {
   return (
