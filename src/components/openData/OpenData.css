@@ -1,6 +1,10 @@
 .openData {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-family: Roboto;
 }
 .openData-title {
   text-align: center;
@@ -77,6 +81,9 @@
   *display: inline;
   margin-right: 4vw;
 }
+.openData-filter .li-active {
+  font-weight: bold;
+}
 .openData-item {
   display: flex;
   text-align: left;
@@ -86,6 +93,8 @@
   border-radius: 5px;
   opacity: 1;
   margin-bottom: 2vh;
+  font: normal normal normal 14px/16px Roboto;
+  color: #263859;
 }
 .openData-item > h4,
 description,
@@ -131,7 +140,7 @@ license {
   letter-spacing: -0.5px;
   color: #ffffff;
   position: absolute;
-  right: 3vw;
+  right: 12vw;
   margin-top: 2vh;
   text-align: center;
   line-height: 38px;
