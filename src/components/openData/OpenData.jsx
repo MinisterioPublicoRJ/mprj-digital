@@ -2,23 +2,12 @@
 import React, { useState } from 'react';
 import './OpenData.css';
 import OPENDATA from './MockOpenData';
+import { normalizeString, camelizeString } from '../../utils';
+
 
 export default function Product() {
   const [ filterString: string, setFilterString ] = useState('');
   const [ filterChoice: string, setFilterChoice ] = useState('');
-
-  function normalizeString(string){
-    return string.trim()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-  }
-
-  function camelizeString(str) {
-    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-      return index === 0 ? word.toLowerCase() : word.toUpperCase();
-    }).replace(/\s+/g, '');
-  }
 
   function handleInputChange(e){
     setFilterString(e.target.value);
@@ -36,11 +25,9 @@ export default function Product() {
 
     if (filterChoice === 'dataDeAtualizacao' && filterString !== '' && filterString.length >= 4) {
       if (filterString.length == 4) {
-        console.log( new Date(filterString, '0', '01'));
         return new Date(item.date) >= new Date(filterString, '0', '01');
       }
       var dt = filterString.replace( /(\d{2}).?[-/]?(\d{2}).?[-/.]?(\d{4})/, "$1-$2-$3").split("-");
-      console.log( dt, new Date(dt[2], dt[1]-1, dt[0]));
       return new Date(item.date) >= new Date(dt[2], dt[1]-1, dt[0]);
     }
 
@@ -77,7 +64,7 @@ export default function Product() {
         <div className="openData-counter">{Object.keys(filteredItens).length} Repositórios</div>
       </div>
       <div className="openData-linkToPanel">
-            <a href="/dados-abertos" className="">
+            <a href="https://github.com/MinisterioPublicoRJ" target="_blank">
             Visualizar no painel de repositório
             </a>
       </div>
