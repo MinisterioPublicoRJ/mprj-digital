@@ -35,6 +35,7 @@ export default function Navbar() {
           </Dropdown.Item>
         </DropdownButton>
         <DropdownButton className="dropdow-button" id="dropdown-basic-button" title="Repositórios">
+          <span>Encontre aqui todas as nossas Acervo de Dados</span>
           <Dropdown.Item>
             <NavLink to="/produto">Integra</NavLink>
           </Dropdown.Item>
