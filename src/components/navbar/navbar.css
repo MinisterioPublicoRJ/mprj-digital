@@ -1,9 +1,8 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 60px;
 }
-
 .navbar-links{
     display: flex;
     justify-content: space-between;
@@ -30,10 +29,12 @@
     flex-direction: column;
     font-family: Roboto;
     outline: none;
+    cursor: pointer;
+
 }
 .dropdow-button span {
     visibility: hidden;
-    width: 200px;
+    width: 158px;
     background-color: white;
     color: black;
     text-align: center;
@@ -41,19 +42,20 @@
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 40%;
+    bottom: 160%;
+    left: 20%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
+    font: normal normal normal 12px Roboto;
   }
   .dropdow-button span::after {
     content: '';
     position: absolute;
     top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    left: 25%;
+    margin-left: -10px;
+    border-width: 10px;
     border-style: solid;
     border-color: white transparent transparent transparent;
   }
@@ -61,3 +63,5 @@
     visibility: visible;
     opacity: 1;
   }
+
+  
