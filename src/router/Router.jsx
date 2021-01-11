@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../pages/home/Home';
-import Produto from '../pages/product/Product';
+import { Home, ProductPage, PartnerPage } from '../pages';
 
 const Router = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
-    <Route exact path="produto" element={<Produto />} />
+    <Route exact path="/produto" element={<ProductPage />} />
+    <Route exact path="/parceiro" element={<PartnerPage />} />
   </Routes>
 );
 
