@@ -9,3 +9,9 @@ h1 {
   font-family: Roboto, regular;
   font-size: var(--titleFontSize);
 }
+
+p {
+  color: #9DAFBD;
+  font-family: Roboto, regular;
+  font-size: var(--defaultFontSize);
+}
