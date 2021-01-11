@@ -77,10 +77,11 @@ export default function Product() {
         <label>Filtrar por:</label>
         <navbar>
           <ul>
-            <li onClick={(e) => {handleFilterChoice(e);} }>Qualidade da Base</li>
-            <li onClick={(e) => {handleFilterChoice(e);} }>Data de Atualização</li>
-            <li onClick={(e) => {handleFilterChoice(e);} }>Utilização</li>
-            <li onClick={(e) => {handleFilterChoice(e);} }>Estrutura do Dado</li>
+            <li onClick={(e) => {setFilterChoice('');}} className={filterChoice == '' ? 'li-active' : null}>Tudo</li>
+            <li onClick={(e) => {handleFilterChoice(e);}} className={filterChoice == 'qualidadeDaBase' ? 'li-active' : null}>Qualidade da Base</li>
+            <li onClick={(e) => {handleFilterChoice(e);}} className={filterChoice == 'dataDeAtualizacao' ? 'li-active' : null}>Data de Atualização</li>
+            <li onClick={(e) => {handleFilterChoice(e);}} className={filterChoice == 'utilizacao' ? 'li-active' : null}>Utilização</li>
+            <li onClick={(e) => {handleFilterChoice(e);}} className={filterChoice == 'estruturaDoDado' ? 'li-active' : null}>Estrutura do Dado</li>
           </ul>
         </navbar>
       </div>
@@ -107,9 +108,14 @@ export default function Product() {
           </button>
         </section>
       )}
+      {filteredItens.length == 0 &&
+        <section className="openData-item">
+        <h4>Nenhum resultado encontrado.</h4>
+        </section>
+      }
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
-        totalPages={4}
+        totalPages={1}
         currentPage={1}
       />
     </div>

@@ -7,7 +7,7 @@
     background: url(../../assets/bg-parceiros.png);
     min-height: 80vh;
     margin: -8px;
-    font-family: 'Roboto', regular;
+    font-family: Roboto;
 }
 .section-partners > h3{
     font-size: 54px;
