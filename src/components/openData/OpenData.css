@@ -8,6 +8,7 @@
 }
 .openData-title {
   text-align: center;
+  margin-bottom: 5vh;
 }
 .openData-title h2 {
   font: normal normal normal 54px/63px Roboto;
@@ -80,6 +81,7 @@
   zoom: 1;
   *display: inline;
   margin-right: 4vw;
+  cursor: pointer;
 }
 .openData-filter .li-active {
   font-weight: bold;
@@ -95,6 +97,7 @@
   margin-bottom: 2vh;
   font: normal normal normal 14px/16px Roboto;
   color: #263859;
+  line-height: 1.6;
 }
 .openData-item > h4,
 description,
@@ -167,4 +170,5 @@ license {
   margin-top: -50px;
   margin-bottom: 25px;
   margin-right: 2vw;
+  cursor: pointer;
 }
