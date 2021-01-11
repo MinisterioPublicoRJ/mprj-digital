@@ -14,6 +14,7 @@ export default function Navbar() {
           <span>Encontre aqui todas as nossas Acervo de Dados</span>
         </NavLink>
         <DropdownButton className="dropdow-button" id="dropdown-basic-button" title="Parceiros">
+          <span>Conheça os setores do MPRJ envolvidos nessa iniciativa</span>
           <Dropdown.Item>
             <NavLink to="/produto">Gate</NavLink>
           </Dropdown.Item>
@@ -25,6 +26,7 @@ export default function Navbar() {
           </Dropdown.Item>
         </DropdownButton>
         <DropdownButton className="dropdow-button" id="dropdown-basic-button" title="Produtos">
+          <span>Conheça os setores do MPRJ envolvidos nessa iniciativa</span>
           <Dropdown.Item>
             <NavLink to="/produto">Integra</NavLink>
           </Dropdown.Item>
@@ -47,11 +49,14 @@ export default function Navbar() {
             <NavLink to="/produto">Ouvidoria</NavLink>
           </Dropdown.Item>
         </DropdownButton>
-        <NavLink to="home" className="dropdow-button" id="dropdown-basic-button">
+        <NavLink to="home" className="dropdow-button">
           Fale Conosco
           <span>Adoramos receber elogios, mas o seu feedback e crítica são ainda melhores</span>
         </NavLink>
-        <NavLink to="home">Dúvidas e Reclamações</NavLink>
+        <NavLink className="dropdow-button" to="home">
+          Dúvidas e Reclamações
+          <span>Não hesite em reclamar ou pedir ajuda caso tenha algum problema.</span>
+        </NavLink>
       </section>
     </navbar>
   );

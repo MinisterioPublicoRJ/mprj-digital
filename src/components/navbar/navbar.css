@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 .navbar-links{
     display: flex;
@@ -30,8 +30,11 @@
     font-family: Roboto;
     outline: none;
     cursor: pointer;
+    width: 100px;
+
 
 }
+
 .dropdow-button span {
     visibility: hidden;
     width: 158px;
@@ -49,16 +52,7 @@
     transition: opacity 0.3s;
     font: normal normal normal 12px Roboto;
   }
-  .dropdow-button span::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 25%;
-    margin-left: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-  }
+ 
   .dropdow-button:hover span {
     visibility: visible;
     opacity: 1;
