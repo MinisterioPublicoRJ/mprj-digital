@@ -41,6 +41,7 @@ export default function Footer() {
             <a
               href="https://twitter.com/MP_RJ"
               target="_blank"
+              rel="noreferrer"
               className="footer-menu-icon-twitter"
             >
               Twitter
@@ -48,6 +49,7 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/mprj.oficial/"
               target="_blank"
+              rel="noreferrer"
               className="footer-menu-icon-instagram"
             >
               Instagram
@@ -55,6 +57,7 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/MPRJ.Oficial/"
               target="_blank"
+              rel="noreferrer"
               className="footer-menu-icon-facebook"
             >
               Facebook
@@ -81,6 +84,7 @@ export default function Footer() {
           <a
             href="http://www.mprj.mp.br/comunicacao/ouvidoria"
             target="_blank"
+            rel="noreferrer"
             className="create-space"
           >
             Dúvidas e Reclamações
@@ -88,6 +92,7 @@ export default function Footer() {
           <a
             href="http://www.mprj.mp.br/comunicacao/ouvidoria"
             target="_blank"
+            rel="noreferrer"
             className="create-space"
           >
             <img src="./Ouvidoria.png" alt="Logo Ouvidoria MPRJ" />
