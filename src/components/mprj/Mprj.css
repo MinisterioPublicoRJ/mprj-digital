@@ -1,0 +1,39 @@
+.mprj-digital {
+  width: 64%;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  font-family: Roboto;
+}
+
+.mprj-digital .title {
+  color: #263859;
+  margin: 12px 0;
+  margin-top: 185px;
+}
+
+.mprj-digital p {
+  color: #9dafbd;
+  font-size: 18px;
+  margin: 4px 0px;
+}
+
+.mprj-digital h1 {
+  font-size: 54px;
+  font-weight: normal;
+}
+
+.mprj-digital button {
+  cursor: pointer;
+}
+
+.more-info {
+  display: flex;
+  margin-top: 37px;
+  margin-bottom: 64px;
+}
+
+.more-info > div {
+  width: 30%;
+}

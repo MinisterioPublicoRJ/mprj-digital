@@ -1,18 +1,17 @@
 import React from 'react';
+
 import './Home.css';
 
-import { Footer, Header, MprjDigital, NavBar, Partners, Products, Repos } from '../../components';
+import { Header, Mprj, OpenData, Partners, Products, Repos } from '../../components';
 
 export default function Home() {
   return (
     <div className="home-outer">
       <Header />
-      <NavBar />
-      <MprjDigital />
+      <Mprj />
       <Partners />
       <Products />
-      <Repos />
-      <Footer />
+      <OpenData />
     </div>
   );
 }
