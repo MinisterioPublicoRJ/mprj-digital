@@ -1,14 +1,15 @@
 .products {
-  width: 80%;
+  width: 60%;
   margin: auto;
-  min-height: 100vh;
+  min-height: 100%;
   text-align: center;
   position: relative;
   font-family: Roboto;
+  padding: var(--sectionVerticalPadding) 0px;
 }
 
 .products .mainPagination {
-  display: inline-block;
+  display: none;
 }
 
 .products-title {
@@ -18,12 +19,11 @@
 
 .products p {
   color: #9dafbd;
-  font-size: 18px;
-  margin: 4px 0px;
+  margin: 12px 20%;
+  text-align: center;
 }
 
 .products h1 {
-  font-size: 54px;
   font-weight: normal;
 }
 
@@ -34,7 +34,8 @@
 .all-products {
   display: flex;
   flex-direction: row;
-  padding-top: 32px;
+  padding: 32px 0px;
+  margin: 0px -32px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -43,6 +44,7 @@
   font-size: 14px;
   display: flex;
   margin-top: 37px;
+  display: none;
 }
 
 .filter-title {
