@@ -12,11 +12,14 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.0",
+    "serve": "^11.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm i -g serve && serve -s build -l 3000",
+    "develop": "npm i && npm start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
