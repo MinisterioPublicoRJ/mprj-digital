@@ -11,6 +11,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto';
 }
 
 h1 {
@@ -27,4 +28,6 @@ p {
   color: #9dafbd;
   font-family: Roboto, regular;
   font-size: var(--defaultFontSize);
+  font-size: 14px;
+  text-align: justify;
 }
