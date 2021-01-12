@@ -20,14 +20,14 @@ export default function Header() {
         ))}
       </section>
       <section className="section-info-products">
-        {MOCKPRODUTOSHEADER.map(({ id, title1 }) => (
-          <NavHeader key={id} title={title1} />
+        {MOCKPRODUTOSHEADER.map((i) => (
+          <p key={i.id} value={i.id}>
+            {i.imgIcon1}
+            {i.title1}
+            {i.imgIcon2}
+            {i.title2}
+          </p>
         ))}
-        <p>
-          Contador:
-          {count}
-        </p>
-
         <button type="button">Conheça a Solução</button>
       </section>
       <section className="section-explore">
