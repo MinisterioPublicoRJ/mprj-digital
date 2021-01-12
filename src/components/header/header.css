@@ -3,9 +3,7 @@
     flex-direction: column;
     background: url(../../assets/bg.png);
     min-height: 100%;
-    /* margin: -8px; */
-    margin-top: -70px;
-}
+    margin-top: -110px;}
 
 .section-products{
     display: flex;
@@ -81,8 +79,6 @@ button.products-btn-left{
     outline: none;
 }
 .section-info-explore p{
-    color: #9DAFBD;
-    font-family: 'Roboto', regular;
     font-size: 18px;
 }
 .section-explore-texts{
