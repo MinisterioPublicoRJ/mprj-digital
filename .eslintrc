@@ -11,7 +11,8 @@
     "prettier/prettier": ["warn"],
     "no-unused-vars": "warn",
     "class-methods-use-this": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "object-curly-newline": "warn"
   },
   "env": {
     "browser": true
