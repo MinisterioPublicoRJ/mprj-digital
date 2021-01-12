@@ -5,7 +5,6 @@
     min-height: 100%;
     margin-top: -70px;
 }
-
 .section-products{
     display: flex;
     justify-content: space-between;
@@ -62,7 +61,8 @@ button.products-btn-left{
     justify-content: space-around;
 }
 .section-info-explore h3{
-    color: var(--blueProdutos);;
+    color: var(--blueProdutos);
+
 }
 .section-info-explore button{
     background-color: var(--blueProdutos);
@@ -87,4 +87,14 @@ button.products-btn-left{
 .section-explore-texts p{
     border-bottom: 2px solid #D1DBE3;
     margin-left: 5px;
+}
+#btn-explore{
+    display: none;
+}
+  
+.section-explore-texts:hover #btn-explore {
+    display: block;
+}
+.section-box-button {
+    display: flex;
 }

@@ -6,11 +6,8 @@ import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
-  const [count, setCounter] = useState(0);
-
-  function increment() {
-    setCounter(count + 1);
-  }
+  const [showResults, setShowResults] = useState(false);
+  const onClick = () => setShowResults(true);
 
   return (
     <header className="header">
@@ -28,7 +25,9 @@ export default function Header() {
             {i.title2}
           </p>
         ))}
-        <button type="button">Conheça a Solução</button>
+        <button type="button" value="Search">
+          Conheça a Solução
+        </button>
       </section>
       <section className="section-explore">
         <h3>Explore</h3>
@@ -39,7 +38,9 @@ export default function Header() {
               Iniciativa para exercer uma transparência efetiva na atuação do MPRJ, espaço único
               para a prestação de contas com a sociedade.
             </p>
-            <button type="button">Saiba mais</button>
+            <button value="Search" type="button" id="btn-explore">
+              Saiba mais
+            </button>
           </div>
           <div className="section-explore-texts">
             <h3>Parceiros e Produtos</h3>
@@ -47,10 +48,14 @@ export default function Header() {
               Aqui você encontrará um leque de ferramentas e também todas as informações do setores
               envolvidos nesta iniciativa.
             </p>
-            <button type="button">Parceiros</button>
-            <button className="products-btn-left" type="button">
-              Produtos
-            </button>
+            <div className="section-box-button">
+              <button type="button" id="btn-explore">
+                Parceiros
+              </button>
+              <button className="products-btn-left" type="button" id="btn-explore">
+                Produtos
+              </button>
+            </div>
           </div>
           <div className="section-explore-texts">
             <h3>Repositório de Dados</h3>
@@ -58,7 +63,9 @@ export default function Header() {
               Conheça, explore e baixe tudo o que for interessante para realizar suas pesquisas e
               estudos aqui no nosso repositório de dados.
             </p>
-            <button type="button">Acessar</button>
+            <button type="button" id="btn-explore">
+              Acessar
+            </button>
           </div>
         </div>
       </section>
