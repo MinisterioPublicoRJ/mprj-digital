@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css';
 import ButtonHeader from './buttonHeader/ButtonHeader';
+import NavHeader from './navHeader/NavHeader';
+
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
+  const [productType, setProductType] = useState('');
+
+  function handlePageClick(page) {
+    return page;
+  }
   return (
     <header className="header">
       <section className="section-products">
-        {MOCKBUTTONHEADER.map((i) => (
-          <ButtonHeader key={i.id} title={i.title} />
+        {MOCKBUTTONHEADER.map(({ id, title }) => (
+          <ButtonHeader handlePageClick={(page) => handlePageClick(page)} key={id} title={title} />
         ))}
       </section>
       <section className="section-info-products">
-        {MOCKPRODUTOSHEADER.map((i) => (
-          <p key={i.id} value={i.id}>
-            {i.title1}
-            {i.title2}
-            {i.title3}
-            {i.title4}
-          </p>
+        {MOCKPRODUTOSHEADER.map(({ id, title1 }) => (
+          <NavHeader key={id} title={title1} />
         ))}
         <button type="button">Conheça a Solução</button>
       </section>

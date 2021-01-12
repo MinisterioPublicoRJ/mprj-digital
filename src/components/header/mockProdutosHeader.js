@@ -8,6 +8,7 @@ export const MOCKPRODUTOSHEADER = [
     title2: 'Nome da Base',
     title3: 'Qualidade da Base',
     title4: 'Última Atualização',
+    type: 'farolBg',
   },
   /* {
     id: 'mpBg',
@@ -33,4 +34,4 @@ export const MOCKPRODUTOSHEADER = [
     title3: 'Documentação',
   }, */
 ];
-export { MOCKPRODUTOSHEADER as default };
+export default MOCKPRODUTOSHEADER;

@@ -1,5 +1,4 @@
 import React from 'react';
-import './ButtonHeader.css';
 import PropTypes from 'prop-types';
 
 export default function ButtonHeader({ title }) {
