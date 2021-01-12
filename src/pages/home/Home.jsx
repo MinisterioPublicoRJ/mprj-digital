@@ -1,18 +1,17 @@
 import React from 'react';
-import Header from '../../components/header/Header';
-import Mprj from '../../components/mprj/Mprj';
-import Partners from '../../components/partners/Partners';
-import OpenData from '../../components/openData/OpenData';
-import Products from '../../components/products/Products';
+
+import './Home.css';
+
+import { Header, Mprj, OpenData, Partners, Products } from '../../components';
 
 export default function Home() {
   return (
-    <>
+    <div className="home-outer">
       <Header />
       <Mprj />
       <Partners />
       <Products />
       <OpenData />
-    </>
+    </div>
   );
 }

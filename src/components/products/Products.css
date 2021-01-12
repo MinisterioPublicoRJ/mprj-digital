@@ -1,7 +1,7 @@
 .products {
   width: 80%;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   position: relative;
   font-family: Roboto;
