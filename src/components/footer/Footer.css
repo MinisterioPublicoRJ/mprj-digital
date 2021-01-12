@@ -13,7 +13,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
-  width: 100vw;
 }
 
 .footer-floating {
@@ -33,22 +32,22 @@
   flex-direction: column;
 }
 
-.footer-form-header h1 {
+/* .footer-form-header h1 {
   text-align: center;
   font: normal normal normal 54px/63px Roboto;
   letter-spacing: -1px;
   color: #263859;
   opacity: 1;
   margin-bottom: 0vh;
-}
+} */
 
 .footer-form-header p {
   width: 75%;
-  text-align: center;
-  font: normal normal normal 18px/26px Roboto;
-  letter-spacing: -0.5px;
-  color: #9dafbd;
-  opacity: 1;
+  /* text-align: center; */
+  /* font: normal normal normal 18px/26px Roboto; */
+  /* letter-spacing: -0.5px; */
+  /* color: #9dafbd; */
+  /* opacity: 1; */
   margin-bottom: 5vh;
 }
 

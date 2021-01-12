@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Home.css';
 
-import { Header, Mprj, OpenData, Partners, Products, Repos } from '../../components';
+import { Header, Mprj, OpenData, Partners, Products } from '../../components';
 
 export default function Home() {
   return (
