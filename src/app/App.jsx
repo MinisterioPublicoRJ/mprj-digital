@@ -6,7 +6,7 @@ import '../themes/themes.css';
 
 import Router from '../router/Router';
 import Footer from '../components/footer/footer';
-import Navbar from '../components/navbar/navbar';
+import Navbar from '../components/navbar/Navbar';
 
 const App = () => (
   <BrowserRouter>
