@@ -1,4 +1,5 @@
 import farolBg from '../../assets/ImgsHeader/bg-farol.png';
+import mpBg from '../../assets/ImgsHeader/bg-mp.png';
 
 export const MOCKPRODUTOSHEADER = [
   {
@@ -8,30 +9,18 @@ export const MOCKPRODUTOSHEADER = [
     title2: 'Nome da Base',
     title3: 'Qualidade da Base',
     title4: 'Última Atualização',
-    type: 'farolBg',
+    color: '#F3A04C',
+    background: '#F3A04C',
   },
-  /* {
+  {
     id: 'mpBg',
     img: mpBg,
     title1: 'Repositório',
     title2: 'Nome da Base',
     title3: 'Qualidade da Base',
     title4: 'Última Atualização',
+    color: '#6792FF',
+    background: '#6792FF',
   },
-  {
-    id: 'mpParquet',
-    img: mpParquet,
-    title1: 'Conheça o Farol',
-    title2: 'Planilhas',
-    title3: 'Documentos',
-    title4: 'Notas Técnicas',
-  },
-  {
-    id: 'ParqueDigital',
-    img: './gate.png',
-    title1: 'Um Robô em cada Promotoria',
-    title2: 'Perfil de Atuação',
-    title3: 'Documentação',
-  }, */
 ];
 export default MOCKPRODUTOSHEADER;

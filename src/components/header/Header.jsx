@@ -2,27 +2,32 @@ import React, { useState } from 'react';
 import './header.css';
 import ButtonHeader from './buttonHeader/ButtonHeader';
 import NavHeader from './navHeader/NavHeader';
-
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
-  const [productType, setProductType] = useState('');
+  const [count, setCounter] = useState(0);
 
-  function handlePageClick(page) {
-    return page;
+  function increment() {
+    setCounter(count + 1);
   }
+
   return (
     <header className="header">
       <section className="section-products">
         {MOCKBUTTONHEADER.map(({ id, title }) => (
-          <ButtonHeader handlePageClick={(page) => handlePageClick(page)} key={id} title={title} />
+          <ButtonHeader key={id} title={title} />
         ))}
       </section>
       <section className="section-info-products">
         {MOCKPRODUTOSHEADER.map(({ id, title1 }) => (
           <NavHeader key={id} title={title1} />
         ))}
+        <p>
+          Contador:
+          {count}
+        </p>
+
         <button type="button">Conheça a Solução</button>
       </section>
       <section className="section-explore">

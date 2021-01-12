@@ -19,8 +19,8 @@
     border: none;
     cursor: pointer;
     background: transparent;
-    opacity : 0.5
-
+    opacity : 0.5;
+    outline: none;
 }
 .section-info-products{
     background-color: var(--backgroundBoxProdutos);
