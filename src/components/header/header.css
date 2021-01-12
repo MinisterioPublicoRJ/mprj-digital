@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background: url(../../assets/ImgsHeader/bg-mp.png);
-    min-height: 100%;
+    min-height: 130vh;
     margin-top: -70px;
 }
 .section-products{
@@ -95,7 +95,10 @@ button.products-btn-left{
 }
 .section-explore-texts:hover #btn-explore {
     display: block;
-    transition-duration: 3s;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in; 
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in
 }
 .section-box-button {
     display: flex;
