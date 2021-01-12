@@ -1,23 +1,25 @@
+import farolBg from '../../assets/ImgsHeader/bg-farol.png';
+
 export const MOCKPRODUTOSHEADER = [
   {
-    id: 'Ouvidoria',
-    img: './cadg.png',
+    id: 'farolBg',
+    img: farolBg,
     title1: 'Repositório',
     title2: 'Nome da Base',
     title3: 'Qualidade da Base',
     title4: 'Última Atualização',
   },
   /* {
-    id: 'MprjDigital',
-    img: './cenpe.png',
+    id: 'mpBg',
+    img: mpBg,
     title1: 'Repositório',
     title2: 'Nome da Base',
     title3: 'Qualidade da Base',
     title4: 'Última Atualização',
   },
   {
-    id: 'Farol',
-    img: './csi.png',
+    id: 'mpParquet',
+    img: mpParquet,
     title1: 'Conheça o Farol',
     title2: 'Planilhas',
     title3: 'Documentos',

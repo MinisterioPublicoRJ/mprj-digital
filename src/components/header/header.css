@@ -1,7 +1,7 @@
 .header{
     display: flex;
     flex-direction: column;
-    background: url(../../assets/bg.png);
+    background: url(../../assets/ImgsHeader/bg-mp.png);
     min-height: 100%;
     /* margin: -8px; */
     margin-top: -70px;

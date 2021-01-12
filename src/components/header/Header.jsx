@@ -1,17 +1,16 @@
 import React from 'react';
 import './header.css';
+import ButtonHeader from './buttonHeader/ButtonHeader';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
+import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
   return (
     <header className="header">
       <section className="section-products">
-        <button type="button">Ouvidoria</button>
-        <button type="button">MPRJ Digital</button>
-        <button type="button">Farol</button>
-        <button type="button">Parquet Digital</button>
-        <button type="button">Integra</button>
-        <button type="button">Painel Saneamento</button>
+        {MOCKBUTTONHEADER.map((i) => (
+          <ButtonHeader key={i.id} title={i.title} />
+        ))}
       </section>
       <section className="section-info-products">
         {MOCKPRODUTOSHEADER.map((i) => (
