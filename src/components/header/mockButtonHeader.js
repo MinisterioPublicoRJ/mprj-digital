@@ -15,13 +15,13 @@ export const MOCKBUTTONHEADER = [
     id: 'Parquet Digital',
     title: 'Parquet Digital',
   },
-  {
-    id: 'Integra',
-    title: 'Integra',
-  },
-  {
-    id: 'Painel Saneamento',
-    title: 'Painel Saneamento',
-  },
+  // {
+  //   id: 'Integra',
+  //   title: 'Integra',
+  // },
+  // {
+  //   id: 'Painel Saneamento',
+  //   title: 'Painel Saneamento',
+  // },
 ];
 export default MOCKBUTTONHEADER;

@@ -16,7 +16,7 @@ export default function Header() {
           <ButtonHeader key={id} title={title} />
         ))}
       </section>
-      <section className="section-info-products">
+      {/* <section className="section-info-products">
         {MOCKPRODUTOSHEADER.map((i) => (
           <p key={i.id} value={i.id}>
             {i.imgIcon1}
@@ -28,7 +28,7 @@ export default function Header() {
         <button type="button" value="Search">
           Conheça a Solução
         </button>
-      </section>
+      </section> */}
       <section className="section-explore">
         <h3>Explore</h3>
         <div className="section-info-explore">
