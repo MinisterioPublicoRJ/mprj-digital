@@ -24,6 +24,21 @@
   flex-direction: column;
 }
 
+.mprjDigital-itemOuter {
+  display: flex;
+  align-items: center;
+  margin-right: 45px;
+}
+
+.mprjDigital-moreInfo div:last-child {
+  margin-right: 0;
+}
+
+.mprjDigital-itemOuter p {
+  font-size: var(--smallFont);
+  text-align: justify;
+}
+
 .mprj-digital .title {
   /* color: #263859;
   margin: 12px 0;

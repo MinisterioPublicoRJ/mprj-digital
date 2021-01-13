@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto';
+  font-family: Roboto;
 }
 
 h1 {
@@ -21,6 +21,13 @@ h1 {
   text-align: center;
   margin-bottom: 15px;
   margin-top: 0;
+  font-weight: normal;
+}
+
+h6 {
+  color: #263859;
+  font-size: var(--defaultFontSize);
+  text-align: center;
   font-weight: normal;
 }
 
