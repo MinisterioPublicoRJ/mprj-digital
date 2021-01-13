@@ -8,20 +8,20 @@ export default function NavHeader({
   title4,
   cor,
   icon1,
-  // icon2,
-  // icon3,
-  // icon4,
+  icon2,
+  icon3,
+  icon4,
   titleBtn,
 }) {
   return (
     <div className="section-products">
       <img alt={title1} src={icon1} />
       <p>{title1}</p>
-      <img alt={title2} src={icon1} />
+      <img alt={title2} src={icon2} />
       <p>{title2}</p>
-      <img alt={title3} src={icon1} />
+      <img alt={title3} src={icon3} />
       <p>{title3}</p>
-      <img alt={title4} src={icon1} />
+      <img alt={title4} src={icon4} />
       <p>{title4}</p>
       <button style={{ backgoundColor: `(${cor})` }} type="button">
         {titleBtn}
@@ -36,5 +36,8 @@ NavHeader.propTypes = {
   title4: PropTypes.string.isRequired,
   titleBtn: PropTypes.string.isRequired,
   cor: PropTypes.node.isRequired,
-  icon1: PropTypes.node.isRequired,
+  icon1: PropTypes.string.isRequired,
+  icon2: PropTypes.string.isRequired,
+  icon3: PropTypes.string.isRequired,
+  icon4: PropTypes.string.isRequired,
 };

@@ -13,7 +13,7 @@ export default function Header() {
     <header className="header">
       <section className="section-products">
         {MOCKBUTTONHEADER.map(({ id, title }) => (
-          <ButtonHeader onClick={(e) => setchangeData((state) => !state)} key={id} title={title} />
+          <ButtonHeader onClick={setchangeData + 1} key={id} title={title} />
         ))}
       </section>
       <section className="section-info-products">
