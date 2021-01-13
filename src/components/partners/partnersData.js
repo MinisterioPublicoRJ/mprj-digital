@@ -7,6 +7,7 @@ import SGMP from '../../assets/logos/sgmp.png';
 import STIC from '../../assets/logos/stic.png';
 import SUBADM from '../../assets/logos/subadm.png';
 import SUBPLAN from '../../assets/logos/subplan.png';
+import IEP from '../../assets/logos/iep.png';
 
 export const PARNERS_CONST = [
   {
@@ -44,6 +45,10 @@ export const PARNERS_CONST = [
   {
     id: 'subplan',
     img: SUBPLAN,
+  },
+  {
+    id: 'iep',
+    img: IEP,
   },
 ];
 export { PARNERS_CONST as default };
