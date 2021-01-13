@@ -4,7 +4,7 @@ import Logo from '../../assets/logo';
 
 export default function Footer() {
   return (
-    <div className="footer-outer">
+    <div className="footer-outer" id="rodape">
       <div className="footer-menu">
         <div className="footer-menu-column">
           <Logo alt="Logo MPRJ Digital" />

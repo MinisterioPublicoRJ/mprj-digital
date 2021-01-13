@@ -44,19 +44,19 @@ export default function openData() {
     if (filterChoice === 'estruturaDoDado') {
       return normalizeString(item.datatype).indexOf(query) >= 0;
     }
-    
+
     return (
       normalizeString(item.title).indexOf(query) >= 0 ||
-      normalizeString(item.description).indexOf(query) >= 0 || 
+      normalizeString(item.description).indexOf(query) >= 0 ||
       normalizeString(item.owner).indexOf(query) >= 0 ||
-      normalizeString(item.purpose).indexOf(query) >= 0 || 
-      normalizeString(item.datatype).indexOf(query) >= 0 || 
-      normalizeString(item.license).indexOf(query) >= 0 
+      normalizeString(item.purpose).indexOf(query) >= 0 ||
+      normalizeString(item.datatype).indexOf(query) >= 0 ||
+      normalizeString(item.license).indexOf(query) >= 0
     );
   });
 
   return (
-    <div className="openData">
+    <section className="openData" id="repositorios">
       <div className="openData-title">
         <h1>Repositório de Dados Abertos</h1>
         <p>
@@ -70,7 +70,7 @@ export default function openData() {
         */}
         <div className="openData-counter">{Object.keys(filteredItens).length} Repositórios</div>
       </div>
-  
+
       <div className="openData-linkToPanel">
             {/*
             <a href="https://github.com/MinisterioPublicoRJ" target="new">
@@ -92,7 +92,7 @@ export default function openData() {
         </navbar>
       </div>
       */}
-      {filteredItens.map((item) => 
+      {filteredItens.map((item) =>
         <section className="openData-item">
           <h4>{item.title}</h4>
           <description>{item.description}</description>
@@ -125,6 +125,6 @@ export default function openData() {
         totalPages={1}
         currentPage={1}
       />*/}
-    </div>
+    </section>
   );
 }
