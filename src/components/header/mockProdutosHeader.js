@@ -1,34 +1,39 @@
+import farolBg from '../../assets/ImgsHeader/bg-farol.png';
+import mpBg from '../../assets/ImgsHeader/bg-mp.png';
+import CLOCK from '../../assets/arrow';
+import REPOSITORIO from '../../assets/repositorio';
+import SEARCH from '../../assets/search';
+import ARROW from '../../assets/clock';
+import FAROL from '../../assets/farol';
+
 export const MOCKPRODUTOSHEADER = [
   {
-    id: 'Ouvidoria',
-    img: './cadg.png',
+    id: 'farolBg',
+    imgBg: farolBg,
+    img: REPOSITORIO,
     title1: 'Repositório',
+    imgIcon2: SEARCH,
     title2: 'Nome da Base',
+    imgIcon3: ARROW,
     title3: 'Qualidade da Base',
+    imgIcon4: CLOCK,
     title4: 'Última Atualização',
-  },
-  /* {
-    id: 'MprjDigital',
-    img: './cenpe.png',
-    title1: 'Repositório',
-    title2: 'Nome da Base',
-    title3: 'Qualidade da Base',
-    title4: 'Última Atualização',
+    color: '#F3A04C',
+    background: '#F3A04C',
   },
   {
-    id: 'Farol',
-    img: './csi.png',
+    id: 'mpBg',
+    img: mpBg,
+    imgIcon1: FAROL,
     title1: 'Conheça o Farol',
+    imgIcon2: SEARCH,
     title2: 'Planilhas',
+    imgIcon3: ARROW,
     title3: 'Documentos',
+    imgIcon4: CLOCK,
     title4: 'Notas Técnicas',
+    color: '#6792FF',
+    background: '#6792FF',
   },
-  {
-    id: 'ParqueDigital',
-    img: './gate.png',
-    title1: 'Um Robô em cada Promotoria',
-    title2: 'Perfil de Atuação',
-    title3: 'Documentação',
-  }, */
 ];
-export { MOCKPRODUTOSHEADER as default };
+export default MOCKPRODUTOSHEADER;

@@ -1,10 +1,13 @@
 .product .text {
   font-size: 14px;
+  margin: 0;
 }
 
 .product {
-  width: 157px;
-  height: 320px;
+  width: 100%;
   display: inline-block;
-  margin: 0 37px;
+}
+
+.product img {
+  width: 100%;
 }

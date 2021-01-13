@@ -12,21 +12,21 @@ export default function Footer() {
           <div className="footer-menu-icons">
             <a
               href="https://twitter.com/MP_RJ"
-              target="_blank"
+              target="new"
               rel="noreferrer"
               className="footer-menu-icon-twitter"
               aria-label="Twitter"
             />
             <a
               href="https://www.instagram.com/mprj.oficial/"
-              target="_blank"
+              target="new"
               rel="noreferrer"
               className="footer-menu-icon-instagram"
               aria-label="Instagram"
             />
             <a
               href="https://www.facebook.com/MPRJ.Oficial/"
-              target="_blank"
+              target="new"
               rel="noreferrer"
               className="footer-menu-icon-facebook"
               aria-label="Facebook"
@@ -52,7 +52,7 @@ export default function Footer() {
           <h3>OUVIDORIA</h3>
           <a
             href="http://www.mprj.mp.br/comunicacao/ouvidoria"
-            target="_blank"
+            target="new"
             rel="noreferrer"
             className="create-space"
           >
@@ -60,7 +60,7 @@ export default function Footer() {
           </a>
           <a
             href="http://www.mprj.mp.br/comunicacao/ouvidoria"
-            target="_blank"
+            target="new"
             rel="noreferrer"
             className="create-space"
           >

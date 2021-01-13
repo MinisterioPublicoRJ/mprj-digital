@@ -3,11 +3,11 @@
   justify-content: space-around;
   margin-top: 80px;
 }
-.navbar-links{
+.navbar-links {
   display: flex;
   justify-content: space-between;
 }
-.navbar-links a{
+.navbar-links a {
   list-style: none;
   text-decoration: none;
   color: var(--white);
@@ -18,12 +18,12 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 .dropdown-content a {
-  padding: 8px 30px 4px 5px;
-  margin-left: -2px;
+  padding: 8px 30px 4px 8px;
+  margin-left: 0px;
   text-decoration: none;
   display: block;
 }
@@ -33,27 +33,30 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-#basic-button{
+#basic-button {
   background: transparent;
   border: none;
   color: var(--white);
   font-size: 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: Roboto;
   outline: none;
   cursor: pointer;
   width: 100px;
 }
 #basic-button:after {
-  position: absolute;
+  /* position: absolute;
   margin-left: 90px;
-  top: 8px;
-  content: "";
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
+  top: 8px; */
+  margin-left: 4px;
+  align-self: flex-end;
+  padding-bottom: 7px;
+  content: '';
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
   border-bottom: 0;
-  border-left: .3em solid transparent;
+  border-left: 0.3em solid transparent;
 }
 .tooltip {
   position: relative;
@@ -78,7 +81,7 @@
   font-family: Roboto, regular;
 }
 .tooltip .tooltiptext::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   left: 20%;

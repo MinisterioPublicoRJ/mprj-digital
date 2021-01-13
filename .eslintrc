@@ -13,7 +13,8 @@
     "class-methods-use-this": "off",
     "no-use-before-define": "off",
     "object-curly-newline": "warn",
-    "jsx-a11y/anchor-has-content": "off"
+    "jsx-a11y/anchor-has-content": "off",
+    "linebreak-style": "off"
   },
   "env": {
     "browser": true

@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import { DropdownButton, Dropdown } from 'react-bootstrap';
 import Logo from '../../assets/logo';
 
 export default function Navbar() {
