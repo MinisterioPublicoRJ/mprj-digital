@@ -1,7 +1,6 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  margin-top: 80px;
 }
 .navbar-links{
   display: flex;
