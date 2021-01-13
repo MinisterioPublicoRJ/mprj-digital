@@ -28,6 +28,5 @@ p {
   color: #9dafbd;
   font-family: Roboto, regular;
   font-size: var(--defaultFontSize);
-  font-size: 14px;
-  text-align: justify;
+  text-align: center;
 }

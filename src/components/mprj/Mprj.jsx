@@ -3,7 +3,7 @@ import './Mprj.css';
 
 export default function Mprj() {
   return (
-    <div className="mprj-digital">
+    <div className="mprjDigital-outer">
       <h1 className="title"> MPRJ Digital </h1>
       <p>
         Solução colaborativa do MPRJ para centralizar a exibição e disponibilização de suas soluções
@@ -12,7 +12,16 @@ export default function Mprj() {
         outras organizações e o empoderamento da sociedade civil em uma plataforma unificada de
         conhecimento.
       </p>
-      <div className="more-info">
+      <div className="mprjDigital-moreInfo">
+        <div>
+          ouhiuh
+          <span> aopjfsdh </span>
+        </div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      {/*
+
         <div className="why">
           <img width={68} height={68} alt="Porque?" src="/." />
           <div className="text">
@@ -39,7 +48,7 @@ export default function Mprj() {
             <p> O valor dos dados! Não há governos abertos sem dados. Não há produto sem dados e</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
