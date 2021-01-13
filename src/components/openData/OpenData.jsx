@@ -58,10 +58,10 @@ export default function openData() {
   return (
     <div className="openData">
       <div className="openData-title">
-        <h2>Repositório de Dados Abertos</h2>
-        <h3>
+        <h1>Repositório de Dados Abertos</h1>
+        <p>
         Visando o aprimoramento das iniciativas e o fomento ao controle social exercido pela sociedade, as bases de dados e eventuais links de códigos de desenvolvimento estarão disponibilizados aqui. As bases de dados, que são o que dá vida aos nossos produtos, podem ter notas atribuídas a elas, bem como o apontamento dos critérios que fizeram chegar ao conceito atribuído, facilitando sua compreensão e o manuseio por quem quiser. Os dados que não estão disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
-        </h3>
+        </p>
       </div>
 
       <div className="openData-search">

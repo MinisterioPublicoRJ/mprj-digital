@@ -10,14 +10,10 @@
   text-align: center;
   margin-bottom: 5vh;
 }
-.openData-title h2 {
-  font: normal normal normal 54px/63px Roboto;
+.openData-title h1 {
   letter-spacing: -1px;
-  color: #263859;
-  opacity: 1;
 }
-.openData-title h3 {
-  font: normal normal normal 18px/26px Roboto;
+.openData-title p {
   letter-spacing: -0.5px;
   color: #9dafbd;
   opacity: 1;
