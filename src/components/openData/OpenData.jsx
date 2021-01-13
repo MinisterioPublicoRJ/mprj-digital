@@ -69,7 +69,7 @@ export default function Product() {
         <div className="openData-counter">{Object.keys(filteredItens).length} Repositórios</div>
       </div>
       <div className="openData-linkToPanel">
-            <a href="https://github.com/MinisterioPublicoRJ" target="_blank">
+            <a href="https://github.com/MinisterioPublicoRJ" target="new">
             Visualizar no painel de repositório
             </a>
       </div>

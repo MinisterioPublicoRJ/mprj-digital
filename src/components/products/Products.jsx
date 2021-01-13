@@ -16,10 +16,8 @@ export default function Products() {
       <h1 className="products-title">Produtos</h1>
       <p className="products-text">
         Painéis, estudos, relatórios e os mais variados formatos de soluções gerados pelos nossos
-        parceiros.
-      </p>
-      <p className="products-text">
-        Fique a vontade para explorar cada um deles, e não esqueça de mandar seu feedback
+        parceiros. Fique a vontade para explorar cada um deles, e não esqueça de mandar seu
+        feedback, ficaremos muito feliz em recebê-lo.
       </p>
       <div className="products-filter-titles">
         <button type="button" onClick={() => setProductType('')} className="filter-title active">
@@ -44,6 +42,7 @@ export default function Products() {
               title={product.title}
               text={product.text}
               imgUrl={product.imgUrl}
+              url={product.url}
             />
           ),
         )}
