@@ -1,7 +1,7 @@
 .openData {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 60%;
   text-align: center;
   margin: auto;
   font-family: Roboto;
@@ -145,7 +145,7 @@ license {
   letter-spacing: -0.5px;
   color: #ffffff;
   position: absolute;
-  right: 12vw;
+  right: 21.5vw;
   margin-top: 2vh;
   text-align: center;
   line-height: 38px;
