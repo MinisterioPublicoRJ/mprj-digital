@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function ProductItem({ title, text, imgUrl, url }) {
   return (
     <div className="product">
-      <a href={url} target="_blank" rel="noreferrer">
+      <a href={url} target="new" rel="noreferrer">
         <img src={process.env.PUBLIC_URL + imgUrl} alt={title} />
       </a>
       <h4>{title}</h4>
