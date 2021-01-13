@@ -6,7 +6,7 @@ import { normalizeString, camelizeString } from '../../utils';
 import Pagination from '../pagination/Pagination';
 
 
-export default function Product() {
+export default function openData() {
   const [ filterString: string, setFilterString ] = useState('');
   const [ filterChoice: string, setFilterChoice ] = useState('');
 
@@ -73,6 +73,7 @@ export default function Product() {
             Visualizar no painel de repositório
             </a>
       </div>
+      {/*
       <div className="openData-filter">
         <label>Filtrar por:</label>
         <navbar>
@@ -85,6 +86,7 @@ export default function Product() {
           </ul>
         </navbar>
       </div>
+      */}
       {filteredItens.map((item) => 
         <section className="openData-item">
           <h4>{item.title}</h4>
@@ -113,11 +115,11 @@ export default function Product() {
         <h4>Nenhum resultado encontrado.</h4>
         </section>
       }
-      <Pagination
+      {/*<Pagination
         handlePageClick={(page) => handlePageClick(page)}
         totalPages={1}
         currentPage={1}
-      />
+      />*/}
     </div>
   );
 }
