@@ -3,7 +3,7 @@ import './Mprj.css';
 
 export default function Mprj() {
   return (
-    <div className="mprjDigital-outer">
+    <div className="mprjDigital-outer" id="mprjDigital">
       <h1 className="title"> MPRJ Digital </h1>
       <p>
         Solução colaborativa do MPRJ para centralizar a exibição e disponibilização de suas soluções

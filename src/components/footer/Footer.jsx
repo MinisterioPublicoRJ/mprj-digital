@@ -35,18 +35,20 @@ export default function Footer() {
         </div>
         <div className="footer-menu-column">
           <h3>PRODUTOS EM DESTAQUE</h3>
-          <a href="./#">Parquet Digital</a>
-          <a href="./#">Farol</a>
-          <a href="/#">Integra</a>
+          <a href="https://www.mprj.mp.br/documents/20184/1444502/caderno_ierbb_projeto_farol_luz_sobre_as_promotorias.pdf">
+            Parquet Digital
+          </a>
+          <a href="https://parquetdigital.mprj.mp.br/">Farol</a>
+          {/* <a href="/#">Integra</a>
           <a href="/#">Radar</a>
           <a href="/#">Painel do Saneamento</a>
-          <a href="/#">Painel de Compras</a>
+          <a href="/#">Painel de Compras</a> */}
         </div>
         <div className="footer-menu-column">
           <h3>MPRJ DIGITAL</h3>
-          <a href="/#">Quem Somos?</a>
-          <a href="/#">Parceiros</a>
-          <a href="/#">Contato</a>
+          <a href="#mprjDigital">Quem Somos?</a>
+          <a href="#parceiros">Parceiros</a>
+          {/* <a href="/#">Contato</a> */}
         </div>
         <div className="footer-menu-column">
           <h3>OUVIDORIA</h3>

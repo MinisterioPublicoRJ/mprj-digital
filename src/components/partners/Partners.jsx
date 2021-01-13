@@ -6,7 +6,7 @@ import { PARNERS_CONST } from './partnersData';
 
 export default function Partners() {
   return (
-    <section className="partners-outer">
+    <section className="partners-outer" id="parceiros">
       <div className="partners-header">
         <h1>Parceiros</h1>
         <p>
