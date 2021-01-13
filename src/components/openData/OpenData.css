@@ -1,7 +1,7 @@
 .openData {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 60%;
   text-align: center;
   margin: auto;
   font-family: Roboto;
@@ -49,6 +49,7 @@
 .openData-linkToPanel {
   align-self: flex-end;
   margin-top: -42px;
+  margin-bottom: 55px;
 }
 .openData-linkToPanel a {
   text-decoration: underline;
@@ -98,6 +99,7 @@
   font: normal normal normal 14px/16px Roboto;
   color: #263859;
   line-height: 1.6;
+  padding: 5px;
 }
 .openData-item > h4,
 description,
@@ -143,7 +145,7 @@ license {
   letter-spacing: -0.5px;
   color: #ffffff;
   position: absolute;
-  right: 12vw;
+  right: 21.5vw;
   margin-top: 2vh;
   text-align: center;
   line-height: 38px;
@@ -154,7 +156,10 @@ license {
   color: #d1dbe3;
   border: none;
   opacity: 1;
-  width: 100%;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .openData-button {
