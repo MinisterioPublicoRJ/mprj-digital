@@ -42,6 +42,7 @@ export default function Products() {
               title={product.title}
               text={product.text}
               imgUrl={product.imgUrl}
+              url={product.url}
             />
           ),
         )}
