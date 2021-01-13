@@ -1,0 +1,33 @@
+:root {
+  /* FONTS */
+  --defaultFontSize: clamp(12px, 1.5vh, 18px);
+  --smallFont: clamp(8px, 1.2vh, 12px);
+  --titleFontSize: calc(var(--defaultFontSize) * 3);
+
+  /* SPACING */
+  --sectionVerticalPadding: 7vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+h1 {
+  color: #263859;
+  font-family: Roboto;
+  font-size: var(--titleFontSize);
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+p {
+  color: #9dafbd;
+  font-family: Roboto, regular;
+  font-size: var(--defaultFontSize);
+  font-size: 14px;
+  text-align: justify;
+}

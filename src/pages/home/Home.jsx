@@ -1,5 +1,17 @@
 import React from 'react';
 
+import './Home.css';
+
+import { Header, Mprj, OpenData, Partners, Products } from '../../components';
+
 export default function Home() {
-  return <div>hello im home</div>;
+  return (
+    <div className="home-outer">
+      <Header />
+      <Mprj />
+      <Partners />
+      <Products />
+      <OpenData />
+    </div>
+  );
 }

@@ -1,22 +1,17 @@
 import React from 'react';
+import './App.css';
+
 import { BrowserRouter } from 'react-router-dom';
+
 import '../themes/themes.css';
+
 import Router from '../router/Router';
-import Header from '../components/header/Header';
-import OpenData from '../components/openData/OpenData';
-import Footer from '../components/footer/footer';
-import Mprj from '../components/mprj/Mprj';
-import Partners from '../components/partners/Partners';
-import Products from '../components/products/Products';
+import { Footer, Navbar } from '../components';
 
 const App = () => (
   <BrowserRouter>
-    <Header />
-    <Mprj />
-    <Partners />
+    <Navbar />
     <Router />
-    <OpenData />
-    <Products />
     <Footer />
   </BrowserRouter>
 );
