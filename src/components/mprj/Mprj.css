@@ -7,33 +7,60 @@
   font-family: Roboto;
 }
 
-.mprj-digital .title {
-  color: #263859;
-  margin: 12px 0;
-  margin-top: 185px;
+.mprjDigital-outer {
+  height: 55vh;
+  padding: var(--sectionVerticalPadding) 20%;
+  display: flex;
+  flex-direction: column;
 }
 
-.mprj-digital p {
+.mprjDigital-moreInfo {
+  display: flex;
+  flex: 1;
+}
+
+.mprjDigital-moreInfo div {
+  flex: 1;
+  flex-direction: column;
+}
+
+.mprjDigital-itemOuter {
+  display: flex;
+  align-items: center;
+  margin-right: 45px;
+}
+
+.mprjDigital-moreInfo div:last-child {
+  margin-right: 0;
+}
+
+.mprjDigital-itemOuter p {
+  font-size: var(--smallFont);
+  text-align: justify;
+}
+
+.mprj-digital .title {
+  /* color: #263859;
+  margin: 12px 0;
+  margin-top: 185px; */
+}
+
+/* .mprj-digital p {
   color: #9dafbd;
   font-size: 18px;
   margin: 4px 0px;
-}
+} */
 
-.mprj-digital h1 {
+/* .mprj-digital h1 {
   font-size: 54px;
   font-weight: normal;
-}
+} */
 
 .mprj-digital button {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
-.more-info {
-  display: flex;
-  margin-top: 37px;
-  margin-bottom: 64px;
-}
 
 .more-info > div {
-  width: 30%;
+  /* width: 30%; */
 }
