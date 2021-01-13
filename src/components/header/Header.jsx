@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './header.css';
 import ButtonHeader from './buttonHeader/ButtonHeader';
 import NavHeader from './navHeader/NavHeader';
@@ -6,28 +6,26 @@ import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
-  const [showResults, setShowResults] = useState(false);
-  const onClick = () => setShowResults(true);
+  const [changeData, setchangeData] = useState(0);
+  const data = MOCKPRODUTOSHEADER;
 
   return (
     <header className="header">
       <section className="section-products">
         {MOCKBUTTONHEADER.map(({ id, title }) => (
-          <ButtonHeader key={id} title={title} />
+          <ButtonHeader onClick={(e) => setchangeData((state) => !state)} key={id} title={title} />
         ))}
       </section>
       <section className="section-info-products">
-        {MOCKPRODUTOSHEADER.map((i) => (
-          <p key={i.id} value={i.id}>
-            {i.imgIcon1}
-            {i.title1}
-            {i.imgIcon2}
-            {i.title2}
-          </p>
+        {MOCKPRODUTOSHEADER.map((id, img, color, imgBg, icon1, icon2, icon3, icon4) => (
+          <NavHeader
+            key={id}
+            style={{
+              backgroundImage: `url(${img})`,
+              color: `(${color})`,
+            }}
+          />
         ))}
-        <button type="button" value="Search">
-          Conheça a Solução
-        </button>
       </section>
       <section className="section-explore">
         <h3>Explore</h3>
