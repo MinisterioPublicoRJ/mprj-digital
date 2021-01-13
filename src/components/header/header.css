@@ -56,6 +56,7 @@ button.products-btn-left{
 }
 .section-explore > h3{
     margin-left: 35px;
+    font-weight: normal;
 }
 .section-info-explore{
     display: flex;
@@ -64,7 +65,7 @@ button.products-btn-left{
 }
 .section-info-explore h3{
     color: var(--blueProdutos);
-
+    font-weight: normal;
 }
 .section-info-explore button{
     background-color: var(--blueProdutos);
@@ -89,6 +90,7 @@ button.products-btn-left{
 .section-explore-texts p{
     border-bottom: 2px solid #D1DBE3;
     margin-left: 5px;
+    text-align: left;
 }
 #btn-explore{
     display: none;
