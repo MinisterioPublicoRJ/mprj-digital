@@ -38,9 +38,9 @@ export default function Header() {
               Iniciativa para exercer uma transparência efetiva na atuação do MPRJ, espaço único
               para a prestação de contas com a sociedade.
             </p>
-            <button value="Search" type="button" id="btn-explore">
+            {/* <button value="Search" type="button" id="btn-explore">
               Saiba mais
-            </button>
+            </button> */}
           </div>
           <div className="section-explore-texts">
             <h3>Parceiros e Produtos</h3>
@@ -49,12 +49,12 @@ export default function Header() {
               envolvidos nesta iniciativa.
             </p>
             <div className="section-box-button">
-              <button type="button" id="btn-explore">
+              {/* <button type="button" id="btn-explore">
                 Parceiros
               </button>
               <button className="products-btn-left" type="button" id="btn-explore">
                 Produtos
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="section-explore-texts">
@@ -63,9 +63,9 @@ export default function Header() {
               Conheça, explore e baixe tudo o que for interessante para realizar suas pesquisas e
               estudos aqui no nosso repositório de dados.
             </p>
-            <button type="button" id="btn-explore">
+            {/* <button type="button" id="btn-explore">
               Acessar
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
