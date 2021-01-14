@@ -85,6 +85,3 @@ const OPENDATA = [
   },
 ];
 export default OPENDATA;
-
-
-
