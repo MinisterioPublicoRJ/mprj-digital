@@ -36,7 +36,7 @@
 
 .mprjDigital-itemOuter p {
   font-size: var(--smallFont);
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .mprj-digital .title {

@@ -9,16 +9,21 @@ export default function Navbar() {
       <Logo alt="logo" />
       <section className="navbar-links">
         <div className="tooltip">
-          <NavLink to="/" end className="dropdow-button">
+          <a href="#mprjDigital" className="dropdow-button">
             O que é o MPRJ Digital?
-          </NavLink>
+          </a>
           <span className="tooltiptext">Conheça a nossa visão de dados abertos</span>
         </div>
-        <div className="dropdown">
+        <div className="tooltip">
+          <a href="#parceiros" className="dropdow-button">
+            Parceiros
+          </a>
+        </div>
+        {/* <div className="dropdown">
           <div className="tooltip">
-            <button type="button" className="dropbtn" id="basic-button">
+            <a href="#parceiros" type="button" className="dropbtn" id="basic-button">
               Parceiros
-            </button>
+            </a>
             <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
             <div className="dropdown-content">
               <NavLink to="/produto">Gate</NavLink>
@@ -26,12 +31,17 @@ export default function Navbar() {
               <NavLink to="/produto">Csi</NavLink>
             </div>
           </div>
+        </div> */}
+        <div className="tooltip">
+          <a href="#produtos" className="dropbtn">
+            Produtos
+          </a>
         </div>
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <div className="tooltip">
-            <button type="button" className="dropbtn" id="basic-button">
+            <a href="#produtos" type="button" className="dropbtn" id="basic-button">
               Produtos
-            </button>
+            </a>
             <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
             <div className="dropdown-content">
               <NavLink to="/produto">Integra</NavLink>
@@ -39,12 +49,17 @@ export default function Navbar() {
               <NavLink to="/produto">Ouvidoria</NavLink>
             </div>
           </div>
+        </div> */}
+        <div className="tooltip">
+          <a href="#repositorios" className="dropbtn">
+            Repositórios
+          </a>
         </div>
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <div className="tooltip">
-            <button type="button" className="dropbtn" id="basic-button">
+            <a href=".#" type="button" className="dropbtn" id="basic-button">
               Repositórios
-            </button>
+            </a>
             <span className="tooltiptext">Encontre aqui todas os nossos acervos de dados</span>
             <div className="dropdown-content">
               <NavLink to="/produto">Integra</NavLink>
@@ -52,23 +67,28 @@ export default function Navbar() {
               <NavLink to="/produto">Ouvidoria</NavLink>
             </div>
           </div>
-        </div>
-        <div className="tooltip">
+        </div> */}
+        {/* <div className="tooltip">
           <NavLink to="home" className="dropdow-button">
             Fale Conosco
             <span className="tooltiptext">
               Adoramos receber elogios, mas o seu feedback e crítica são ainda melhores
             </span>
           </NavLink>
-        </div>
+        </div> */}
         <div className="tooltip">
+          <a href="#rodape" className="dropbtn">
+            Dúvidas e Reclamações
+          </a>
+        </div>
+        {/* <div className="tooltip">
           <NavLink className="dropdow-button" to="home">
             Dúvidas e Reclamações
             <span className="tooltiptext">
               Não hesite em reclamar ou pedir ajuda caso tenha algum problema.
             </span>
           </NavLink>
-        </div>
+        </div> */}
       </section>
     </navbar>
   );

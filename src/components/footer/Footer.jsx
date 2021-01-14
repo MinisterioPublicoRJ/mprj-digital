@@ -3,36 +3,8 @@ import './Footer.css';
 import Logo from '../../assets/logo';
 
 export default function Footer() {
-  function handleFormSubmit() {
-    alert('Mensagem enviada com sucesso!');
-  }
-
   return (
-    <div className="footer-outer">
-      <div className="footer-map" />
-      <div className="footer-floating">
-        <div className="footer-form-header">
-          <h1>Dúvidas e Reclamações?</h1>
-          <p>
-            Espaço aberto para ouvir suas dúvidas e comentários a respeito da plataforma, dos
-            produtos, ou de algum dado que está a disposição.
-          </p>
-        </div>
-        <form className="footer-form-body">
-          <div>
-            <input type="text" placeholder="Nome" />
-            <input type="text" placeholder="Email" />
-          </div>
-          <div>
-            <textarea placeholder="Mensagem" />
-          </div>
-          <div>
-            <button type="button" onClick={() => handleFormSubmit()}>
-              Enviar
-            </button>
-          </div>
-        </form>
-      </div>
+    <div className="footer-outer" id="rodape">
       <div className="footer-menu">
         <div className="footer-menu-column">
           <Logo alt="Logo MPRJ Digital" />
@@ -43,41 +15,40 @@ export default function Footer() {
               target="new"
               rel="noreferrer"
               className="footer-menu-icon-twitter"
-            >
-              Twitter
-            </a>
+              aria-label="Twitter"
+            />
             <a
               href="https://www.instagram.com/mprj.oficial/"
               target="new"
               rel="noreferrer"
               className="footer-menu-icon-instagram"
-            >
-              Instagram
-            </a>
+              aria-label="Instagram"
+            />
             <a
               href="https://www.facebook.com/MPRJ.Oficial/"
               target="new"
               rel="noreferrer"
               className="footer-menu-icon-facebook"
-            >
-              Facebook
-            </a>
+              aria-label="Facebook"
+            />
           </div>
         </div>
         <div className="footer-menu-column">
           <h3>PRODUTOS EM DESTAQUE</h3>
-          <a href="./#">Parquet Digital</a>
-          <a href="./#">Farol</a>
-          <a href="/#">Integra</a>
+          <a href="https://www.mprj.mp.br/documents/20184/1444502/caderno_ierbb_projeto_farol_luz_sobre_as_promotorias.pdf">
+            Parquet Digital
+          </a>
+          <a href="https://parquetdigital.mprj.mp.br/">Farol</a>
+          {/* <a href="/#">Integra</a>
           <a href="/#">Radar</a>
           <a href="/#">Painel do Saneamento</a>
-          <a href="/#">Painel de Compras</a>
+          <a href="/#">Painel de Compras</a> */}
         </div>
         <div className="footer-menu-column">
           <h3>MPRJ DIGITAL</h3>
-          <a href="/#">Quem Somos?</a>
-          <a href="/#">Parceiros</a>
-          <a href="/#">Contato</a>
+          <a href="#mprjDigital">Quem Somos?</a>
+          <a href="#parceiros">Parceiros</a>
+          {/* <a href="/#">Contato</a> */}
         </div>
         <div className="footer-menu-column">
           <h3>OUVIDORIA</h3>

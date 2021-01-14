@@ -12,7 +12,7 @@ export default function Products() {
   const [productType, setProductType] = useState('');
 
   return (
-    <div className="products">
+    <section className="products" id="produtos">
       <h1 className="products-title">Produtos</h1>
       <p className="products-text">
         Painéis, estudos, relatórios e os mais variados formatos de soluções gerados pelos nossos
@@ -52,6 +52,6 @@ export default function Products() {
         totalPages={4}
         currentPage={1}
       />
-    </div>
+    </section>
   );
 }

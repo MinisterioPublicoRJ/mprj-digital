@@ -1,9 +1,13 @@
 import React from 'react';
 import './Mprj.css';
 
+import WhyIcon from '../../assets/whyIcon';
+import HowIcon from '../../assets/howIcon';
+import BaseIcon from '../../assets/baseIcon';
+
 export default function Mprj() {
   return (
-    <div className="mprjDigital-outer">
+    <div className="mprjDigital-outer" id="mprjDigital">
       <h1 className="title"> MPRJ Digital </h1>
       <p>
         Solução colaborativa do MPRJ para centralizar a exibição e disponibilização de suas soluções
@@ -14,6 +18,7 @@ export default function Mprj() {
       </p>
       <div className="mprjDigital-moreInfo">
         <div className="mprjDigital-itemOuter">
+          <WhyIcon />
           <h6> Por quê? </h6>
           <p>
             Porque ainda que já existam iniciativas de transparência ativa (portal da transparência)
@@ -25,6 +30,7 @@ export default function Mprj() {
           </p>
         </div>
         <div className="mprjDigital-itemOuter">
+          <HowIcon />
           <h6> Como? </h6>
           <p>
             Por meio da disponibilização de acesso a produtos que servem de subsídio à atuação
@@ -38,6 +44,7 @@ export default function Mprj() {
           </p>
         </div>
         <div className="mprjDigital-itemOuter">
+          <BaseIcon />
           <h6> Baseado em quê? </h6>
           <p>
             Nos valores de governos abertos: transparência, integridade, participação popular e
