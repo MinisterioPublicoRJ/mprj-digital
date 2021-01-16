@@ -24,6 +24,10 @@
   flex: 2;
 }
 
+.partners-itemList a {
+  cursor: default;
+}
+
 .partner-itemAnchor {
   background-position: center;
   background-size: contain;
