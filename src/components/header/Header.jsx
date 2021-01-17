@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { useState } from 'react';
 import './header.css';
 import ButtonHeader from './buttonHeader/ButtonHeader';
 import NavHeader from './navHeader/NavHeader';
@@ -6,26 +7,17 @@ import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
-  const [changeData, setchangeData] = useState(0);
-  const data = MOCKPRODUTOSHEADER;
+  const [changeData, setchangeData] = useState('MPRJDigital');
 
   return (
     <header className="header">
       <section className="section-products">
         {MOCKBUTTONHEADER.map(({ id, title }) => (
-          <ButtonHeader onClick={setchangeData + 1} key={id} title={title} />
+          <ButtonHeader onClick={() => setchangeData(id)} key={id} title={title} />
         ))}
       </section>
       <section className="section-info-products">
-        {MOCKPRODUTOSHEADER.map((id, img, color, imgBg, icon1, icon2, icon3, icon4) => (
-          <NavHeader
-            key={id}
-            style={{
-              backgroundImage: `url(${img})`,
-              color: `(${color})`,
-            }}
-          />
-        ))}
+        <NavHeader {...MOCKPRODUTOSHEADER.find((button) => button.id === changeData)} />
       </section>
       <section className="section-explore">
         <h3>Explore</h3>
