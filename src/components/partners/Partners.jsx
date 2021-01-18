@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import './partners.css';
 import { PARNERS_CONST } from './partnersData';
@@ -16,12 +16,13 @@ export default function Partners() {
       </div>
       <div className="partners-itemList">
         {PARNERS_CONST.map(({ id, img }) => (
-          <Link
+          <div className="partner-itemAnchor" key={id} style={{ backgroundImage: `url(${img})` }} />
+          /* <Link
             to="/"
             className="partner-itemAnchor"
             key={id}
             style={{ backgroundImage: `url(${img})` }}
-          />
+          /> */
         ))}
       </div>
     </section>
