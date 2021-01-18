@@ -8,9 +8,9 @@ import FAROL from '../../assets/farol';
 
 export const MOCKPRODUTOSHEADER = [
   {
-    id: 'Farol',
-    imgBg: farolBg,
-    color: '#F3A04C',
+    id: 'MPRJDigital',
+    imgBg: mpBg,
+    colorBtn: '#F3A04C',
     titleBtn: 'Procurar',
     icon1: REPOSITORIO,
     title1: 'Repositório',
@@ -23,9 +23,9 @@ export const MOCKPRODUTOSHEADER = [
     background: '#F3A04C',
   },
   {
-    id: 'MPRJDigital',
-    img: mpBg,
-    color: '#6792FF',
+    id: 'Farol',
+    imgBg: farolBg,
+    colorBtn: '#6792FF',
     background: '#6792FF',
     titleBtn: 'Procurar',
     icon1: FAROL,
@@ -40,7 +40,7 @@ export const MOCKPRODUTOSHEADER = [
   {
     id: 'Parquet Digital',
     img: mpBg,
-    color: '#6792FF',
+    colorBtn: '#6792FF',
     background: '#6792FF',
     titleBtn: 'Veja',
     icon1: FAROL,

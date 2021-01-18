@@ -5,6 +5,16 @@
   min-height: 110vh;
   margin-top: -120px;
 }
+#animeRight{
+  animation: animeRight 3s forwards;
+  transform: translate(30px);
+}
+@keyframes animeRight{
+  to{
+    transform: initial;
+    transform: initial;
+  }
+}
 .section-products {
   display: flex;
   justify-content: space-between;

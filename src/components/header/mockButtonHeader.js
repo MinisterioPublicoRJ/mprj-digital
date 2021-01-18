@@ -1,11 +1,12 @@
 export const MOCKBUTTONHEADER = [
-  /*{
+  /* {
     id: 'Ouvidoria',
     title: 'Ouvidoria',
-  },*/
+  }, */
   {
     id: 'MPRJDigital',
     title: 'MPRJ Digital',
+    colorTitle: '#F3A04C',
   },
   {
     id: 'Farol',
