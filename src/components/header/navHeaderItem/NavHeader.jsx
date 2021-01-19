@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './NavHeader.css';
 
 export default function NavHeader({
   title1,
   title2,
   title3,
   title4,
-  cor,
+  corTitleBtn,
   icon1,
   icon2,
   icon3,
   icon4,
   titleBtn,
   colorBtn,
-  changeData,
 }) {
   return (
-    <div className="section-products">
+    <div className="section-products-item">
       <img alt={title1} src={icon1} />
       <p>{title1}</p>
       <img alt={title2} src={icon2} />
@@ -26,8 +26,12 @@ export default function NavHeader({
       <img alt={title4} src={icon4} />
       <p>{title4}</p>
       <button
-        backgoundColor={changeData === 'MPRJDigital' ? '#fbfaf8' : '#F86C72'}
-        color={colorBtn}
+        style={{
+          backgroundColor: colorBtn,
+          color: corTitleBtn,
+          height: '40px',
+          width: '164px',
+        }}
         type="button"
       >
         {titleBtn}
@@ -41,11 +45,10 @@ NavHeader.propTypes = {
   title3: PropTypes.string.isRequired,
   title4: PropTypes.string.isRequired,
   titleBtn: PropTypes.string.isRequired,
-  cor: PropTypes.node.isRequired,
+  corTitleBtn: PropTypes.node.isRequired,
   colorBtn: PropTypes.node.isRequired,
   icon1: PropTypes.string.isRequired,
   icon2: PropTypes.string.isRequired,
   icon3: PropTypes.string.isRequired,
   icon4: PropTypes.string.isRequired,
-  changeData: PropTypes.func.isRequired,
 };

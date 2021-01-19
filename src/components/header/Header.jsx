@@ -17,10 +17,7 @@ export default function Header() {
         ))}
       </section>
       <section className="section-info-products">
-        <NavHeader
-          {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)}
-          style={{ color: changeData === 'MPRJDigital' ? '#805161' : '#F86C72' }}
-        />
+        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
       </section>
       <section className="section-explore">
         <h3>Explore</h3>

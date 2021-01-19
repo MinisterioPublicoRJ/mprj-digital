@@ -1,0 +1,30 @@
+.section-products-item{
+    display: flex;
+    margin-top: 20px;
+}
+.section-info-products {
+    background-color: var(--backgroundBoxProdutos);
+    border-radius: 5px 5px 5px 5px;
+    width: 950px;
+    height: 70px;
+    margin-left: 35px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 30px 60px #0000004D;
+    color: var(--darkBlueProdutos);
+}
+.section-info-products p{
+    font-size: 14px;
+    font-family: 'Poppins', Mediun;
+    display: flex;
+    white-space: nowrap
+}
+.section-products-item button{
+    border-radius: 5px;
+    letter-spacing: -0.19px;
+    border: none;
+    cursor: pointer;
+    width: 164px;
+    height: 40px;
+}
