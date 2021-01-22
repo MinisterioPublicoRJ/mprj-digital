@@ -1,38 +1,11 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: url(../../assets/ImgsHeader/bg-mp.png);
-  min-height: 110vh;
-  margin-top: -120px;
+  margin-top: -130px;
 }
-/*#animeRight{
-  animation: animeRight 3s forwards;
-  transform: translate(30px);
+.all-components{
+  margin-top: -640px ;
 }
-@keyframes animeRight{
-  to{
-    transform: initial;
-    transform: initial;
-  }
-}*/
-.section-products {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 80px;
-}
-.section-products > button {
-  color: #d1dbe3;
-  font-family: 'Roboto', regular;
-  font-size: 33px;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  opacity: 0.5;
-  outline: none;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 .section-explore {
   color: #d1dbe3;
   font-size: 30px;

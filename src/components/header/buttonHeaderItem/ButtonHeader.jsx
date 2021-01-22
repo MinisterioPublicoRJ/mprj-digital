@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './ButtonHeader.css';
 
-export default function ButtonHeader({ title, onClick, colorTitle }) {
+export default function ButtonHeader({ title, onClick, titleBtn }) {
   return (
     <div className="section-products">
-      <button style={{ color: `(${colorTitle})` }} onClick={onClick} type="button">
+      <button className={`button-${titleBtn}`} onClick={onClick} type="button">
         {title}
       </button>
     </div>
@@ -12,6 +13,6 @@ export default function ButtonHeader({ title, onClick, colorTitle }) {
 }
 ButtonHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  titleBtn: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  colorTitle: PropTypes.node.isRequired,
 };

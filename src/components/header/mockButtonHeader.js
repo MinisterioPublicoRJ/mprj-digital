@@ -5,18 +5,18 @@ export const MOCKBUTTONHEADER = [
   }, */
   {
     id: 'MPRJDigital',
+    titleBtn: 'MPRJDigital',
     title: 'MPRJ Digital',
-    colorTitle: '#F3A04C',
   },
   {
     id: 'Farol',
+    titleBtn: 'Farol',
     title: 'Farol',
-    colorTtitle: '#6792FF',
   },
   {
-    id: 'Parquet Digital',
+    id: 'ParquetDigital',
+    titleBtn: 'ParquetDigital',
     title: 'Parquet Digital',
-    colorTitle: '#F3A04C',
   },
   // {
   //   id: 'Integra',
