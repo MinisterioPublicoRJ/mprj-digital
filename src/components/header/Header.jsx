@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import ButtonHeader from './buttonHeaderItem/ButtonHeader';
 import NavHeader from './navHeaderItem/NavHeader';
-import BgHeader from './bgHeader/BgHeader';
+import BgHeader from './bgHeaderItem/BgHeader';
 
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
