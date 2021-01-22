@@ -17,7 +17,7 @@ export default function Partners() {
       <div className="partners-itemList">
         {PARNERS_CONST.map(({ id, img }) => (
           <Link
-            to="/parceiros"
+            to="/"
             className="partner-itemAnchor"
             key={id}
             style={{ backgroundImage: `url(${img})` }}

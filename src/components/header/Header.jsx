@@ -37,8 +37,8 @@ export default function Header() {
           <div className="section-explore-texts">
             <h3>O que é o MPRJ Digital?</h3>
             <p>
-              Iniciativa para exercer uma transparência efetiva na atuação do MPRJ, espaço único
-              para a prestação de contas com a sociedade.
+              Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
+              atividade baseada no modelo de governos digitais.
             </p>
             {/* <button value="Search" type="button" id="btn-explore">
               Saiba mais
@@ -47,8 +47,8 @@ export default function Header() {
           <div className="section-explore-texts">
             <h3>Parceiros e Produtos</h3>
             <p>
-              Aqui você encontrará um leque de ferramentas e também todas as informações do setores
-              envolvidos nesta iniciativa.
+              Aqui você encontrará diversos produtos oriundos da política de governos digitais
+              empreendida pelo MPRJ.
             </p>
             <div className="section-box-button">
               {/* <button type="button" id="btn-explore">
@@ -62,8 +62,8 @@ export default function Header() {
           <div className="section-explore-texts">
             <h3>Repositório de Dados</h3>
             <p>
-              Conheça, explore e baixe tudo o que for interessante para realizar suas pesquisas e
-              estudos aqui no nosso repositório de dados.
+              Confira a integridade de nossas soluções desde os dados e conheça, explore e baixe
+              tudo o que for interessante para realizar suas pesquisas, estudos e soluções.
             </p>
             {/* <button type="button" id="btn-explore">
               Acessar
