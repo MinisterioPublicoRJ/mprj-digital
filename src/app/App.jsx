@@ -10,7 +10,7 @@ import { Footer, Navbar } from '../components';
 
 const App = () => (
   <BrowserRouter>
-    <Navbar />
+    {/* <Navbar /> */}
     <Router />
     <Footer />
   </BrowserRouter>

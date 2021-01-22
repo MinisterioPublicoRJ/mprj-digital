@@ -6,6 +6,8 @@
 
   /* SPACING */
   --sectionVerticalPadding: 7vh;
+  --navbarHeight: 10vh;
+  --footerHeight: 30vh;
 }
 
 body {
