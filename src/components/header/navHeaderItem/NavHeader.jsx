@@ -29,8 +29,6 @@ export default function NavHeader({
         style={{
           backgroundColor: colorBtn,
           color: corTitleBtn,
-          height: '40px',
-          width: '164px',
         }}
         type="button"
       >

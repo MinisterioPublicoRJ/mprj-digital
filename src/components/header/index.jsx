@@ -12,5 +12,3 @@ export { default as FAROL } from '../../assets/ImgsHeader/farol.png';
 export { default as PLANILHA } from '../../assets/ImgsHeader/planilhas.png';
 export { default as DOCS } from '../../assets/ImgsHeader/docs.png';
 export { default as ROBOT } from '../../assets/ImgsHeader/robot.png';
-
-
