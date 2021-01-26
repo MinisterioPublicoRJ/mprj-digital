@@ -1,5 +1,7 @@
 import bgFarol from '../../assets/images/bgFarol.png';
 import bgParquet from '../../assets/images/bgParquet.png';
+import FarolIcon from '../../assets/svg/farolIcon';
+import ParquetIcon from '../../assets/svg/parquetIcon';
 
 const PRODUCTS_CONST = {
   farol: {
@@ -11,7 +13,7 @@ const PRODUCTS_CONST = {
       title: 'Análise da atuação das Promotorias de Justiça do MPRJ à luz da seara criminal',
       subtitle:
         'Ferramenta de gestão construída com o intuito de orientar o processo de tomada de decisão dentro do MPRJ e gerar transparência acerca da atuação ministerial. Nesse painel, são apresentados indicadores estratégicos e análises consistentes da atuação da instituição na área investigativa criminal, com especial ênfase para as Promotorias de Investigação Penal (PIP).',
-      icon: '',
+      icon: FarolIcon,
     },
     tabs: [
       {
@@ -43,7 +45,7 @@ const PRODUCTS_CONST = {
       title: 'Um robô em cada Promotoria, painel dinâmico para subsidiar a atuação dos Promotores',
       subtitle:
         'Afim de subsidiar o máximo desempenho da sua Promotoria e facilitar o seu trabalho, o robô fornece uma ajuda estratégica na observação e gestão do seu acervo e resolução dos seus processos. O robô auxilia o melhor entendimento da rotina de trabalho da Promotoria e otimiza a visualização das demandas com base em alertas, indicativos, metas e acompanhamento funcional.',
-      icon: '',
+      icon: ParquetIcon,
     },
     tabs: [
       {

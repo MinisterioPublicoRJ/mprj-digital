@@ -1,7 +1,7 @@
 .productPage-outer {
   display: grid;
   grid-template-columns: 15% 17% 36% 17% 15%;
-  grid-template-rows: 40% 20% 40%;
+  grid-template-rows: 40% 20% 12% 28%;
   /* fits the whole page in the fold but the footer under it */
   height: calc(100vh - var(--navbarHeight));
   margin-top: var(--navbarHeight);
@@ -16,7 +16,61 @@
 }
 
 .productPage-presentation {
-  background-color: white;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
   grid-row: 1 / 2;
   grid-column: 2 / 5;
+  padding: 5% 15% 0 15%;
+  text-align: center;
+}
+
+.productPage-presentation p {
+  color: white;
+  font-size: var(--smallFont);
+}
+
+.productPage-bodyFilling {
+  background-color: white;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.productPage-body-title {
+  background-color: white;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productPage-body-service {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.productPage-body-organ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.productPage-body-service :first-child, .productPage-body-organ :first-child {
+  color: var(--darkBlue);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.productPage-body-service :nth-child(2), .productPage-body-organ :nth-child(2) {
+  color: var(--lightGray);
+  font-size: var(--smallFont);
+  font-weight: bold;
 }
