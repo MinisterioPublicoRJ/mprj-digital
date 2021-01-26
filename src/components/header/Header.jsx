@@ -1,34 +1,34 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
-import './header.css';
-import ButtonHeader from './buttonHeader/ButtonHeader';
-import NavHeader from './navHeader/NavHeader';
+import './Header.css';
+import { BgHeader, NavHeader, ButtonHeader } from './index';
+
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 
 export default function Header() {
-  const [showResults, setShowResults] = useState(false);
-  const onClick = () => setShowResults(true);
+  const [changeData, setchangeData] = useState('MPRJDigital');
 
   return (
-    <header className="header">
-      <section className="section-products">
-        {MOCKBUTTONHEADER.map(({ id, title }) => (
-          <ButtonHeader key={id} title={title} />
-        ))}
-      </section>
-      {/* <section className="section-info-products">
-        {MOCKPRODUTOSHEADER.map((i) => (
-          <p key={i.id} value={i.id}>
-            {i.imgIcon1}
-            {i.title1}
-            {i.imgIcon2}
-            {i.title2}
-          </p>
-        ))}
-        <button type="button" value="Search">
-          Conheça a Solução
-        </button>
-      </section> */}
+    <header {...MOCKPRODUTOSHEADER.find((img) => img.id === changeData)} className="header">
+      <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+      <div className="all-components">
+        <section className="section-products">
+          {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
+            <ButtonHeader
+              onClick={() => {
+                setchangeData(id);
+              }}
+              key={id}
+              title={title}
+              titleBtn={titleBtn}
+            />
+          ))}
+        </section>
+        <section className="section-info-products">
+          <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+        </section>
+      </div>
       <section className="section-explore">
         <h3>Explore</h3>
         <div className="section-info-explore">
