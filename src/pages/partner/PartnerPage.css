@@ -1,0 +1,65 @@
+h3 {
+  text-align: left;
+  font: normal normal bold 34px/45px Roboto;
+  letter-spacing: 0px;
+  color: #6792ff;
+  opacity: 1;
+}
+.text-justify {
+  text-align: justify;
+}
+.partner-page-section {
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+}
+.partner-page-header {
+  width: 100vw;
+  height: 25vh;
+  /*text-align-last: center;*/
+  padding-left: 40vw;
+  background-color: grey;
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+}
+.partner-page-header navbar {
+  display: inline-flex;
+}
+.partner-page-section h1 {
+  text-align: left;
+  font: normal normal bold 61px/73px Roboto;
+  letter-spacing: 0px;
+  color: #6792ff;
+  opacity: 1;
+}
+
+.partner-page-content {
+  display: flex;
+  margin: 0 10vw;
+}
+.partner-page-left {
+  width: 25vw;
+  margin-top: -15vh;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+.partner-page-logo {
+  width: 25vw;
+  height: 40vh;
+  background: #1d2933 0% 0% no-repeat padding-box;
+  border-radius: 9px 9px 0px 0px;
+  opacity: 1;
+  display: flex;
+}
+.partner-page-logo img {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  height: 500px;
+  width: 500px;
+}
+.partner-page-about {
+  margin: 0 2vw;
+}
+.partner-page-right {
+  width: 50vw;
+}
