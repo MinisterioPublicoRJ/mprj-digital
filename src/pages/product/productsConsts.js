@@ -6,6 +6,7 @@ import ParquetIcon from '../../assets/svg/parquetIcon';
 const PRODUCTS_CONST = {
   farol: {
     title: 'Farol',
+    titleColorNav: 'Farol',
     organ: 'CENPE/MPRJ',
     service: 'Monitoramento das Promotorias de Investigação Penal',
     background: bgFarol,
