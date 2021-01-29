@@ -6,9 +6,7 @@ import Logo from '../../assets/logo';
 export default function Navbar() {
   return (
     <navbar className="navbar">
-      <NavLink to="/" type="button">
-        <Logo alt="logo" className="logo" />
-      </NavLink>
+      <Logo alt="logo" className="logo" />
       <section className="navbar-links">
         <div className="tooltip">
           <NavLink
