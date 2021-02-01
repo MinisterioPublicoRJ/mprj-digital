@@ -115,9 +115,24 @@ small {
 .partner-page-cards {
   display: flex;
   flex-wrap: wrap;
+  margin: 30px 0px;
+}
+.partner-page-cards p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .partner-page-cards .first {
-  flex: 0 0 30%;
+  flex: 0 0 47%;
+  margin: 0 10px;
+  text-align-last: center;
+}
+.partner-page-cards .first p {
+  -webkit-line-clamp: 6;
+}
+.partner-page-cards .first-with-border {
+  flex: 0 0 47%;
   margin: 0 10px;
   text-align-last: center;
   border-bottom: 6px solid #6792ff;
@@ -166,10 +181,4 @@ small {
   letter-spacing: 0px;
   color: #24375b;
   opacity: 1;
-}
-.partner-page-cards p {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }

@@ -30,7 +30,10 @@ export default function PartnerPage() {
   return (
     <>
       <section className="partner-page-section">
-        <div className="partner-page-header">
+        <div
+          className="partner-page-header"
+          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
+        >
           <div className="partner-page-title">
             <h1>{partnerFiltered[0].name}</h1>
             <p>{partnerFiltered[0].desc}</p>
@@ -55,7 +58,7 @@ export default function PartnerPage() {
               {featuredTopics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title}</h3>
-                  <p className="">{featured.smalltext}</p>
+                  <p className="" dangerouslySetInnerHTML={{ __html: featured.smalltext }} />
                 </div>
               ))}
             </div>
