@@ -1,7 +1,7 @@
 import {
-  farolBg,
-  mpBg,
-  parquet,
+  FAROLBG,
+  MPBG,
+  PARQUET,
   FAROL,
   PLANILHA,
   ARROW,
@@ -15,7 +15,7 @@ import {
 export const MOCKPRODUTOSHEADER = [
   {
     id: 'MPRJDigital',
-    imgBg: mpBg,
+    imgBg: MPBG,
     colorBtn: '#6792FF',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
@@ -30,7 +30,7 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'Farol',
-    imgBg: farolBg,
+    imgBg: FAROLBG,
     colorBtn: '#F3A04C',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
@@ -45,7 +45,7 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'ParquetDigital',
-    imgBg: parquet,
+    imgBg: PARQUET,
     colorBtn: '#82D4FF',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
