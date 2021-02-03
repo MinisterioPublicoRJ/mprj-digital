@@ -12,6 +12,23 @@ small {
   font-size: var(--smallFont);
   color: #9dafbd;
 }
+/*
+form{
+  display: flex;
+    flex-direction: row;
+}
+label, input, textarea  {
+  display:block;
+}
+*/
+label {
+  display: inline-grid;
+}
+.rounded-border-box{
+  border: 1px solid #707070;
+  border-radius: 6px;
+  padding: 10px;
+}
 .text-justify {
   text-align: justify;
 }
@@ -30,10 +47,12 @@ small {
 .partner-page-title {
   margin-left: 50px;
 }
+.partner-page-header .partner-page-navigation {
+  position: absolute;
+}
 .partner-page-navigation {
   display: inline-flex;
   place-self: flex-end;
-  position: absolute;
   width: 48%;
 }
 .partner-page-navigation div {
@@ -49,7 +68,7 @@ small {
   border-radius: 3px;
   height: 40px;
 }
-.partner-page-navigation div:hover .partner-page-navigation-link {
+.partner-page-navigation div:hover .partner-partner-page-link {
   color: #6792ff !important;
 }
 .partner-page-navigation a {
@@ -181,4 +200,52 @@ small {
   letter-spacing: 0px;
   color: #24375b;
   opacity: 1;
+}
+.partner-dynamic-content{
+  background-color: #FFFFFF ;
+  padding: 1vw;
+}
+
+.partner-contact-form  label{
+  font: normal normal medium 18px/24px Roboto;
+}
+.partner-contact-form input {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d1dbe3;
+  border-radius: 4px;
+  width: 12vw;
+  height: 40px;
+  margin: 5px 10px 5px 0px;
+  padding: 0 10px;
+  display: inline-flex;
+}
+.partner-contact-form #nome, .partner-contact-form #email{ 
+  width: 19vw;
+}
+.partner-contact-form ::placeholder {
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: -0.5px;
+  color: #9dafbd;
+}
+.partner-contact-form textarea {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d1dbe3;
+  border-radius: 5px;
+  margin: 5px 10px 5px 0px;
+  resize: none;
+  width: 41vw;
+  height: 20vh;
+  padding: 10px;
+}
+.partner-contact-form-action {
+  direction: rtl;
+  margin-top: 20px;
+}
+.partner-contact-button{
+  color: #F9F9F9;
+  background: #6792FF 0% 0% no-repeat padding-box;
+  border: 0px solid #707070;
+  border-radius: 10px;
+  height:24px;
+  direction: rtl;
 }

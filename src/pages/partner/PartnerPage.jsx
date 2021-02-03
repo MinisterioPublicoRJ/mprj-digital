@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useParams, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './PartnerPage.css';
 import { Partners } from '../../components';
@@ -8,9 +8,12 @@ import { PARTNERS_CONST } from './partnersData';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
+  const [formType, setFormType] = useState('');
+
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
+  const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
   const subpageData = (partnerFiltered[0].subpages || []).filter(
-    (subpages) => subpages.id === subpageId,
+    (subpages) => subpages.id === subpageIdToLoad,
   );
   const featuredTopics = (subpageData[0].topics || []).filter((topics) => topics.featured === true);
   const defaultTopics = (subpageData[0].topics || []).filter((topics) => topics.featured === false);
@@ -41,9 +44,13 @@ export default function PartnerPage() {
           <navbar className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
               <div key={subpage.id}>
-                <a className="partner-page-navigation-link" href={subpage.id}>
+                <NavLink
+                  className="partner-page-link"
+                  activeClassName="active"
+                  to={`/parceiro/${partnerId}/${subpage.id}`}
+                >
                   {subpage.call}
-                </a>
+                </NavLink>
               </div>
             ))}
           </navbar>
@@ -65,7 +72,7 @@ export default function PartnerPage() {
           </div>
           <div className="partner-page-right">
             <div className="partner-page-topics">
-              {defaultTopics.map((topic, i) => (
+              {defaultTopics.map((topic) => (
                 <div key={topic.id}>
                   <h3>{topic.title}</h3>
                   <p>{topic.smalltext}</p>
@@ -74,7 +81,13 @@ export default function PartnerPage() {
             </div>
             <div className="partner-page-cards">
               {(subpageData[0].cards || []).map((card) => (
-                <div key={card.id} className={`partner-page-card ${card.type}`}>
+                <div
+                  key={card.id}
+                  className={`partner-page-card ${card.type}`}
+                  onClick={() => setFormType(card.id)}
+                  onKeyDown={() => setFormType(card.id)}
+                  aria-hidden="true"
+                >
                   {card.img ? <img src={card.img} alt={card.alt} /> : null}
                   <h4>{card.title}</h4>
                   {card.smalltext ? <p>{card.smalltext}</p> : null}
@@ -86,6 +99,57 @@ export default function PartnerPage() {
                 </div>
               ))}
             </div>
+            {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
+              <div className="partner-dynamic-content">
+                <h5>No que podemos melhorar</h5>
+                <div className="rounded-border-box">
+                  <navbar className="partner-page-navigation">
+                    <div>
+                      <NavLink to="#cidadao">Cidadão</NavLink>
+                    </div>
+                    <div>
+                      <NavLink to="#membro">Membro/Servidor</NavLink>
+                    </div>
+                  </navbar>
+                  <form className="partner-contact-form">
+                    <div className="inputs-box">
+                      <label htmlFor="nome">
+                        Nome
+                        <input type="text" id="nome" name="nome" />
+                      </label>
+                      <label htmlFor="email">
+                        E-mail
+                        <input type="text" id="email" name="email" />
+                      </label>
+                    </div>
+                    <div className="inputs-box">
+                      <label htmlFor="dataNascimento">
+                        Data de nascimento
+                        <input type="text" id="dataNascimento" name="dataNascimento" />
+                      </label>
+                      <label htmlFor="sexo">
+                        Sexo
+                        <input type="text" id="sexo" name="sexo" />
+                      </label>
+                      <label htmlFor="profissao">
+                        Profissão / Ocupação
+                        <input type="text" id="profissao" name="profissao" />
+                      </label>
+                    </div>
+                    <div className="inputs-box">
+                      <textarea placeholder="No que podemos melhorar?" />
+                    </div>
+                  </form>
+                </div>
+                <div className="partner-contact-form-action">
+                  <button type="button" className="partner-contact-button">
+                    enviar
+                    {' '}
+                    {formType}
+                  </button>
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
