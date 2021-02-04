@@ -18,14 +18,16 @@ export default function Produto() {
         <p>{header.subtitle}</p>
       </div>
       <div className="productPage-bodyFilling" />
-      <h1 className="productPage-body-title">{title}</h1>
-      <div className="productPage-body-service">
-        <p>{service}</p>
-        <span>Serviço</span>
-      </div>
-      <div className="productPage-body-organ">
-        <p>{organ}</p>
-        <span>Orgão Responsável</span>
+      <div className="productPage-body-main">
+        <h1>{title}</h1>
+        <div className="productPage-body-service">
+          <p>{service}</p>
+          <span>Serviço</span>
+        </div>
+        <div className="productPage-body-organ">
+          <p>{organ}</p>
+          <span>Orgão Responsável</span>
+        </div>
       </div>
     </article>
   );
