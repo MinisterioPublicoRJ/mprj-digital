@@ -1,3 +1,14 @@
 export { default as ButtonHeader } from './buttonHeaderItem/ButtonHeader';
 export { default as NavHeader } from './navHeaderItem/NavHeader';
 export { default as BgHeader } from './bgHeaderItem/BgHeader';
+export { default as FAROLBG } from '../../assets/ImgsHeader/bg-farol.png';
+export { default as MPBG } from '../../assets/ImgsHeader/bg-mp.png';
+export { default as PARQUET } from '../../assets/ImgsHeader/bg-parquet.png';
+export { default as ARROW } from '../../assets/ImgsHeader/arrow.png';
+export { default as REPOSITORIO } from '../../assets/ImgsHeader/grupo.png';
+export { default as SEARCH } from '../../assets/ImgsHeader/search.png';
+export { default as CLOCK } from '../../assets/ImgsHeader/clock.png';
+export { default as FAROL } from '../../assets/ImgsHeader/farol.png';
+export { default as PLANILHA } from '../../assets/ImgsHeader/planilhas.png';
+export { default as DOCS } from '../../assets/ImgsHeader/docs.png';
+export { default as ROBOT } from '../../assets/ImgsHeader/robot.png';
