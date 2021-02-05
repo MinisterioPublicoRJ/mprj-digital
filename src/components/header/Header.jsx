@@ -10,7 +10,7 @@ export default function Header() {
   const [changeData, setchangeData] = useState('MPRJDigital');
 
   return (
-    <header {...MOCKPRODUTOSHEADER.find((img) => img.id === changeData)} className="header">
+    <header className="header">
       <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
       <div className="all-components">
         <section className="section-products">
