@@ -18,6 +18,8 @@ const PRODUCTS_CONST = {
     tabs: [
       {
         title: 'Porque?',
+        subtitle: 'O Farol',
+        info: 'Dados',
         header: 'Motivação da Plataforma',
         text:
           'Essa fase foca em estabelecer um processo de medição das atividades das promotorias da área criminal e tem como produto o desenvolvimento de um relatório de monitoramento, com informações mensais acerca dos trabalhos das promotorias.​',
@@ -50,6 +52,8 @@ const PRODUCTS_CONST = {
     tabs: [
       {
         title: 'Porque?',
+        subtitle: 'O Parquet',
+        info: 'Dados',
         header: 'Motivação da Plataforma',
         text:
           'O Parquet Digital é uma solução que nasceu do trabalho coletivo de vários profissionais e setores do Ministério Público do Estado do Rio de Janeiro, e propõe uma significativa mudança de paradigma na atuação dos Promotores de Justiça.',

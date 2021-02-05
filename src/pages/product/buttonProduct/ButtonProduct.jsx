@@ -2,16 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ButtonProduct.css';
 
-export default function ButtonProduct({ titleBtn, onClick }) {
+export default function ButtonProduct({ titleBtn }) {
   return (
-    <div className="btns-products">
-      <button onClick={onClick} type="button">
-        {titleBtn}
-      </button>
-    </div>
+    <button className="btns-products" type="button">
+      {titleBtn}
+    </button>
   );
 }
 ButtonProduct.propTypes = {
   titleBtn: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
 };
