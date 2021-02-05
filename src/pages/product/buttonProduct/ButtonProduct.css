@@ -1,0 +1,13 @@
+.btns-products {
+    display: flex;
+}
+.btns-products button{
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    color:#263859;
+    font-size: 12px;
+
+}
