@@ -1,14 +1,18 @@
 import bgFarol from '../../assets/images/bgFarol.png';
 import bgParquet from '../../assets/images/bgParquet.png';
+import imgParquet from '../../assets/images/imgParquet.png';
+import imgFarol from '../../assets/images/imgFarol.png';
 import FarolIcon from '../../assets/svg/farolIcon';
 import ParquetIcon from '../../assets/svg/parquetIcon';
 
 const PRODUCTS_CONST = {
   farol: {
+    id: 'Farol',
     title: 'Farol',
     organ: 'CENPE/MPRJ',
-    service: 'Monitoramento das Promotorias de Investigação Penal',
     background: bgFarol,
+    imgUrl: imgFarol,
+    service: 'Monitoramento das Promotorias de Investigação Penal',
     header: {
       title: 'Análise da atuação das Promotorias de Justiça do MPRJ à luz da seara criminal',
       subtitle:
@@ -20,9 +24,9 @@ const PRODUCTS_CONST = {
         title: 'Porque?',
         subtitle: 'O Farol',
         info: 'Dados',
-        header: 'Motivação da Plataforma',
+        header: 'Por que?',
         text:
-          'Essa fase foca em estabelecer um processo de medição das atividades das promotorias da área criminal e tem como produto o desenvolvimento de um relatório de monitoramento, com informações mensais acerca dos trabalhos das promotorias.​',
+          'Fomentar a gestão comparada a partir da construção de indicadores é buscar por maior capacidade de resposta do MPRJ. O Farol permite olhar o mesmo parâmetro em diferentes unidades do MPRJ e sinalizar o que pode ser aprimorado. Estabelecer a medição e o acompanhamento das atividades ministeriais, incentivando uma atuação resolutiva por meio do emprego de evidências científicas nas tomadas de decisão é algo inédito entre os Ministérios Públicos do Brasil. ',
       },
       {
         title: 'O Farol',
@@ -39,10 +43,12 @@ const PRODUCTS_CONST = {
     ],
   },
   parquet_digital: {
+    id: 'ParquetDigital',
     title: 'Parquet Digital',
     organ: 'MP em Mapas',
     service: 'Análise da Atuação das promotorias',
     background: bgParquet,
+    imgUrl: imgParquet,
     header: {
       title: 'Um robô em cada Promotoria, painel dinâmico para subsidiar a atuação dos Promotores',
       subtitle:

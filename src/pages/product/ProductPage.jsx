@@ -1,13 +1,15 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
-import ButtonProduct from './buttonProduct/ButtonProduct';
+import { useParams } from 'react-router-dom';
+import DataProduct from './dataProductItem/DataProductItem';
+import ButtonProduct from './buttonProductItem/ButtonProduct';
 import './ProductPage.css';
 import PRODUCTS_CONST from './productsConsts';
-import BUTTON_PRODUCT_DATA from './buttonProduct/buttonProductData';
+import BUTTON_PRODUCT_DATA from './buttonProductItem/buttonProductData';
 
 export default function Produto() {
   const { key } = useParams();
-  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[key];
+  const { background, header, title, service, organ } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
   const [changeData, setchangeData] = useState('Farol');
 
@@ -21,34 +23,26 @@ export default function Produto() {
       </div>
       <div className="productPage-body-main">
         {BUTTON_PRODUCT_DATA.map(({ id }) => (
-          <ButtonProduct key={id} titleBtn={id}>
-            {/* <NavLink to={`/parceiro/${key}`} type="button" /> */}
-          </ButtonProduct>
+          <ButtonProduct
+            onClick={() => {
+              setchangeData(id);
+            }}
+            key={id}
+            titleBtn={id}
+          />
         ))}
         <h1>{title}</h1>
-        <div className="productPage-bodyAllProducts">
+        <div className="productPage-bodyAll-Texts">
           <div className="productPage-bodyFilling">
             <p>{organ}</p>
             <span>Orgão Responsável</span>
-            <div className="productPage-bodyFilling-texts">
-              <p>{tabs[0].title}</p>
-              <span>{tabs[0].subtitle}</span>
-              <span>{tabs[0].info}</span>
-            </div>
           </div>
           <div className="productPage-body-organ">
             <p>{service}</p>
             <span>Serviço</span>
-            <div className="productPage-body-organ-texts">
-              <h3>{tabs[0].header}</h3>
-              <span>{tabs[0].text}</span>
-            </div>
-          </div>
-          <div className="productPage-body-service">
-            <p>{organ}</p>
-            <span>Orgão Responsável</span>
           </div>
         </div>
+        <DataProduct {...PRODUCTS_CONST.find((btn) => btn.id === changeData)} />
       </div>
     </article>
   );

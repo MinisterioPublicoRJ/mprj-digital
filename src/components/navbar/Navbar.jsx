@@ -11,7 +11,7 @@ export default function Navbar() {
       <section className="navbar-links">
         <div className="tooltip">
           <NavLink
-            to="/produto"
+            to="/produto/"
             type="button"
             className="dropbtn"
             activeStyle={{ color: '#263859' }}

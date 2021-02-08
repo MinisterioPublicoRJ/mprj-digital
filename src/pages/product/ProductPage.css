@@ -14,24 +14,6 @@
   grid-row: 1 / 3;
   grid-column: 1 / 6;
 }
-.productPage-bodyFilling {
-  text-align: left;
-}
-.productPage-bodyFilling-texts {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-.productPage-bodyAllProducts {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 30px;
-}
-.productPage-body-organ-texts{
-  text-align: left;
-  max-width: 360px;
-}
 .productPage-presentation {
   align-items: center;
   color: white;
@@ -53,6 +35,20 @@
   color: white;
   font-size: var(--smallFont);
 }
+
+.productPage-bodyFilling {
+  margin-left: 80px;
+}
+.productPage-body-organ{
+  margin-left: 200px;
+}
+
+.productPage-bodyAll-Texts {
+  display: flex;
+  text-align: center;
+  margin-top: 30px;
+}
+
 .productPage-body-main span {
   color: var(--lightGray);
   font-family: Roboto, regular;
@@ -67,18 +63,4 @@
 .productPage-body-main h3 {
   color: var(--darkBlue);
   font: normal normal 300 24px Roboto;
-}
-.productPage-vara-criminal button{
-    display: flex;
-    border: none;
-    cursor: pointer;
-    background-color: #0000001A;
-    outline: none;
-    box-shadow: 0px 20px 40px #0000001A;
-    opacity: 1;
-    margin-top: 10px;
-    height: 40px;
-    width: 150px;
-    border-radius: 5px;
-    text-align: center;
 }

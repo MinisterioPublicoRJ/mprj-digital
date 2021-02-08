@@ -1,0 +1,28 @@
+.productPage-body-service{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px 0px rgba(199,192,192,0.75);
+    opacity: 1;
+}
+.productPage-body-service img{
+    width: 220px;
+    height: 220px;
+}
+.productPage-body-service-all button{
+    width: 190px;
+    height: 35px;
+    margin-top: 10px;
+    margin-right: 50px;
+    background-color: #263859;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px #00000033;
+    outline: none;
+}
+.productPage-bodyFilling-texts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 150px;
+  }
+  
