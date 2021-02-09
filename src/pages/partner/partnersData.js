@@ -9,6 +9,11 @@ import SUBADM from '../../assets/logos/subadm.png';
 import SUBPLAN from '../../assets/logos/subplan.png';
 import IEP from '../../assets/logos/iep.png';
 
+import GEAR from '../../assets/gearIcon.svg';
+import BIGDATA from '../../assets/bigDataIcon.svg';
+import DATASCIENCE from '../../assets/dataScienceIcon.svg';
+import GEOTAG from '../../assets/geoReferenceIcon.svg';
+
 export const PARTNERS_CONST = [
   {
     id: 'cadg',
@@ -48,11 +53,11 @@ export const PARTNERS_CONST = [
               'Uma equipe com profissionais de vários ramos do conhecimento permite a entrega de soluções de maior valor. A diversidade da equipe auxilia desde a melhor identificação do problema até a elaboração da melhor visualização final.',
             link: '',
             call: '',
-            img: CADG,
+            img: GEAR,
             alt: 'Img alt',
           },
           {
-            id: 'big-ata',
+            id: 'big-data',
             type: 'first',
             background: 'transparent',
             title: 'Big Data',
@@ -60,7 +65,7 @@ export const PARTNERS_CONST = [
               'Para realizar as análises e chegar às soluções, trabalhamos com grandes quantidades de dados, que vêm tanto de bases internas do MPRJ quanto de parceiros externos e definem o valor das soluções. Para trabalhar isso tudo, utilizamos uma infraestrutura consistente.',
             link: '',
             call: '',
-            img: CADG,
+            img: BIGDATA,
             alt: 'Img alt',
           },
           {
@@ -72,7 +77,7 @@ export const PARTNERS_CONST = [
               'Mais do que ter dados, aplicamos análises que extraem inteligência deles. O objetivo é conseguir descrever cenários e hipóteses e entregar visualizações de fácil compreensão.',
             link: '',
             call: '',
-            img: CADG,
+            img: DATASCIENCE,
             alt: 'Img alt',
           },
           {
@@ -84,7 +89,7 @@ export const PARTNERS_CONST = [
               'Além de análises de dados que descrevem cenários situados no tempo, um pilar da CADG é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
             link: '',
             call: '',
-            img: CADG,
+            img: GEOTAG,
             alt: 'Img alt',
           },
         ],
