@@ -9,7 +9,7 @@ import BUTTON_PRODUCT_DATA from './buttonProductItem/buttonProductData';
 
 export default function Produto() {
   const { key } = useParams();
-  const { background, header, title, service, organ } = PRODUCTS_CONST[key];
+  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
   const [changeData, setchangeData] = useState('Farol');
 
@@ -42,7 +42,7 @@ export default function Produto() {
             <span>Serviço</span>
           </div>
         </div>
-        <DataProduct {...PRODUCTS_CONST.find((btn) => btn.id === changeData)} />
+        <DataProduct {...tabs[0]} />
       </div>
     </article>
   );
