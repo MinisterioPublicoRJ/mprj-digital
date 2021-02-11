@@ -3,10 +3,15 @@
     flex-direction: column;
     box-shadow: 0px 10px 10px 0px rgba(199,192,192,0.75);
     opacity: 1;
+    margin-top: -50px;
 }
 .productPage-body-service img{
-    width: 220px;
-    height: 220px;
+    width: 210px;
+    height: 210px;
+}
+.productPage-body-organ-texts {
+    text-align: left;
+    max-width: 500px;
 }
 .productPage-body-service-all button{
     width: 190px;
@@ -19,10 +24,5 @@
     box-shadow: 0px 10px 20px #00000033;
     outline: none;
 }
-.productPage-bodyFilling-texts {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-right: 150px;
-  }
+
   

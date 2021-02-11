@@ -19,10 +19,11 @@
   color: white;
   display: flex;
   flex-direction: column;
-  grid-row: 1 / 2;
+  grid-row: 1 / 1;
   grid-column: 2 / 5;
   padding: 5% 15% 0 15%;
   text-align: center;
+  margin-bottom: 20px;
 }
 .productPage-body-main {
   background-color: white;
@@ -39,14 +40,23 @@
 .productPage-bodyFilling {
   margin-left: 80px;
 }
-.productPage-body-organ{
-  margin-left: 200px;
+.productPage-body-organ {
+  margin-right: 100px;
 }
-
+.productPage-body-main-links{
+  font-size: 12px;
+  color:#263859;
+  margin-left: 10px;
+}
 .productPage-bodyAll-Texts {
   display: flex;
   text-align: center;
   margin-top: 30px;
+  justify-content: space-between;
+}
+.productPage-section-buttons{
+  display: flex;
+  justify-content: space-between;
 }
 
 .productPage-body-main span {
@@ -54,13 +64,41 @@
   font-family: Roboto, regular;
   font-size: var(--defaultFontSize);
   margin-top: 20px;
+  text-align: left;
 
 }
 .productPage-body-main p {
   color: var(--darkBlue);
   font-family: Roboto;
+  text-align: left;
+  margin-top: 20px;
 }
 .productPage-body-main h3 {
   color: var(--darkBlue);
   font: normal normal 300 24px Roboto;
+}
+.btns-product {
+  display: flex;
+  flex-direction: column;
+  color:#263859;
+  font-size: 12px;
+  text-align: left ; 
+  margin-top: 52px;
+}
+.btn-product-text{
+  font-family: Roboto, regular;
+  font-size: var(--defaultFontSize);
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: -5px;
+  margin-top: 20px;
+  color: var(--darkBlue);
+}
+.btn-product-text:hover{
+  color: #9DAFBD;
+  
 }
