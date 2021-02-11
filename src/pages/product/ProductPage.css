@@ -1,7 +1,7 @@
 .productPage-outer {
   display: grid;
   grid-template-columns: 15% 17% 36% 17% 15%;
-  grid-template-rows: 40% 20% 12% 28%;
+  grid-template-rows: 38% 30% 12% 28%;
   /* fits the whole page in the fold but the footer under it */
   height: calc(100vh - var(--navbarHeight));
   margin-top: var(--navbarHeight);

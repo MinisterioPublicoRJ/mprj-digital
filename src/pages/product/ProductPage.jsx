@@ -7,7 +7,7 @@ import PRODUCTS_CONST from './productsConsts';
 
 export default function Produto() {
   const { key } = useParams();
-  const { background, header, title, id, subpages, service, organ, tabs } = PRODUCTS_CONST[key];
+  const { background, header, title, subpages, service, organ, tabs } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
   const [changeData, setchangeData] = useState('Farol');
 
@@ -45,23 +45,21 @@ export default function Produto() {
         </div>
         <div className="productPage-section-buttons">
           <div className="btns-product">
-            <button className="btn-product-text" type="button">
-              {tabs[0].title}
-            </button>
-            <button
-              onClick={() => {
-                setchangeData(id);
-              }}
-              className="btn-product-text"
-              type="button"
-            >
-              {tabs[0].product}
-            </button>
-            <button className="btn-product-text" type="button">
-              {tabs[0].subtitle}
-            </button>
+            {tabs.map(({ id, subtitle }) => (
+              <div key={id}>
+                <button
+                  onClick={() => {
+                    setchangeData(id);
+                  }}
+                  className="btn-product-text"
+                  type="button"
+                >
+                  {subtitle}
+                </button>
+              </div>
+            ))}
           </div>
-          <DataProduct {...tabs.find((btn) => btn.id === changeData)} />
+          <DataProduct {...tabs.find((tab) => tab.id === changeData)} />
         </div>
       </div>
     </article>

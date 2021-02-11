@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './DataProductItem.css';
 
-export default function DataProductItem({ header, text, imgUrl, title }) {
+export default function DataProductItem({ header, text, imgUrl, id }) {
   return (
     <div className="productPage-bodyAll-Texts">
       <div className="productPage-body-organ-texts">
@@ -11,16 +11,16 @@ export default function DataProductItem({ header, text, imgUrl, title }) {
       </div>
       <div className="productPage-body-service-all">
         <div className="productPage-body-service">
-          <img src={imgUrl} alt={title} />
+          <img src={imgUrl} alt={id} />
         </div>
-        <button type="button">{title}</button>
+        <button type="button">{id}</button>
       </div>
     </div>
   );
 }
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };

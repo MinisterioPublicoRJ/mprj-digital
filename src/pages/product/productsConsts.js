@@ -7,7 +7,6 @@ import ParquetIcon from '../../assets/svg/parquetIcon';
 
 const PRODUCTS_CONST = {
   farol: {
-    id: 'Farol',
     title: 'Farol',
     organ: 'CENPE/MPRJ',
     background: bgFarol,
@@ -34,28 +33,32 @@ const PRODUCTS_CONST = {
     ],
     tabs: [
       {
+        id: 'Farol',
         imgUrl: imgFarol,
         header: 'Por que?',
-        title: 'Por que ?',
-        subtitle: 'Dados',
-        product: 'O Farol',
+        subtitle: 'Por que ?',
         text:
           'Fomentar a gestão comparada a partir da construção de indicadores é buscar por maior capacidade de resposta do MPRJ. O Farol permite olhar o mesmo parâmetro em diferentes unidades do MPRJ e sinalizar o que pode ser aprimorado. Estabelecer a medição e o acompanhamento das atividades ministeriais, incentivando uma atuação resolutiva por meio do emprego de evidências científicas nas tomadas de decisão é algo inédito entre os Ministérios Públicos do Brasil. ',
       },
       {
-        header: 'Eixo Apoio ao Uso',
+        id: 'Transparencia',
+        imgUrl: imgFarol,
+        header: 'O Farol',
+        subtitle: 'O Farol',
         text:
-          'Essa fase tem como objetivo incentivar o uso do Relatório de Monitoramento Farol como instrumento de aporte para a tomada de decisão no nível estratégico dentro MRPJ. ​',
+          'O Farol procura lançar luz sobre as Promotorias e preconiza a transparência ativa a fim de aprimorar a comunicação do MPRJ com a sociedade. Dentre seus produtos está o Relatório de Gestão, no qual encontram-se estatísticas como taxas de denúncia e de arquivamento pelo MPRJ, bem como a evolução dos indicadores ao longo do tempo, permitindo compará-los entre comarca, área de atribuição e Promotorias.',
       },
       {
+        id: 'Diagnostico',
+        imgUrl: imgFarol,
         header: 'Eixo Transparência',
+        subtitle: 'Dados ?',
         text:
           'Essa fase tem como intuito aprimorar o diálogo com a sociedade e estruturar um sistema de transparência ativa dos resultados obtidos pelas promotorias.​',
       },
     ],
   },
   parquet_digital: {
-    id: 'ParquetDigital',
     title: 'Parquet Digital',
     organ: 'MP em Mapas',
     service: 'Análise da Atuação das promotorias',
@@ -82,21 +85,26 @@ const PRODUCTS_CONST = {
     ],
     tabs: [
       {
+        id: 'ParquetDigital',
         imgUrl: imgParquet,
         header: 'Motivação da Plataforma',
-        title: 'Por que ?',
-        subtitle: 'Dados',
-        product: 'O Parquet',
+        subtitle: 'Por que?',
         text:
           'O Parquet Digital é uma solução que nasceu do trabalho coletivo de vários profissionais e setores do Ministério Público do Estado do Rio de Janeiro, e propõe uma significativa mudança de paradigma na atuação dos Promotores de Justiça.',
       },
       {
+        id: 'Robo',
+        imgUrl: imgParquet,
         header: 'O Painel e o Robô',
+        subtitle: 'O Parquet Digital',
         text:
           'Esta ferramenta agrega bastante valor em vários momentos da rotina deste profissional com o propósito de trazer mais inteligência nos processos que podem ser automatizados aumentando assim o poder analítico do operador público da lei.',
       },
       {
+        id: 'Dados',
+        imgUrl: imgParquet,
         header: 'A base das análises',
+        subtitle: 'Os Dados',
         text:
           'Esperamos que a forma que a plataforma se expresse reflita diretamente os valores do Ministério Público e toda a grandeza do trabalho realizado pela instituição. Tudo foi pensado e escolhido visando os nosso usuários em primeiro lugar, fornecendo assim um melhor entendimento da sua mesa de trabalho, com um navegação facilitada e entregando o maior valor possível com um produto que agrega informação, estratégia e inteligência baseada em evidências.',
       },
