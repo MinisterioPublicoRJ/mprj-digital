@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import DataProduct from './dataProductItem/DataProductItem';
 import './ProductPage.css';
@@ -9,7 +9,9 @@ export default function Produto() {
   const { key } = useParams();
   const { background, header, title, subpages, service, organ, tabs } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
-  const [changeData, setchangeData] = useState(tabs[0].id);
+  const [changeData, setchangeData] = useState();
+
+  useEffect(() => setchangeData(tabs[0].id), [tabs]);
 
   return (
     <article className="productPage-outer">
