@@ -9,7 +9,7 @@ export default function Produto() {
   const { key } = useParams();
   const { background, header, title, subpages, service, organ, tabs } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
-  const [changeData, setchangeData] = useState('Farol');
+  const [changeData, setchangeData] = useState(tabs[0].id);
 
   return (
     <article className="productPage-outer">
@@ -20,17 +20,19 @@ export default function Produto() {
         <p>{header.subtitle}</p>
       </div>
       <div className="productPage-body-main">
-        {subpages.map((subpage) => (
-          <div key={subpage.id}>
-            <NavLink
-              className="productPage-subPage-link"
-              activeClassName="active"
-              to={`/parceiro/${key}/${subpage.id}`}
-            >
-              {subpage.titleBtn}
-            </NavLink>
-          </div>
-        ))}
+        <div className="productPage-section-subpages">
+          {subpages.map((subpage) => (
+            <div key={subpage.id}>
+              <NavLink
+                className="productPage-subPage-link"
+                activeClassName="active"
+                to={`/parceiro/${key}/${subpage.id}`}
+              >
+                {subpage.titleBtn}
+              </NavLink>
+            </div>
+          ))}
+        </div>
         <h1>{title}</h1>
         <div className="productPage-bodyAll-Texts">
           <div className="productPage-bodyFilling">
@@ -54,7 +56,7 @@ export default function Produto() {
                   className="btn-product-text"
                   type="button"
                 >
-                  {subtitle}
+                  <span>{subtitle}</span>
                 </button>
               </div>
             ))}

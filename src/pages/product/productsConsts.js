@@ -1,9 +1,13 @@
 import bgFarol from '../../assets/images/bgFarol.png';
 import bgParquet from '../../assets/images/bgParquet.png';
 import imgParquet from '../../assets/images/imgParquet.png';
+import ParquetIcon from '../../assets/svg/parquetIcon';
 import imgFarol from '../../assets/images/imgFarol.png';
 import FarolIcon from '../../assets/svg/farolIcon';
-import ParquetIcon from '../../assets/svg/parquetIcon';
+import imgRobo from '../../assets/images/imgRobo.png';
+import imgSuaMesa from '../../assets/images/imgSuaMesa.png';
+import imgVaras from '../../assets/images/imgVarasCriminais.png';
+import imgDiagnostico from '../../assets/images/imgDiagnostico.png';
 
 const PRODUCTS_CONST = {
   farol: {
@@ -34,7 +38,8 @@ const PRODUCTS_CONST = {
     tabs: [
       {
         id: 'Farol',
-        imgUrl: imgFarol,
+        textBtn: 'Baixar Farol',
+        imgUrl: imgVaras,
         header: 'Por que?',
         subtitle: 'Por que ?',
         text:
@@ -42,6 +47,7 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'Transparencia',
+        textBtn: 'Baixar Farol',
         imgUrl: imgFarol,
         header: 'O Farol',
         subtitle: 'O Farol',
@@ -50,16 +56,17 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'Diagnostico',
-        imgUrl: imgFarol,
-        header: 'Eixo Transparência',
+        textBtn: 'Baixar Farol',
+        imgUrl: imgDiagnostico,
+        header: 'Acesse os dados do Farol.',
         subtitle: 'Dados ?',
-        text:
-          'Essa fase tem como intuito aprimorar o diálogo com a sociedade e estruturar um sistema de transparência ativa dos resultados obtidos pelas promotorias.​',
+        text: 'Acesse os dados do Farol.​',
       },
     ],
   },
   parquet_digital: {
     title: 'Parquet Digital',
+    subId: 'Farol',
     organ: 'MP em Mapas',
     service: 'Análise da Atuação das promotorias',
     background: bgParquet,
@@ -86,6 +93,7 @@ const PRODUCTS_CONST = {
     tabs: [
       {
         id: 'ParquetDigital',
+        textBtn: 'Acessar o Parquet Digital',
         imgUrl: imgParquet,
         header: 'Motivação da Plataforma',
         subtitle: 'Por que?',
@@ -94,7 +102,8 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'Robo',
-        imgUrl: imgParquet,
+        textBtn: 'Acessar o Parquet Digital',
+        imgUrl: imgRobo,
         header: 'O Painel e o Robô',
         subtitle: 'O Parquet Digital',
         text:
@@ -102,7 +111,8 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'Dados',
-        imgUrl: imgParquet,
+        textBtn: 'Acessar o Parquet Digital',
+        imgUrl: imgSuaMesa,
         header: 'A base das análises',
         subtitle: 'Os Dados',
         text:

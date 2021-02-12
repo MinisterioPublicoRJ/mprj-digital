@@ -9,20 +9,24 @@
     width: 210px;
     height: 210px;
 }
+.productPage-Data{
+    display: flex;
+}
 .productPage-body-organ-texts {
     text-align: left;
+    margin-right: 50px;
     max-width: 500px;
 }
 .productPage-body-service-all button{
     width: 190px;
     height: 35px;
     margin-top: 10px;
-    margin-right: 50px;
     background-color: #263859;
     color: white;
     border-radius: 5px;
     box-shadow: 0px 10px 20px #00000033;
     outline: none;
+    margin-right: 20px;
 }
 
   
