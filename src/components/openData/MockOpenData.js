@@ -1,6 +1,6 @@
 const OPENDATA = [
   {
-    title: 'BaseFAROLCriminal_Acervo',
+    title: 'BaseFAROL_Criminal_Acervo',
     description:
       'Compila números absolutos do volume atual do acervo (documentos abertos) das Promotorias de Justiça com atribuição criminal por ano de cadastro do documento no banco de dados institucional. Periodicidade mensal. Unidade de análise: promotoria.',
     owner: 'CENPE/MPRJ',
