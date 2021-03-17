@@ -6,7 +6,7 @@ import Logo from '../../assets/logo';
 export default function Navbar() {
   return (
     <navbar className="navbar">
-      <Logo alt="logo" />
+      <Logo alt="logo" className="logo" />
       <section className="navbar-links">
         <div className="tooltip">
           <a href="#mprjDigital" className="dropdow-button">

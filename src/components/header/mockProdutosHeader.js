@@ -1,39 +1,62 @@
-import farolBg from '../../assets/ImgsHeader/bg-farol.png';
-import mpBg from '../../assets/ImgsHeader/bg-mp.png';
-import CLOCK from '../../assets/arrow';
-import REPOSITORIO from '../../assets/repositorio';
-import SEARCH from '../../assets/search';
-import ARROW from '../../assets/clock';
-import FAROL from '../../assets/farol';
+import {
+  FAROLBG,
+  MPBG,
+  PARQUET,
+  FAROL,
+  PLANILHA,
+  ARROW,
+  REPOSITORIO,
+  SEARCH,
+  CLOCK,
+  DOCS,
+  ROBOT,
+} from './index';
 
 export const MOCKPRODUTOSHEADER = [
   {
-    id: 'farolBg',
-    imgBg: farolBg,
-    img: REPOSITORIO,
+    id: 'MPRJDigital',
+    imgBg: MPBG,
+    colorBtn: '#6792FF',
+    corTitleBtn: '#FFF',
+    titleBtn: 'Procurar',
+    icon1: REPOSITORIO,
     title1: 'Repositório',
-    imgIcon2: SEARCH,
+    icon2: SEARCH,
     title2: 'Nome da Base',
-    imgIcon3: ARROW,
+    icon3: ARROW,
     title3: 'Qualidade da Base',
-    imgIcon4: CLOCK,
+    icon4: CLOCK,
     title4: 'Última Atualização',
-    color: '#F3A04C',
-    background: '#F3A04C',
   },
   {
-    id: 'mpBg',
-    img: mpBg,
-    imgIcon1: FAROL,
+    id: 'Farol',
+    imgBg: FAROLBG,
+    colorBtn: '#F3A04C',
+    corTitleBtn: '#FFF',
+    titleBtn: 'Procurar',
+    icon1: FAROL,
     title1: 'Conheça o Farol',
-    imgIcon2: SEARCH,
+    icon2: PLANILHA,
     title2: 'Planilhas',
-    imgIcon3: ARROW,
+    icon3: DOCS,
     title3: 'Documentos',
-    imgIcon4: CLOCK,
+    icon4: DOCS,
     title4: 'Notas Técnicas',
-    color: '#6792FF',
-    background: '#6792FF',
+  },
+  {
+    id: 'ParquetDigital',
+    imgBg: PARQUET,
+    colorBtn: '#82D4FF',
+    corTitleBtn: '#FFF',
+    titleBtn: 'Procurar',
+    icon1: ROBOT,
+    title1: 'Um Robô em cada Promotoria',
+    icon2: PLANILHA,
+    title2: 'Perfil de Atuação',
+    icon3: DOCS,
+    title3: 'Documentos',
+    icon4: DOCS,
+    title4: 'Documentação',
   },
 ];
 export default MOCKPRODUTOSHEADER;
