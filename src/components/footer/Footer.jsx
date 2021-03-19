@@ -7,7 +7,7 @@ export default function Footer() {
     <div className="footer-outer" id="rodape">
       <div className="footer-menu">
         <div className="footer-menu-column">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo-footer" src={logo} alt="logo" />
           <span className="create-space">© Ministério Público do Estado do Rio de Janeiro</span>
           <div className="footer-menu-icons">
             <a
