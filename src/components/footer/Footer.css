@@ -7,7 +7,10 @@
   flex-direction: column;
   height: 30vh;
 }
-
+.logo{
+  width: 130px;
+  height: 40px;
+}
 .footer-menu {
   display: flex;
   flex-direction: row;
