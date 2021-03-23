@@ -10,31 +10,31 @@ export default function Navbar() {
       <Logo alt="logo" className="logo" />
       <section className="navbar-links">
         <div className="tooltip">
-          <NavLink
+          {/* <NavLink
             to="/produto/"
             type="button"
             className="dropbtn"
             activeStyle={{ color: '#263859' }}
           >
             O que é o MPRJ Digital?
-          </NavLink>
-          {/* <a href="#mprjDigital" className="dropdow-button">
+          </NavLink> */}
+          <a href="#mprjDigital" className="dropdow-button">
             O que é o MPRJ Digital?
-          </a> */}
+          </a>
           <span className="tooltiptext">Conheça a nossa visão de dados abertos</span>
         </div>
         <div className="tooltip">
-          <NavLink
+          <a href="#parceiros" className="dropdow-button">
+            Parceiros
+          </a>
+          {/* <NavLink
             to="/produto/"
             type="button"
             className="dropbtn"
             activeStyle={{ color: '#263859' }}
           >
             Parceiros
-          </NavLink>
-          {/* <a href="#parceiros" className="dropdow-button">
-            Parceiros
-          </a> */}
+          </NavLink> */}
         </div>
         {/* <div className="dropdown">
           <div className="tooltip">
@@ -56,17 +56,20 @@ export default function Navbar() {
         </div> */}
         <div className="dropdown">
           <div className="tooltip">
-            <NavLink
+            <a href="#produtos" className="dropbtn">
+              Produtos
+            </a>
+            {/* <NavLink
               to="/produto/"
               type="button"
               className="dropbtn"
               activeStyle={{ color: '#263859' }}
             >
               Produtos
-            </NavLink>
+            </NavLink> */}
             <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
             <div className="dropdown-content">
-              <NavLink
+              {/* <NavLink
                 to="/produto/farol"
                 type="button"
                 className="dropbtn"
@@ -81,14 +84,17 @@ export default function Navbar() {
                 activeStyle={{ color: '#263859' }}
               >
                 Parque Digital
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
         </div>
         <div className="tooltip">
-          <NavLink to="/produto/" className="dropbtn" activeStyle={{ color: '#263859' }}>
+          <a href="#repositorios" className="dropbtn">
             Repositórios
-          </NavLink>
+          </a>
+          {/* <NavLink to="/produto/" className="dropbtn" activeStyle={{ color: '#263859' }}>
+            Repositórios
+            </NavLink> */}
         </div>
         {/* <div className="dropdown">
           <div className="tooltip">
@@ -112,12 +118,12 @@ export default function Navbar() {
           </NavLink>
         </div> */}
         <div className="tooltip">
-          {/* <a href="#rodape" className="dropbtn">
+          <a href="#rodape" className="dropbtn">
             Dúvidas e Reclamações
-            </a> */}
-          <NavLink to="/produto/" className="dropbtn" activeStyle={{ color: '#263859' }}>
+          </a>
+          {/* <NavLink to="/produto/" className="dropbtn" activeStyle={{ color: '#263859' }}>
             Dúvidas e Reclamações
-          </NavLink>
+          </NavLink> */}
         </div>
         {/* <div className="tooltip">
           <NavLink className="dropdow-button" to="home">

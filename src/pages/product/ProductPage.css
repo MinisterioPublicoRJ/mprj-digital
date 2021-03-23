@@ -45,6 +45,19 @@
 }
 .productPage-section-subpages{
   display: flex;
+  font-size: 12px;
+  padding: 5px;
+}
+.productPage-section-subpages a{
+  margin: 8px;
+  text-decoration: none;
+  color: #263859;
+}
+.productPage-section-subpages a:hover{
+  color:#9DAFBD59;
+}
+.productPage-section-subpages a::after{
+  content: '>';
 }
 .productPage-bodyAll-Texts {
   display: flex;
