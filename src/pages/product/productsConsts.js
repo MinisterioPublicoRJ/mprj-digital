@@ -38,7 +38,8 @@ const PRODUCTS_CONST = {
     tabs: [
       {
         id: 'Farol',
-        textBtn: 'Baixar Farol',
+        textBtn: 'Acessar Farol',
+        url: 'https://j.mp/cadernoierbbfarol',
         imgUrl: imgVaras,
         header: 'Por que?',
         subtitle: 'Por que ?',
@@ -47,7 +48,8 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'Transparencia',
-        textBtn: 'Baixar Farol',
+        textBtn: 'Acessar Farol',
+        url: 'https://j.mp/cadernoierbbfarol',
         imgUrl: imgFarol,
         header: 'O Farol',
         subtitle: 'O Farol',
@@ -56,7 +58,8 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'Diagnostico',
-        textBtn: 'Baixar Farol',
+        textBtn: 'Acessar Farol',
+        url: 'https://j.mp/cadernoierbbfarol',
         imgUrl: imgDiagnostico,
         header: 'Acesse os dados do Farol.',
         subtitle: 'Dados ?',
@@ -94,6 +97,7 @@ const PRODUCTS_CONST = {
       {
         id: 'ParquetDigital',
         textBtn: 'Acessar o Parquet Digital',
+        url: 'https://parquetdigital.mprj.mp.br/#/login',
         imgUrl: imgParquet,
         header: 'Motivação da Plataforma',
         subtitle: 'Por que?',
@@ -103,6 +107,7 @@ const PRODUCTS_CONST = {
       {
         id: 'Robo',
         textBtn: 'Acessar o Parquet Digital',
+        url: 'https://parquetdigital.mprj.mp.br/#/login',
         imgUrl: imgRobo,
         header: 'O Painel e o Robô',
         subtitle: 'O Parquet Digital',
@@ -112,6 +117,7 @@ const PRODUCTS_CONST = {
       {
         id: 'Dados',
         textBtn: 'Acessar o Parquet Digital',
+        url: 'https://parquetdigital.mprj.mp.br/#/login',
         imgUrl: imgSuaMesa,
         header: 'A base das análises',
         subtitle: 'Os Dados',
