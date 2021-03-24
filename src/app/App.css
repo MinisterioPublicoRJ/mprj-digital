@@ -11,7 +11,9 @@
   --darkBlue: #263859;
   --lightGray: #9dafbd;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
