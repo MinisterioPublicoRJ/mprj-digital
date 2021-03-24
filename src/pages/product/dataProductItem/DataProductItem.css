@@ -1,0 +1,42 @@
+.productPage-body-service-main{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px 0px rgba(199,192,192,0.75);
+    opacity: 1;
+    margin-top: -50px;
+}
+.productPage-body-service img{
+    width: 210px;
+    height: 210px;
+}
+.productPage-Data{
+    display: flex;
+    justify-content: space-around;
+}
+.productPage-body-organ-texts {
+    text-align: left;
+    max-width: 450px;
+}
+.productPage-body-service button{
+    display: flex;
+    flex-direction: column;
+}
+.productPage-body-service a{
+    text-decoration: none;
+}
+.productPage-body-service button{
+    width: 190px;
+    height: 35px;
+    margin-top: 10px;
+    background-color: #263859;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px #00000033;
+    outline: none;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+
+  

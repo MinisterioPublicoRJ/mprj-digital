@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import './Navbar.css';
 import logo from '../../assets/logo1.png';
 
@@ -9,6 +10,14 @@ export default function Navbar() {
       <img className="logo" src={logo} alt="logo" />
       <section className="navbar-links">
         <div className="tooltip">
+          {/* <NavLink
+            to="/produto/"
+            type="button"
+            className="dropbtn"
+            activeStyle={{ color: '#263859' }}
+          >
+            O que é o MPRJ Digital?
+          </NavLink> */}
           <a href="#mprjDigital" className="dropdow-button">
             O que é o MPRJ Digital?
           </a>
@@ -18,6 +27,14 @@ export default function Navbar() {
           <a href="#parceiros" className="dropdow-button">
             Parceiros
           </a>
+          {/* <NavLink
+            to="/produto/"
+            type="button"
+            className="dropbtn"
+            activeStyle={{ color: '#263859' }}
+          >
+            Parceiros
+          </NavLink> */}
         </div>
         {/* <div className="dropdown">
           <div className="tooltip">
@@ -32,28 +49,52 @@ export default function Navbar() {
             </div>
           </div>
         </div> */}
-        <div className="tooltip">
+        {/* <div className="tooltip">
           <a href="#produtos" className="dropbtn">
             Produtos
           </a>
-        </div>
-        {/* <div className="dropdown">
+        </div> */}
+        <div className="dropdown">
           <div className="tooltip">
-            <a href="#produtos" type="button" className="dropbtn" id="basic-button">
+            <a href="#produtos" className="dropbtn">
               Produtos
             </a>
+            {/* <NavLink
+              to="/produto/"
+              type="button"
+              className="dropbtn"
+              activeStyle={{ color: '#263859' }}
+            >
+              Produtos
+            </NavLink> */}
             <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
             <div className="dropdown-content">
-              <NavLink to="/produto">Integra</NavLink>
-              <NavLink to="/produto">Farol</NavLink>
-              <NavLink to="/produto">Ouvidoria</NavLink>
+              {/* <NavLink
+                to="/produto/farol"
+                type="button"
+                className="dropbtn"
+                activeStyle={{ color: '#263859' }}
+              >
+                Farol
+              </NavLink>
+              <NavLink
+                to="/produto/parquet_digital"
+                type="button"
+                className="dropbtn"
+                activeStyle={{ color: '#263859' }}
+              >
+                Parque Digital
+              </NavLink> */}
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="tooltip">
           <a href="#repositorios" className="dropbtn">
             Repositórios
           </a>
+          {/* <NavLink to="/produto/" className="dropbtn" activeStyle={{ color: '#263859' }}>
+            Repositórios
+            </NavLink> */}
         </div>
         {/* <div className="dropdown">
           <div className="tooltip">
@@ -80,6 +121,9 @@ export default function Navbar() {
           <a href="#rodape" className="dropbtn">
             Dúvidas e Reclamações
           </a>
+          {/* <NavLink to="/produto/" className="dropbtn" activeStyle={{ color: '#263859' }}>
+            Dúvidas e Reclamações
+          </NavLink> */}
         </div>
         {/* <div className="tooltip">
           <NavLink className="dropdow-button" to="home">

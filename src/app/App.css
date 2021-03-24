@@ -6,6 +6,10 @@
 
   /* SPACING */
   --sectionVerticalPadding: 7vh;
+  --navbarHeight: 3vh;
+  --footerHeight: 30vh;
+  --darkBlue: #263859;
+  --lightGray: #9dafbd;
 }
 
 body {
@@ -15,7 +19,7 @@ body {
 }
 
 h1 {
-  color: #263859;
+  color: var(--darkBlue);
   font-family: Roboto;
   font-size: var(--titleFontSize);
   text-align: center;
@@ -25,14 +29,14 @@ h1 {
 }
 
 h6 {
-  color: #263859;
+  color: var(--darkBlue);
   font-size: var(--defaultFontSize);
   text-align: center;
   font-weight: normal;
 }
 
 p {
-  color: #9dafbd;
+  color: var(--lightGray);
   font-family: Roboto, regular;
   font-size: var(--defaultFontSize);
   text-align: center;
