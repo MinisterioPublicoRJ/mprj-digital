@@ -17,7 +17,9 @@
   font-family: Roboto, regular;
 }
 .logo{
-  position: absolute;
+  width: 130px;
+  height: 40px;
+  margin-top: -10px;
 }
 .dropdown-content {
   display: none;

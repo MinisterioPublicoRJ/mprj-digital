@@ -1,13 +1,13 @@
 import React from 'react';
 import './Footer.css';
-import Logo from '../../assets/logo';
+import logo from '../../assets/logo1.png';
 
 export default function Footer() {
   return (
     <div className="footer-outer" id="rodape">
       <div className="footer-menu">
         <div className="footer-menu-column">
-          <Logo alt="Logo MPRJ Digital" />
+          <img className="logo-footer" src={logo} alt="logo" />
           <span className="create-space">© Ministério Público do Estado do Rio de Janeiro</span>
           <div className="footer-menu-icons">
             <a
