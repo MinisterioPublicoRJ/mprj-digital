@@ -2,12 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './Navbar.css';
-import Logo from '../../assets/logo';
+import logo from '../../assets/logo1.png';
 
 export default function Navbar() {
   return (
     <navbar className="navbar">
-      <Logo alt="logo" className="logo" />
+      <img className="logo" src={logo} alt="logo" />
       <section className="navbar-links">
         <div className="tooltip">
           {/* <NavLink
