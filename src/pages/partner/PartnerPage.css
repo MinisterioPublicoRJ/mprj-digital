@@ -69,6 +69,9 @@ label {
   opacity: 1;
   text-decoration: none;
 }
+.partner-page-navigation a:hover {
+  color: #6792FF;
+}
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;
@@ -118,26 +121,27 @@ label {
   text-align: left;
 }
 .partner-page-right {
-  width: 50vw;
   margin: 0 3vw;
 }
 .partner-page-cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   margin: 30px 0px;
 }
 .partner-page-cards p{
-  text-align: center;
+  text-align: center !important;
+  margin: 0 !important;
 }
-.partner-page-cards p {
+/*.partner-page-cards p {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-}
+}*/
 .partner-page-cards .first {
   flex: 0 0 47%;
-  text-align-last: center;
+  text-align: center;
   margin-top: 20px;
 }
 .partner-page-cards .first-with-border {
@@ -150,11 +154,13 @@ label {
 .partner-page-cards .first p {
   -webkit-line-clamp: 6;
 }
+.partner-page-cards {
+  text-align: center;
+}
 .partner-page-cards .second {
-  flex: 0 0 21%;
+  flex: 0 0 20%;
   margin: 20px 4px;
-  padding: 5px 10px;
-  text-align-last: left;
+  text-align: center;
 }
 .partner-page-cards .second-with-border {
   flex: 0 0 21%;
@@ -172,9 +178,7 @@ label {
 .partner-page-cards .second img {
   width: 100%;
 }
-.partner-page-cards .second p {
-  text-align: left;
-}
+
 .partner-page-cards .second div {
   text-align-last: right;
 }
