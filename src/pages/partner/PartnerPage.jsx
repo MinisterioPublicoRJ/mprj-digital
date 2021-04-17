@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
-import { Partners } from '../../components';
+import { PartnersPageComponent } from '../../components';
 
 import { PARTNERS_CONST } from './partnersData';
 
@@ -147,7 +147,7 @@ export default function PartnerPage() {
           </div>
         </div>
       </section>
-      <Partners />
+      <PartnersPageComponent />
     </>
   );
 }
