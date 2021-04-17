@@ -2,7 +2,6 @@
   font-family: Roboto;
   display: grid;
   grid-gap: 30px;
-  height: 100vh;
   grid-template-areas:
     'mprjTexts mprjTexts mprjTexts mprjInfo mprjInfo mprjInfo';
 }
@@ -32,7 +31,8 @@
 }
 .mprjDigital-itemOuter {
   display: flex;
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .mprjDigital-itemOuter img{
   width: 70px;
