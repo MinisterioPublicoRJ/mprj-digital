@@ -2,21 +2,22 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  text-align: center;
   margin: auto;
   font-family: Roboto;
 }
 .openData-title {
-  text-align: center;
   margin-bottom: 5vh;
 }
 .openData-title h1 {
   letter-spacing: -1px;
+  text-align: left;
 }
 .openData-title p {
   letter-spacing: -0.5px;
   color: #9dafbd;
   opacity: 1;
+  text-align: left;
+
 }
 .openData-search {
   display: flex;

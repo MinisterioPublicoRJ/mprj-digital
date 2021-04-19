@@ -4,17 +4,17 @@
   padding: var(--sectionVerticalPadding) 20%;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
-
 .partners-outer h1 {
   color: white;
 }
-
+.partners-outer h1, p {
+  text-align: left;
+}
 .partners-header {
   flex: 1;
-  text-align: center;
 }
-
 .partners-itemList {
   align-items: center;
   display: grid;
@@ -23,11 +23,9 @@
   grid-gap: 7vw 5vw;
   flex: 2;
 }
-
 .partners-itemList a {
   cursor: default;
 }
-
 .partner-itemAnchor {
   background-position: center;
   background-size: contain;

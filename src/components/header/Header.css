@@ -7,7 +7,6 @@
   margin-top: -600px ;
 }
 .section-explore {
-  color: #d1dbe3;
   font-size: 30px;
   display: flex;
   flex-direction: column;
@@ -17,6 +16,7 @@
 .section-explore > h3 {
   margin-left: 35px;
   font-weight: normal;
+  color: #d1dbe3;
 }
 .section-info-explore {
   display: flex;
