@@ -1,10 +1,10 @@
 .section-products {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .section-products > button {
-  color: #d1dbe3;
+  color: #B1B1B1;
   font-family: 'Roboto', regular;
   font-size: 33px;
   border: none;
@@ -16,7 +16,7 @@
   margin-right: 20px;
 }
 .button-MPRJDigital:hover{
-  color:#6792FF;
+  color:#C99E50;
   opacity: 1;
   font-weight: bold;
 
@@ -29,7 +29,7 @@
 
 }
 .button-ParquetDigital:hover{
-  color:#82D4FF;
+  color:#C99E50;
   opacity: 1;
   font-weight: bold;
 }  

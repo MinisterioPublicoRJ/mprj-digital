@@ -8,12 +8,13 @@
 .mprjDigital-outer-text{
   grid-area: mprjTexts;
   margin: auto;
-  background-color: #333D47;
+  background-color: #6E2E2D;
   height: 386px;
+  border: 1px solid #707070;
 }
 .mprjDigital-outer-text h1{ 
   font-size: 3.375em;
-  color: #FFFFFF;
+  color: #C99E50;
 }
 .mprjDigital-outer-text p{ 
   font-size: 0.938em;
@@ -46,11 +47,14 @@
 .mprjDigital-itemOuter-text  { 
   display: flex;
   flex-direction: column;
-  width: 700px;
+  color: #222222;
 }
-
+.mprjDigital-itemOuter-text h6  { 
+  font-weight: bold;
+}
 .mprjDigital-itemOuter p, h6 { 
   text-align: left;
+  color: #222222;
 }
 .mprjDigital-itemOuter p { 
   margin-top: 0px;

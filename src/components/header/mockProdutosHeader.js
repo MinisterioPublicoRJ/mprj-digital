@@ -16,7 +16,7 @@ export const MOCKPRODUTOSHEADER = [
   {
     id: 'MPRJDigital',
     imgBg: MPBG,
-    colorBtn: '#6792FF',
+    colorBtn: '#C99E50',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
     icon1: REPOSITORIO,

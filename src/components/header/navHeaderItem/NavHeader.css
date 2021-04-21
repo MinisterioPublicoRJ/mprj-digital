@@ -3,12 +3,12 @@
     margin: 20px 20px 20px;
 }
 .section-info-products {
-    background-color: var(--backgroundBoxProdutos);
+    background-color: #702826;
     border-radius: 5px 5px 5px 5px;
     width: 890px;
     height: 70px;
     margin-left: 35px;
-    margin-top: 75px;
+    margin-top: -195px;
     display: flex;
     justify-content: space-around;
     box-shadow: 0px 30px 60px #0000004D;
@@ -21,6 +21,7 @@
     white-space: nowrap;
     margin: 2px;
     margin-right: 13px;
+    color: #B1B1B1;
 }
 .section-products-item button{
     border-radius: 5px;
