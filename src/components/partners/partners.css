@@ -1,16 +1,17 @@
 .partners-outer {
   background: url(../../assets/bg-parceiros.png);
-  height: 50vh;
+  height: 60vh;
   padding: var(--sectionVerticalPadding) 20%;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 .partners-outer h1 {
-  color: white;
+  color: #ffff;
 }
 .partners-outer h1, p {
   text-align: left;
+  color: #ffff;
 }
 .partners-header {
   flex: 1;

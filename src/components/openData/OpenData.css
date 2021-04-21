@@ -11,13 +11,13 @@
 .openData-title h1 {
   letter-spacing: -1px;
   text-align: left;
+  color: #311E1E;
 }
 .openData-title p {
   letter-spacing: -0.5px;
   color: #9dafbd;
   opacity: 1;
   text-align: left;
-
 }
 .openData-search {
   display: flex;
@@ -112,17 +112,18 @@ license {
   text-decoration: underline;
   font: normal normal medium 18px/26px Roboto Mono;
   letter-spacing: -0.5px;
-  color: #263859;
+  color: #311E1E;
   opacity: 1;
 }
 .openData-item description {
   text-align: left;
-  font: normal normal normal 14px/17px Roboto;
+  font-family: 'Roboto';
   letter-spacing: 0px;
   color: #9dafbd;
   opacity: 1;
   width: 48vw;
   margin-bottom: 5vh;
+  font-size: 14px;
 }
 .openData-item label {
   text-align: left;
@@ -162,10 +163,10 @@ license {
 .openData-button {
   width: 108px;
   height: 38px;
-  background: #263859 0% 0% no-repeat padding-box;
+  background: #6F2826 0% 0% no-repeat padding-box;
   border-radius: 5px;
   opacity: 1;
-  font: normal normal medium 16px/19px Roboto;
+  font: normal medium 16px Roboto;
   letter-spacing: -0.5px;
   color: #ffffff;
   align-self: flex-end;
@@ -173,4 +174,5 @@ license {
   margin-bottom: 25px;
   margin-right: 2vw;
   cursor: pointer;
+  border: #6F2826;
 }

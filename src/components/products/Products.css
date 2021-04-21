@@ -20,8 +20,8 @@
 .products h1 {
   font-weight: normal;
   text-align: left;
+  color: #311E1E;
 }
-
 .products button {
   cursor: pointer;
 }
@@ -30,8 +30,8 @@
   padding-top: 32px;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(320px, auto);
-  grid-column-gap: 6%;
-  column-gap: 6%;
+  grid-column-gap: 5%;
+  column-gap: 5%;
 }
 .products-filter-titles {
   font-size: 14px;

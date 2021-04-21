@@ -13,19 +13,21 @@ export default function Header() {
     <header className="header">
       <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
       <section className="section-products">
-        {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
-          <ButtonHeader
-            onClick={() => {
-              setchangeData(id);
-            }}
-            key={id}
-            title={title}
-            titleBtn={titleBtn}
-          />
-        ))}
-      </section>
-      <section className="section-info-products">
-        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+        <div className="section-products-btn">
+          {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
+            <ButtonHeader
+              onClick={() => {
+                setchangeData(id);
+              }}
+              key={id}
+              title={title}
+              titleBtn={titleBtn}
+            />
+          ))}
+        </div>
+        <section className="section-info-products">
+          <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+        </section>
       </section>
       <section className="section-explore">
         <div className="section-explore-texts">

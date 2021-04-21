@@ -30,7 +30,7 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'Farol',
-    imgBg: FAROLBG,
+    imgBg: MPBG,
     colorBtn: '#F3A04C',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
@@ -45,7 +45,7 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'ParquetDigital',
-    imgBg: PARQUET,
+    imgBg: MPBG,
     colorBtn: '#82D4FF',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',

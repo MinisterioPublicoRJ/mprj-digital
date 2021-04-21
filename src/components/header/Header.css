@@ -5,12 +5,19 @@
 }
 .section-products{
   position: absolute;
+  width: 100%;
+}
+.section-products-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 .section-explore {
   display: flex;
   flex: 1;
   justify-content: space-around;
-  margin-top: 150px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 .section-explore-texts {
   font-weight: normal;
