@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import styles from './PartnerPage.css';
-import { Partners } from '../../components';
+import './PartnerPage.css';
+import { PartnersPageComponent } from '../../components';
 
 import { PARTNERS_CONST } from './partnersData';
 
@@ -91,11 +90,6 @@ export default function PartnerPage() {
                   {card.img ? <img src={card.img} alt={card.alt} /> : null}
                   <h4>{card.title}</h4>
                   {card.smalltext ? <p>{card.smalltext}</p> : null}
-                  {card.link ? (
-                    <div>
-                      <a href={card.link}>{card.call}</a>
-                    </div>
-                  ) : null}
                 </div>
               ))}
             </div>
@@ -153,7 +147,7 @@ export default function PartnerPage() {
           </div>
         </div>
       </section>
-      <Partners />
+      <PartnersPageComponent />
     </>
   );
 }
