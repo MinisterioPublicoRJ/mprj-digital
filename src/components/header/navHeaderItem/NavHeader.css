@@ -37,3 +37,18 @@
     height: 22px;
     width: 23px;
 }
+@media only screen and (max-width: 600px) {
+    .section-info-products {
+        width: 450px;
+    }
+    .section-products-item img{
+        height: 15px;
+        width: 16px;
+    }
+    .section-info-products p {
+        font-size: 8px;
+    }
+  .section-products-item button {
+    width: 70px;
+  }
+}

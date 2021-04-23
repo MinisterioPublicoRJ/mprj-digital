@@ -30,9 +30,9 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'Farol',
-    imgBg: MPBG,
-    colorBtn: '#F3A04C',
-    corTitleBtn: '#FFF',
+    imgBg: FAROLBG,
+    colorBtn: '#CCB0A3',
+    corTitleBtn: '#FFFF',
     titleBtn: 'Procurar',
     icon1: FAROL,
     title1: 'Conheça o Farol',
