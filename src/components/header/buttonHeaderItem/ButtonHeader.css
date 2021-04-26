@@ -1,10 +1,5 @@
-.section-products {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-.section-products > button {
-  color: #d1dbe3;
+.section-products-btn > button {
+  color: #B1B1B1;
   font-family: 'Roboto', regular;
   font-size: 33px;
   border: none;
@@ -14,22 +9,20 @@
   outline: none;
   margin-left: 20px;
   margin-right: 20px;
+  opacity: 1;
 }
 .button-MPRJDigital:hover{
-  color:#6792FF;
+  color:#C99E50;
   opacity: 1;
   font-weight: bold;
-
 } 
 .button-Farol:hover{
-  color:#F3A04C;
+  color:#CCB0A3;
   opacity: 1;
   font-weight: bold;
-
-
 }
 .button-ParquetDigital:hover{
-  color:#82D4FF;
+  color: #82D4FF;
   opacity: 1;
   font-weight: bold;
 }  

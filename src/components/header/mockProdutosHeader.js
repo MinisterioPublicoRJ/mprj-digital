@@ -16,7 +16,7 @@ export const MOCKPRODUTOSHEADER = [
   {
     id: 'MPRJDigital',
     imgBg: MPBG,
-    colorBtn: '#6792FF',
+    colorBtn: '#C99E50',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
     icon1: REPOSITORIO,
@@ -31,8 +31,8 @@ export const MOCKPRODUTOSHEADER = [
   {
     id: 'Farol',
     imgBg: FAROLBG,
-    colorBtn: '#F3A04C',
-    corTitleBtn: '#FFF',
+    colorBtn: '#CCB0A3',
+    corTitleBtn: '#FFFF',
     titleBtn: 'Procurar',
     icon1: FAROL,
     title1: 'Conheça o Farol',
@@ -45,7 +45,7 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'ParquetDigital',
-    imgBg: PARQUET,
+    imgBg: MPBG,
     colorBtn: '#82D4FF',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',

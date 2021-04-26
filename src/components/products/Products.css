@@ -7,39 +7,32 @@
   font-family: Roboto;
   padding: var(--sectionVerticalPadding) 0px;
 }
-
 .products .mainPagination {
   display: none;
 }
-
 .products-title {
   margin: 12px 0;
 }
-
 .products p {
   color: #9dafbd;
-  margin: 12px 20%;
-  text-align: center;
+  text-align: left;
 }
-
 .products h1 {
   font-weight: normal;
+  text-align: left;
+  color: #311E1E;
 }
-
 .products button {
   cursor: pointer;
 }
-
 .all-products {
   display: grid;
-  /* padding: 32px 0px; */
   padding-top: 32px;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(320px, auto);
-  grid-column-gap: 6%;
-  column-gap: 6%;
+  grid-column-gap: 5%;
+  column-gap: 5%;
 }
-
 .products-filter-titles {
   font-size: 14px;
   display: flex;

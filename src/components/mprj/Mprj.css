@@ -2,21 +2,24 @@
   font-family: Roboto;
   display: grid;
   grid-gap: 30px;
-  height: 100vh;
   grid-template-areas:
     'mprjTexts mprjTexts mprjTexts mprjInfo mprjInfo mprjInfo';
 }
 .mprjDigital-outer-text{
   grid-area: mprjTexts;
   margin: auto;
-  background-color: #333D47;
+  background-color: #6E2E2D;
   height: 386px;
+  border: 1px solid #707070;
 }
 .mprjDigital-outer-text h1{ 
   font-size: 3.375em;
+  color: #C99E50;
 }
 .mprjDigital-outer-text p{ 
   font-size: 0.938em;
+  color: #FFFFFF;
+  margin-left: 30px;
 }
 .mprjDigital-outer-text h1, p{ 
   margin-right: 30px;
@@ -32,7 +35,8 @@
 }
 .mprjDigital-itemOuter {
   display: flex;
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .mprjDigital-itemOuter img{
   width: 70px;
@@ -43,13 +47,14 @@
 .mprjDigital-itemOuter-text  { 
   display: flex;
   flex-direction: column;
-  width: 700px;
+  color: #222222;
 }
-.mprjDigital-outer-text p, h1{ 
-  color: #FFFFFF;
+.mprjDigital-itemOuter-text h6  { 
+  font-weight: bold;
 }
 .mprjDigital-itemOuter p, h6 { 
   text-align: left;
+  color: #222222;
 }
 .mprjDigital-itemOuter p { 
   margin-top: 0px;

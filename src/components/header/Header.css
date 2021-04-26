@@ -1,71 +1,38 @@
 .header {
   display: flex;
   flex-direction: column;
-  margin-top: -130px;
+  position: relative;
 }
-.all-components{
-  margin-top: -600px ;
+.section-products{
+  position: absolute;
+  width: 100%;
+}
+.section-products-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 .section-explore {
-  color: #d1dbe3;
-  font-size: 30px;
   display: flex;
-  flex-direction: column;
   flex: 1;
-  justify-content: space-evenly;
-}
-.section-explore > h3 {
-  margin-left: 35px;
-  font-weight: normal;
-  color: #D1DBE3;
-}
-.section-info-explore {
-  display: flex;
-  align-items: center;
   justify-content: space-around;
-}
-.section-info-explore h3 {
-  color: var(--blueProdutos);
-  font-weight: normal;
-}
-.section-info-explore button {
-  background-color: var(--blueProdutos);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 120px;
-  height: 40px;
-  color: var(--white);
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 16px;
-  outline: none;
-}
-.section-info-explore p {
-  color: #9dafbd;
-  text-align: left;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 .section-explore-texts {
-  max-width: 400px;
-  border-bottom: 2px solid #d1dbe3;
+  font-weight: normal;
+  color: #702826;
+  max-width: 330px;
+  border-bottom: 2px solid #702826;
+}
+.section-explore-texts > h3 {
+  font-weight: normal;
+  color: #702826;
+  font-size: 30px;
+}
+.section-explore-texts > P {
+  color: #702826;
 }
 
-.section-explore-texts:hover {
-  border-bottom: 2px solid #6792ff;
-}
-.section-explore-texts p {
-  margin-left: 5px;
-}
-#btn-explore {
-  display: none;
-}
-.section-explore-texts:hover #btn-explore {
-  display: block;
-  -webkit-transition: 0.3s ease-in;
-  -moz-transition: 0.3s ease-in;
-  -o-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-.section-box-button {
-  display: flex;
-}
+
+

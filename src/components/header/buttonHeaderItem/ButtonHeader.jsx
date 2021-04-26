@@ -4,7 +4,7 @@ import './ButtonHeader.css';
 
 export default function ButtonHeader({ title, onClick, titleBtn }) {
   return (
-    <div className="section-products">
+    <div className="section-products-btn">
       <button className={`button-${titleBtn}`} onClick={onClick} type="button">
         {title}
       </button>
