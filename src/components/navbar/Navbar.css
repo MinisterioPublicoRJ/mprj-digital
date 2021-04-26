@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .navbar-links {
   display: flex;
@@ -12,7 +12,7 @@
   list-style: none;
   text-decoration: none;
   color: #6F2826;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-right: 10px;
   font-family: Roboto, regular;
 }
@@ -29,7 +29,7 @@
 }
 .dropdown-content a {
   padding: 8px 30px 4px 8px;
-  margin-left: 0px;
+  margin-left: 7px;
   text-decoration: none;
   display: block;
 }
@@ -49,7 +49,6 @@
   font-family: Roboto;
   outline: none;
   cursor: pointer;
-  width: 100px;
 }
 #basic-button:after {
   margin-left: 4px;
@@ -68,7 +67,7 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 156px;
-  background-color: #702826;
+  border: 1px solid #702826;
   text-align: center;
   border-radius: 6px;
   padding: 6px;
@@ -80,7 +79,7 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  color: #ffff;
+  color: #702826;
   font-family: Roboto, regular;
 }
 .tooltip .tooltiptext::after {
@@ -91,7 +90,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #702826 transparent transparent transparent;
+  border-color: #ffff #702826 #702826 #702826;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
