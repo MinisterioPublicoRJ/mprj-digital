@@ -11,81 +11,35 @@ export default function Navbar() {
       <img className="logo" src={logo} alt="logo" />
       <section className="navbar-links">
         <div className="tooltip">
-          {/* <NavLink
-            to="/produto/"
-            type="button"
-            className="dropbtn"
-            activeStyle={{ color: '#263859' }}
-          >
-            O que é o MPRJ Digital?
-          </NavLink> */}
           <a href="#mprjDigital" className="dropdow-button">
             O que é o MPRJ Digital?
           </a>
           <span className="tooltiptext">Conheça a nossa visão de dados abertos</span>
         </div>
-        <div className="tooltip">
-          <a href="#parceiros" className="dropdow-button">
-            Parceiros
-          </a>
-          {/* <NavLink
-            to="/produto/"
-            type="button"
-            className="dropbtn"
-            activeStyle={{ color: '#263859' }}
-          >
-            Parceiros
-          </NavLink> */}
-        </div>
-        {/* <div className="dropdown">
-          <div className="tooltip">
-            <a href="#parceiros" type="button" className="dropbtn" id="basic-button">
-              Parceiros
-            </a>
-            <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
-            <div className="dropdown-content">
-              <NavLink to="/produto">Gate</NavLink>
-              <NavLink to="/produto">Cenpe</NavLink>
-              <NavLink to="/produto">Csi</NavLink>
-            </div>
-          </div>
-        </div> */}
-        {/* <div className="tooltip">
-          <a href="#produtos" className="dropbtn">
-            Produtos
-          </a>
-        </div> */}
         <div className="dropdown">
           <div className="tooltip">
-            <a href="#produtos" className="dropbtn">
-              Produtos
-            </a>
-            {/* <NavLink
-              to="/produto/"
-              type="button"
-              className="dropbtn"
-              activeStyle={{ color: '#263859' }}
-            >
-              Produtos
-            </NavLink> */}
+            <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+              Parceiros
+            </NavLink>
             <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
             <div className="dropdown-content">
-              {/* <NavLink
-                to="/produto/farol"
-                type="button"
-                className="dropbtn"
-                activeStyle={{ color: '#263859' }}
-              >
+              <NavLink to="/parceiro/cadg">Cadg</NavLink>
+            </div>
+          </div>
+        </div>
+        <div className="dropdown">
+          <div className="tooltip">
+            <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+              Produtos
+            </NavLink>
+            <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
+            <div className="dropdown-content">
+              <NavLink to="/produto/farol" type="button" className="dropbtn">
                 Farol
               </NavLink>
-              <NavLink
-                to="/produto/parquet_digital"
-                type="button"
-                className="dropbtn"
-                activeStyle={{ color: '#263859' }}
-              >
+              <NavLink to="/produto/parquet_digital" type="button" className="dropbtn">
                 Parque Digital
-              </NavLink> */}
+              </NavLink>
             </div>
           </div>
         </div>
