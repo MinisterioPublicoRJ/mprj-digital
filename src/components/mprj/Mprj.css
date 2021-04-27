@@ -8,7 +8,7 @@
 .mprjDigital-outer-text{
   grid-area: mprjTexts;
   margin: auto;
-  background-color: #6E2E2D;
+  background-color: var(--mainColor);
   height: 386px;
   border: 1px solid #707070;
 }

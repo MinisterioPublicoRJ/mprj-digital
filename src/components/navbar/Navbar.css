@@ -90,7 +90,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #702826 transparent transparent transparent;
+  border-color: var(--secondColor) transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;

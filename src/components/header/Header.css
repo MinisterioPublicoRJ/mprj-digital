@@ -23,8 +23,7 @@
   font-weight: normal;
   color: var(--secondColor);
   max-width: 330px;
-  border-bottom: 2px solid #702826;
-
+  border-bottom: 2px solid var(--secondColor);
 }
 .section-explore-texts > h3 {
   font-weight: normal;
@@ -33,6 +32,7 @@
 }
 .section-explore-texts > P {
   color: var(--secondColor);
+  text-align: left;
 }
 @media (max-width: 1080px){
   .section-explore{

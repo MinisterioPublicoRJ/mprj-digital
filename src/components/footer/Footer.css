@@ -1,5 +1,5 @@
 .footer-outer {
-  background-color: #311E1E;
+  background-color: var(--backgroundFooter);
   position: relative;
   align-content: center;
   justify-content: center;
@@ -18,21 +18,18 @@
   align-self: center;
   margin-top: 30px;
 }
-
 .footer-menu-column {
   display: flex;
   flex-direction: column;
   margin: 0 2vw;
 }
-
 .footer-menu-column span {
   letter-spacing: -0.32px;
-  color: #ffffff;
+  color: var(--white);
   width: 12vw;
   margin-top: 1vh;
   font-size: var(--smallFont);
 }
-
 .footer-menu-column h3 {
   color: var(--blueLightProdutos);
   font-size: var(--defaultFontSize);
