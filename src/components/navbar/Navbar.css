@@ -29,7 +29,7 @@
 }
 .dropdown-content a {
   padding: 8px 30px 4px 0px;
-  margin-left: 14px;
+  margin-left: 1px;
   text-decoration: none;
   display: block;
 }
@@ -38,6 +38,7 @@
 }
 .dropdown:hover .dropdown-content {
   display: block;
+  margin-left: 14px;
 }
 #basic-button {
   background: transparent;
