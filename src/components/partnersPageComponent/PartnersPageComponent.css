@@ -1,8 +1,8 @@
 #partners-outer {
-  background-color:#1d2933;
+  background-color: #311E1E;
   height: 50vh;
   padding: var(--sectionVerticalPadding) 20%;
   display: flex;
   flex-direction: column;
-  opacity: 0.9;
+  opacity: 0.92;
 }

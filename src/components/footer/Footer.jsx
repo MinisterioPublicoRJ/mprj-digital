@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import logo from '../../assets/logoNovo.png';
+import logoOuvidoria from '../../assets/Ouvidoria.png';
 
 export default function Footer() {
   return (
@@ -66,7 +67,7 @@ export default function Footer() {
             rel="noreferrer"
             className="create-space"
           >
-            <img className="icon-ouvidoria" src="./Ouvidoria.png" alt="Logo Ouvidoria MPRJ" />
+            <img className="icon-ouvidoria" src={logoOuvidoria} alt="Logo Ouvidoria MPRJ" />
           </a>
         </div>
       </div>

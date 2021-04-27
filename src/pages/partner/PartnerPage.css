@@ -119,6 +119,8 @@ label {
 .partner-page-featured p,
 .partner-page-topics p {
   text-align: left;
+  color: #9dafbd;
+
 }
 .partner-page-right {
   margin: 0 3vw;
@@ -132,13 +134,8 @@ label {
 .partner-page-cards p{
   text-align: center !important;
   margin: 0 !important;
+  color: #9dafbd;
 }
-/*.partner-page-cards p {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}*/
 .partner-page-cards .first {
   flex: 0 0 47%;
   text-align: center;
