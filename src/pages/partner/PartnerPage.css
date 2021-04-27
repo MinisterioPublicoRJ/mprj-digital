@@ -5,14 +5,11 @@ h3 {
   color: #1d2933;
   opacity: 1;
 }
-p {
-  font-size: var(--defaultFontSize);
-}
+
 small {
   font-size: var(--smallFont);
   color: #9dafbd;
 }
-
 label {
   display: inline-grid;
 }
@@ -133,12 +130,6 @@ label {
   text-align: center !important;
   margin: 0 !important;
 }
-/*.partner-page-cards p {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}*/
 .partner-page-cards .first {
   flex: 0 0 47%;
   text-align: center;

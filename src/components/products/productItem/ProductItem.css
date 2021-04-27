@@ -11,3 +11,13 @@
 .product img {
   width: 100%;
 }
+@media (max-width: 1080px){
+  .product img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+  }
+  .product .text {
+   text-align: center;
+  }
+}

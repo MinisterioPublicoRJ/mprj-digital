@@ -48,7 +48,6 @@
   flex-direction: row;
   font-family: Roboto;
   outline: none;
-  cursor: pointer;
   width: 100px;
 }
 #basic-button:after {
@@ -96,4 +95,10 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+@media (max-width: 1080px){
+  .navbar{
+   display: none;
+  }
+ 
 }

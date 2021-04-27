@@ -45,7 +45,7 @@ export const MOCKPRODUTOSHEADER = [
   },
   {
     id: 'ParquetDigital',
-    imgBg: MPBG,
+    imgBg: PARQUET,
     colorBtn: '#82D4FF',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',

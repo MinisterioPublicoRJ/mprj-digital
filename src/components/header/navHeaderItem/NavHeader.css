@@ -27,7 +27,6 @@
     border-radius: 5px;
     letter-spacing: -0.19px;
     border: none;
-    cursor: pointer;
     width: 164px;
     height: 40px;
     margin-left: 8px;
@@ -37,9 +36,9 @@
     height: 22px;
     width: 23px;
 }
-@media only screen and (max-width: 600px) {
-    .section-info-products {
-        width: 450px;
+@media (max-width: 1080px){
+    .section-info-products{
+        display: none;
     }
     .section-products-item img{
         height: 15px;
@@ -48,7 +47,7 @@
     .section-info-products p {
         font-size: 8px;
     }
-  .section-products-item button {
+    .section-products-item button {
     width: 70px;
   }
 }

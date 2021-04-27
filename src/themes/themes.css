@@ -1,7 +1,11 @@
 /* TODO: REMOVE THIS AND ADD STYLES TO APP.CSS */
+
 :root {
 /* COLORS */
---backgroundBoxProdutos: #263859;
+--mainColor: #6F2826;
+--backgroundFooter: #263859;
+--backgroundBoxProdutos: #453434;
+--yellonProdutos: #C99E50;
 --darkBlueProdutos: #6B778D;
 --blueLightProdutos: #9DAFBD;
 --blueProdutos: #6792FF;
@@ -11,4 +15,5 @@
 --robotDefault: Roboto;
 --robotRegular: 'Roboto', regular;
 --titleFont: Roboto;
+
 }

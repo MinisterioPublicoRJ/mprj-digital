@@ -60,5 +60,35 @@
   margin-top: 0px;
   width: 500px;
 }
-
+@media (max-width: 1080px){
+  .mprjDigital-outer{
+    display: flex;
+    flex-direction: column;
+  }
+  .mprjDigital-itemOuter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mprjDigital-itemOuter-text h6  { 
+    text-align: center;
+  }
+  .mprjDigital-itemOuter {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .mprjDigital-itemOuter img {
+    display: flex;
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+  .mprjDigital-itemOuter p { 
+    width: 300px;
+    margin-bottom: 50px;
+  }
+  .mprjDigital-outer-text h1, p{ 
+    text-align: center;
+  }
+}
 

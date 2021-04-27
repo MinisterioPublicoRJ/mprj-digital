@@ -33,6 +33,22 @@
 .section-explore-texts > P {
   color: #702826;
 }
-
+@media (max-width: 1080px){
+  .section-explore{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .section-explore-texts > h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .section-explore-texts > P {
+    margin-bottom: 30px;
+  }
+}
 
 

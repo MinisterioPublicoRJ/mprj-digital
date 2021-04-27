@@ -4,7 +4,6 @@
   min-height: 100%;
   text-align: center;
   position: relative;
-  font-family: Roboto;
   padding: var(--sectionVerticalPadding) 0px;
 }
 .products .mainPagination {
@@ -13,7 +12,7 @@
 .products-title {
   margin: 12px 0;
 }
-.products p {
+.products h2 {
   color: #9dafbd;
   text-align: left;
 }
@@ -21,9 +20,6 @@
   font-weight: normal;
   text-align: left;
   color: #311E1E;
-}
-.products button {
-  cursor: pointer;
 }
 .all-products {
   display: grid;
@@ -46,7 +42,19 @@
   background: transparent;
   border: 0;
 }
-
 .filter-title.active {
   color: #263859;
+}
+@media (max-width: 1080px){
+  .products {
+    text-align: center;
+  }
+  .all-products{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
