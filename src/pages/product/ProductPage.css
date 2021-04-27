@@ -35,12 +35,10 @@
   grid-row: 2 / 3;
   margin: 0;
 }
-
 .productPage-presentation p {
   color: white;
   font-size: var(--smallFont);
 }
-
 .productPage-bodyFilling {
   margin-left: 80px;
 }
@@ -51,6 +49,7 @@
   display: flex;
   font-size: 12px;
   padding: 5px;
+  display: none;
 }
 .productPage-section-subpages a{
   margin: 8px;
