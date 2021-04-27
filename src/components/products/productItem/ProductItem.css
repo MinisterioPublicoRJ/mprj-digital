@@ -1,11 +1,18 @@
 .product .text {
-  font-size: 14px;
   margin: 0;
 }
 
 .product {
   width: 100%;
   display: inline-block;
+}
+.product > h4 {
+  margin-top: 20px !important;
+}
+.product > p {
+ text-align: center !important;
+ margin-top: 5px !important;
+
 }
 
 .product img {

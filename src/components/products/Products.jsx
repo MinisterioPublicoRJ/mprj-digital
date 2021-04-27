@@ -14,11 +14,11 @@ export default function Products() {
   return (
     <section className="products" id="produtos">
       <h1 className="products-title">Produtos</h1>
-      <h2 className="products-text">
+      <p className="products-text">
         Painéis, estudos, relatórios e os mais variados formatos de soluções gerados pelos nossos
         parceiros. Fique a vontade para explorar cada um deles, e não esqueça de mandar seu
         feedback, ficaremos muito feliz em recebê-lo.
-      </h2>
+      </p>
       <div className="products-filter-titles">
         <button type="button" onClick={() => setProductType('')} className="filter-title active">
           Todos os produtos

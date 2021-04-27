@@ -21,17 +21,18 @@
 }
 .section-explore-texts {
   font-weight: normal;
-  color: #702826;
+  color: var(--secondColor);
   max-width: 330px;
   border-bottom: 2px solid #702826;
+
 }
 .section-explore-texts > h3 {
   font-weight: normal;
-  color: #702826;
+  color: var(--secondColor);
   font-size: 30px;
 }
 .section-explore-texts > P {
-  color: #702826;
+  color: var(--secondColor);
 }
 @media (max-width: 1080px){
   .section-explore{
