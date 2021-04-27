@@ -36,18 +36,30 @@
     height: 22px;
     width: 23px;
 }
+@media (min-width: 280px) and (max-width: 380px ){
+    .section-info-products p {
+        font-size:  0.3225rem !important;
+    }
+}
 @media (max-width: 1080px){
     .section-info-products{
-        display: none;
+        max-width: 100%;
+        margin: 0;
+        margin-top: 30px;
     }
     .section-products-item img{
         height: 15px;
         width: 16px;
     }
     .section-info-products p {
-        font-size: 8px;
+        font-size:  0.5rem;
     }
     .section-products-item button {
-    width: 70px;
-  }
+        width: 50px;
+        font-size:  0.3940rem !important;
+    }
+    .section-products-item{
+        display: flex;
+    
+    }
 }
