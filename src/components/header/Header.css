@@ -34,7 +34,14 @@
   color: var(--secondColor);
   text-align: left;
 }
+
 @media (max-width: 1080px){
+  header{
+    margin-top: 150px;
+  }
+  .section-explore-texts > P{
+    text-align: center;
+  }
   .section-explore{
     display: flex;
     flex-direction: column;

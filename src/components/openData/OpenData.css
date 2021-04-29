@@ -176,10 +176,19 @@ license {
   border: #6F2826;
 }
 @media (max-width: 1080px){
+  .mprjDigital-itemOuter p{
+    text-align: center;
+  }
   .openData-button{
     width: 70px;
   }
   .openData-score{
     width: 40px;
+  }
+  .openData-title h1 {
+    text-align: center;
+  }
+  .openData-title p{
+    text-align: center;
   }
 }

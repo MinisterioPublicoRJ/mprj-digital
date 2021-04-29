@@ -49,6 +49,12 @@
   .products {
     text-align: center;
   }
+  .products h1 {
+    text-align: center;
+  }
+  .products > p{
+    text-align: center;
+  }
   .all-products{
     display: flex;
     flex-direction: column;

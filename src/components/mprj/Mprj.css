@@ -16,7 +16,7 @@
   color: #C99E50;
 }
 .mprjDigital-outer-text p{ 
-  color: #FFFFFF;
+  color: var(--white);
   margin-left: 30px;
 }
 .mprjDigital-outer-text h1, p{ 
@@ -79,14 +79,19 @@
   .mprjDigital-itemOuter img {
     display: flex;
     margin-right: 0px;
+    margin-top: 0px;
     margin-bottom: 40px;
   }
   .mprjDigital-itemOuter p { 
     width: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    margin-top: 40px;
   }
   .mprjDigital-outer-text h1, p{ 
     text-align: center;
+  }
+  .mprjDigital-outer-text { 
+    height: 270px;
   }
 }
 
