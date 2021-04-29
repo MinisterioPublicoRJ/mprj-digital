@@ -37,7 +37,7 @@
 
 @media (max-width: 1080px){
   header{
-    margin-top: 150px;
+    position: absolute;
   }
   .section-explore-texts > P{
     text-align: center;
