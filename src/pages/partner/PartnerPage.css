@@ -126,10 +126,6 @@ label {
   justify-content: space-around;
   margin: 30px 0px;
 }
-.partner-page-cards p{
-  text-align: center !important;
-  margin: 0 !important;
-}
 .partner-page-cards .first {
   flex: 0 0 47%;
   text-align: center;

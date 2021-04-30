@@ -7,13 +7,9 @@
   display: inline-block;
 }
 .product > h4 {
-  margin-top: 20px !important;
+  margin-top: 20px;
 }
-.product > p {
- text-align: center !important;
- margin-top: 5px !important;
 
-}
 
 .product img {
   width: 100%;
