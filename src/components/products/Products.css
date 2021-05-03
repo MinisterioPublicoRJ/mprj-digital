@@ -4,7 +4,6 @@
   min-height: 100%;
   text-align: center;
   position: relative;
-  font-family: Roboto;
   padding: var(--sectionVerticalPadding) 0px;
 }
 .products .mainPagination {
@@ -22,16 +21,13 @@
   text-align: left;
   color: #311E1E;
 }
-.products button {
-  cursor: pointer;
-}
 .all-products {
   display: grid;
   padding-top: 32px;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(320px, auto);
   grid-column-gap: 5%;
-  column-gap: 5%;
+  column-gap: 2%;
 }
 .products-filter-titles {
   font-size: 14px;
@@ -46,7 +42,25 @@
   background: transparent;
   border: 0;
 }
-
 .filter-title.active {
   color: #263859;
+}
+@media (max-width: 1080px){
+  .products {
+    text-align: center;
+  }
+  .products h1 {
+    text-align: center;
+  }
+  .products > p{
+    text-align: center;
+  }
+  .all-products{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
