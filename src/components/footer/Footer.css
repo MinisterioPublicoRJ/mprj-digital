@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   height: 40vh;
-  opacity: 1;
+  opacity: 0.92;
 }
 .logo-footer{
   width: 130px;

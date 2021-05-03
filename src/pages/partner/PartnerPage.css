@@ -116,6 +116,8 @@ label {
 .partner-page-featured p,
 .partner-page-topics p {
   text-align: left;
+  color: #9dafbd;
+
 }
 .partner-page-right {
   margin: 0 3vw;

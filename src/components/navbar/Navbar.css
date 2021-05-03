@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 .navbar-links {
   display: flex;
@@ -12,7 +12,7 @@
   list-style: none;
   text-decoration: none;
   color: #6F2826;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-right: 10px;
   font-family: Roboto, regular;
 }
@@ -28,10 +28,10 @@
   z-index: 1;
 }
 .dropdown-content a {
-  padding: 8px 30px 4px 8px;
-  margin-left: 0px;
+  padding: 8px 30px 4px 0px;
   text-decoration: none;
   display: block;
+  font-size: 15px;
 }
 .dropdown-content a:hover {
   background-color: transparent;
@@ -42,7 +42,7 @@
 #basic-button {
   background: transparent;
   border: none;
-  color: var(--white);
+  color: #6F2826;
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -67,7 +67,8 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 156px;
-  background-color: #702826;
+  border: 1px solid #702826;
+  background-color: #702826 ;
   text-align: center;
   border-radius: 6px;
   padding: 6px;
@@ -79,7 +80,7 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  color: #ffff;
+  color: var(--white);
   font-family: Roboto, regular;
 }
 .tooltip .tooltiptext::after {
@@ -175,6 +176,12 @@
   }
   .navbarMobile .tooltip .tooltiptext{
     display: none;
+  }
+  #basic-button{
+    font-size: 10px;
+  }
+  .dropdown-content {
+    position: relative;
   }
  
 }
