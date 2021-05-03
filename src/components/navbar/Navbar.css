@@ -177,5 +177,11 @@
   .navbarMobile .tooltip .tooltiptext{
     display: none;
   }
+  #basic-button{
+    font-size: 10px;
+  }
+  .dropdown-content {
+    position: relative;
+  }
  
 }
