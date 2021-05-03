@@ -15,7 +15,8 @@
 }
 .productPage-body-organ-texts {
     text-align: left;
-    max-width: 450px;
+    max-width: 330px;
+    margin-top: 60px;
 }
 .productPage-body-service button{
     display: flex;

@@ -1,9 +1,10 @@
-h3 {
+.partner-page-topics h3 {
   text-align: left;
   font: normal normal bold 34px/45px Roboto;
   letter-spacing: 0px;
-  color: #1d2933;
+  color: #702826;
   opacity: 1;
+  margin-top: 20px;
 }
 
 small {
@@ -34,6 +35,9 @@ label {
 .partner-page-title {
   margin-left: 50px;
 }
+.partner-page-title > p {
+  color: white;
+}
 .partner-page-header .partner-page-navigation {
   position: absolute;
 }
@@ -50,14 +54,7 @@ label {
   flex: auto;
   text-align-last: center;
 }
-.partner-page-navigation div:hover {
-  border-bottom: 6px solid #6792ff;
-  border-radius: 3px;
-  height: 40px;
-}
-.partner-page-navigation div:hover .partner-partner-page-link {
-  color: #6792ff !important;
-}
+
 .partner-page-navigation a {
   text-align: left;
   font-size: var(--defaultFontSize);
@@ -67,13 +64,13 @@ label {
   text-decoration: none;
 }
 .partner-page-navigation a:hover {
-  color: #6792FF;
+  color: #C99E50;
 }
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;
   letter-spacing: 0px;
-  color: #6792ff;
+  color: #C99E50;
   opacity: 1;
   font-size: var(--titleFontSize);
   margin-bottom: unset;
@@ -94,9 +91,9 @@ label {
   border-radius: 10px 10px 0px 0px;
 }
 .partner-page-logo {
-  width: 25vw;
+  width: 22vw;
   height: 35vh;
-  background: #1d2933 0% 0% no-repeat padding-box;
+  background: #6E2E2D 0% 0% no-repeat padding-box;
   background-position: center;
   border-radius: 9px 9px 0px 0px;
   opacity: 1;
@@ -113,6 +110,11 @@ label {
 .partner-page-featured {
   margin: 0 2vw;
 }
+.partner-page-featured h3 {
+  color: #702826;
+  font: normal normal bold 34px/45px Roboto;
+  margin-top: 20px;
+}
 .partner-page-featured p,
 .partner-page-topics p {
   text-align: left;
@@ -128,6 +130,7 @@ label {
   justify-content: space-around;
   margin: 30px 0px;
 }
+
 .partner-page-cards .first {
   flex: 0 0 47%;
   text-align: center;
@@ -140,11 +143,13 @@ label {
   border-bottom: 6px solid #6792ff;
   border-radius: 3px;
 }
-.partner-page-cards .first p {
-  -webkit-line-clamp: 6;
-}
-.partner-page-cards {
+.partner-page-cards p,
+.partner-page-cards h4 {
   text-align: center;
+}
+.partner-page-cards p{
+  color: #9DAFBD ;
+  margin-left: 25px;
 }
 .partner-page-cards .second {
   flex: 0 0 20%;
@@ -165,9 +170,9 @@ label {
   margin-bottom: 50px;
 }
 .partner-page-cards .second img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
 }
-
 .partner-page-cards .second div {
   text-align-last: right;
 }
@@ -190,7 +195,7 @@ label {
   text-align: center;
   font: normal normal bold 18px/24px Roboto;
   letter-spacing: 0px;
-  color: #24375b;
+  color: #702826;
   opacity: 1;
 }
 .partner-dynamic-content {

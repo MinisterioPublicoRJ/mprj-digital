@@ -71,6 +71,7 @@
 .productPage-section-buttons{
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 .productPage-body-main span {
@@ -90,6 +91,12 @@
 .productPage-body-main h3 {
   color: var(--darkBlue);
   font: normal normal 300 24px Roboto;
+}
+.productPage-body-main h1 {
+  color: #263859;
+  font-family: Roboto, regular;
+  text-align: center;
+  margin-top: 20px;
 }
 .btns-product {
   margin-top: 30px;

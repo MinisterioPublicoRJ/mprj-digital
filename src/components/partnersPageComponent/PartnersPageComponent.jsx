@@ -9,7 +9,7 @@ import { PARNERS_CONST } from '../partners/partnersData';
 export default function PartnersPageComponent() {
   return (
     <section id="partners-outer">
-      <div className="partners-header">
+      <div className="partners-header-Page">
         <h1>Parceiros</h1>
         <p>
           Setores parceiros diretamente ligados na iniciativa MPRJ Digital. Clique no logo para ver
