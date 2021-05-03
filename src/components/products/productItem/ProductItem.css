@@ -1,5 +1,4 @@
 .product .text {
-  font-size: 14px;
   margin: 0;
 }
 
@@ -7,7 +6,21 @@
   width: 100%;
   display: inline-block;
 }
+.product > h4 {
+  margin-top: 20px;
+}
+
 
 .product img {
   width: 100%;
+}
+@media (max-width: 1080px){
+  .product img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+  }
+  .product .text {
+   text-align: center;
+  }
 }
