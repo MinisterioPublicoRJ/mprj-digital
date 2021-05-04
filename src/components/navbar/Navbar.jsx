@@ -2,15 +2,14 @@
 /* eslint-disable react/no-this-in-sfc */
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import useMediaMobile from '../hooks/UsemediaMobile';
+import useMedia from '../hooks/Usemedia';
 import './Navbar.css';
 import logo from '../../assets/logoNovo.png';
 
 export default function Navbar() {
   const { pathname } = useLocation();
-  const mobile = useMediaMobile('(max-width: 67.5rem)');
+  const mobile = useMedia('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
-  console.log(mobile, 'fala');
   return (
     <>
       {mobile && (
@@ -41,29 +40,41 @@ export default function Navbar() {
           </div>
           <div className="dropdown">
             <div className="tooltip">
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
-                Parceiros
-              </NavLink>
+              {pathname === '/' ? (
+                <a href="#parceiros" className="dropdow-button">
+                  Parceiros
+                </a>
+              ) : (
+                <NavLink to="/" type="button" className="dropbtn-button">
+                  Parceiros
+                </NavLink>
+              )}
               <span className="tooltiptext">Conheça os setores envolvidos nessa iniciativa</span>
-              <div className="dropdown-content">
+              {/* <div className="dropdown-content">
                 <NavLink to="/parceiro/cadg">Cadg</NavLink>
-              </div>
+            </div> */}
             </div>
           </div>
           <div className="dropdown">
             <div className="tooltip">
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
-                Produtos
-              </NavLink>
+              {pathname === '/' ? (
+                <a href="#produtos" className="dropdow-button">
+                  Produtos
+                </a>
+              ) : (
+                <NavLink to="/" type="button" className="dropbtn-button">
+                  Produtos
+                </NavLink>
+              )}
               <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
-              <div className="dropdown-content">
+              {/* <div className="dropdown-content">
                 <NavLink to="/produto/farol" type="button" className="dropbtn">
                   Farol
                 </NavLink>
                 <NavLink to="/produto/parquet_digital" type="button" className="dropbtn">
                   Parque Digital
                 </NavLink>
-              </div>
+          </div> */}
             </div>
           </div>
           <div className="tooltip">
