@@ -20,7 +20,6 @@ export default function Navbar() {
           onClick={() => setMobileMenu(!mobileMenu)}
         />
       )}
-
       <navbar
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
       >
