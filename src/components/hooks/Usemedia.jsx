@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 
-export default function useMediaMobile(media) {
+export default function useMedia(media) {
   const [matchMobile, setmatchMobile] = useState(null);
 
   useEffect(() => {
@@ -15,6 +15,5 @@ export default function useMediaMobile(media) {
       window.removeEventListener('resize', changeMatchMobile);
     };
   }, [media]);
-  console.log(matchMobile, 'oiiii');
-  return [matchMobile];
+  return matchMobile;
 }
