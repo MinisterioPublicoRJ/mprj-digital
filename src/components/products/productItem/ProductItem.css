@@ -1,7 +1,6 @@
 .product .text {
   margin: 0;
 }
-
 .product {
   width: 100%;
   display: inline-block;
@@ -9,8 +8,6 @@
 .product > h4 {
   margin-top: 20px;
 }
-
-
 .product img {
   width: 100%;
 }

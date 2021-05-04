@@ -2,15 +2,15 @@
 /* eslint-disable react/no-this-in-sfc */
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import useMedia from '../hooks/Usemedia';
-
+import useMediaMobile from '../hooks/UsemediaMobile';
 import './Navbar.css';
 import logo from '../../assets/logoNovo.png';
 
 export default function Navbar() {
   const { pathname } = useLocation();
-  const mobile = useMedia('(max-width: 67.5rem)');
+  const mobile = useMediaMobile('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
+  console.log(mobile, 'fala');
   return (
     <>
       {mobile && (
@@ -21,6 +21,7 @@ export default function Navbar() {
           onClick={() => setMobileMenu(!mobileMenu)}
         />
       )}
+
       <navbar
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
       >
