@@ -8,17 +8,15 @@
 .mprjDigital-outer-text{
   grid-area: mprjTexts;
   margin: auto;
-  background-color: #6E2E2D;
+  background-color: var(--mainColor);
   height: 386px;
   border: 1px solid #707070;
 }
 .mprjDigital-outer-text h1{ 
-  font-size: 3.375em;
   color: #C99E50;
 }
 .mprjDigital-outer-text p{ 
-  font-size: 0.938em;
-  color: #FFFFFF;
+  color: var(--white);
   margin-left: 30px;
 }
 .mprjDigital-outer-text h1, p{ 
@@ -58,7 +56,46 @@
 }
 .mprjDigital-itemOuter p { 
   margin-top: 0px;
-  width: 500px;
 }
-
+@media (max-width: 1080px){
+  .mprjDigital-outer-text h1, h6 { 
+  font-size: 20px ;
+}
+}
+@media (max-width: 1080px){
+  .mprjDigital-outer{
+    display: flex;
+    flex-direction: column;
+  }
+  .mprjDigital-itemOuter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mprjDigital-itemOuter-text h6  { 
+    text-align: center;
+  }
+  .mprjDigital-itemOuter {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .mprjDigital-itemOuter img {
+    display: flex;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .mprjDigital-itemOuter p { 
+    width: 300px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  .mprjDigital-outer-text h1, p{ 
+    text-align: center;
+  }
+  .mprjDigital-outer-text { 
+    height: 270px;
+  }
+}
 

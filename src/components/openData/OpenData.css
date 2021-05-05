@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 60%;
   margin: auto;
-  font-family: Roboto;
 }
 .openData-title {
   margin-bottom: 5vh;
@@ -14,7 +13,6 @@
   color: #311E1E;
 }
 .openData-title p {
-  letter-spacing: -0.5px;
   color: #9dafbd;
   opacity: 1;
   text-align: left;
@@ -147,6 +145,7 @@ license {
   margin-top: 2vh;
   text-align: center;
   line-height: 38px;
+  margin-top: 30px;
 }
 .openData-item hr {
   background: #d1dbe3 0% 0% no-repeat padding-box;
@@ -175,4 +174,27 @@ license {
   margin-right: 2vw;
   cursor: pointer;
   border: #6F2826;
+}
+@media (max-width: 380px){
+  .openData-title h1 {
+    font-size: 20px;
+  }
+
+}
+@media (max-width: 1080px){
+  .mprjDigital-itemOuter p{
+    text-align: center;
+  }
+  .openData-button{
+    width: 70px;
+  }
+  .openData-score{
+    width: 40px;
+  }
+  .openData-title h1 {
+    text-align: center;
+  }
+  .openData-title p{
+    text-align: center;
+  }
 }

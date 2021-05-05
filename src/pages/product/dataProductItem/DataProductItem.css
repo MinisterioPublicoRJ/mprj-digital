@@ -25,16 +25,15 @@
     text-decoration: none;
 }
 .productPage-body-service button{
-    width: 190px;
+    width: 180px;
     height: 35px;
     margin-top: 10px;
-    background-color: #263859;
+    background-color: #6F2826;
     color: white;
     border-radius: 5px;
     box-shadow: 0px 10px 20px #00000033;
     outline: none;
     margin-right: 20px;
-    cursor: pointer;
     padding: 10px;
     border: none;
 }
