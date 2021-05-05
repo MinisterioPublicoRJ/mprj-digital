@@ -9,6 +9,7 @@ import STIC from '../../assets/logos/stic.png';
 import SUBADM from '../../assets/logos/subadm.png';
 import SUBPLAN from '../../assets/logos/subplan.png';
 import IEP from '../../assets/logos/iep.png';
+import BGHome from '../../assets/bg-home-produto.png';
 
 import GEAR from '../../assets/gearIcon.svg';
 import BIGDATA from '../../assets/bigDataIcon.svg';
@@ -20,7 +21,7 @@ export const PARTNERS_CONST = [
     id: 'cadg',
     name: 'CADG',
     img: CADG,
-    imgBg: '/headers/bg-cadg-produtos.png',
+    imgBg: BGHome,
     desc: 'Coordenadoria de Análise, Diagnósticos e Geografia',
     subpages: [
       {
@@ -67,7 +68,7 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             img: BIGDATA,
-            alt: 'Img alt',
+            alt: 'Big Data',
           },
           {
             id: 'ciencia-de-dados',
@@ -91,7 +92,7 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             img: GEOTAG,
-            alt: 'Img alt',
+            alt: 'GEOTAG',
           },
         ],
       },
@@ -127,7 +128,7 @@ export const PARTNERS_CONST = [
             link: 'https://parquetdigital.mprj.mp.br/',
             call: 'Conheça a solução >',
             img: '/Parquet_Digital.png',
-            alt: 'Img alt',
+            alt: 'parquetDigital',
           },
           {
             id: 'painel2',
@@ -150,7 +151,7 @@ export const PARTNERS_CONST = [
             link: '#',
             call: 'Conheça a solução >',
             img: '/diagnostico.png',
-            alt: 'Img alt',
+            alt: 'painel3',
           },
           {
             id: 'painel4',

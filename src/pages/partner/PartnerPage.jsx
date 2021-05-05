@@ -64,7 +64,7 @@ export default function PartnerPage() {
               {featuredTopics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title}</h3>
-                  <p className="" dangerouslySetInnerHTML={{ __html: featured.smalltext }} />
+                  <p dangerouslySetInnerHTML={{ __html: featured.smalltext }} />
                 </div>
               ))}
             </div>

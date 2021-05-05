@@ -26,7 +26,7 @@ label {
   background: #f9f9f9 0% 0% no-repeat padding-box;
 }
 .partner-page-header {
-  height: 50vh;
+  height: 40vh;
   padding-left: 38vw;
   background-color: #6b778d;
   align-items: center;
@@ -87,6 +87,7 @@ label {
 .partner-page-left {
   width: 25vw;
   margin-top: -15vh;
+  margin-bottom: 10vh;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 10px 10px 0px 0px;
 }
