@@ -28,6 +28,7 @@
 }
 .productPage-presentation h2 {
   font-size: 17px;
+  text-align: center;
 }
 .productPage-body-main {
   background-color: white;
@@ -36,8 +37,8 @@
   margin: 0;
 }
 .productPage-presentation p {
-  color: white;
   font-size: var(--smallFont);
+  text-align: center;
 }
 .productPage-bodyFilling {
   margin-left: 80px;
