@@ -69,11 +69,11 @@
   flex-grow: 1;
 }
 .icon-ouvidoria {
-  width: 130px;
-  height: 70px;
+  width: 110px;
+  height: 60px;
 }
 .button-back-to-top {
-  width: 100px;
+  width: 80px;
   height: 38px;
   background: #6F2826;
   border-radius: 5px;
@@ -82,7 +82,7 @@
   border: #6F2826;
 }
 .button-back-to-top a {
-  font-size: 12px;
+  font-size: var(--smallFont);
   color: #ffffff;
   text-decoration: none;
   text-align: center;
