@@ -22,6 +22,7 @@ export default function Navbar() {
       )}
 
       <navbar
+        id="navBar"
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
       >
         <img className="logo" src={logo} alt="logo" />

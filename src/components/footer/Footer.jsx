@@ -70,6 +70,9 @@ export default function Footer() {
             <img className="icon-ouvidoria" src={logoOuvidoria} alt="Logo Ouvidoria MPRJ" />
           </a>
         </div>
+        <button type="button" className="button-back-to-top">
+          <a href="#navBar">Voltar ao topo</a>
+        </button>
       </div>
     </div>
   );
