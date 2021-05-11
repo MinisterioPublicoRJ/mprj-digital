@@ -1,5 +1,9 @@
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable implicit-arrow-linebreak */
 import React from 'react';
 import './Footer.css';
+import { NavLink } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import logo from '../../assets/logoNovo.png';
 import logoOuvidoria from '../../assets/Ouvidoria.png';
 
@@ -77,7 +81,19 @@ export default function Footer() {
           </a>
         </div>
         <button type="button" className="button-back-to-top">
-          <a href="#navBar">Voltar ao topo</a>
+          <NavLink
+            to="/"
+            type="button"
+            className="dropbtn-button"
+            onClick={() =>
+              scroller.scrollTo('allnavBar', {
+                smooth: true,
+                offset: -70,
+                duration: 400,
+              })}
+          >
+            Voltar ao topo
+          </NavLink>
         </button>
       </div>
     </div>

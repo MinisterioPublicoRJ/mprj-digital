@@ -12,7 +12,7 @@ export default function Navbar() {
   const mobile = useMedia('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
-    <>
+    <div id="allnavBar">
       {mobile && (
         <button
           className={`${'mobileButton'} ${mobileMenu && 'mobileButtonActive'}`}
@@ -124,7 +124,6 @@ export default function Navbar() {
               to="/"
               className="dropdow-button"
               type="button"
-              id="basic-button"
               onClick={() =>
                 scroller.scrollTo('rodape', {
                   smooth: true,
@@ -138,6 +137,6 @@ export default function Navbar() {
           </div>
         </section>
       </navbar>
-    </>
+    </div>
   );
 }
