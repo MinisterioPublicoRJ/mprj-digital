@@ -11,6 +11,12 @@
 .product img {
   width: 100%;
 }
+@media (max-width: 380px){
+  .product img{
+    width: 100px;
+    height: 100px;
+  }
+}
 @media (max-width: 1080px){
   .product img{
     width: 150px;

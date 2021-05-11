@@ -162,7 +162,6 @@
 .navbarMobile .tooltip{
   display: block;
 }
-
 @media (max-width: 1080px){
   .logo{
    display: none;
