@@ -17,9 +17,6 @@
   --darkBlue: #263859;
   --lightGray: #9dafbd;
 }
-html{
-  scroll-behavior: smooth;
-}
 h1 {
   font-family: Roboto;
   font-size: var(--titleFontSize);
