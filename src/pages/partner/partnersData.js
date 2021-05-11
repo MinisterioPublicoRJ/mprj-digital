@@ -9,6 +9,7 @@ import STIC from '../../assets/logos/stic.png';
 import SUBADM from '../../assets/logos/subadm.png';
 import SUBPLAN from '../../assets/logos/subplan.png';
 import IEP from '../../assets/logos/iep.png';
+import BGHome from '../../assets/bg-home-produto.png';
 
 import GEAR from '../../assets/gearIcon.svg';
 import BIGDATA from '../../assets/bigDataIcon.svg';
@@ -20,7 +21,7 @@ export const PARTNERS_CONST = [
     id: 'cadg',
     name: 'CADG',
     img: CADG,
-    imgBg: '/headers/bg-cadg-produtos.png',
+    imgBg: BGHome,
     desc: 'Coordenadoria de Análise, Diagnósticos e Geografia',
     subpages: [
       {
@@ -31,17 +32,12 @@ export const PARTNERS_CONST = [
             id: 'quemSomos',
             title: 'Quem somos?',
             smalltext:
-              'A Coordenadoria de Análises, Diagnósticos e Geoprocessamento (CADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados. <br/><br/> A equipe é responsável pela plataforma MPRJ em Mapas e todas as ferramentas, sistemas e aplicações ali concentradas. O foco de seu trabalho é entregar soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
-            featured: true,
-          },
-          {
-            id: 'pilares',
-            title: 'Nossos pilares',
-            smalltext:
+              'A Coordenadoria de Análises, Diagnósticos e Geoprocessamento (CADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados.',
+            subsmalltext:
+              'A equipe é responsável pela plataforma MPRJ em Mapas e todas as ferramentas, sistemas e aplicações ali concentradas. O foco de seu trabalho é entregar soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
+            title2: 'Nossos pilares',
+            smalltext2:
               'Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e diferenciam o setor dos demais e são fatores críticos de sucesso, sem os quais seria impossível realizar os trabalhos.',
-            link: '',
-            call: '',
-            featured: false,
           },
         ],
         cards: [
@@ -67,7 +63,7 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             img: BIGDATA,
-            alt: 'Img alt',
+            alt: 'Img bigdata',
           },
           {
             id: 'ciencia-de-dados',
@@ -79,7 +75,7 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             img: DATASCIENCE,
-            alt: 'Img alt',
+            alt: 'Img datascience',
           },
           {
             id: 'georreferenciamento',
@@ -91,7 +87,7 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             img: GEOTAG,
-            alt: 'Img alt',
+            alt: 'Img geotag',
           },
         ],
       },
@@ -103,17 +99,12 @@ export const PARTNERS_CONST = [
             id: 'comoAjudar',
             title: 'Como elas podem te ajudar?',
             smalltext:
-              'Para membros e servidores do MPRJ, aqui estarão soluções que se valem de análises de dados para responder problemas concretos enfrentados pela instituição nas atividades meio e fim, com foco em resolução mais rápida, mais qualificada ou ambos.<br/><br/> Para visitantes externos, aqui podem ser encontradas não só algumas ferramentas de trabalho do MPRJ e uma prestação de contas do setor para a sociedade (o que temos feito com o dinheiro público), mas também recursos digitais e bases de dados que fortalecem a transparência efetiva e podem indicar aos cidadãos quais são os cenários e problemas enfrentados no Estado do Rio de Janeiro.',
-            featured: true,
-          },
-          {
-            id: 'introSolucoes',
-            title: 'Soluções',
-            smalltext:
+              'Para membros e servidores do MPRJ, aqui estarão soluções que se valem de análises de dados para responder problemas concretos enfrentados pela instituição nas atividades meio e fim, com foco em resolução mais rápida, mais qualificada ou ambos.',
+            subsmalltext:
+              'Para visitantes externos, aqui podem ser encontradas não só algumas ferramentas de trabalho do MPRJ e uma prestação de contas do setor para a sociedade (o que temos feito com o dinheiro público), mas também recursos digitais e bases de dados que fortalecem a transparência efetiva e podem indicar aos cidadãos quais são os cenários e problemas enfrentados no Estado do Rio de Janeiro.',
+            title2: 'Soluções',
+            smalltext2:
               'Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
-            link: '',
-            call: '',
-            featured: false,
           },
         ],
         cards: [

@@ -6,3 +6,11 @@
   flex-direction: column;
   opacity: 0.92;
 }
+.partners-header-Page {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.partners-header-Page p {
+  color: #B1B1B1;
+}

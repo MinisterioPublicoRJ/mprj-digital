@@ -14,8 +14,7 @@ export default function PartnerPage() {
   const subpageData = (partnerFiltered[0].subpages || []).filter(
     (subpages) => subpages.id === subpageIdToLoad,
   );
-  const featuredTopics = (subpageData[0].topics || []).filter((topics) => topics.featured === true);
-  const defaultTopics = (subpageData[0].topics || []).filter((topics) => topics.featured === false);
+  const featuredTopics = subpageData[0].topics;
 
   function openForm() {
     console.log('Opened Form');
@@ -64,17 +63,18 @@ export default function PartnerPage() {
               {featuredTopics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title}</h3>
-                  <p className="" dangerouslySetInnerHTML={{ __html: featured.smalltext }} />
+                  <p>{featured.smalltext}</p>
+                  <p>{featured.subsmalltext}</p>
                 </div>
               ))}
             </div>
           </div>
           <div className="partner-page-right">
             <div className="partner-page-topics">
-              {defaultTopics.map((topic) => (
-                <div key={topic.id}>
-                  <h3>{topic.title}</h3>
-                  <p>{topic.smalltext}</p>
+              {featuredTopics.map((featured) => (
+                <div key={featured.id}>
+                  <h3>{featured.title2}</h3>
+                  <p>{featured.smalltext2}</p>
                 </div>
               ))}
             </div>
@@ -138,7 +138,6 @@ export default function PartnerPage() {
                 <div className="partner-contact-form-action">
                   <button type="button" className="partner-contact-button">
                     enviar
-                    {' '}
                     {formType}
                   </button>
                 </div>

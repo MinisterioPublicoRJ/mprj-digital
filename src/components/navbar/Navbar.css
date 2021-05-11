@@ -12,7 +12,7 @@
   list-style: none;
   text-decoration: none;
   color: #6F2826;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-right: 10px;
   font-family: Roboto, regular;
 }
@@ -40,15 +40,8 @@
   display: block;
 }
 #basic-button {
-  background: transparent;
-  border: none;
   color: #6F2826;
-  font-size: 16px;
   display: flex;
-  flex-direction: row;
-  font-family: Roboto;
-  outline: none;
-  width: 100px;
 }
 #basic-button:after {
   margin-left: 4px;
