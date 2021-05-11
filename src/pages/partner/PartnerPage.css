@@ -150,11 +150,11 @@ label {
 }
 .partner-page-cards p{
   color: #9DAFBD ;
-  margin-left: 25px;
 }
 .partner-page-cards .second {
   flex: 0 0 20%;
   margin: 20px 4px;
+  margin-right: 0px;
   text-align: center;
 }
 .partner-page-cards .second-with-border {
@@ -171,8 +171,8 @@ label {
   margin-bottom: 50px;
 }
 .partner-page-cards .second img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 140px;
 }
 .partner-page-cards .second div {
   text-align-last: right;

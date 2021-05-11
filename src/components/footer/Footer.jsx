@@ -36,10 +36,16 @@ export default function Footer() {
         </div>
         <div className="footer-menu-column">
           <h3>PRODUTOS EM DESTAQUE</h3>
-          <a href="https://www.mprj.mp.br/documents/20184/1444502/caderno_ierbb_projeto_farol_luz_sobre_as_promotorias.pdf">
+          <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
             Parquet Digital
           </a>
-          <a href="https://parquetdigital.mprj.mp.br/">Farol</a>
+          <a
+            href="https://www.mprj.mp.br/documents/20184/1444502/caderno_ierbb_projeto_farol_luz_sobre_as_promotorias.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Farol
+          </a>
           {/* <a href="/#">Integra</a>
           <a href="/#">Radar</a>
           <a href="/#">Painel do Saneamento</a>

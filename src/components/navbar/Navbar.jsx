@@ -1,13 +1,14 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-constant-condition */
 /* eslint-disable react/no-this-in-sfc */
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
 import './Navbar.css';
 import logo from '../../assets/logoNovo.png';
 
 export default function Navbar() {
-  const { pathname } = useLocation();
   const mobile = useMedia('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
@@ -20,7 +21,6 @@ export default function Navbar() {
           onClick={() => setMobileMenu(!mobileMenu)}
         />
       )}
-
       <navbar
         id="navBar"
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
@@ -28,20 +28,34 @@ export default function Navbar() {
         <img className="logo" src={logo} alt="logo" />
         <section className="navbar-links">
           <div className="tooltip">
-            {pathname === '/' ? (
-              <a href="#mprjDigital" className="dropdow-button">
-                O que é o MPRJ Digital?
-              </a>
-            ) : (
-              <NavLink to="/" className="dropdow-button">
-                O que é o MPRJ Digital?
-              </NavLink>
-            )}
+            <NavLink
+              to="/"
+              className="dropdow-button"
+              onClick={() =>
+                scroller.scrollTo('mprjDigital', {
+                  smooth: true,
+                  offset: -70,
+                  duration: 400,
+                })}
+            >
+              O que é o MPRJ Digital?
+            </NavLink>
             <span className="tooltiptext">Conheça a nossa visão de dados abertos</span>
           </div>
           <div className="dropdown">
             <div className="tooltip">
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+              <NavLink
+                to="/"
+                type="button"
+                className="dropbtn-button"
+                id="basic-button"
+                onClick={() =>
+                  scroller.scrollTo('parceiros', {
+                    smooth: true,
+                    offset: -70,
+                    duration: 400,
+                  })}
+              >
                 Parceiros
               </NavLink>
               <span className="tooltiptext">Conheça os setores envolvidos nessa iniciativa</span>
@@ -52,7 +66,18 @@ export default function Navbar() {
           </div>
           <div className="dropdown">
             <div className="tooltip">
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+              <NavLink
+                to="/"
+                type="button"
+                className="dropbtn-button"
+                id="basic-button"
+                onClick={() =>
+                  scroller.scrollTo('produtos', {
+                    smooth: true,
+                    offset: -70,
+                    duration: 400,
+                  })}
+              >
                 Produtos
               </NavLink>
               <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
@@ -67,15 +92,18 @@ export default function Navbar() {
             </div>
           </div>
           <div className="tooltip">
-            {pathname === '/' ? (
-              <a href="#repositorios" className="dropdow-button">
-                Repositórios
-              </a>
-            ) : (
-              <NavLink to="/" className="dropdow-button">
-                Repositórios
-              </NavLink>
-            )}
+            <NavLink
+              to="/"
+              className="dropdow-button"
+              onClick={() =>
+                scroller.scrollTo('repositorios', {
+                  smooth: true,
+                  offset: -70,
+                  duration: 400,
+                })}
+            >
+              Repositórios
+            </NavLink>
             <span className="tooltiptext">Encontre aqui todas as nossas Acervo de Dados</span>
           </div>
           {/* <div className="dropdown">
@@ -92,15 +120,20 @@ export default function Navbar() {
           </div>
         </div> */}
           <div className="tooltip">
-            {pathname === '/' ? (
-              <a href="#rodape" className="dropdow-button">
-                Dúvidas e Reclamações
-              </a>
-            ) : (
-              <NavLink to="/" className="dropdow-button">
-                Dúvidas e Reclamações
-              </NavLink>
-            )}
+            <NavLink
+              to="/"
+              className="dropdow-button"
+              type="button"
+              id="basic-button"
+              onClick={() =>
+                scroller.scrollTo('rodape', {
+                  smooth: true,
+                  offset: -70,
+                  duration: 400,
+                })}
+            >
+              Dúvidas e Reclamações
+            </NavLink>
             <span className="tooltiptext">Tem uma Reclamação ou precisa da nossa ajuda.</span>
           </div>
         </section>

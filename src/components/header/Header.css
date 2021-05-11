@@ -34,7 +34,6 @@
   color: var(--secondColor);
   text-align: left;
 }
-
 @media (max-width: 1080px){
   header{
     position: absolute;
