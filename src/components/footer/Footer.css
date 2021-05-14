@@ -17,6 +17,7 @@
   flex-direction: row;
   align-self: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .footer-menu-column {
   display: flex;
@@ -69,8 +70,8 @@
   flex-grow: 1;
 }
 .icon-ouvidoria {
-  width: 110px;
-  height: 60px;
+  width: 80px;
+  height: 50px;
 }
 .button-back-to-top {
   width: 50px;
