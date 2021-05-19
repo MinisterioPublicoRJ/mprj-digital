@@ -57,7 +57,7 @@ export default function openData() {
   
   useEffect(() => {
     const fetchData = async () => {
-      const res = OPENDATA.page
+      const res = OPENDATA.length
       console.log(res)
     }
   }
@@ -107,10 +107,10 @@ export default function openData() {
       */}
       {filteredItens.map((item) =>
         <section key={item.id} className="openData-item">
-          <div className="firts-infos">
+          <div className="main-infos">
           <p className="openData-score">{item.score.toFixed(2)}</p>
           <h4>{item.title}</h4>
-          <p>{item.description}</p>
+          <p className="openData-description">{item.description}</p>
           <p><label>Setor Responsável:</label> {item.owner}</p>
           <p><label>Atualização:</label> {new Date(item.date).toLocaleDateString()}</p>
           </div>

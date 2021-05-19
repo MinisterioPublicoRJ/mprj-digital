@@ -93,14 +93,16 @@
   margin-bottom: 2vh;
   font: normal normal normal 14px/16px Roboto;
   color: #263859;
-  line-height: 1.6;
-  padding: 5px;
+  padding: 25px;
 }
-.openData-item > h4,
-p,
-license {
+.openData-item > h4, p, span {
   text-align: left;
-
+}
+.openData-description {
+  color: #9DAFBD;
+  font-size: 12px;
+  margin-top: 10px;
+  max-width: 600px;
 }
 .openData-item h4 {
   text-align: left;
@@ -129,13 +131,13 @@ license {
   letter-spacing: -0.5px;
   color: #ffffff;
   position: absolute;
-  right: 18.5vw;
+  right: 19.5vw;
   margin-top: 2vh;
   text-align: center;
   line-height: 38px;
 }
-.firts-infos {
-  border-bottom: #d1dbe3 ;
+.main-infos {
+  border-bottom: solid 1px #d1dbe3 ;
 }
 
 .openData-button {
@@ -150,7 +152,7 @@ license {
   align-self: flex-end;
   margin-top: -50px;
   margin-bottom: 25px;
-  margin-right: 2vw;
+  margin-right: 0vw;
   cursor: pointer;
   border: #6F2826;
 }

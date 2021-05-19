@@ -1,7 +1,6 @@
 const OPENDATA = [
   {
     id: 1,
-    page: 1,
     title: 'Base de dados: Finalização de inquéritos policiais no nível da comarca',
     description:
       'Compila números absolutos de novos inquéritos e seus respectivos resultados dentro do MPRJ, a saber: oferecimento de denúncia e promoção de arquivamento, que compõem os indicadores de resultado e produtos. Periodicidade: anual. Unidade de análise: comarca.',
@@ -16,7 +15,6 @@ const OPENDATA = [
   },
   {
     id: 2,
-    page: 2,
     title:
       'Base de dados: Resultados das denúncias oferecidas ao Tribunal de Justiça no nível da comarca',
     description:
