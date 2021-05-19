@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './OpenData.css';
 import OPENDATA from './MockOpenData';
 import { normalizeString, camelizeString } from '../../utils';
@@ -7,7 +7,7 @@ import Pagination from '../pagination/Pagination';
 
 
 export default function openData() {
-  const [totalPages, setTotalPages] = useState(10);
+  const [totalPages, setTotalPages] = useState(OPENDATA.length);
   const [page, setPage] = useState(1);
 
   const [ filterString: string, setFilterString ] = useState('');
@@ -21,9 +21,6 @@ export default function openData() {
     setFilterChoice(camelizeString(normalizeString(e.target.innerText)));
   }
 
-  function handlePageClick(page) {
-    return page;
-  }
 
   const filteredItens = OPENDATA.filter(item => {
     const query = normalizeString(filterString);
@@ -57,6 +54,15 @@ export default function openData() {
       normalizeString(item.license).indexOf(query) >= 0
     );
   });
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = OPENDATA.page
+      console.log(res)
+    }
+  }
+
+  )
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
@@ -100,16 +106,17 @@ export default function openData() {
       </div>
       */}
       {filteredItens.map((item) =>
-        <section className="openData-item">
+        <section key={item.id} className="openData-item">
+          <div className="firts-infos">
+          <p className="openData-score">{item.score.toFixed(2)}</p>
           <h4>{item.title}</h4>
-          <description>{item.description}</description>
-          <owner><label>Setor Responsável:</label> {item.owner}</owner>
-          <date><label>Atualização:</label> {new Date(item.date).toLocaleDateString()}</date>
-          <score className="openData-score">{item.score.toFixed(2)}</score>
-          <hr />
-          <purpose><label>Utilização:</label> {item.purpose}</purpose>
-          <datatype><label>Estrutura do Dado:</label> {item.datatype}</datatype>
-          <license><label>Licença:</label> {item.license}</license>
+          <p>{item.description}</p>
+          <p><label>Setor Responsável:</label> {item.owner}</p>
+          <p><label>Atualização:</label> {new Date(item.date).toLocaleDateString()}</p>
+          </div>
+          <p><label>Utilização:</label> {item.purpose}</p>
+          <p><label>Estrutura do Dado:</label> {item.datatype}</p>
+          <p><label>Licença:</label> {item.license}</p>
           <button type="button" className="openData-button" onClick={event => {
             if (item.link) {
               event.preventDefault();
