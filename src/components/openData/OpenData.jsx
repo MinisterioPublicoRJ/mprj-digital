@@ -7,6 +7,9 @@ import Pagination from '../pagination/Pagination';
 
 
 export default function openData() {
+  const [totalPages, setTotalPages] = useState(10);
+  const [page, setPage] = useState(1);
+
   const [ filterString: string, setFilterString ] = useState('');
   const [ filterChoice: string, setFilterChoice ] = useState('');
 
@@ -54,6 +57,10 @@ export default function openData() {
       normalizeString(item.license).indexOf(query) >= 0
     );
   });
+  function handlePageClick(nextPage) {
+    if (nextPage < 1 || nextPage > totalPages) return;
+    setPage(nextPage);
+  }
 
   return (
     <section className="openData" id="repositorios">
@@ -120,11 +127,11 @@ export default function openData() {
         <h4>Nenhum resultado encontrado.</h4>
         </section>
       }
-      {/*<Pagination
+      <Pagination
         handlePageClick={(page) => handlePageClick(page)}
-        totalPages={1}
-        currentPage={1}
-      />*/}
+        totalPages={totalPages || 0}
+        currentPage={page}
+      />
     </section>
   );
 }
