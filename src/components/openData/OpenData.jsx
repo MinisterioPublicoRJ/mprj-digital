@@ -54,15 +54,16 @@ export default function openData() {
       normalizeString(item.license).indexOf(query) >= 0
     );
   });
-  
+
   useEffect(() => {
     const fetchData = async () => {
-      const res = OPENDATA.length
+      const res = OPENDATA;
+      setTotalPages(res.length);
       console.log(res)
-    }
-  }
+    };
+    fetchData()
+  }, [page, totalPages])
 
-  )
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
@@ -76,14 +77,12 @@ export default function openData() {
         Visando o aprimoramento das iniciativas e o fomento ao controle social exercido pela sociedade, as bases de dados e eventuais links de códigos de desenvolvimento estarão disponibilizados aqui. As bases de dados, que são o que dá vida aos nossos produtos, podem ter notas atribuídas a elas, bem como o apontamento dos critérios que fizeram chegar ao conceito atribuído, facilitando sua compreensão e o manuseio por quem quiser. Os dados que não estão disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
         </p>
       </div>
-
       <div className="openData-search">
         {/*
         <input type="text" placeholder="Busque uma base de dados" onChange={(e) => handleInputChange(e)}/>
         */}
         <div className="openData-counter">{Object.keys(filteredItens).length} Repositórios</div>
       </div>
-
       <div className="openData-linkToPanel">
             {/*
             <a href="https://github.com/MinisterioPublicoRJ" target="new">
@@ -136,7 +135,7 @@ export default function openData() {
       }
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
-        totalPages={totalPages || 0}
+        totalPages={totalPages}
         currentPage={page}
       />
     </section>
