@@ -17,6 +17,7 @@
   flex-direction: row;
   align-self: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .footer-menu-column {
   display: flex;
@@ -69,12 +70,39 @@
   flex-grow: 1;
 }
 .icon-ouvidoria {
-  width: 130px;
-  height: 70px;
+  width: 80px;
+  height: 50px;
+}
+.button-back-to-top {
+  width: 50px;
+  height: 50px;
+  background: #6F2826;
+  border-radius: 5px;
+  margin-top: 40px;
+  cursor: pointer;
+  border: #6F2826;
+}
+.button-back-to-top a {
+  font-size: var(--smallFont);
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+@media (max-width: 380px){
+  .icon-ouvidoria{
+    height: 40px;
+  }
+  .logo-footer{
+    width: 70px;
+    height: 30px;
+  }
 }
 @media (max-width: 1080px){
   .icon-ouvidoria{
     width: 70px;
     height: 50px;
+  }
+  .footer-menu-column span{
+    width: 100%;
   }
 }
