@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import './OpenData.css';
 import OPENDATA from './MockOpenData';
-import { normalizeString, camelizeString } from '../../utils';
 import Pagination from '../pagination/Pagination';
 import OpenDataPosts from './openDataPosts/OpenDataPosts';
 
@@ -10,13 +9,14 @@ import OpenDataPosts from './openDataPosts/OpenDataPosts';
 export default function openData() {
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
-  const [postPorPage, setpostPorPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(OPENDATA.length);
+  const [postPorPage, setpostPorPage] = useState(2);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
       const res = OPENDATA;
       setPosts(res);
+      setTotalPages(res.length / 2);
     };
     fetchData()
   }, [])
@@ -27,7 +27,7 @@ export default function openData() {
     setPage(nextPage);
   }
 
-  const lastPost = page + postPorPage;
+  const lastPost = page * postPorPage ;
   const firstPost = lastPost - postPorPage;
   const currentPost = posts.slice(firstPost, lastPost);
 
