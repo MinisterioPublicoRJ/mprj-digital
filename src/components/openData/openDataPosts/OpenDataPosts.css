@@ -1,0 +1,124 @@
+.openData-title {
+    margin-bottom: 5vh;
+}
+.openData-title h1 {
+    letter-spacing: -1px;
+    text-align: left;
+    color: #311E1E;
+}
+p.openData-score{
+    color: #ffff;
+}
+.openData-counter {
+    text-align: left;
+    font: normal normal bold 21px/16px Roboto;
+    color: #263859;
+    opacity: 1;
+    line-height: 42px;
+}
+.openData-linkToPanel {
+    align-self: flex-end;
+    margin-top: -42px;
+    margin-bottom: 55px;
+}
+.openData-linkToPanel a {
+    text-decoration: underline;
+    font: normal normal normal 14px/16px Roboto;
+    letter-spacing: -0.32px;
+    color: #9dafbd;
+    opacity: 1;
+    line-height: 42px;
+}
+.openData-item span {
+    text-align: left;
+    font-size: 14px;
+    color: #311E1E;
+    font-weight: bold;
+    opacity: 1;
+}
+.openData-item {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d1dbe3;
+    border-radius: 5px;
+    opacity: 1;
+    margin-bottom: 2vh;
+    font: normal normal normal 14px/16px Roboto;
+    color: #263859;
+    padding: 25px;
+}
+.openData-item > h4, p, span {
+    text-align: left;
+}
+p.openData-description {
+    color: #9DAFBD;
+    font-size: 12px;
+    margin-top: 10px;
+    max-width: 600px;
+}
+.openData-item h4 {
+    text-align: left;
+    text-decoration: underline;
+    font: normal normal medium 18px/26px Roboto Mono;
+    letter-spacing: -0.5px;
+    color: #311E1E;
+    opacity: 1;
+}
+.openData-score {
+    width: 50px;
+    height: 38px;
+    background: #4d8055 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 5px;
+    font: normal normal 500 16px/19px Roboto;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    position: absolute;
+    right: 19.5vw;
+    margin-top: 2vh;
+    text-align: center;
+    line-height: 38px;
+}
+.main-infos {
+    border-bottom: solid 1px #d1dbe3 ;
+}
+.openData-button {
+    width: 108px;
+    height: 38px;
+    background: #6F2826 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    font: normal medium 16px Roboto;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    align-self: flex-end;
+    margin-top: -50px;
+    margin-bottom: 25px;
+    margin-right: 0vw;
+    cursor: pointer;
+    border: #6F2826;
+}
+@media (max-width: 380px){
+    .openData-title h1 {
+    font-size: 20px;
+    }
+}
+@media (max-width: 1080px){
+    .mprjDigital-itemOuter p{
+      text-align: center;
+    }
+    .openData-button{
+      width: 70px;
+    }
+    .openData-score{
+      width: 40px;
+    }
+    .openData-title h1 {
+      text-align: center;
+    }
+    .openData-title p{
+      text-align: center;
+    }
+}
