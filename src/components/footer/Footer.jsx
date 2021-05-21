@@ -79,23 +79,22 @@ export default function Footer() {
           >
             <img className="icon-ouvidoria" src={logoOuvidoria} alt="Logo Ouvidoria MPRJ" />
           </a>
-          <button type="button" className="button-back-to-top">
-            <NavLink
-              to="/"
-              type="button"
-              className="dropbtn-button"
-              onClick={() =>
-                scroller.scrollTo('allnavBar', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })}
-            >
-              Voltar ao topo
-            </NavLink>
-          </button>
         </div>
       </div>
+      <button type="button" className="button-back-to-top">
+        <NavLink
+          to="/"
+          type="button"
+          className="dropbtn-button"
+          onClick={() =>
+            scroller.scrollTo('allnavBar', {
+              smooth: true,
+              offset: -70,
+              duration: 400,
+            })}
+        >
+        </NavLink>
+      </button>
     </div>
   );
 }

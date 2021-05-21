@@ -74,20 +74,27 @@
   height: 50px;
 }
 .button-back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
   width: 50px;
   height: 50px;
-  background: #6F2826;
-  border-radius: 5px;
-  margin-top: 40px;
-  cursor: pointer;
-  border: #6F2826;
-}
-.button-back-to-top a {
-  font-size: var(--smallFont);
-  color: #ffffff;
+  background-color: #6F2826 ;
   text-decoration: none;
-  text-align: center;
 }
+.button-back-to-top ::after {
+  content: "↑";
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffff;
+}
+.button-back-to-top:hover::after {
+  margin-top:-8px;
+}
+
 @media (max-width: 380px){
   .icon-ouvidoria{
     height: 40px;
