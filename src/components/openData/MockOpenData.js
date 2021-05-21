@@ -10,8 +10,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Comarca_FinalizacaoIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 2,
@@ -25,8 +24,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Comarca_ResultadoDenunciasTJ.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 3,
@@ -40,8 +38,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_AtividadeIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 4,
@@ -54,8 +51,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_EnquadramentoDenuncia.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 5,
@@ -68,8 +64,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.github.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_FinalizacaoIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 6,
@@ -83,8 +78,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_ResultadoDenunciasTJ.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 7,
@@ -97,8 +91,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PIP_Atividade.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 8,
@@ -112,8 +105,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PIP_FinalizacaoIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 9,
@@ -126,8 +118,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PJVaraCriminal_Atividade.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 10,
@@ -141,8 +132,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PJVaraCriminal_ResultadoDenunciasTJ.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 11,
@@ -154,8 +144,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Dicionário_BaseFAROL.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 12,
@@ -168,8 +157,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Relação_AISP_PIP_Detalhes_e_Considerações.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 13,
@@ -182,8 +170,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_aisp_cisp.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 14,
@@ -196,8 +183,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_pip_area_atuacao.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 15,
@@ -210,8 +196,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_cisp_area_atuacao_familiaTerritorial.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 16,
@@ -224,8 +209,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/de_para_cisp_area_atuacao_familiaEspecializadas.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 17,
@@ -238,8 +222,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_cisp_area_atuacao_familiaVD.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 18,
@@ -253,8 +236,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Promotoria_Foro_Comarca_Grupo.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 19,
@@ -267,8 +249,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Foro_Comarca_Craai_Município.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
     id: 20,
@@ -280,8 +261,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Foro_Comarca.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
 ];
 export default OPENDATA;
