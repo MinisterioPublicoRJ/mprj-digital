@@ -1,5 +1,6 @@
 const OPENDATA = [
   {
+    id: 1,
     title: 'Base de dados: Finalização de inquéritos policiais no nível da comarca',
     description:
       'Compila números absolutos de novos inquéritos e seus respectivos resultados dentro do MPRJ, a saber: oferecimento de denúncia e promoção de arquivamento, que compõem os indicadores de resultado e produtos. Periodicidade: anual. Unidade de análise: comarca.',
@@ -9,10 +10,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Comarca_FinalizacaoIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 2,
     title:
       'Base de dados: Resultados das denúncias oferecidas ao Tribunal de Justiça no nível da comarca',
     description:
@@ -23,10 +24,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Comarca_ResultadoDenunciasTJ.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 3,
     title:
       'Base de dados: Atividades ministeriais nos inquéritos policiais no estado do Rio de Janeiro',
     description:
@@ -37,10 +38,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_AtividadeIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 4,
     title: 'Base de dados: Oferecimentos de denúncias por tipo penal no estado do Rio de Janeiro',
     description:
       'Compila números absolutos de denúncias oferecidas em cada tipo penal e seus respectivos tempos medianos. Periodicidade: anual. Unidade de análise: estado.',
@@ -50,10 +51,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_EnquadramentoDenuncia.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 5,
     title: 'Base de dados: Finalização de inquéritos policiais no estado do Rio de Janeiro',
     description:
       'Compila números absolutos de novos inquéritos e seus respectivos resultados dentro do MPRJ, a saber: oferecimento de denúncia e promoção de arquivamento, que compõem os indicadores de resultado e produtos . Periodicidade: anual. Unidade de análise: estado.',
@@ -63,10 +64,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.github.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_FinalizacaoIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 6,
     title:
       'Base de dados: Resultados das denúncias oferecidas ao Tribunal de Justiça no estado do Rio de Janeiro',
     description:
@@ -77,10 +78,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_Estado_ResultadoDenunciasTJ.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 7,
     title: 'Base de dados: Atividades das Promotorias de Investigação Penal',
     description:
       'Compila números absolutos referente à atividade de uma Promotoria de Justiça de Investigação Penal, a saber: abertura de vistas, novos inquéritos, denúncias, arquivamentos, baixas de inquérito policial, instauração de procedimentos investigatório criminal (PIC), acordos de não persecução penal (oferecidos e propostos) e requerimentos de medidas cautelares por iniciativa do MPRJ. Periodicidade: mensal. Unidade de análise: promotoria.',
@@ -90,10 +91,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PIP_Atividade.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 8,
     title:
       'Base de dados: Finalização de inquéritos policiais no nível da Promotoria de Investigação Penal',
     description:
@@ -104,10 +105,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PIP_FinalizacaoIP.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 9,
     title: 'Base de dados: Atividades das Promotorias de Justiça Junto às Varas Criminais',
     description:
       'Compila números absolutos referente às atividades de uma promotoria de justiça da seara criminal, a saber: despachos, manifestações, recursos, denúncias, arquivamentos, requerimentos de prisão, propostas de transação penal, alegações finais, requerimentos de medidas cautelares por iniciativa do MP, ciências de sentenças, ciências de decisões e a ciência do Tribunal do Júri. Periodicidade: mensal. Unidade de análise: promotoria.',
@@ -117,10 +118,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PJVaraCriminal_Atividade.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 10,
     title:
       'Base de dados: Resultados das denúncias oferecidas ao Tribunal de Justiça no nível da Promotoria de Justiça Junto às Varas Criminais',
     description:
@@ -131,10 +132,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://raw.githubusercontent.com/MinisterioPublicoRJ/repositorio_dados_publicos/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/BaseFAROL_PJVaraCriminal_ResultadoDenunciasTJ.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 11,
     title: 'Dicionário de variáveis das bases de dados',
     description: 'Descreve cada variável utilizada nas bases de dados do Projeto Farol.',
     owner: 'CENPE/MPRJ',
@@ -143,10 +144,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Dicionário_BaseFAROL.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 12,
     title: 'Planilha auxiliar: Relação territorial das PIP e áreas de Segurança Pública',
     description:
       'Descreve o vínculo territorial entre as Promotorias de Investigação Penal, as Circunscrições Integradas de Segurança Pública (CISP) e as Áreas Integradas de Segurança Pública (AISP).c',
@@ -156,10 +157,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Relação_AISP_PIP_Detalhes_e_Considerações.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 13,
     title: 'Planilha auxiliar: Divisão territorial das áreas de Segurança Pública',
     description:
       'Descreve o vínculo entre as Circunscrições Integradas de Segurança Pública (CISP) e as Áreas Integradas de Segurança Pública (AISP).',
@@ -169,10 +170,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_aisp_cisp.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 14,
     title: 'Planilha auxiliar: Relação entre as PIP e as áreas de atribuição',
     description:
       'Descreve o vínculo entre as Promotorias de Justiça de Investigação Penal e suas respectivas áreas de atribuição.',
@@ -182,10 +183,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_pip_area_atuacao.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 15,
     title: 'Planilha auxiliar: Relação entre as CISP e as PIP da família Territorial',
     description:
       'Descreve o vínculo entre as Circunscrições Integradas de Segurança Pública (CISP ) e as Promotorias de Investigação Penal da família Territorial.',
@@ -195,10 +196,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_cisp_area_atuacao_familiaTerritorial.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 16,
     title: 'Planilha auxiliar: Relação entre as CISP e as PIP da família Especializada',
     description:
       'Descreve o vínculo entre as Circunscrições Integradas de Segurança Pública (CISP) e as Promotorias de Investigação Penal da família Especializada.',
@@ -208,10 +209,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/de_para_cisp_area_atuacao_familiaEspecializadas.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 17,
     title: 'Planilha auxiliar: Relação entre as CISP e as PIP da família Violência Doméstica',
     description:
       'Descreve o vínculo entre as Circunscrições Integradas de Segurança Pública (CISP) e as Promotorias de Investigação Penal da família Violência Doméstica.',
@@ -221,10 +222,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'CSV',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/de_para_cisp_area_atuacao_familiaVD.csv',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 18,
     title:
       'Planilha auxiliar: Relação territorial das Promotorias Criminais com a base do Sistema de Justiça',
     description:
@@ -235,10 +236,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Promotoria_Foro_Comarca_Grupo.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 19,
     title: 'Planilha auxiliar: Relação territorial entre as comarcas e os municípios',
     description:
       'Descreve o vínculo territorial entre os foros, comarcas, municípios e Centros Regionais de Apoio Administrativo Institucional (CRAAI).',
@@ -248,10 +249,10 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Foro_Comarca_Craai_Município.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
+    id: 20,
     title: 'Planilha auxiliar: Divisão territorial da base do Sistema de Justiça',
     description: 'Descreve o vínculo territorial entre os foros e as comarcas.',
     owner: 'CENPE/MPRJ',
@@ -260,8 +261,7 @@ const OPENDATA = [
     purpose: 'Open Source',
     datatype: 'XLSX',
     license: 'MIT',
-    link:
-      'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos/raw/master/cenpe/farol/07.Relat%C3%B3rio_BasesDados/Foro_Comarca.xlsx',
+    link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
 ];
 export default OPENDATA;

@@ -8,7 +8,7 @@
   margin-top: 10px;
 }
 .paginationItem {
-  margin-top: 3px;
+  margin-top: 9px;
 }
 .btnPaginationItem > button {
   color: var(--grayPagination);
@@ -32,6 +32,7 @@
   border: 0;
   background: transparent;
   color: #9dafbd;
+  margin: 5px;
 }
 .pagination-number-button.active {
   font-weight: bold;
