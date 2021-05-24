@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
 import './Products.css';
 import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 
 export default function Products() {
-  function handlePageClick(page) {
-    return page;
+  const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(PRODUCTS_CONSTANTS.length);
+  const [productType, setProductType] = useState('');
+  function handlePageClick(nextPage) {
+    if (nextPage < 1 || nextPage > totalPages) return;
+    setPage(nextPage);
   }
 
-  const [productType, setProductType] = useState('');
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = PRODUCTS_CONSTANTS;
+      setProducts(res);
+      setTotalPages(res.length / 2);
+    };
+    fetchData();
+  }, []);
 
   return (
     <section className="products" id="produtos">
@@ -38,19 +50,15 @@ export default function Products() {
         {PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType)).map(
           (product) => (
             <ProductItem
-              key={product.id}
-              title={product.title}
-              text={product.text}
-              imgUrl={product.imgUrl}
-              url={product.url}
+            products={currentProducts}
             />
           ),
         )}
       </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
-        totalPages={4}
-        currentPage={1}
+        totalPages={totalPages}
+        currentPage={page}
       />
     </section>
   );
