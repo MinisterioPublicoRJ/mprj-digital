@@ -26,21 +26,6 @@ p.products-text {
   color: #311E1E;
 }
 
-.products-filter-titles {
-  font-size: 14px;
-  display: flex;
-  margin-top: 37px;
-  display: none;
-}
-.filter-title {
-  margin: 4px 0px 4px 37px;
-  color: #9dafbd;
-  background: transparent;
-  border: 0;
-}
-.filter-title.active {
-  color: #263859;
-}
 @media (max-width: 380px){
   .products h1 {
    font-size: 20px;

@@ -18,9 +18,9 @@ export default function ProductItem({ products }) {
         <button type="button" onClick={() => setProductType('Relatório')} className="filter-title">
           Relatórios
         </button>
-        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
+        {/* <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
           Estudos
-        </button>
+        </button> */}
       </div>
       <div className="all-products">
         {products

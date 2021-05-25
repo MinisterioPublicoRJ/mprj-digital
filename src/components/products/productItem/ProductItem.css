@@ -7,10 +7,24 @@
 }
 .product {
   text-align: center;
-  padding: var(--sectionVerticalPadding) 0px;
 }
 .product img {
   width: 150px;
+}
+.products-filter-titles {
+  font-size: 14px;
+  display: flex;
+  margin-top: 37px;
+}
+.filter-title {
+  margin: 4px 0px 4px 37px;
+  color: #9dafbd;
+  background: transparent;
+  border: 0;
+  display: none;
+}
+.filter-title:hover {
+  color: #263859;
 }
 @media (max-width: 380px){
   .product img{
