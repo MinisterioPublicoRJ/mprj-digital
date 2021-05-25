@@ -1,13 +1,11 @@
 .products {
-  width: 60%;
-  margin: auto;
-  min-height: 100%;
-  text-align: center;
-  position: relative;
-  padding: var(--sectionVerticalPadding) 0px;
+  max-width: 120vh;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
-.products .mainPagination {
-  display: none;
+.products h4 {
+  margin-top: 20px;
+  text-align: center;
 }
 .products-title {
   margin: 12px 0;
@@ -19,19 +17,15 @@ p.products-text {
 .product p {
   color: #9dafbd;
   text-align: center;
+  margin-right: 0px;
+
 }
 .products h1 {
   font-weight: normal;
   text-align: left;
   color: #311E1E;
 }
-.all-products {
-  display: grid;
-  padding-top: 32px;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax(320px, auto);
-  column-gap: 2%;
-}
+
 .products-filter-titles {
   font-size: 14px;
   display: flex;

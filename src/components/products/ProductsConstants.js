@@ -64,12 +64,12 @@ export const PRODUCTS_CONSTANTS = [
     imgUrl: './Monitoramento.png',
     type: '',
   },
-  {
+  /* {
     id: 'Estudo-produto',
     title: 'Estudo',
     text: 'Letalidade policial no Rio de Janeiro em 10 pontos',
     imgUrl: './Estudo.png',
     type: 'Estudo',
-  },
+  }, */
 ];
 export default PRODUCTS_CONSTANTS;
