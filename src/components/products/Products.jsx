@@ -56,7 +56,7 @@ export default function Products() {
         </button>
       </div>
       <div className="all-products">
-        {currentProductPage.map((product, index) => (
+        {currentProductPage.map((product) => (
           <ProductItem product={product} key={product.id}/>
         ))}
       </div>

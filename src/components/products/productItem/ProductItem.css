@@ -17,11 +17,10 @@
   margin-top: 37px;
 }
 .filter-title {
-  margin: 4px 0px 4px 37px;
+  margin: 0px 30px 4px 5px;
   color: #9dafbd;
   background: transparent;
   border: 0;
-  /*display: none;*/
 }
 .filter-title:hover {
   color: #263859;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ProductItem.css';
 
 import PropTypes from 'prop-types';
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function ProductItem({ product }) {
   return (
     <>
-      <div className="product" key={product.id}>
+      <div className="product">
         <a href={product.url} target="new" rel="noreferrer">
           <img src={process.env.PUBLIC_URL + product.imgUrl} alt={product.title} />
         </a>
