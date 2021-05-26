@@ -15,12 +15,12 @@ export default function ProductItem({ products }) {
         <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
           Painéis
         </button>
-        <button type="button" onClick={() => setProductType('Relatório')} className="filter-title">
+        <button type="button" onClick={() => setProductType('Relatorio')} className="filter-title">
           Relatórios
         </button>
-        {/* <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
+        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
           Estudos
-        </button> */}
+        </button>
       </div>
       <div className="all-products">
         {products

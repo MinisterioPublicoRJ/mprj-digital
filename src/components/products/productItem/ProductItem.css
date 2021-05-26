@@ -21,7 +21,7 @@
   color: #9dafbd;
   background: transparent;
   border: 0;
-  display: none;
+  /*display: none;*/
 }
 .filter-title:hover {
   color: #263859;
