@@ -6,29 +6,32 @@ import './Products.css';
 import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
   const [page, setPage] = useState(1);
-  const [productsPorPage, setProductsPorPage] = useState(4);
+  const [productsPerPage, setProductsPerPage] = useState(4);
   const [totalPages, setTotalPages] = useState(0);
+  const [productType, setProductType] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = PRODUCTS_CONSTANTS;
-      setProducts(res);
-      setTotalPages(res.length / 4);
+
+      const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
+      setProducts(filteredProducts);
+      setTotalPages(Math.ceil(filteredProducts.length / 4));
+      setPage(1);
     };
     fetchData();
-  }, []);
+  }, [productType]);
 
-  
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
   }
 
-  const lastProduct = page * productsPorPage;
-  const firstProduct = lastProduct - productsPorPage;
-  const currentProduct = products.slice(firstProduct, lastProduct);
+  
+  const lastProduct = page * productsPerPage;
+  const firstProduct = lastProduct - productsPerPage;
+  const currentProductPage = products.slice(firstProduct, lastProduct);
 
   return (
     <section className="products" id="produtos">
@@ -38,7 +41,25 @@ export default function Products() {
         parceiros. Fique a vontade para explorar cada um deles, e não esqueça de mandar seu
         feedback, ficaremos muito feliz em recebê-lo.
       </p>
-      <ProductItem products={currentProduct} />
+      <div className="products-filter-titles">
+        <button type="button" onClick={() => setProductType('')} className="filter-title active">
+          Todos os produtos
+        </button>
+        <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
+          Painéis
+        </button>
+        <button type="button" onClick={() => setProductType('Relatorio')} className="filter-title">
+          Relatórios
+        </button>
+        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
+          Estudos
+        </button>
+      </div>
+      <div className="all-products">
+        {currentProductPage.map((product, index) => (
+          <ProductItem product={product} key={product.id}/>
+        ))}
+      </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
         totalPages={totalPages}
