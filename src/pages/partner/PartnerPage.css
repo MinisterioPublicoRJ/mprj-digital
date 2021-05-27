@@ -241,10 +241,36 @@ label {
   margin-top: 20px;
 }
 .partner-contact-button {
-  color: #f9f9f9;
+  color: hsl(0, 1%, 49%);
   background: #6792ff 0% 0% no-repeat padding-box;
   border: 0px solid #707070;
   border-radius: 10px;
   height: 24px;
   direction: rtl;
+}
+@media (max-width: 600px){
+  .partner-page-cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1080px){
+  .partner-page-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .partner-page-left{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .partner-page-logo{
+    width: 100%;
+  }
+  .partner-page-header{
+    padding: 0;
+  }
+  .partner-page-navigation{
+    display: flex;
+    width: 100%;
+  }
 }
