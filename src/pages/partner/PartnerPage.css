@@ -253,6 +253,9 @@ label {
     display: flex;
     flex-direction: column;
   }
+  .partner-page-right {
+    margin: 0;
+  }
 }
 @media (max-width: 1080px){
   .partner-page-content {
