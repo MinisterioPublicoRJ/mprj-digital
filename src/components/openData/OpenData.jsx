@@ -7,7 +7,7 @@ import OpenDataPosts from './openDataPosts/OpenDataPosts';
 
 
 export default function openData() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
   const [postPorPage, setpostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
@@ -16,7 +16,8 @@ export default function openData() {
     const fetchData = async () => {
       const res = OPENDATA;
       setPosts(res);
-      setTotalPages(res.length / 2);
+      setTotalPages(Math.ceil(res.length / 2));
+      setPage(1);
     };
     fetchData()
   }, [])

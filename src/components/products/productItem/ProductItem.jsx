@@ -1,21 +1,21 @@
 import React from 'react';
 import './ProductItem.css';
+
 import PropTypes from 'prop-types';
 
-export default function ProductItem({ title, text, imgUrl, url }) {
+export default function ProductItem({ product }) {
   return (
-    <div className="product">
-      <a href={url} target="new" rel="noreferrer">
-        <img src={process.env.PUBLIC_URL + imgUrl} alt={title} />
-      </a>
-      <h4>{title}</h4>
-      <p className="text">{text}</p>
-    </div>
+    <>
+      <div className="product">
+        <a href={product.url} target="new" rel="noreferrer">
+          <img src={process.env.PUBLIC_URL + product.imgUrl} alt={product.title} />
+        </a>
+        <h4>{product.title}</h4>
+        <p className="text">{product.text}</p>
+      </div>
+    </>
   );
 }
 ProductItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  product: PropTypes.node.isRequired,
 };

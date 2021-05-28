@@ -1,15 +1,37 @@
-import React, { useState } from 'react';
+/* eslint-disable */
+import React, { useState, useEffect } from 'react';
 import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
 import './Products.css';
 import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 
 export default function Products() {
-  function handlePageClick(page) {
-    return page;
+  const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
+  const [page, setPage] = useState(1);
+  const [productsPerPage, setProductsPerPage] = useState(4);
+  const [totalPages, setTotalPages] = useState(0);
+  const [productType, setProductType] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+
+      const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
+      setProducts(filteredProducts);
+      setTotalPages(Math.ceil(filteredProducts.length / 4));
+      setPage(1);
+    };
+    fetchData();
+  }, [productType]);
+
+  function handlePageClick(nextPage) {
+    if (nextPage < 1 || nextPage > totalPages) return;
+    setPage(nextPage);
   }
 
-  const [productType, setProductType] = useState('');
+  
+  const lastProduct = page * productsPerPage;
+  const firstProduct = lastProduct - productsPerPage;
+  const currentProductPage = products.slice(firstProduct, lastProduct);
 
   return (
     <section className="products" id="produtos">
@@ -26,31 +48,22 @@ export default function Products() {
         <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
           Painéis
         </button>
-        <button type="button" onClick={() => setProductType('Relatório')} className="filter-title">
+        <button type="button" onClick={() => setProductType('Relatorio')} className="filter-title">
           Relatórios
         </button>
         <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
           Estudos
         </button>
       </div>
-
       <div className="all-products">
-        {PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType)).map(
-          (product) => (
-            <ProductItem
-              key={product.id}
-              title={product.title}
-              text={product.text}
-              imgUrl={product.imgUrl}
-              url={product.url}
-            />
-          ),
-        )}
+        {currentProductPage.map((product) => (
+          <ProductItem product={product} key={product.id}/>
+        ))}
       </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
-        totalPages={4}
-        currentPage={1}
+        totalPages={totalPages}
+        currentPage={page}
       />
     </section>
   );

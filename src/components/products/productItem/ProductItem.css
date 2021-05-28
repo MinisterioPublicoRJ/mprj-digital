@@ -1,15 +1,29 @@
-.product .text {
-  margin: 0;
+.all-products {
+  display: grid;
+  padding-top: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(320px, auto);
+  column-gap: 2%;
 }
 .product {
-  width: 100%;
-  display: inline-block;
-}
-.product > h4 {
-  margin-top: 20px;
+  text-align: center;
 }
 .product img {
-  width: 100%;
+  width: 150px;
+}
+.products-filter-titles {
+  font-size: 14px;
+  display: flex;
+  margin-top: 37px;
+}
+.filter-title {
+  margin: 0px 30px 4px 5px;
+  color: #9dafbd;
+  background: transparent;
+  border: 0;
+}
+.filter-title:hover {
+  color: #263859;
 }
 @media (max-width: 380px){
   .product img{
