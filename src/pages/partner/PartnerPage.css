@@ -256,6 +256,12 @@ label {
   .partner-page-right {
     margin: 0;
   }
+  .partner-page-topics h3{
+    text-align: center;
+  } 
+  .partner-page-topics p{
+    text-align: center;
+  }
 }
 @media (max-width: 1080px){
   .partner-page-content {
