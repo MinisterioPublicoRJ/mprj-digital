@@ -34,54 +34,34 @@ export default function PartnersPageComponent() {
       <div className="partners-itemList-page">
         <Slider {...settings}>
           <div>
-            <a href="http://apps.mprj.mp.br/sistema/cadg/" target="_blank" rel="noreferrer">
-              <img className="" src={CADG} alt="CADG" />
-            </a>
+            <img className="" src={CADG} alt="CADG" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={CENPE} alt="CENPE" />
-            </a>
+            <img className="" src={CENPE} alt="CENPE" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={CSI} alt="CSI" />
-            </a>
+            <img className="" src={CSI} alt="CSI" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={GATE} alt="GATE" />
-            </a>
+            <img className="" src={GATE} alt="GATE" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={INOVA} alt="INOVA" />
-            </a>
+            <img className="" src={INOVA} alt="INOVA" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={SGMP} alt="SGMP" />
-            </a>
+            <img className="" src={SGMP} alt="SGMP" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={STIC} alt="STIC" />
-            </a>
+            <img className="" src={STIC} alt="STIC" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={SUBADM} alt="CENPE" />
-            </a>
+            <img className="" src={SUBADM} alt="CENPE" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={SUBPLAN} alt="CSI" />
-            </a>
+            <img className="" src={SUBPLAN} alt="CSI" />
           </div>
           <div>
-            <a href="https://parquetdigital.mprj.mp.br/" target="_blank" rel="noreferrer">
-              <img className="" src={IEP} alt="GATE" />
-            </a>
+            <img className="" src={IEP} alt="GATE" />
           </div>
         </Slider>
       </div>
