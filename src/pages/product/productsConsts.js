@@ -61,7 +61,7 @@ const PRODUCTS_CONST = {
         textBtn: 'Acessar Farol',
         url: 'https://j.mp/cadernoierbbfarol',
         imgUrl: imgDiagnostico,
-        header: 'Acesse os dados do Farol.',
+        header: 'Dados.',
         subtitle: 'Dados ?',
         text: 'Acesse os dados do Farol.​',
       },

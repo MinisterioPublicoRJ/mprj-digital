@@ -22,7 +22,7 @@
   flex-direction: column;
   grid-row: 1 / 1;
   grid-column: 2 / 5;
-  padding: 1% 15% 1% 15%;
+  padding: 3% 15% 1% 15%;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -112,5 +112,9 @@
 }
 .btn-product-text span:hover{
   color:#263859;
-  
+}
+@media (max-width: 1080px){
+  .productPage-section-buttons {
+    display: none;
+  }
 }
