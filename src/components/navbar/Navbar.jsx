@@ -86,7 +86,7 @@ export default function Navbar() {
                   Farol
                 </NavLink>
                 <NavLink to="/produto/parquet_digital" type="button" className="dropbtn">
-                  Parque Digital
+                  Parquet Digital
                 </NavLink>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function Navbar() {
                   duration: 400,
                 })}
             >
-              Dúvidas e Reclamações
+              Denúncias e Reclamações
             </NavLink>
             <span className="tooltiptext">Tem uma Reclamação ou precisa da nossa ajuda.</span>
           </div>

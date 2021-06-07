@@ -69,7 +69,7 @@ export default function Footer() {
             rel="noreferrer"
             className="create-space"
           >
-            Dúvidas e Reclamações
+            Denúncias e Reclamações
           </a>
           <a
             href="http://www.mprj.mp.br/comunicacao/ouvidoria"

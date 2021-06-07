@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import GADG from '../../assets/logos/gadg.png';
-import CENPE from '../../assets/logos/cenpe.png';
 import CSI from '../../assets/logos/csi.png';
 import GATE from '../../assets/logos/gate.png';
 import INOVA from '../../assets/logos/inova.png';
@@ -275,11 +274,6 @@ export const PARTNERS_CONST = [
         ],
       }, */
     ],
-  },
-  {
-    id: 'cenpe',
-    name: 'CENPE',
-    img: CENPE,
   },
   {
     id: 'csi',
