@@ -32,7 +32,7 @@ export default function PartnersPageComponent() {
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
       </div>
       <div className="partners-itemList-page">
-        <Slider {...settings}>
+        <Slider id="slider" {...settings}>
           <div>
             <img className="" src={CADG} alt="CADG" />
           </div>
