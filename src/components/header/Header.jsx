@@ -25,9 +25,7 @@ export default function Header() {
             />
           ))}
         </div>
-        <section className="section-info-products">
-          <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
-        </section>
+        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
       </section>
       <section className="section-explore">
         <div className="section-explore-texts">
