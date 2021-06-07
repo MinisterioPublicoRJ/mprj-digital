@@ -33,6 +33,7 @@
 .section-explore-texts > P {
   color: var(--secondColor);
   text-align: left;
+  font-size: 14px;
 }
 @media (max-width: 1080px){
   header{

@@ -1,8 +1,8 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
-  margin-bottom: 75px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 .navbar-links {
   display: flex;
@@ -24,6 +24,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
+  background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -64,7 +65,7 @@
   background-color: #702826 ;
   text-align: center;
   border-radius: 6px;
-  padding: 6px;
+  padding: 3px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
