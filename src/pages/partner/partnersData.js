@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import CADG from '../../assets/logos/cadg.png';
+import GADG from '../../assets/logos/gadg.png';
 import CENPE from '../../assets/logos/cenpe.png';
 import CSI from '../../assets/logos/csi.png';
 import GATE from '../../assets/logos/gate.png';
@@ -19,10 +19,10 @@ import GEOTAG from '../../assets/geoReferenceIcon.svg';
 export const PARTNERS_CONST = [
   {
     id: 'cadg',
-    name: 'CADG',
-    img: CADG,
+    name: 'GADG',
+    img: GADG,
     imgBg: BGHome,
-    desc: 'Coordenadoria de Análise, Diagnósticos e Geografia',
+    desc: 'Gerência de Análise, Diagnósticos e Geografia',
     subpages: [
       {
         id: 'sobre',
@@ -83,7 +83,7 @@ export const PARTNERS_CONST = [
             background: 'transparent',
             title: 'Georreferenciamento',
             smalltext:
-              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da CADG é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
+              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
             link: '',
             call: '',
             img: GEOTAG,

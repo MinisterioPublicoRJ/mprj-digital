@@ -100,14 +100,6 @@ label {
   opacity: 1;
   display: flex;
 }
-.partner-page-logo img {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  height: 500px;
-  width: 500px;
-}
 .partner-page-featured {
   margin: 0 2vw;
 }
