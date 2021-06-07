@@ -14,27 +14,35 @@ export default function NavHeader({
   icon4,
   titleBtn,
   colorBtn,
+  colorBar,
 }) {
   return (
-    <div className="section-products-item">
-      <img alt={title1} src={icon1} />
-      <p>{title1}</p>
-      <img alt={title2} src={icon2} />
-      <p>{title2}</p>
-      <img alt={title3} src={icon3} />
-      <p>{title3}</p>
-      <img alt={title4} src={icon4} />
-      <p>{title4}</p>
-      <button
-        style={{
-          backgroundColor: colorBtn,
-          color: corTitleBtn,
-        }}
-        type="button"
-      >
-        {titleBtn}
-      </button>
-    </div>
+    <section
+      className="section-info-products"
+      style={{
+        backgroundColor: colorBar,
+      }}
+    >
+      <div className="section-products-item">
+        <img alt={title1} src={icon1} />
+        <p>{title1}</p>
+        <img alt={title2} src={icon2} />
+        <p>{title2}</p>
+        <img alt={title3} src={icon3} />
+        <p>{title3}</p>
+        <img alt={title4} src={icon4} />
+        <p>{title4}</p>
+        <button
+          style={{
+            backgroundColor: colorBtn,
+            color: corTitleBtn,
+          }}
+          type="button"
+        >
+          {titleBtn}
+        </button>
+      </div>
+    </section>
   );
 }
 NavHeader.propTypes = {
@@ -45,6 +53,7 @@ NavHeader.propTypes = {
   titleBtn: PropTypes.string.isRequired,
   corTitleBtn: PropTypes.node.isRequired,
   colorBtn: PropTypes.node.isRequired,
+  colorBar: PropTypes.node.isRequired,
   icon1: PropTypes.string.isRequired,
   icon2: PropTypes.string.isRequired,
   icon3: PropTypes.string.isRequired,
