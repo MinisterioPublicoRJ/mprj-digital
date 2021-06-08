@@ -14,4 +14,18 @@
 .partners-header-Page p {
   color: #B1B1B1;
   text-align: center;
+  margin-top: 10px;
+}
+.partners-itemList-page{
+  margin-top: 30px;
+}
+.slick-slide img{
+  width: 90px;
+  margin-left: 30px;
+}
+@media (max-width: 800px){
+  .slick-slide img{
+    width: 40px;
+    height: 40px;
+  }
 }
