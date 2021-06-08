@@ -10,17 +10,17 @@
   margin-right: 20px;
   opacity: 1;
 }
-.button-MPRJDigital:hover{
+.button-MPRJDigital:focus{
   color:#C99E50;
   opacity: 1;
   font-weight: bold;
 } 
-.button-Farol:hover{
+.button-Farol:focus{
   color:#CCB0A3;
   opacity: 1;
   font-weight: bold;
 }
-.button-ParquetDigital:hover{
+.button-ParquetDigital:focus{
   color: #82D4FF;
   opacity: 1;
   font-weight: bold;

@@ -34,9 +34,6 @@
   display: block;
   font-size: 15px;
 }
-.dropdown-content a:hover {
-  background-color: transparent;
-}
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -62,7 +59,6 @@
   visibility: hidden;
   width: 156px;
   border: 1px solid #702826;
-  background-color: #702826 ;
   text-align: center;
   border-radius: 6px;
   padding: 3px;
@@ -74,7 +70,7 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  color: var(--white);
+  color: #702826;
   font-family: Roboto, regular;
 }
 .tooltip .tooltiptext::after {
