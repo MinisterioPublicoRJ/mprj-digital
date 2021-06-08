@@ -87,7 +87,9 @@ export default function PartnerPage() {
                   onKeyDown={() => setFormType(card.id)}
                   aria-hidden="true"
                 >
-                  {card.img ? <img src={card.img} alt={card.alt} /> : null}
+                  <a target="new" href={card.link}>
+                    {card.img ? <img src={card.img} alt={card.alt} /> : null}
+                  </a>
                   <h4>{card.title}</h4>
                   {card.smalltext ? <p>{card.smalltext}</p> : null}
                 </div>
