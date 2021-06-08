@@ -1,5 +1,4 @@
 .section-products-bg img{
-    min-height: 40vh;
     width: 100%;
 }
 @media (max-width: 1080px){

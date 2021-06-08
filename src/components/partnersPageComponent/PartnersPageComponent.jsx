@@ -6,8 +6,7 @@ import '../partners/partners.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import CADG from '../../assets/logos/cadg.png';
-import CENPE from '../../assets/logos/cenpe.png';
+import GADG from '../../assets/logos/gadg.png';
 import CSI from '../../assets/logos/csi.png';
 import GATE from '../../assets/logos/gate.png';
 import INOVA from '../../assets/logos/inova.png';
@@ -34,10 +33,7 @@ export default function PartnersPageComponent() {
       <div className="partners-itemList-page">
         <Slider id="slider" {...settings}>
           <div>
-            <img className="" src={CADG} alt="CADG" />
-          </div>
-          <div>
-            <img className="" src={CENPE} alt="CENPE" />
+            <img className="" src={GADG} alt="CADG" />
           </div>
           <div>
             <img className="" src={CSI} alt="CSI" />
