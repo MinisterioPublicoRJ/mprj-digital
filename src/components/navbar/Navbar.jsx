@@ -25,7 +25,9 @@ export default function Navbar() {
         id="navBar"
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
       >
-        <img className="logo" src={logo} alt="logo" />
+        <NavLink to="/">
+          <img className="logo" src={logo} alt="logo" />
+        </NavLink>
         <section className="navbar-links">
           <div className="tooltip">
             <NavLink
