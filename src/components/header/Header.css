@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 30px;
 }
 .section-products{
   position: absolute;
@@ -9,7 +10,7 @@
 }
 .section-products-btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 30px;
 }
 .section-explore {
@@ -27,7 +28,7 @@
 .section-explore-texts > h3 {
   font-weight: normal;
   color: var(--secondColor);
-  font-size: 30px;
+  font-size: 26px;
 }
 .section-explore-texts > P {
   color: var(--secondColor);

@@ -9,7 +9,7 @@ export default function Partners() {
     <section className="partners-outer" id="parceiros">
       <div className="partners-header">
         <h1>Parceiros</h1>
-        <h2>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</h2>
+        <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
       </div>
       <div className="partners-itemList">
         {PARNERS_CONST.map(({ id, img }) => (
