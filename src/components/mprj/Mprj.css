@@ -35,7 +35,6 @@
   flex-direction: column;
   grid-area: mprjInfo;
   text-align: left;
-  margin: 0 auto;
   margin-left: 40px;
 }
 .mprjDigital-itemOuter {
@@ -65,15 +64,17 @@
 .mprjDigital-itemOuter p { 
   margin-top: 0px;
 }
+
 @media (max-width: 1080px){
   .mprjDigital-outer-text h1, h6 { 
-  font-size: 20px ;
-}
-}
-@media (max-width: 1080px){
+    font-size: 20px ;
+  }
   .mprjDigital-outer{
     display: flex;
     flex-direction: column;
+  }
+  .mprjDigital-moreInfo {
+    margin: 0 auto;
   }
   .mprjDigital-itemOuter{
     display: flex;

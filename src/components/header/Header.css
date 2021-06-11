@@ -58,6 +58,12 @@
   .section-explore-texts > P {
     margin-bottom: 30px;
   }
+  .section-products-btn {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
 }
+
 
 

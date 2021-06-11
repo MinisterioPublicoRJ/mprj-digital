@@ -101,7 +101,7 @@ p.openData-description {
     border: #6F2826;
 }
 @media (max-width: 380px){
-    .openData-title h1 {
+    #repositorios h1 {
     font-size: 20px;
     }
 }

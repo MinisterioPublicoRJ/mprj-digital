@@ -28,6 +28,11 @@
 @media (max-width: 1080px){
   .section-products-btn > button {
    font-size: 16px;
- 
+  }
+}
+@media (max-width: 380px){
+  .section-products-btn > button{
+    margin-left: 0;
+    margin-right: 0;
   }
 }
