@@ -1,7 +1,6 @@
 .productPage-body-service-main{
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 10px 10px 0px rgba(199,192,192,0.75);
     opacity: 1;
     margin-top: -50px;
 }

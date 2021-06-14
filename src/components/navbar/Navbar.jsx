@@ -46,12 +46,7 @@ export default function Navbar() {
           </div>
           <div className="dropdown">
             <div className="tooltip">
-              <NavLink
-                to="/"
-                type="button"
-                className="dropbtn-button"
-                id="basic-button"
-              >
+              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
                 Parceiros
               </NavLink>
               <span className="tooltiptext">Conheça os setores envolvidos nessa iniciativa</span>
@@ -62,12 +57,7 @@ export default function Navbar() {
           </div>
           <div className="dropdown">
             <div className="tooltip">
-              <NavLink
-                to="/"
-                type="button"
-                className="dropbtn-button"
-                id="basic-button"
-              >
+              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
                 Produtos
               </NavLink>
               <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
