@@ -6,12 +6,13 @@ import { BrowserRouter } from 'react-router-dom';
 import '../themes/themes.css';
 
 import Router from '../router/Router';
-import { Footer, Navbar } from '../components';
+import { Footer, Navbar, TalkToUs } from '../components';
 
 const App = () => (
   <BrowserRouter>
     <Navbar />
     <Router />
+    <TalkToUs />
     <Footer />
   </BrowserRouter>
 );
