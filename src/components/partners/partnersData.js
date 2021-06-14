@@ -1,5 +1,4 @@
-import CADG from '../../assets/logos/cadg.png';
-import CENPE from '../../assets/logos/cenpe.png';
+import GADG from '../../assets/logos/gadg.png';
 import CSI from '../../assets/logos/csi.png';
 import GATE from '../../assets/logos/gate.png';
 import INOVA from '../../assets/logos/inova.png';
@@ -11,12 +10,8 @@ import IEP from '../../assets/logos/iep.png';
 
 export const PARNERS_CONST = [
   {
-    id: 'cadg',
-    img: CADG,
-  },
-  {
-    id: 'cenpe',
-    img: CENPE,
+    id: 'gadg',
+    img: GADG,
   },
   {
     id: 'csi',

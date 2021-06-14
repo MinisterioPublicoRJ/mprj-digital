@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
-import CADG from '../../assets/logos/cadg.png';
-import CENPE from '../../assets/logos/cenpe.png';
+import GADG from '../../assets/logos/gadg.png';
 import CSI from '../../assets/logos/csi.png';
 import GATE from '../../assets/logos/gate.png';
 import INOVA from '../../assets/logos/inova.png';
@@ -19,10 +18,10 @@ import GEOTAG from '../../assets/geoReferenceIcon.svg';
 export const PARTNERS_CONST = [
   {
     id: 'cadg',
-    name: 'CADG',
-    img: CADG,
+    name: 'GADG',
+    img: GADG,
     imgBg: BGHome,
-    desc: 'Coordenadoria de Análise, Diagnósticos e Geografia',
+    desc: 'Gerência de Análise, Diagnósticos e Geografia',
     subpages: [
       {
         id: 'sobre',
@@ -83,7 +82,7 @@ export const PARTNERS_CONST = [
             background: 'transparent',
             title: 'Georreferenciamento',
             smalltext:
-              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da CADG é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
+              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
             link: '',
             call: '',
             img: GEOTAG,
@@ -127,10 +126,10 @@ export const PARTNERS_CONST = [
             title: 'In loco',
             smalltext:
               'Mapa interativo com disponibilidade de várias camadas de dados georreferenciados.',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/inloco/',
             call: 'Conheça a solução >',
             img: '/inLoco.png',
-            alt: 'Img alt',
+            alt: 'Logo In loco',
           },
           {
             id: 'painel3',
@@ -138,10 +137,10 @@ export const PARTNERS_CONST = [
             background: 'white',
             title: 'Diágnostico de Promotorias',
             smalltext: 'Comparativo de feitos entre promotorias',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/dgpj/#!/promotoriaDeJustica',
             call: 'Conheça a solução >',
             img: '/diagnostico.png',
-            alt: 'Img alt',
+            alt: 'Logo Diágnostico de Promotorias',
           },
           {
             id: 'painel4',
@@ -150,10 +149,10 @@ export const PARTNERS_CONST = [
             title: 'Lyra',
             smalltext:
               'Inteligencia artificial de leitura de demandas repetitivas no Judiciário, busca de padroes em decisoes e pesquisas especifícas',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/cadg/',
             call: 'Conheça a solução >',
             img: '/lyra.png',
-            alt: 'Img alt',
+            alt: 'Logo Lyra',
           },
           {
             id: 'painel5',
@@ -161,10 +160,10 @@ export const PARTNERS_CONST = [
             background: 'white',
             title: 'Painéis',
             smalltext: 'Painéis temáticos e gerenciais diversos.',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/cadg/',
             call: 'Conheça a solução >',
             img: '/paines.png',
-            alt: 'Img alt',
+            alt: 'Logo Painéis temáticos',
           },
           {
             id: 'painel6',
@@ -172,10 +171,10 @@ export const PARTNERS_CONST = [
             background: 'white',
             title: 'Mprj+',
             smalltext: 'Dados e indicadores sociais por matéria.',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/mprjdigital/',
             call: 'Conheça a solução >',
             img: '/mprj.png',
-            alt: 'Img alt',
+            alt: 'Logo Mprj+',
           },
           {
             id: 'painel7',
@@ -183,10 +182,10 @@ export const PARTNERS_CONST = [
             background: 'white',
             title: 'Domínio',
             smalltext: 'Listagem de procedimentos, sua mesa e alguns alertas.',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/dominio/#/',
             call: 'Conheça a solução >',
             img: '/dominio.png',
-            alt: 'Img alt',
+            alt: 'Logo Domínio',
           },
           {
             id: 'painel8',
@@ -194,10 +193,10 @@ export const PARTNERS_CONST = [
             background: 'white',
             title: 'Painel',
             smalltext: 'Listagem de procedimentos, sua mesa e alguns alertas.',
-            link: '#',
+            link: 'http://apps.mprj.mp.br/sistema/dominio/#/',
             call: 'Conheça a solução >',
             img: '/painel.png',
-            alt: 'Img alt',
+            alt: 'Logo Painel ',
           },
         ],
       },
@@ -275,11 +274,6 @@ export const PARTNERS_CONST = [
         ],
       }, */
     ],
-  },
-  {
-    id: 'cenpe',
-    name: 'CENPE',
-    img: CENPE,
   },
   {
     id: 'csi',

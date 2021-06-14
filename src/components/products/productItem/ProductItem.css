@@ -40,4 +40,8 @@
   .product .text {
    text-align: center;
   }
+  .products-filter-titles {
+    display: flex;
+    justify-content: center;
+  }
 }

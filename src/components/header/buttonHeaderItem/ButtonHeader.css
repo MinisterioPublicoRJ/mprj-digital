@@ -6,21 +6,21 @@
   background: transparent;
   opacity: 0.5;
   outline: none;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 40px;
+  margin-right: 100px;
   opacity: 1;
 }
-.button-MPRJDigital:hover{
+.button-MPRJDigital:focus{
   color:#C99E50;
   opacity: 1;
   font-weight: bold;
 } 
-.button-Farol:hover{
+.button-Farol:focus{
   color:#CCB0A3;
   opacity: 1;
   font-weight: bold;
 }
-.button-ParquetDigital:hover{
+.button-ParquetDigital:focus{
   color: #82D4FF;
   opacity: 1;
   font-weight: bold;
@@ -28,6 +28,11 @@
 @media (max-width: 1080px){
   .section-products-btn > button {
    font-size: 16px;
- 
+  }
+}
+@media (max-width: 380px){
+  .section-products-btn > button{
+    margin-left: 0;
+    margin-right: 0;
   }
 }

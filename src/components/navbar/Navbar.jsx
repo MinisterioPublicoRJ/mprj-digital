@@ -25,7 +25,9 @@ export default function Navbar() {
         id="navBar"
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
       >
-        <img className="logo" src={logo} alt="logo" />
+        <NavLink to="/">
+          <img className="logo" src={logo} alt="logo" />
+        </NavLink>
         <section className="navbar-links">
           <div className="tooltip">
             <NavLink
@@ -60,7 +62,7 @@ export default function Navbar() {
               </NavLink>
               <span className="tooltiptext">Conheça os setores envolvidos nessa iniciativa</span>
               <div className="dropdown-content">
-                <NavLink to="/parceiro/cadg">Cadg</NavLink>
+                <NavLink to="/parceiro/cadg">Gadg</NavLink>
               </div>
             </div>
           </div>
@@ -86,7 +88,7 @@ export default function Navbar() {
                   Farol
                 </NavLink>
                 <NavLink to="/produto/parquet_digital" type="button" className="dropbtn">
-                  Parque Digital
+                  Parquet Digital
                 </NavLink>
               </div>
             </div>
@@ -131,7 +133,7 @@ export default function Navbar() {
                   duration: 400,
                 })}
             >
-              Dúvidas e Reclamações
+              Denúncias e Reclamações
             </NavLink>
             <span className="tooltiptext">Tem uma Reclamação ou precisa da nossa ajuda.</span>
           </div>

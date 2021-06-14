@@ -100,14 +100,6 @@ label {
   opacity: 1;
   display: flex;
 }
-.partner-page-logo img {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  height: 500px;
-  width: 500px;
-}
 .partner-page-featured {
   margin: 0 2vw;
 }
@@ -150,6 +142,7 @@ label {
 }
 .partner-page-cards p{
   color: #9DAFBD ;
+  margin-right: 0px;
 }
 .partner-page-cards .second {
   flex: 0 0 20%;
@@ -171,8 +164,8 @@ label {
   margin-bottom: 50px;
 }
 .partner-page-cards .second img {
-  width: 130px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
 }
 .partner-page-cards .second div {
   text-align-last: right;
@@ -194,8 +187,8 @@ label {
 }
 .partner-page-card h4 {
   text-align: center;
-  font: normal normal bold 18px/24px Roboto;
-  letter-spacing: 0px;
+  font-size: 16px;
+  margin-top: 5px;
   color: #702826;
   opacity: 1;
 }
