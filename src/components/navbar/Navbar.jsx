@@ -51,12 +51,6 @@ export default function Navbar() {
                 type="button"
                 className="dropbtn-button"
                 id="basic-button"
-                onClick={() =>
-                  scroller.scrollTo('parceiros', {
-                    smooth: true,
-                    offset: -70,
-                    duration: 400,
-                  })}
               >
                 Parceiros
               </NavLink>
@@ -73,12 +67,6 @@ export default function Navbar() {
                 type="button"
                 className="dropbtn-button"
                 id="basic-button"
-                onClick={() =>
-                  scroller.scrollTo('produtos', {
-                    smooth: true,
-                    offset: -70,
-                    duration: 400,
-                  })}
               >
                 Produtos
               </NavLink>
