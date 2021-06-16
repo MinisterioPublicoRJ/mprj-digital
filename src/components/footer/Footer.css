@@ -15,9 +15,11 @@
 .footer-menu {
   display: flex;
   flex-direction: row;
-  align-self: center;
+  justify-content: space-around;
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-right: 200px;
+  padding-left: 200px;
 }
 .footer-menu-column {
   display: flex;
@@ -28,8 +30,9 @@
   letter-spacing: -0.32px;
   color: var(--white);
   width: 12vw;
-  margin-top: 1vh;
-  font-size: var(--smallFont);
+  margin-top: 2vh;
+  margin-bottom:2vh ;
+  font-size: 13px;
 }
 .footer-menu-column h3 {
   color: var(--blueLightProdutos);
@@ -43,6 +46,7 @@
   color: var(--white);
   text-decoration: none;
   margin-bottom: 7px;
+  font-size: 13px;
 }
 .footer-menu-icons a {
   margin-right: 5px;

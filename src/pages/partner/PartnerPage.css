@@ -27,7 +27,7 @@ label {
 }
 .partner-page-header {
   height: 40vh;
-  padding-left: 38vw;
+  padding-left: 34vw;
   background-color: #6b778d;
   align-items: center;
   display: flex;
@@ -52,7 +52,7 @@ label {
   border-radius: 3px;
   height: 40px;
   flex: auto;
-  text-align-last: center;
+  margin-left: 53px;
 }
 
 .partner-page-navigation a {
@@ -86,7 +86,7 @@ label {
 }
 .partner-page-left {
   width: 25vw;
-  margin-top: -15vh;
+  margin-top: -20vh;
   margin-bottom: 10vh;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 10px 10px 0px 0px;
@@ -96,7 +96,6 @@ label {
   height: 35vh;
   background: #6E2E2D 0% 0% no-repeat padding-box;
   background-position: center;
-  border-radius: 9px 9px 0px 0px;
   opacity: 1;
   display: flex;
 }
@@ -128,6 +127,9 @@ label {
   flex: 0 0 47%;
   text-align: center;
   margin-top: 20px;
+}
+.partner-page-cards img {
+  width: 80px;
 }
 .partner-page-cards .first-with-border {
   flex: 0 0 47%;
