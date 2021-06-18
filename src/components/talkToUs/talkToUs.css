@@ -1,10 +1,108 @@
 .talk-outer {
-    background-color: var(--backgroundFooter);
-    position: relative;
-    align-content: center;
-    justify-content: center;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundFooter);
+  height: 40vh;
+  opacity: 0.92;
+  margin-top: 450px;
+  margin-bottom: -40px;
+  text-align: center;
+}
+.talk-button {
+  width: 108px;
+  height: 38px;
+  background: #6F2826 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  cursor: pointer;
+  border: #6F2826;
+}
+.talk-outer img{
+  height: 70vh;
+  width: 100%;
+  margin-bottom: -3px;
+  position: absolute;
+  bottom: 240px
+}
+.talk-outer h1{
+  font-size: var(--titleFontSize);
+  margin-top: 20px;
+}
+.talk-outer p{
+  color: #9DAFBD;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+input,
+textarea{
+  color: #9DAFBD;
+}
+input:focus,
+textarea:focus {
+  background-color: #F7F9FA 0% 0% no-repeat padding-box; 
+  outline: 1px solid #D1DBE3;
+}
+.form-inputs-outer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.form-inputs-outer
+ textarea,
+ input{
+  border: 1px solid #D1DBE3;
+  border-radius: 5px;
+  opacity: 1;
+  margin: 10px;
+}
+.form-inputs-text-outer{
+  display: flex;
+  width: 100%;
+}
+.form-inputs-text-outer input{
+  height: 40px;
+  width: 100%;
+}
+.form-inputs-outer textarea{
+  width: 97%;
+}
+.form-outer{
+  position: absolute;
+  width: 60%;
+  height: 75vh;
+  background-color: var(--white);
+  bottom: 40px ;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+}
+@media (max-width: 1080px){
+  .form-inputs-text-outer{
     display: flex;
     flex-direction: column;
-    height: 40vh;
-    opacity: 0.92;
+    width: 100%;
   }
+ 
+  .form-outer{
+    width: 100%;
+    padding: 0px;
+    height: 85vh;
+  }
+  .talk-outer p{
+    font-size: 12px;
+  }
+
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Home.css';
 
-import { Header, Mprj, OpenData, Partners, Products } from '../../components';
+import { Header, Mprj, OpenData, Partners, Products, TalkToUs } from '../../components';
 
 export default function Home() {
   return (
@@ -12,6 +12,8 @@ export default function Home() {
       <Partners />
       <Products />
       <OpenData />
+      <TalkToUs />
+
     </div>
   );
 }
