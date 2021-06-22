@@ -45,7 +45,10 @@ export default function openData() {
         atribuído, facilitando sua compreensão e o manuseio por quem quiser. Os dados que não estão
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
-      <div className="openData-counter">{OPENDATA.length} Repositórios</div>
+      <div className="openData-counter">
+        <input type="text" placeholder="Busque uma base de dados" />
+        <span>{OPENDATA.length} Repositórios</span>
+      </div>
       <div className="products-filter-titles">
         <p>Filtrar por:</p>
         <button type="button" onClick={() => setProductType('')} className="filter-title active">
