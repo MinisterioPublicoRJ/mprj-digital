@@ -44,6 +44,21 @@ export default function openData() {
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
       <div className="openData-counter">{OPENDATA.length} Repositórios</div>
+      <div className="products-filter-titles">
+        <p>Filtrar por:</p>
+        <button type="button" onClick={() => setProductType('')} className="filter-title active">
+          Qualidade da Base
+        </button>
+        <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
+          Data da Atualização
+        </button>
+        <button type="button" onClick={() => setProductType('Relatorio')} className="filter-title">
+          Data da Atualização
+        </button>
+        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
+          Estrutura do Dado
+        </button>
+      </div>
       <OpenDataPosts posts={currentPost} />
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
