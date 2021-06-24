@@ -12,7 +12,8 @@ export default function openData() {
   const [postPorPage, setpostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
-
+  //const [search, setSearch] = useState(OPENDATA);
+  //const [productName, setProductName] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,27 @@ export default function openData() {
     };
     fetchData()
   }, [productType])
+
+  /*useEffect(() => {
+    const fetchData = async () => {
+      const filteredSearch = OPENDATA.filter(
+        repositories =>
+        repositories.owner 
+          .toLowerCase()
+          .includes(productName) || 
+        repositories.datatype 
+          .toLowerCase()
+          .includes(productName) || 
+        repositories.license
+          .toLowerCase()
+          .includes(productName) 
+      
+      );
+      setSearch(filteredSearch);
+      console.log(filteredSearch)
+    };
+    fetchData()
+  }, [productName])*/
 
 
   function handlePageClick(nextPage) {
@@ -46,7 +68,14 @@ export default function openData() {
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
       <div className="openData-counter">
-        <input type="text" placeholder="Busque uma base de dados" />
+        <div class="inputWithIcon">
+        <input type="text"
+          placeholder="Busque uma base de dados" 
+          value={productType}
+          onChange={(event) => setProductType(event.target.value) }
+        />
+        <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
         <span>{OPENDATA.length} Repositórios</span>
       </div>
       <div className="products-filter-titles">
