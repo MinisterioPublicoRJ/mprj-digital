@@ -24,8 +24,8 @@
   text-indent: 10px;
 }
 .openData-counter input:focus{
-  border-color:dodgerBlue;
-  box-shadow:0 0 8px 0 dodgerBlue;
+  border-color:#702826;
+  box-shadow:0 0 8px 0 #702826;
 }
 .inputWithIcon{
   position:relative;

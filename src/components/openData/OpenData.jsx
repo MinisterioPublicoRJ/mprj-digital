@@ -12,41 +12,30 @@ export default function openData() {
   const [postPorPage, setpostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
-  //const [search, setSearch] = useState(OPENDATA);
-  //const [productName, setProductName] = useState('');
+  const [productTitle, setProductTitle] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const filteredRepositories = OPENDATA.filter((repositories) => repositories.datatype.includes(productType));
+      const filteredRepositories = OPENDATA.filter(
+        repositories =>
+        repositories.title 
+          .toLowerCase()
+          .includes(productTitle) ||
+        repositories.datatype 
+          .toLowerCase()
+          .includes(productType) 
+     
+      
+      );
+      //const filteredRepositories = OPENDATA.filter((repositories) => repositories.datatype.includes(productType));
       setPosts(filteredRepositories);
       setTotalPages(Math.ceil(filteredRepositories.length / 2));
       setPage(1);
     };
     fetchData()
-  }, [productType])
+  }, [productType, productTitle])
 
-  /*useEffect(() => {
-    const fetchData = async () => {
-      const filteredSearch = OPENDATA.filter(
-        repositories =>
-        repositories.owner 
-          .toLowerCase()
-          .includes(productName) || 
-        repositories.datatype 
-          .toLowerCase()
-          .includes(productName) || 
-        repositories.license
-          .toLowerCase()
-          .includes(productName) 
-      
-      );
-      setSearch(filteredSearch);
-      console.log(filteredSearch)
-    };
-    fetchData()
-  }, [productName])*/
-
-
+  
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
@@ -70,9 +59,9 @@ export default function openData() {
       <div className="openData-counter">
         <div class="inputWithIcon">
         <input type="text"
-          placeholder="Busque uma base de dados" 
-          value={productType}
-          onChange={(event) => setProductType(event.target.value) }
+          placeholder="Buscar um repositório" 
+          value={productTitle}
+          onChange={(event) => setProductTitle(event.target.value) }
         />
         <i class="fa fa-search" aria-hidden="true"></i>
         </div>
