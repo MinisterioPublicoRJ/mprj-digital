@@ -113,6 +113,10 @@
     width: 70px;
     height: 50px;
   }
+  .footer-menu{
+    padding: 0;
+    
+  }
   .footer-menu-column span{
     width: 100%;
   }

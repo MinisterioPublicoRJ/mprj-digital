@@ -49,7 +49,7 @@
 @media (max-width: 1080px){
     .section-info-products{
         max-width: 100%;
-        margin: 0;
+        margin: 0 auto;
         margin-top: 60px;
     }
     .section-products-item img{
