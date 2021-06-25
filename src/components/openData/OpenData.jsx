@@ -20,14 +20,12 @@ export default function openData() {
         repositories =>
         repositories.title 
           .toLowerCase()
-          .includes(productTitle) ||
+          .includes(productTitle.toLowerCase()) &&
         repositories.datatype 
           .toLowerCase()
-          .includes(productType) 
-     
-      
+          .includes(productType.toLowerCase()) 
       );
-      //const filteredRepositories = OPENDATA.filter((repositories) => repositories.datatype.includes(productType));
+      
       setPosts(filteredRepositories);
       setTotalPages(Math.ceil(filteredRepositories.length / 2));
       setPage(1);
@@ -57,7 +55,7 @@ export default function openData() {
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
       <div className="openData-counter">
-        <div class="inputWithIcon">
+        <div class="input-openData-Icon">
         <input type="text"
           placeholder="Buscar um repositório" 
           value={productTitle}

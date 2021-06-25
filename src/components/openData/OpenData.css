@@ -24,13 +24,13 @@
   text-indent: 10px;
 }
 .openData-counter input:focus{
-  border-color:#702826;
-  box-shadow:0 0 8px 0 #702826;
+  border-color:#263859;
+  box-shadow:0 0 8px 0 #263859;
 }
-.inputWithIcon{
+.input-openData-Icon{
   position:relative;
 }
-.inputWithIcon i{
+.input-openData-Icon i{
   position:absolute;
   left: 220px;
   top: 10px;
