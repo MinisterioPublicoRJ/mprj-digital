@@ -1,6 +1,8 @@
 .mainPagination {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
 .btnPaginationItem {
   display: flex;

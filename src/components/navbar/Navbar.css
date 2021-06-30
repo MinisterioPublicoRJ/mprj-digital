@@ -146,7 +146,6 @@
   border-bottom: 1px solid #eee;
   padding: 0.5rem 0;
   cursor: pointer;
-  margin: 0px;
 }
 .navbarMobileActive .navbar-links{
   transition: 0.3s;
