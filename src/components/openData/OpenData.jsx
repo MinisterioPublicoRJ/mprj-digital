@@ -11,18 +11,29 @@ export default function openData() {
   const [page, setPage] = useState(1);
   const [postPorPage, setpostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
+  const [productType, setProductType] = useState('');
+  const [productTitle, setProductTitle] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = OPENDATA;
-      setPosts(res);
-      setTotalPages(Math.ceil(res.length / 2));
+      const filteredRepositories = OPENDATA.filter(
+        repositories =>
+        repositories.title 
+          .toLowerCase()
+          .includes(productTitle.toLowerCase()) &&
+        repositories.datatype 
+          .toLowerCase()
+          .includes(productType.toLowerCase()) 
+      );
+      
+      setPosts(filteredRepositories);
+      setTotalPages(Math.ceil(filteredRepositories.length / 2));
       setPage(1);
     };
     fetchData()
-  }, [])
+  }, [productType, productTitle])
 
-
+  
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
@@ -43,7 +54,32 @@ export default function openData() {
         atribuído, facilitando sua compreensão e o manuseio por quem quiser. Os dados que não estão
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
-      <div className="openData-counter">{OPENDATA.length} Repositórios</div>
+      <div className="openData-counter">
+        <div class="input-openData-Icon">
+        <input type="text"
+          placeholder="Buscar um repositório" 
+          value={productTitle}
+          onChange={(event) => setProductTitle(event.target.value) }
+        />
+        <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <span>{OPENDATA.length} Repositórios</span>
+      </div>
+      <div className="products-filter-titles">
+        <p>Filtrar por:</p>
+        <button type="button" onClick={() => setProductType('')} className="filter-title active">
+          Qualidade da Base
+        </button>
+        <button type="button" onClick={() => setProductType('CSV')} className="filter-title">
+          Data da Atualização
+        </button>
+        <button type="button" onClick={() => setProductType('XLSX')} className="filter-title">
+          Utilização
+        </button>
+        <button type="button" onClick={() => setProductType('CSV')} className="filter-title">
+          Estrutura do Dado
+        </button>
+      </div>
       <OpenDataPosts posts={currentPost} />
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}

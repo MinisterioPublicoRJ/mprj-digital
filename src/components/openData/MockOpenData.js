@@ -37,7 +37,7 @@ const OPENDATA = [
     score: 8.0,
     purpose: 'Open Source',
     datatype: 'CSV',
-    license: 'MIT',
+    license: 'CAD',
     link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
@@ -195,7 +195,7 @@ const OPENDATA = [
     score: 9.0,
     purpose: 'Open Source',
     datatype: 'CSV',
-    license: 'MIT',
+    license: 'PAB',
     link: 'https://github.com/MinisterioPublicoRJ/repositorio_dados_publicos',
   },
   {
