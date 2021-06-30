@@ -10,11 +10,17 @@ p.openData-score{
     color: #ffff;
 }
 .openData-counter {
+    margin-top: 50px;
+    display: flex;
+}
+.openData-counter span {
     text-align: left;
     font: normal normal bold 21px/16px Roboto;
     color: #263859;
     opacity: 1;
     line-height: 42px;
+    margin-left: 30px;
+    margin-top: 10px;
 }
 .openData-linkToPanel {
     align-self: flex-end;
