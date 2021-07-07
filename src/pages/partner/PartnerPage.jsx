@@ -1,13 +1,17 @@
+/* eslint-disable no-shadow */
 import React, { useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
+import Pagination from '../../components/pagination/Pagination';
 
 import { PARTNERS_CONST } from './partnersData';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
+  const [productType, setProductType] = useState(featuredTopics);
+  const [page, setPage] = useState(1);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -27,6 +31,10 @@ export default function PartnerPage() {
     }
     action();
   };
+  function handlePageClick(nextPage) {
+    if (nextPage < 1 || nextPage > partnerFiltered) return;
+    setPage(nextPage);
+  }
 
   return (
     <>
@@ -147,6 +155,11 @@ export default function PartnerPage() {
             ) : null}
           </div>
         </div>
+        <Pagination
+          handlePageClick={(page) => handlePageClick(page)}
+          totalPages={productType}
+          currentPage={page}
+        />
       </section>
       <PartnersPageComponent />
     </>
