@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
@@ -10,7 +10,8 @@ import { PARTNERS_CONST } from './partnersData';
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
-  const [productType, setProductType] = useState(featuredTopics);
+  const [totalPages, setTotalPages] = useState(0);
+  const [productType, setProductType] = useState('');
   const [page, setPage] = useState(1);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
@@ -19,6 +20,17 @@ export default function PartnerPage() {
     (subpages) => subpages.id === subpageIdToLoad,
   );
   const featuredTopics = subpageData[0].topics;
+  const featuredCards = subpageData[0].cards;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const filteredCards = featuredCards.filter((cards) => cards.type.includes(productType));
+      setTotalPages(Math.ceil(filteredCards.length / 2));
+      setPage(1);
+    };
+    fetchData();
+  }, [productType]);
+  console.log(featuredCards);
 
   function openForm() {
     console.log('Opened Form');
@@ -32,7 +44,7 @@ export default function PartnerPage() {
     action();
   };
   function handlePageClick(nextPage) {
-    if (nextPage < 1 || nextPage > partnerFiltered) return;
+    if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
   }
 
@@ -157,7 +169,7 @@ export default function PartnerPage() {
         </div>
         <Pagination
           handlePageClick={(page) => handlePageClick(page)}
-          totalPages={productType}
+          totalPages={totalPages}
           currentPage={page}
         />
       </section>
