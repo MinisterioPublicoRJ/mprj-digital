@@ -55,13 +55,13 @@ export default function openData() {
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
       <div className="openData-counter">
-        <div class="input-openData-Icon">
+        <div className="input-openData-Icon">
         <input type="text"
           placeholder="Buscar um repositório" 
           value={productTitle}
           onChange={(event) => setProductTitle(event.target.value) }
         />
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i className="fa fa-search" aria-hidden="true"></i>
         </div>
         <span>{OPENDATA.length} Repositórios</span>
       </div>

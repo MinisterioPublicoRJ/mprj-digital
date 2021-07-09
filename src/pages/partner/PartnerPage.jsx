@@ -115,6 +115,13 @@ export default function PartnerPage() {
                 </div>
               ))}
             </div>
+            {subpageData[0].id === 'solucoes' ? (
+              <Pagination
+                handlePageClick={(page) => handlePageClick(page)}
+                totalPages={totalPages}
+                currentPage={page}
+              />
+            ) : null}
             {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
               <div className="partner-dynamic-content">
                 <h5>No que podemos melhorar</h5>
@@ -167,11 +174,6 @@ export default function PartnerPage() {
             ) : null}
           </div>
         </div>
-        <Pagination
-          handlePageClick={(page) => handlePageClick(page)}
-          totalPages={totalPages}
-          currentPage={page}
-        />
       </section>
       <PartnersPageComponent />
     </>
