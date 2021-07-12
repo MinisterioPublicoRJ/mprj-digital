@@ -9,40 +9,30 @@ import { PARTNERS_CONST } from './partnersData';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
-  const [formType, setFormType] = useState('');
-  const [totalPages, setTotalPages] = useState(0);
-  const [productType, setProductType] = useState('');
+  const [partners, setPartners] = useState(PARTNERS_CONST);
+  const [cards, setCards] = useState([]);
   const [page, setPage] = useState(1);
-
-  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
-  const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
-  const subpageData = (partnerFiltered[0].subpages || []).filter(
-    (subpages) => subpages.id === subpageIdToLoad,
-  );
-  const featuredTopics = subpageData[0].topics;
-  const featuredCards = subpageData[0].cards;
+  const [cardsPorPage, setCardsPorPage] = useState(2);
+  const [totalPages, setTotalPages] = useState(0);
+  const [formType, setFormType] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const filteredCards = featuredCards.filter((cards) => cards.type.includes(productType));
-      setTotalPages(Math.ceil(filteredCards.length / 2));
+      const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
+      const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
+      const subpageData = (partnerFiltered[0].subpages || []).filter(
+        (subpages) => subpages.id === subpageIdToLoad,
+      );
+      const featuredCards = partnerFiltered[0].subpages[0].cards;
+      setCards(featuredCards);
+      setPartners(partners);
+      setTotalPages(Math.ceil(featuredCards.length / 2));
       setPage(1);
     };
     fetchData();
-  }, [productType]);
-  console.log(featuredCards);
+  }, []);
+  console.log(cards);
 
-  function openForm() {
-    console.log('Opened Form');
-  }
-
-  const createLink = ({ url, action }) => {
-    if (url) {
-      window.open(url);
-      return;
-    }
-    action();
-  };
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
@@ -53,14 +43,14 @@ export default function PartnerPage() {
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
+          style={{ backgroundImage: `url(${partners[0].imgBg})` }}
         >
           <div className="partner-page-title">
-            <h1>{partnerFiltered[0].name}</h1>
-            <p>{partnerFiltered[0].desc}</p>
+            <h1>{partners[0].name}</h1>
+            <p>{partners[0].desc}</p>
           </div>
           <navbar className="partner-page-navigation">
-            {partnerFiltered[0].subpages.map((subpage) => (
+            {partners[0].subpages.map((subpage) => (
               <div key={subpage.id}>
                 <NavLink
                   className="partner-page-link"
@@ -77,10 +67,10 @@ export default function PartnerPage() {
           <div className="partner-page-left">
             <div
               className="partner-page-logo"
-              style={{ backgroundImage: `url(${partnerFiltered[0].img})` }}
+              style={{ backgroundImage: `url(${partners[0].img})` }}
             />
             <div className="partner-page-featured">
-              {featuredTopics.map((featured) => (
+              {partners[0].subpages[0].topics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title}</h3>
                   <p>{featured.smalltext}</p>
@@ -91,7 +81,7 @@ export default function PartnerPage() {
           </div>
           <div className="partner-page-right">
             <div className="partner-page-topics">
-              {featuredTopics.map((featured) => (
+              {partners[0].subpages[0].topics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title2}</h3>
                   <p>{featured.smalltext2}</p>
@@ -99,14 +89,8 @@ export default function PartnerPage() {
               ))}
             </div>
             <div className="partner-page-cards">
-              {(subpageData[0].cards || []).map((card) => (
-                <div
-                  key={card.id}
-                  className={`partner-page-card ${card.type}`}
-                  onClick={() => setFormType(card.id)}
-                  onKeyDown={() => setFormType(card.id)}
-                  aria-hidden="true"
-                >
+              {partners[0].subpages[0].cards.map((card) => (
+                <div key={card.id} className={`partner-page-card ${card.type}`}>
                   <a target="new" href={card.link}>
                     {card.img ? <img src={card.img} alt={card.alt} /> : null}
                   </a>
@@ -115,14 +99,14 @@ export default function PartnerPage() {
                 </div>
               ))}
             </div>
-            {subpageData[0].id === 'solucoes' ? (
+            {partners[0].subpages[0].id === 'solucoes' ? (
               <Pagination
                 handlePageClick={(page) => handlePageClick(page)}
                 totalPages={totalPages}
                 currentPage={page}
               />
             ) : null}
-            {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
+            {partners[0] === 'podemos-ajudar' && (
               <div className="partner-dynamic-content">
                 <h5>No que podemos melhorar</h5>
                 <div className="rounded-border-box">
@@ -167,11 +151,10 @@ export default function PartnerPage() {
                 <div className="partner-contact-form-action">
                   <button type="button" className="partner-contact-button">
                     enviar
-                    {formType}
                   </button>
                 </div>
               </div>
-            ) : null}
+            )}
           </div>
         </div>
       </section>

@@ -117,7 +117,7 @@ export const PARTNERS_CONST = [
             link: 'https://parquetdigital.mprj.mp.br/',
             call: 'Conheça a solução >',
             img: '/Parquet_Digital.png',
-            alt: 'Img alt',
+            alt: 'Logo parquet Digital',
           },
           {
             id: 'painel2',

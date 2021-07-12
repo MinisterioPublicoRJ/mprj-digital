@@ -9,7 +9,7 @@ import OpenDataPosts from './openDataPosts/OpenDataPosts';
 export default function openData() {
   const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
-  const [postPorPage, setpostPorPage] = useState(2);
+  const [postPorPage, setPostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const [productTitle, setProductTitle] = useState('');
