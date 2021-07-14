@@ -11,6 +11,7 @@ import { PARTNERS_CONST } from './partnersData';
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
+  const [posts, setPosts] = useState(PARTNERS_CONST);
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
   const [cardsPorPage, setCardsPorPage] = useState(4);

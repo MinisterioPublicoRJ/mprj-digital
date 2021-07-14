@@ -200,6 +200,7 @@ export const PARTNERS_CONST = [
         ],
       },
       {
+        /* {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
@@ -258,6 +259,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Gadg',
           },
         ],
+      }, */
       },
       /* {
         id: 'nosso-time',
