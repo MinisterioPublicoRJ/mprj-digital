@@ -27,7 +27,6 @@ export default function PartnerPage() {
   useEffect(() => {
     const fetchData = async () => {
       const featuredCards = subpageData[0].cards;
-      console.log(featuredCards);
       setCards(featuredCards);
       setTotalCards(Math.ceil(featuredCards.length / 4));
       setPage(1);
@@ -54,7 +53,7 @@ export default function PartnerPage() {
             <h1>{partnerFiltered[0].name}</h1>
             <p>{partnerFiltered[0].desc}</p>
           </div>
-          <navbar className="partner-page-navigation">
+          <div className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
               <div key={subpage.id}>
                 <NavLink
@@ -66,7 +65,7 @@ export default function PartnerPage() {
                 </NavLink>
               </div>
             ))}
-          </navbar>
+          </div>
         </div>
         <div className="partner-page-content">
           <div className="partner-page-left">
@@ -124,13 +123,10 @@ export default function PartnerPage() {
                   <div
                     key={card.id}
                     className={`partner-page-card ${card.type}`}
-                    onClick={() => setFormType(card.id)}
-                    onKeyDown={() => setFormType(card.id)}
-                    aria-hidden="true"
                   >
-                    <a target="new" href={card.link}>
+                    <div>
                       {card.img ? <img src={card.img} alt={card.alt} /> : null}
-                    </a>
+                    </div>
                     <h4>{card.title}</h4>
                     {card.smalltext ? <p>{card.smalltext}</p> : null}
                   </div>

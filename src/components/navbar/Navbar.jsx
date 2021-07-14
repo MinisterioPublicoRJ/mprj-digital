@@ -21,7 +21,7 @@ export default function Navbar() {
           onClick={() => setMobileMenu(!mobileMenu)}
         />
       )}
-      <navbar
+      <section
         id="navBar"
         className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
       >
@@ -116,7 +116,7 @@ export default function Navbar() {
             <span className="tooltiptext">Tem uma Reclamação ou precisa da nossa ajuda.</span>
           </div>
         </section>
-      </navbar>
+      </section>
     </div>
   );
 }
