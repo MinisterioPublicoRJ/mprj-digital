@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+/* eslint-disable import/no-cycle */
+/* eslint-disable no-shadow */
+/* eslint-disable */
+import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
-
+import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
+  const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
+  const [page, setPage] = useState(1);
+  const [cardsPorPage, setCardsPorPage] = useState(4);
+  const [totalCards, setTotalCards] = useState(0);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -15,6 +22,25 @@ export default function PartnerPage() {
     (subpages) => subpages.id === subpageIdToLoad,
   );
   const featuredTopics = subpageData[0].topics;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const featuredCards = subpageData[0].cards;
+      console.log(featuredCards);
+      setCards(featuredCards);
+      setTotalCards(Math.ceil(featuredCards.length / 4));
+      setPage(1);
+    };
+    fetchData();
+  }, []);
+
+  function handlePageClick(nextPage) {
+    if (nextPage < 1 || nextPage > totalCards) return;
+    setPage(nextPage);
+  }
+  const lastCard = page * cardsPorPage;
+  const firstCard = lastCard - cardsPorPage;
+  const currentCards = cards.slice(firstCard, lastCard);
 
   return (
     <>
@@ -66,23 +92,50 @@ export default function PartnerPage() {
                 </div>
               ))}
             </div>
-            <div className="partner-page-cards">
-              {(subpageData[0].cards || []).map((card) => (
-                <div
-                  key={card.id}
-                  className={`partner-page-card ${card.type}`}
-                  onClick={() => setFormType(card.id)}
-                  onKeyDown={() => setFormType(card.id)}
-                  aria-hidden="true"
-                >
-                  <a target="new" href={card.link}>
-                    {card.img ? <img src={card.img} alt={card.alt} /> : null}
-                  </a>
-                  <h4>{card.title}</h4>
-                  {card.smalltext ? <p>{card.smalltext}</p> : null}
+            {subpageData[0].call === 'Soluções' ? (
+              <>
+                <div className="partner-page-cards">
+                  {currentCards.map((card) => (
+                    <div
+                      key={card.id}
+                      className={`partner-page-card ${card.type}`}
+                      onClick={() => setFormType(card.id)}
+                      onKeyDown={() => setFormType(card.id)}
+                      aria-hidden="true"
+                    >
+                      <a target="new" href={card.link}>
+                        {card.img ? <img src={card.img} alt={card.alt} /> : null}
+                      </a>
+                      <h4>{card.title}</h4>
+                      {card.smalltext ? <p>{card.smalltext}</p> : null}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+                <Pagination
+                  handlePageClick={(page) => handlePageClick(page)}
+                  totalPages={totalCards}
+                  currentPage={page}
+                />
+              </>
+            ) : (
+              <div className="partner-page-cards">
+                {(subpageData[0].cards ||  []).map((card) => (
+                  <div
+                    key={card.id}
+                    className={`partner-page-card ${card.type}`}
+                    onClick={() => setFormType(card.id)}
+                    onKeyDown={() => setFormType(card.id)}
+                    aria-hidden="true"
+                  >
+                    <a target="new" href={card.link}>
+                      {card.img ? <img src={card.img} alt={card.alt} /> : null}
+                    </a>
+                    <h4>{card.title}</h4>
+                    {card.smalltext ? <p>{card.smalltext}</p> : null}
+                  </div>
+                ))}
+              </div>
+            )}
             {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
               <div className="partner-dynamic-content">
                 <h5>No que podemos melhorar</h5>

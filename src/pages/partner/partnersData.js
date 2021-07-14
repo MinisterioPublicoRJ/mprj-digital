@@ -199,7 +199,7 @@ export const PARTNERS_CONST = [
           },
         ],
       },
-      /* {
+      {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
@@ -230,8 +230,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
           {
             id: 'reclamacao',
@@ -242,8 +242,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
           {
             id: 'elogios',
@@ -254,8 +254,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
         ],
       },
