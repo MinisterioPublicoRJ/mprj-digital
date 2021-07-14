@@ -33,7 +33,7 @@ export default function PartnerPage() {
       setPage(1);
     };
     fetchData();
-  }, []);
+  }, [subpageId]);
 
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalCards) return;
