@@ -1,56 +1,34 @@
-/* eslint-disable no-shadow */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
-import Pagination from '../../components/pagination/Pagination';
 
 import { PARTNERS_CONST } from './partnersData';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
-  const [partners, setPartners] = useState(PARTNERS_CONST);
-  const [cards, setCards] = useState([]);
-  const [page, setPage] = useState(1);
-  const [cardsPorPage, setCardsPorPage] = useState(2);
-  const [totalPages, setTotalPages] = useState(0);
   const [formType, setFormType] = useState('');
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
-      const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
-      const subpageData = (partnerFiltered[0].subpages || []).filter(
-        (subpages) => subpages.id === subpageIdToLoad,
-      );
-      const featuredCards = partnerFiltered[0].subpages[0].cards;
-      setCards(featuredCards);
-      setPartners(partners);
-      setTotalPages(Math.ceil(featuredCards.length / 2));
-      setPage(1);
-    };
-    fetchData();
-  }, []);
-  console.log(cards);
-
-  function handlePageClick(nextPage) {
-    if (nextPage < 1 || nextPage > totalPages) return;
-    setPage(nextPage);
-  }
+  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
+  const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
+  const subpageData = (partnerFiltered[0].subpages || []).filter(
+    (subpages) => subpages.id === subpageIdToLoad,
+  );
+  const featuredTopics = subpageData[0].topics;
 
   return (
     <>
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partners[0].imgBg})` }}
+          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
         >
           <div className="partner-page-title">
-            <h1>{partners[0].name}</h1>
-            <p>{partners[0].desc}</p>
+            <h1>{partnerFiltered[0].name}</h1>
+            <p>{partnerFiltered[0].desc}</p>
           </div>
           <navbar className="partner-page-navigation">
-            {partners[0].subpages.map((subpage) => (
+            {partnerFiltered[0].subpages.map((subpage) => (
               <div key={subpage.id}>
                 <NavLink
                   className="partner-page-link"
@@ -67,10 +45,10 @@ export default function PartnerPage() {
           <div className="partner-page-left">
             <div
               className="partner-page-logo"
-              style={{ backgroundImage: `url(${partners[0].img})` }}
+              style={{ backgroundImage: `url(${partnerFiltered[0].img})` }}
             />
             <div className="partner-page-featured">
-              {partners[0].subpages[0].topics.map((featured) => (
+              {featuredTopics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title}</h3>
                   <p>{featured.smalltext}</p>
@@ -81,7 +59,7 @@ export default function PartnerPage() {
           </div>
           <div className="partner-page-right">
             <div className="partner-page-topics">
-              {partners[0].subpages[0].topics.map((featured) => (
+              {featuredTopics.map((featured) => (
                 <div key={featured.id}>
                   <h3>{featured.title2}</h3>
                   <p>{featured.smalltext2}</p>
@@ -89,8 +67,14 @@ export default function PartnerPage() {
               ))}
             </div>
             <div className="partner-page-cards">
-              {partners[0].subpages[0].cards.map((card) => (
-                <div key={card.id} className={`partner-page-card ${card.type}`}>
+              {(subpageData[0].cards || []).map((card) => (
+                <div
+                  key={card.id}
+                  className={`partner-page-card ${card.type}`}
+                  onClick={() => setFormType(card.id)}
+                  onKeyDown={() => setFormType(card.id)}
+                  aria-hidden="true"
+                >
                   <a target="new" href={card.link}>
                     {card.img ? <img src={card.img} alt={card.alt} /> : null}
                   </a>
@@ -99,14 +83,7 @@ export default function PartnerPage() {
                 </div>
               ))}
             </div>
-            {partners[0].subpages[0].id === 'solucoes' ? (
-              <Pagination
-                handlePageClick={(page) => handlePageClick(page)}
-                totalPages={totalPages}
-                currentPage={page}
-              />
-            ) : null}
-            {partners[0] === 'podemos-ajudar' && (
+            {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
               <div className="partner-dynamic-content">
                 <h5>No que podemos melhorar</h5>
                 <div className="rounded-border-box">
@@ -151,10 +128,11 @@ export default function PartnerPage() {
                 <div className="partner-contact-form-action">
                   <button type="button" className="partner-contact-button">
                     enviar
+                    {formType}
                   </button>
                 </div>
               </div>
-            )}
+            ) : null}
           </div>
         </div>
       </section>

@@ -18,7 +18,6 @@ import GEOTAG from '../../assets/geoReferenceIcon.svg';
 export const PARTNERS_CONST = [
   {
     id: 'cadg',
-    name: 'GADG',
     img: GADG,
     imgBg: BGHome,
     desc: 'Gerência de Análise, Diagnósticos e Geografia',

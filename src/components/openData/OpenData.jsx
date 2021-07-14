@@ -31,7 +31,7 @@ export default function openData() {
       setPage(1);
     };
     fetchData()
-  }, [productType, productTitle])
+  }, [productType, productTitle]);
 
   
   function handlePageClick(nextPage) {
