@@ -9,7 +9,7 @@ import OpenDataPosts from './openDataPosts/OpenDataPosts';
 export default function openData() {
   const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
-  const [postPorPage, setpostPorPage] = useState(2);
+  const [postPorPage, setPostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const [productTitle, setProductTitle] = useState('');
@@ -31,7 +31,7 @@ export default function openData() {
       setPage(1);
     };
     fetchData()
-  }, [productType, productTitle])
+  }, [productType, productTitle]);
 
   
   function handlePageClick(nextPage) {
@@ -55,13 +55,13 @@ export default function openData() {
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
       <div className="openData-counter">
-        <div class="input-openData-Icon">
+        <div className="input-openData-Icon">
         <input type="text"
           placeholder="Buscar um repositório" 
           value={productTitle}
           onChange={(event) => setProductTitle(event.target.value) }
         />
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i className="fa fa-search" aria-hidden="true"></i>
         </div>
         <span>{OPENDATA.length} Repositórios</span>
       </div>

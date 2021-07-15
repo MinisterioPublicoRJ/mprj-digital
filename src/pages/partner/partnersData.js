@@ -18,7 +18,6 @@ import GEOTAG from '../../assets/geoReferenceIcon.svg';
 export const PARTNERS_CONST = [
   {
     id: 'cadg',
-    name: 'GADG',
     img: GADG,
     imgBg: BGHome,
     desc: 'Gerência de Análise, Diagnósticos e Geografia',
@@ -117,7 +116,7 @@ export const PARTNERS_CONST = [
             link: 'https://parquetdigital.mprj.mp.br/',
             call: 'Conheça a solução >',
             img: '/Parquet_Digital.png',
-            alt: 'Img alt',
+            alt: 'Logo parquet Digital',
           },
           {
             id: 'painel2',
@@ -200,7 +199,8 @@ export const PARTNERS_CONST = [
           },
         ],
       },
-      /* {
+      {
+        /* {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
@@ -231,8 +231,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
           {
             id: 'reclamacao',
@@ -243,8 +243,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
           {
             id: 'elogios',
@@ -255,10 +255,11 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
         ],
+      }, */
       },
       /* {
         id: 'nosso-time',
