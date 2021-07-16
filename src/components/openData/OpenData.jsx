@@ -18,12 +18,12 @@ export default function openData() {
     const fetchData = async () => {
       const filteredRepositories = OPENDATA.filter(
         repositories =>
-        repositories.title 
+        repositories.title
           .toLowerCase()
-          .includes(productTitle) &&
-        repositories.datatype 
+          .includes(productTitle.toLowerCase()) &&
+        repositories.datatype
           .toLowerCase()
-          .includes(productType) 
+          .includes(productType.toLowerCase()) 
       );
       
       setPosts(filteredRepositories);

@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-shadow */
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
@@ -27,9 +28,9 @@ export default function PartnerPage() {
   useEffect(() => {
     const fetchData = async () => {
       const featuredCards = subpageData[0].cards.filter(
-        (infoCards) => infoCards.title
+        infoCards => infoCards.title
           .toLowerCase()
-          .includes(cardstTitle),
+          .includes(cardstTitle.toLowerCase()),
       );
       setCards(featuredCards);
       setTotalCards(Math.ceil(featuredCards.length / 4));
