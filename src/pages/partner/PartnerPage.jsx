@@ -1,6 +1,5 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-shadow */
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
@@ -84,13 +83,24 @@ export default function PartnerPage() {
             </div>
           </div>
           <div className="partner-page-right">
-            <div className="partner-page-topics">
-              {featuredTopics.map((featured) => (
-                <div key={featured.id}>
-                  <h3>{featured.title2}</h3>
-                  <p>{featured.smalltext2}</p>
-                </div>
-              ))}
+            <div className="partner-page-topics-button">
+              <div className="partner-page-topics">
+                {featuredTopics.map((featured) => (
+                  <div key={featured.id}>
+                    <h3>{featured.title2}</h3>
+                    <p>{featured.smalltext2}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="input-openData-Icon">
+                <input
+                  type="text"
+                  placeholder="Pesquise sua solução..."
+                  // value={productTitle}
+                  // onChange={(event) => setProductTitle(event.target.value)}
+                />
+                <i className="fa fa-search" aria-hidden="true" />
+              </div>
             </div>
             {subpageData[0].call === 'Soluções' ? (
               <>
@@ -119,14 +129,9 @@ export default function PartnerPage() {
               </>
             ) : (
               <div className="partner-page-cards">
-                {(subpageData[0].cards ||  []).map((card) => (
-                  <div
-                    key={card.id}
-                    className={`partner-page-card ${card.type}`}
-                  >
-                    <div>
-                      {card.img ? <img src={card.img} alt={card.alt} /> : null}
-                    </div>
+                {(subpageData[0].cards || []).map((card) => (
+                  <div key={card.id} className={`partner-page-card ${card.type}`}>
+                    <div>{card.img ? <img src={card.img} alt={card.alt} /> : null}</div>
                     <h4>{card.title}</h4>
                     {card.smalltext ? <p>{card.smalltext}</p> : null}
                   </div>

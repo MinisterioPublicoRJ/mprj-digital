@@ -1,6 +1,6 @@
 #partners-outer {
   background-color: #311E1E;
-  height: 40vh;
+  height: 35vh;
   padding: var(--sectionVerticalPadding) 20%;
   display: flex;
   flex-direction: column;
