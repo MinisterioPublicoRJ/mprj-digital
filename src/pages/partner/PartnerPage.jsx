@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
@@ -14,6 +15,7 @@ export default function PartnerPage() {
   const [page, setPage] = useState(1);
   const [cardsPorPage, setCardsPorPage] = useState(4);
   const [totalCards, setTotalCards] = useState(0);
+  const [cardstTitle, setCardstTitle] = useState('');
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -24,13 +26,17 @@ export default function PartnerPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const featuredCards = subpageData[0].cards;
+      const featuredCards = subpageData[0].cards.filter(
+        (infoCards) => infoCards.title
+          .toLowerCase()
+          .includes(cardstTitle),
+      );
       setCards(featuredCards);
       setTotalCards(Math.ceil(featuredCards.length / 4));
       setPage(1);
     };
     fetchData();
-  }, [subpageId]);
+  }, [subpageId, cardstTitle]);
 
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalCards) return;
@@ -96,8 +102,8 @@ export default function PartnerPage() {
                   <input
                     type="text"
                     placeholder="Pesquise sua solução..."
-                    // value={productTitle}
-                    // onChange={(event) => setProductTitle(event.target.value)}
+                    value={cardstTitle}
+                    onChange={(event) => setCardstTitle(event.target.value)}
                   />
                   <i className="fa fa-search" aria-hidden="true" />
                 </div>

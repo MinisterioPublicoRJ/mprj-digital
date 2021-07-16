@@ -20,10 +20,10 @@ export default function openData() {
         repositories =>
         repositories.title 
           .toLowerCase()
-          .includes(productTitle.toLowerCase()) &&
+          .includes(productTitle) &&
         repositories.datatype 
           .toLowerCase()
-          .includes(productType.toLowerCase()) 
+          .includes(productType) 
       );
       
       setPosts(filteredRepositories);

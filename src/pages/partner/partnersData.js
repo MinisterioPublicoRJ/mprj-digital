@@ -107,7 +107,7 @@ export const PARTNERS_CONST = [
         ],
         cards: [
           {
-            id: 'parquetDigital',
+            id: 'painelParquetDigital',
             type: 'second',
             background: 'white',
             title: 'Parquet Digital',
@@ -119,7 +119,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo parquet Digital',
           },
           {
-            id: 'painel2',
+            id: 'painelInloco',
             type: 'second',
             background: 'white',
             title: 'In loco',
@@ -131,7 +131,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo In loco',
           },
           {
-            id: 'painel3',
+            id: 'painelDiagnostico',
             type: 'second',
             background: 'white',
             title: 'Diágnostico de Promotorias',
@@ -142,7 +142,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Diágnostico de Promotorias',
           },
           {
-            id: 'painel4',
+            id: 'painelLyra',
             type: 'second',
             background: 'white',
             title: 'Lyra',
@@ -154,7 +154,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Lyra',
           },
           {
-            id: 'painel5',
+            id: 'painelPaines',
             type: 'second',
             background: 'white',
             title: 'Painéis',
@@ -165,7 +165,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Painéis temáticos',
           },
           {
-            id: 'painel6',
+            id: 'painelMprj+',
             type: 'second',
             background: 'white',
             title: 'Mprj+',
@@ -176,7 +176,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Mprj+',
           },
           {
-            id: 'painel7',
+            id: 'painelDominio',
             type: 'second',
             background: 'white',
             title: 'Domínio',
@@ -187,7 +187,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Domínio',
           },
           {
-            id: 'painel8',
+            id: 'painelPainel',
             type: 'second',
             background: 'white',
             title: 'Painel',
