@@ -10,7 +10,6 @@ import { PARTNERS_CONST } from './partnersData';
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
-  const [posts, setPosts] = useState(PARTNERS_CONST);
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
   const [cardsPorPage, setCardsPorPage] = useState(4);
@@ -92,15 +91,17 @@ export default function PartnerPage() {
                   </div>
                 ))}
               </div>
-              <div className="input-openData-Icon">
-                <input
-                  type="text"
-                  placeholder="Pesquise sua solução..."
-                  // value={productTitle}
-                  // onChange={(event) => setProductTitle(event.target.value)}
-                />
-                <i className="fa fa-search" aria-hidden="true" />
-              </div>
+              {subpageData[0].call === 'Soluções' ? (
+                <div className="input-openData-Icon">
+                  <input
+                    type="text"
+                    placeholder="Pesquise sua solução..."
+                    // value={productTitle}
+                    // onChange={(event) => setProductTitle(event.target.value)}
+                  />
+                  <i className="fa fa-search" aria-hidden="true" />
+                </div>
+              ) : null}
             </div>
             {subpageData[0].call === 'Soluções' ? (
               <>

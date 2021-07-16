@@ -17,5 +17,5 @@ export default function ProductItem({ product }) {
   );
 }
 ProductItem.propTypes = {
-  product: PropTypes.string.isRequired,
+  product: PropTypes.node.isRequired,
 };
