@@ -159,17 +159,7 @@ label {
   border-color:#263859;
   box-shadow:0 0 8px 0 #263859;
 }
-.input-openData-Icon{
-  position:relative;
-}
-.input-openData-Icon i{
-  position:absolute;
-  left: 250px;
-  top: 20px;
-  padding:9px 8px;
-  color:#aaa;
-  transition:.3s;
-}
+
 .partner-page-cards p,
 .partner-page-cards h4 {
   text-align: center;

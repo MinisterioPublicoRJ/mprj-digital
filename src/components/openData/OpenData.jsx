@@ -20,9 +20,11 @@ export default function openData() {
         repositories =>
         repositories.title
           .toLowerCase()
+          .replace(/[\u0300-\u036f]/g, '')
           .includes(productTitle.toLowerCase()) &&
-        repositories.datatype
+        repositories.license
           .toLowerCase()
+          .replace(/[\u0300-\u036f]/g, '')
           .includes(productType.toLowerCase()) 
       );
       
@@ -32,7 +34,7 @@ export default function openData() {
     };
     fetchData()
   }, [productType, productTitle]);
-
+    
   
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
@@ -59,7 +61,7 @@ export default function openData() {
         <input type="text"
           placeholder="Buscar um repositório" 
           value={productTitle}
-          onChange={(event) => setProductTitle(event.target.value) }
+          onChange={(event) => setProductTitle(event.target.value)}
         />
         <i className="fa fa-search" aria-hidden="true"></i>
         </div>

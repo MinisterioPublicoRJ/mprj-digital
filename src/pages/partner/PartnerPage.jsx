@@ -18,6 +18,7 @@ export default function PartnerPage() {
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
 
+
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
   const subpageData = (partnerFiltered[0].subpages || []).filter(
@@ -30,6 +31,7 @@ export default function PartnerPage() {
       const featuredCards = subpageData[0].cards.filter(
         infoCards => infoCards.title
           .toLowerCase()
+          .replace(/[\u0300-\u036f]/g, '')
           .includes(cardstTitle.toLowerCase()),
       );
       setCards(featuredCards);
@@ -105,8 +107,9 @@ export default function PartnerPage() {
                     placeholder="Pesquise sua solução..."
                     value={cardstTitle}
                     onChange={(event) => setCardstTitle(event.target.value)}
+                    onMouseOver={() => setCardstTitle("")}
                   />
-                  <i className="fa fa-search" aria-hidden="true" />
+                  <i className="fa fa-search" aria-hidden="true" style={{ left: 250, top: 20}}/>
                 </div>
               ) : null}
             </div>
