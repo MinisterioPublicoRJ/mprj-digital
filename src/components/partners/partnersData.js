@@ -1,4 +1,4 @@
-import GADG from '../../assets/logos/gadg.png';
+import GADG from '../../assets/logos/gadg.png'
 import CSI from '../../assets/logos/csi.png';
 import GATE from '../../assets/logos/gate.png';
 import INOVA from '../../assets/logos/inova.png';

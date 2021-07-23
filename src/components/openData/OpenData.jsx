@@ -22,7 +22,7 @@ export default function openData() {
           .toLowerCase()
           .replace(/[\u0300-\u036f]/g, '')
           .includes(productTitle.toLowerCase()) &&
-        repositories.license
+        repositories.datatype
           .toLowerCase()
           .replace(/[\u0300-\u036f]/g, '')
           .includes(productType.toLowerCase()) 

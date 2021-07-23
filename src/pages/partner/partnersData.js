@@ -81,7 +81,7 @@ export const PARTNERS_CONST = [
             background: 'transparent',
             title: 'Georreferenciamento',
             smalltext:
-              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
+              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a GADG é conhecida por se valer de recursos geográficos.',
             link: '',
             call: '',
             img: GEOTAG,
