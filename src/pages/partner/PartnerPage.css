@@ -26,7 +26,7 @@ label {
   background: #f9f9f9 0% 0% no-repeat padding-box;
 }
 .partner-page-header {
-  height: 36vh;
+  height: 390px;
   padding-left: 34vw;
   background-color: #6b778d;
   align-items: center;
@@ -66,6 +66,7 @@ label {
 .partner-page-navigation a:hover {
   color: #C99E50;
 }
+
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;

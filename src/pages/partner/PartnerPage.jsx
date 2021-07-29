@@ -54,7 +54,7 @@ export default function PartnerPage() {
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
+          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})`}}
         >
           <div className="partner-page-title">
             <h1>{partnerFiltered[0].name}</h1>
