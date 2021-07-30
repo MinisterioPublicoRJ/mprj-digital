@@ -25,13 +25,13 @@ export default function Partners() {
             </a>
           </div>
           <div>
+            <img className="" src={INOVA} alt="INOVA" />
+          </div>
+          <div>
             <img className="" src={CSI} alt="CSI" />
           </div>
           <div>
             <img className="" src={GATE} alt="GATE" />
-          </div>
-          <div>
-            <img className="" src={INOVA} alt="INOVA" />
           </div>
           <div>
             <img className="" src={SGMP} alt="SGMP" />
