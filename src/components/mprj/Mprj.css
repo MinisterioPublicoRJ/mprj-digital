@@ -25,6 +25,7 @@
 .mprjDigital-outer-text p{ 
   color: var(--white);
   margin-left: 80px;
+  text-align: right;
 }
 .mprjDigital-outer-text h1, p{ 
   margin-right: 30px;
