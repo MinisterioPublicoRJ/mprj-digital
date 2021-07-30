@@ -194,7 +194,7 @@ export const PARTNERS_CONST = [
             smalltext: 'Listagem de procedimentos, sua mesa e alguns alertas.',
             link: 'http://apps.mprj.mp.br/sistema/dominio/#/',
             call: 'Conheça a solução >',
-            img: '/painel.png',
+            img: '/Painel.png',
             alt: 'Logo Painel ',
           },
         ],
