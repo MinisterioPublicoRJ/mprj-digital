@@ -70,7 +70,7 @@ const PRODUCTS_CONST = {
   parquet_digital: {
     title: 'Parquet Digital',
     subId: 'Farol',
-    organ: 'MP em Mapas',
+    organ: 'GADG',
     service: 'Análise da Atuação das promotorias',
     background: bgParquet,
     header: {
