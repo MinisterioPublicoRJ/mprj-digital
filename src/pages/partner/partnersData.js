@@ -113,7 +113,7 @@ export const PARTNERS_CONST = [
             title: 'Parquet Digital',
             smalltext:
               'O robô das promotorias, que auxilia na visão, gestão e resolução do acervo.',
-            link: 'https://d-mprjdigital.mprj.mp.br/produto/parquet_digital',
+            link: '/produto/parquet_digital',
             call: 'Conheça a solução >',
             img: '/Parquet_Digital.png',
             alt: 'Logo parquet Digital',

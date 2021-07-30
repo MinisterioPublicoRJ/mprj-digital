@@ -20,7 +20,7 @@ export default function Partners() {
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
         <div className="partners-itemList">
           <div>
-            <a href="https://d-mprjdigital.mprj.mp.br/parceiro/cadg" target="new">
+            <a href="/parceiro/cadg">
               <img className="" src={GADG} alt="CADG" />
             </a>
           </div>

@@ -4,7 +4,7 @@ export const PRODUCTS_CONSTANTS = [
     title: 'Parquet Digital',
     text: 'Ferramenta para auxiliar o trabalho dos promotores do MPRJ',
     imgUrl: './Parquet_Digital.png',
-    url: 'https://parquetdigital.mprj.mp.br/',
+    url: '/produto/parquet_digital',
     type: 'Relatorio',
   },
   {
