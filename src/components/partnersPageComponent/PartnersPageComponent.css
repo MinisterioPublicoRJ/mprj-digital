@@ -1,6 +1,6 @@
 #partners-outer {
   background-color: #311E1E;
-  height: 40vh;
+  height: 35vh;
   padding: var(--sectionVerticalPadding) 20%;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   margin-top: 30px;
 }
 .slick-slide img{
-  width: 90px;
+  width: 128px;
   margin-left: 30px;
 }
 @media (max-width: 800px){

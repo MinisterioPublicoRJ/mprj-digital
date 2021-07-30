@@ -26,7 +26,7 @@ label {
   background: #f9f9f9 0% 0% no-repeat padding-box;
 }
 .partner-page-header {
-  height: 36vh;
+  height: 390px;
   padding-left: 34vw;
   background-color: #6b778d;
   align-items: center;
@@ -66,6 +66,7 @@ label {
 .partner-page-navigation a:hover {
   color: #C99E50;
 }
+
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;
@@ -121,7 +122,6 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 30px 0px;
 }
 
 .partner-page-cards .first {
@@ -139,6 +139,28 @@ label {
   border-bottom: 6px solid #6792ff;
   border-radius: 3px;
 }
+.partner-page-topics-button{
+  display: flex;
+}
+.partner-page-topics-button input{
+  width: 300px;
+  height: 60px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #D1DBE3;
+  opacity: 1;
+  color: #9DAFBD;
+  outline: 0;
+  margin:8px 0;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+  text-indent: 10px;
+}
+.partner-page-topics-button input:focus{
+  border-color:#263859;
+  box-shadow:0 0 8px 0 #263859;
+}
+
 .partner-page-cards p,
 .partner-page-cards h4 {
   text-align: center;
@@ -148,7 +170,7 @@ label {
   margin-right: 0px;
 }
 .partner-page-cards .second {
-  flex: 0 0 20%;
+  flex: 0 0 35%;
   margin: 20px 4px;
   margin-right: 0px;
   text-align: center;
@@ -167,8 +189,8 @@ label {
   margin-bottom: 50px;
 }
 .partner-page-cards .second img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
 }
 .partner-page-cards .second div {
   text-align-last: right;
@@ -257,6 +279,13 @@ label {
   } 
   .partner-page-topics p{
     text-align: center;
+  }
+  .partner-page-topics-button{
+    display: flex;
+    flex-direction: column;
+  }
+  .input-openData-Icon{
+    margin: 0 auto;
   }
 }
 @media (max-width: 1080px){

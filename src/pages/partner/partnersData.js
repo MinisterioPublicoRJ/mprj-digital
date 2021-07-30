@@ -81,7 +81,7 @@ export const PARTNERS_CONST = [
             background: 'transparent',
             title: 'Georreferenciamento',
             smalltext:
-              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
+              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a GADG é conhecida por se valer de recursos geográficos.',
             link: '',
             call: '',
             img: GEOTAG,
@@ -107,19 +107,19 @@ export const PARTNERS_CONST = [
         ],
         cards: [
           {
-            id: 'parquetDigital',
+            id: 'painelParquetDigital',
             type: 'second',
             background: 'white',
             title: 'Parquet Digital',
             smalltext:
               'O robô das promotorias, que auxilia na visão, gestão e resolução do acervo.',
-            link: 'https://parquetdigital.mprj.mp.br/',
+            link: '/produto/parquet_digital',
             call: 'Conheça a solução >',
             img: '/Parquet_Digital.png',
             alt: 'Logo parquet Digital',
           },
           {
-            id: 'painel2',
+            id: 'painelInloco',
             type: 'second',
             background: 'white',
             title: 'In loco',
@@ -131,7 +131,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo In loco',
           },
           {
-            id: 'painel3',
+            id: 'painelDiagnostico',
             type: 'second',
             background: 'white',
             title: 'Diágnostico de Promotorias',
@@ -142,7 +142,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Diágnostico de Promotorias',
           },
           {
-            id: 'painel4',
+            id: 'painelLyra',
             type: 'second',
             background: 'white',
             title: 'Lyra',
@@ -154,7 +154,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Lyra',
           },
           {
-            id: 'painel5',
+            id: 'painelPaines',
             type: 'second',
             background: 'white',
             title: 'Painéis',
@@ -165,7 +165,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Painéis temáticos',
           },
           {
-            id: 'painel6',
+            id: 'painelMprj+',
             type: 'second',
             background: 'white',
             title: 'Mprj+',
@@ -176,7 +176,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Mprj+',
           },
           {
-            id: 'painel7',
+            id: 'painelDominio',
             type: 'second',
             background: 'white',
             title: 'Domínio',
@@ -187,7 +187,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Domínio',
           },
           {
-            id: 'painel8',
+            id: 'painelPainel',
             type: 'second',
             background: 'white',
             title: 'Painel',

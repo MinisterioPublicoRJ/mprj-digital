@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-shadow */
 /* eslint-disable */
@@ -11,11 +12,12 @@ import { PARTNERS_CONST } from './partnersData';
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
-  const [posts, setPosts] = useState(PARTNERS_CONST);
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
   const [cardsPorPage, setCardsPorPage] = useState(4);
   const [totalCards, setTotalCards] = useState(0);
+  const [cardstTitle, setCardstTitle] = useState('');
+
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -26,13 +28,18 @@ export default function PartnerPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const featuredCards = subpageData[0].cards;
+      const featuredCards = subpageData[0].cards.filter(
+        infoCards => infoCards.title
+          .toLowerCase()
+          .replace(/[\u0300-\u036f]/g, '')
+          .includes(cardstTitle.toLowerCase()),
+      );
       setCards(featuredCards);
       setTotalCards(Math.ceil(featuredCards.length / 4));
       setPage(1);
     };
     fetchData();
-  }, [subpageId]);
+  }, [subpageId, cardstTitle]);
 
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalCards) return;
@@ -47,7 +54,7 @@ export default function PartnerPage() {
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
+          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})`}}
         >
           <div className="partner-page-title">
             <h1>{partnerFiltered[0].name}</h1>
@@ -84,13 +91,27 @@ export default function PartnerPage() {
             </div>
           </div>
           <div className="partner-page-right">
-            <div className="partner-page-topics">
-              {featuredTopics.map((featured) => (
-                <div key={featured.id}>
-                  <h3>{featured.title2}</h3>
-                  <p>{featured.smalltext2}</p>
+            <div className="partner-page-topics-button">
+              <div className="partner-page-topics">
+                {featuredTopics.map((featured) => (
+                  <div key={featured.id}>
+                    <h3>{featured.title2}</h3>
+                    <p>{featured.smalltext2}</p>
+                  </div>
+                ))}
+              </div>
+              {subpageData[0].call === 'Soluções' ? (
+                <div className="input-openData-Icon">
+                  <input
+                    type="text"
+                    placeholder="Pesquise sua solução..."
+                    value={cardstTitle}
+                    onChange={(event) => setCardstTitle(event.target.value)}
+                    onMouseOver={() => setCardstTitle("")}
+                  />
+                  <i className="fa fa-search" aria-hidden="true" style={{ left: 250, top: 20}}/>
                 </div>
-              ))}
+              ) : null}
             </div>
             {subpageData[0].call === 'Soluções' ? (
               <>
@@ -119,14 +140,9 @@ export default function PartnerPage() {
               </>
             ) : (
               <div className="partner-page-cards">
-                {(subpageData[0].cards ||  []).map((card) => (
-                  <div
-                    key={card.id}
-                    className={`partner-page-card ${card.type}`}
-                  >
-                    <div>
-                      {card.img ? <img src={card.img} alt={card.alt} /> : null}
-                    </div>
+                {(subpageData[0].cards || []).map((card) => (
+                  <div key={card.id} className={`partner-page-card ${card.type}`}>
+                    <div>{card.img ? <img src={card.img} alt={card.alt} /> : null}</div>
                     <h4>{card.title}</h4>
                     {card.smalltext ? <p>{card.smalltext}</p> : null}
                   </div>

@@ -29,13 +29,23 @@
 }
 .input-openData-Icon{
   position:relative;
+  margin-top: 25px;
+  margin-left: 15px;
 }
 .input-openData-Icon i{
   position:absolute;
   left: 220px;
   top: 10px;
   padding:9px 8px;
-  color:#aaa;
+  color:black;
   transition:.3s;
 }
-
+@media (max-width: 480px){
+  .openData-counter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  
+}
