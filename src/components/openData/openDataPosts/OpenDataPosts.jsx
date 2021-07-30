@@ -18,7 +18,7 @@ export default function OpenDataPosts({ posts }) {
             <p>
               <span>Atualização:</span>
               {' '}
-              {new Date(item.date).toLocaleDateString()}
+              {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
           </div>
           <p>
