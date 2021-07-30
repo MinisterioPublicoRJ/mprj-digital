@@ -37,6 +37,8 @@
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+
 @media (max-width: 1080px){
   header{
     position: absolute;

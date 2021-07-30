@@ -51,7 +51,7 @@ export default function PartnersPageComponent() {
             <img className="" src={STIC} alt="STIC" />
           </div>
           <div>
-            <img className="" src={SUBADM} alt="CENPE" />
+            <img className="" src={SUBADM} alt="GADG" />
           </div>
           <div>
             <img className="" src={SUBPLAN} alt="CSI" />

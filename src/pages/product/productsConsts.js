@@ -12,7 +12,7 @@ import imgDiagnostico from '../../assets/images/imgDiagnostico.png';
 const PRODUCTS_CONST = {
   farol: {
     title: 'Farol',
-    organ: 'CENPE/MPRJ',
+    organ: 'GADG/MPRJ',
     background: bgFarol,
     service: 'Monitoramento das Promotorias de Investigação Penal',
     header: {
@@ -28,7 +28,7 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'CEMPE',
-        titleBtn: 'Cenpe',
+        titleBtn: 'GADG',
       },
       {
         id: 'FAROL',
@@ -86,7 +86,7 @@ const PRODUCTS_CONST = {
       },
       {
         id: 'CEMPE',
-        titleBtn: 'Cenpe',
+        titleBtn: 'GADG',
       },
       {
         id: 'FAROL',
