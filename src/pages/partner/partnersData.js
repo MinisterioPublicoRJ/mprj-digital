@@ -30,7 +30,7 @@ export const PARTNERS_CONST = [
             id: 'quemSomos',
             title: 'Quem somos?',
             smalltext:
-              'A Coordenadoria de Análises, Diagnósticos e Geoprocessamento (CADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados.',
+              'A Gerência de Análises, Diagnósticos e Geoprocessamento (GADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados.',
             subsmalltext:
               'A equipe é responsável pela plataforma MPRJ em Mapas e todas as ferramentas, sistemas e aplicações ali concentradas. O foco de seu trabalho é entregar soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
             title2: 'Nossos pilares',
@@ -194,7 +194,7 @@ export const PARTNERS_CONST = [
             smalltext: 'Listagem de procedimentos, sua mesa e alguns alertas.',
             link: 'http://apps.mprj.mp.br/sistema/dominio/#/',
             call: 'Conheça a solução >',
-            img: '/painel.png',
+            img: '/Painel.png',
             alt: 'Logo Painel ',
           },
         ],

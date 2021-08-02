@@ -103,7 +103,7 @@ export default function openData() {
         <span>{OPENDATA.length} Repositórios</span>
       </div>
       <div className="products-filter-titles">
-        <p>Filtrar por:</p>
+        <p>Ordenar por:</p>
         <button
           type="button"
           onClick={() => setFilterByType('score')}
@@ -113,9 +113,6 @@ export default function openData() {
         </button>
         <button type="button" onClick={() => setFilterByType('date')} className="filter-title">
           Data da Atualização
-        </button>
-        <button type="button" onClick={() => setFilterByType('purpose')} className="filter-title">
-          Utilização
         </button>
         <button type="button" onClick={() => setFilterByType('datatype')} className="filter-title">
           Estrutura do Dado

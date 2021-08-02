@@ -36,13 +36,13 @@ export default function PartnersPageComponent() {
             <img className="" src={GADG} alt="CADG" />
           </div>
           <div>
+            <img className="" src={INOVA} alt="INOVA" />
+          </div>
+          <div>
             <img className="" src={CSI} alt="CSI" />
           </div>
           <div>
             <img className="" src={GATE} alt="GATE" />
-          </div>
-          <div>
-            <img className="" src={INOVA} alt="INOVA" />
           </div>
           <div>
             <img className="" src={SGMP} alt="SGMP" />
@@ -51,7 +51,7 @@ export default function PartnersPageComponent() {
             <img className="" src={STIC} alt="STIC" />
           </div>
           <div>
-            <img className="" src={SUBADM} alt="CENPE" />
+            <img className="" src={SUBADM} alt="GADG" />
           </div>
           <div>
             <img className="" src={SUBPLAN} alt="CSI" />

@@ -25,13 +25,13 @@ export default function Partners() {
             </a>
           </div>
           <div>
+            <img className="" src={INOVA} alt="INOVA" />
+          </div>
+          <div>
             <img className="" src={CSI} alt="CSI" />
           </div>
           <div>
             <img className="" src={GATE} alt="GATE" />
-          </div>
-          <div>
-            <img className="" src={INOVA} alt="INOVA" />
           </div>
           <div>
             <img className="" src={SGMP} alt="SGMP" />
@@ -40,7 +40,7 @@ export default function Partners() {
             <img className="" src={STIC} alt="STIC" />
           </div>
           <div>
-            <img className="" src={SUBADM} alt="CENPE" />
+            <img className="" src={SUBADM} alt="GADG" />
           </div>
           <div>
             <img className="" src={SUBPLAN} alt="CSI" />
