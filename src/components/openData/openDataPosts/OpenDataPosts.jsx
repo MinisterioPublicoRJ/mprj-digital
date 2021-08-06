@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './OpenDataPosts.css';
@@ -13,6 +14,7 @@ export default function OpenDataPosts({ posts }) {
             <p className="openData-description">{item.description}</p>
             <p>
               <span>Setor Responsável:</span>
+              {' '}
               {item.owner}
             </p>
             <p>
