@@ -53,7 +53,7 @@ p.openData-score{
     margin-bottom: 2vh;
     padding: 20px;
 }
-.openData-item > h4, p, span {
+.openData-item > h4, .openData-item p, .openData-item span {
     text-align: left;
 }
 p.openData-description {
