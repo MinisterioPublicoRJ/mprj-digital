@@ -21,7 +21,7 @@ export const PARTNERS_CONST = [
     img: GADG,
     name: 'GADG',
     imgBg: BGHome,
-    desc: 'Gerência de Análise, Diagnósticos e Geografia',
+    desc: 'Gerência de Análise, Diagnósticos e Geoprocessamento',
     subpages: [
       {
         id: 'sobre',

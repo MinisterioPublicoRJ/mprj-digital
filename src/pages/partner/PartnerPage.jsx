@@ -65,7 +65,10 @@ export default function PartnerPage() {
               <div key={subpage.id}>
                 <NavLink
                   className="partner-page-link"
-                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#C99E50"
+                  }}
                   to={`/parceiro/${partnerId}/${subpage.id}`}
                 >
                   {subpage.call}
