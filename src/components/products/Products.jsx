@@ -8,7 +8,7 @@ import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 export default function Products() {
   const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
   const [page, setPage] = useState(1);
-  const [productsPerPage, setProductsPerPage] = useState(4);
+  const [productsPerPage, setProductsPerPage] = useState(8);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
 
@@ -17,7 +17,7 @@ export default function Products() {
 
       const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
       setProducts(filteredProducts);
-      setTotalPages(Math.ceil(filteredProducts.length / 4));
+      setTotalPages(Math.ceil(filteredProducts.length / 8));
       setPage(1);
     };
     fetchData();
