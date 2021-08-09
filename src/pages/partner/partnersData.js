@@ -17,7 +17,7 @@ import GEOTAG from '../../assets/geoReferenceIcon.svg';
 
 export const PARTNERS_CONST = [
   {
-    id: 'cadg',
+    id: 'gadg',
     img: GADG,
     name: 'GADG',
     imgBg: BGHome,

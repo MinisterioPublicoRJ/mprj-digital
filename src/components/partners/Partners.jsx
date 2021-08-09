@@ -14,14 +14,14 @@ import IEP from '../../assets/logos/iep.png';
 export default function Partners() {
   return (
     <section className="partners-outer" id="parceiros">
-      <img className="" src={bg} alt="CADG" />
+      <img className="" src={bg} alt="GADG" />
       <div className="partners-header">
         <h1>Parceiros</h1>
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
         <div className="partners-itemList">
           <div>
-            <a href="/parceiro/cadg">
-              <img className="" src={GADG} alt="CADG" />
+            <a href="/parceiro/gadg">
+              <img className="" src={GADG} alt="GADG" />
             </a>
           </div>
           <div>
