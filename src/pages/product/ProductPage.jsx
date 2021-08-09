@@ -21,7 +21,31 @@ export default function Produto() {
         <h2>{header.title}</h2>
         <p>{header.subtitle}</p>
       </div>
-      <div className="productPage-body-main">
+      <h1 className="productPage-productName">{title}</h1>
+      <div className="productPage-owner">
+        <p>{organ}</p>
+        <span>Orgão Responsável</span>
+      </div>
+      <div className="productPage-service">
+        <p>{service}</p>
+        <span>Serviço</span>
+      </div>
+      <div className="productPage-tabNavigation">
+        {tabs.map(({ id, subtitle }) => (
+          <div key={id}>
+            <button
+              onClick={() => {
+                setchangeData(id);
+              }}
+              className="productPage-navButtons"
+              type="button"
+            >
+              <span>{subtitle}</span>
+            </button>
+          </div>
+        ))}
+      </div>
+      {/* <div className="productPage-body-main">
         <div className="productPage-section-subpages">
           {subpages.map((subpage) => (
             <div key={subpage.id}>
@@ -35,7 +59,6 @@ export default function Produto() {
             </div>
           ))}
         </div>
-        <h1>{title}</h1>
         <div className="productPage-bodyAll-Texts">
           <div className="productPage-bodyFilling">
             <p>{organ}</p>
@@ -55,7 +78,7 @@ export default function Produto() {
                   onClick={() => {
                     setchangeData(id);
                   }}
-                  className="btn-product-text"
+                  className="productPage-navButtons"
                   type="button"
                 >
                   <span>{subtitle}</span>
@@ -65,7 +88,7 @@ export default function Produto() {
           </div>
           <DataProduct {...tabs.find((tab) => tab.id === changeData)} />
         </div>
-      </div>
+      </div> */}
     </article>
   );
 }
