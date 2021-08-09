@@ -23,6 +23,11 @@ export default function PartnersPageComponent() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 5,
+    variableWidth: true,
+    variableHeight: true,
+    arrows: true,
+    className: 'slides',
+
   };
   return (
     <section id="partners-outer">
