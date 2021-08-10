@@ -37,7 +37,7 @@ export default function PartnersPageComponent() {
       <div className="partners-itemList-page">
         <Slider id="slider" {...settings}>
           <div>
-            <img className="" src={GADG} alt="CADG" />
+            <img className="" src={GADG} alt="GADG" />
           </div>
           <div>
             <img className="" src={INOVA} alt="INOVA" />
