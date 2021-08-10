@@ -118,11 +118,14 @@ export default function PartnerPage() {
             </div>
             {subpageData[0].call === 'Soluções' ? (
               <>
-                <div className="partner-page-cards">
+                <div
+                className={`${subpageData[0].call === 'Soluções' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'}`}
+                >
                   {currentCards.map((card) => (
                     <div
                       key={card.id}
-                      className={`partner-page-card ${card.type}`}
+                      className={`${subpageData[0].call === 'Soluções' ? 'partner-page-cards-next' : 'partner-page-card'`${card.type}`}`}
+
                       onClick={() => setFormType(card.id)}
                       onKeyDown={() => setFormType(card.id)}
                       aria-hidden="true"

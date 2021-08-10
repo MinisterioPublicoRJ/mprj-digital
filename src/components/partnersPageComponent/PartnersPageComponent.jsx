@@ -26,7 +26,6 @@ export default function PartnersPageComponent() {
     variableWidth: true,
     variableHeight: true,
     arrows: true,
-    className: 'slides',
 
   };
   return (
