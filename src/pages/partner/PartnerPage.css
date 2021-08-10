@@ -324,6 +324,7 @@ label {
   .input-openData-Icon{
     margin: 0 auto;
   }
+
 }
 @media (max-width: 1080px){
   .partner-page-content {
@@ -343,5 +344,12 @@ label {
   .partner-page-navigation{
     display: flex;
     width: 100%;
+  }
+}
+@media (max-width: 480px){
+  .partner-page-cards-solucoes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(320px, auto);
   }
 }
