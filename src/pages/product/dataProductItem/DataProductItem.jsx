@@ -6,23 +6,20 @@ import './DataProductItem.css';
 export default function DataProductItem({ header, text, imgUrl, id, textBtn, url }) {
   return (
     <>
-      <div className="productPage-body-organ-texts">
+      <div className="productItem-texts">
         <h3>{header}</h3>
-        <span>{text}</span>
+        <p>{text}</p>
       </div>
-      <div>
-        <div className="productPage-body-service-main">
-          <img src={imgUrl} alt={id} />
-        </div>
-        <div className="productPage-body-service">
-          <a href={url} target="new" rel="noreferrer">
-            <button type="button">{textBtn}</button>
-          </a>
-        </div>
+      <div className="productItem-action">
+        <img src={imgUrl} alt={id} />
+        <a href={url} target="new" rel="noreferrer">
+          {textBtn}
+        </a>
       </div>
     </>
   );
 }
+
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,

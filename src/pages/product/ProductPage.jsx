@@ -10,6 +10,7 @@ export default function Produto() {
   const { background, header, title, subpages, service, organ, tabs } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
   const [changeData, setchangeData] = useState();
+  console.log('changeData', changeData);
 
   useEffect(() => setchangeData(tabs[0].id), [tabs]);
 
@@ -23,28 +24,30 @@ export default function Produto() {
       </div>
       <h1 className="productPage-productName">{title}</h1>
       <div className="productPage-owner">
-        <p>{organ}</p>
+        <span>{organ}</span>
         <span>Orgão Responsável</span>
       </div>
       <div className="productPage-service">
-        <p>{service}</p>
+        <span>{service}</span>
         <span>Serviço</span>
       </div>
       <div className="productPage-tabNavigation">
         {tabs.map(({ id, subtitle }) => (
-          <div key={id}>
-            <button
-              onClick={() => {
-                setchangeData(id);
-              }}
-              className="productPage-navButtons"
-              type="button"
-            >
-              <span>{subtitle}</span>
-            </button>
-          </div>
+          <button
+            key={id}
+            onClick={() => {
+              setchangeData(id);
+            }}
+            className={`productPage-navButtons ${
+              id === changeData ? 'productPage-navButtons-active' : ''
+            }`}
+            type="button"
+          >
+            {subtitle}
+          </button>
         ))}
       </div>
+      <DataProduct {...tabs.find((tab) => tab.id === changeData)} />
       {/* <div className="productPage-body-main">
         <div className="productPage-section-subpages">
           {subpages.map((subpage) => (
