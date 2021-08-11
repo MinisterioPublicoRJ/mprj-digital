@@ -14,7 +14,7 @@ export default function PartnerPage() {
   const [formType, setFormType] = useState('');
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
-  const [cardsPorPage, setCardsPorPage] = useState(4);
+  const [cardsPorPage, setCardsPorPage] = useState(8);
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
 
@@ -35,7 +35,7 @@ export default function PartnerPage() {
           .includes(cardstTitle.toLowerCase()),
       );
       setCards(featuredCards);
-      setTotalCards(Math.ceil(featuredCards.length / 4));
+      setTotalCards(Math.ceil(featuredCards.length / 8));
       setPage(1);
     };
     fetchData();
@@ -65,7 +65,10 @@ export default function PartnerPage() {
               <div key={subpage.id}>
                 <NavLink
                   className="partner-page-link"
-                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#C99E50"
+                  }}
                   to={`/parceiro/${partnerId}/${subpage.id}`}
                 >
                   {subpage.call}
@@ -115,11 +118,14 @@ export default function PartnerPage() {
             </div>
             {subpageData[0].call === 'Soluções' ? (
               <>
-                <div className="partner-page-cards">
+                <div
+                className={`${subpageData[0].call === 'Soluções' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'}`}
+                >
                   {currentCards.map((card) => (
                     <div
                       key={card.id}
-                      className={`partner-page-card ${card.type}`}
+                      className={`${subpageData[0].call === 'Soluções' ? 'partner-page-cards-next' : 'partner-page-card'`${card.type}`}`}
+
                       onClick={() => setFormType(card.id)}
                       onKeyDown={() => setFormType(card.id)}
                       aria-hidden="true"
@@ -132,11 +138,11 @@ export default function PartnerPage() {
                     </div>
                   ))}
                 </div>
-                <Pagination
+                {/*<Pagination
                   handlePageClick={(page) => handlePageClick(page)}
                   totalPages={totalCards}
                   currentPage={page}
-                />
+                />*/}
               </>
             ) : (
               <div className="partner-page-cards">

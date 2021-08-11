@@ -12,28 +12,28 @@ export default function OpenDataPosts({ posts }) {
             <p className="openData-score">{item.score.toFixed(2)}</p>
             <h4>{item.title}</h4>
             <p className="openData-description">{item.description}</p>
-            <p>
+            <p style={{ color: '#311E1E' }}>
               <span>Setor Responsável:</span>
               {' '}
               {item.owner}
             </p>
-            <p>
+            <p style={{ color: '#311E1E' }}>
               <span>Atualização:</span>
               {' '}
               {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
           </div>
-          <p>
+          <p style={{ color: '#311E1E' }}>
             <span>Utilização:</span>
             {' '}
             {item.purpose}
           </p>
-          <p>
+          <p style={{ color: '#311E1E' }}>
             <span>Estrutura do Dado:</span>
             {' '}
             {item.datatype}
           </p>
-          <p>
+          <p style={{ color: '#311E1E' }}>
             <span>Licença:</span>
             {' '}
             {item.license}

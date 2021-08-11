@@ -1,7 +1,7 @@
 #partners-outer {
   background-color: #311E1E;
-  height: 35vh;
-  padding: var(--sectionVerticalPadding) 20%;
+  height: 30vh;
+  padding: var(--sectionVerticalPadding) 10%;
   display: flex;
   flex-direction: column;
   opacity: 0.92;
@@ -21,8 +21,24 @@
 }
 .slick-slide img{
   width: 128px;
-  margin-left: 30px;
+  margin-left: 28px;
+
 }
+/* The only way I've found to overwrite the library's css is using the important*/
+.slick-next::before,
+.slick-prev::before{
+  font-size: 40px !important;  
+  color: #B1B1B1 !important;
+  opacity: 1 !important;
+ 
+}
+.slick-dots li button::before{
+  font-size: 15px !important;
+}
+.slick-dots li.slick-active button::before{
+  color: #ffff !important;
+}
+
 @media (max-width: 800px){
   .slick-slide img{
     width: 40px;

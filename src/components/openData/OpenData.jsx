@@ -8,11 +8,12 @@ import OpenDataPosts from './openDataPosts/OpenDataPosts';
 export default function openData() {
   const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
-  const [postPorPage, setPostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const [productTitle, setProductTitle] = useState('');
   const [reverse, setReverse] = useState(false);
+  const postPorPage = 2
+
 
   const sortBy = (field, reverse, primer) => {
     let key = primer
@@ -47,7 +48,7 @@ export default function openData() {
       );
 
       setPosts(filteredRepositories);
-      setTotalPages(Math.ceil(filteredRepositories.length / 2));
+      setTotalPages(Math.ceil(filteredRepositories.length / postPorPage ));
       setPage(1);
     };
     fetchData();
