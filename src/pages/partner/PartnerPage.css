@@ -178,6 +178,7 @@ label {
 .partner-page-topics-button{
   display: flex;
 }
+
 .partner-page-topics-button input{
   width: 300px;
   height: 60px;

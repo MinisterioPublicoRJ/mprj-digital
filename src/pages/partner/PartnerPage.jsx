@@ -14,10 +14,9 @@ export default function PartnerPage() {
   const [formType, setFormType] = useState('');
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
-  const [cardsPorPage, setCardsPorPage] = useState(8);
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
-
+  const cardsPorPage = 8
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -35,7 +34,7 @@ export default function PartnerPage() {
           .includes(cardstTitle.toLowerCase()),
       );
       setCards(featuredCards);
-      setTotalCards(Math.ceil(featuredCards.length / 8));
+      setTotalCards(Math.ceil(featuredCards.length / cardsPorPage));
       setPage(1);
     };
     fetchData();
