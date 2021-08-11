@@ -1,17 +1,19 @@
-.mprjDigital-outer{
+.mprjDigital-outer {
   font-family: Roboto;
   display: grid;
   grid-gap: 30px;
-  margin-bottom: 40px;
-  grid-template-areas:
-    'mprjTexts mprjTexts mprjTexts mprjInfo mprjInfo mprjInfo';
+  margin: 10vh 0;
+  grid-template-areas: 'mprjTexts mprjTexts mprjTexts mprjInfo mprjInfo mprjInfo';
+  height: 100vh;
 }
-.mprjDigital-outer-text{
+.mprjDigital-outer-text {
   grid-area: mprjTexts;
   margin: auto;
   background-color: var(--mainColor);
   height: 300px;
   border: 1px solid #707070;
+  padding-left: 8vw;
+  padding-right: 2vw;
 }
 .mprjDigital-outer-text h1{
   color: #C99E50;
@@ -19,10 +21,10 @@
 .mprjDigital-outer-text h1.title {
   margin-top: 50px;
 }
-.mprjDigital-itemOuter-text p.p-subtitle{
+.mprjDigital-itemOuter-text p.p-subtitle {
   max-width: 500px;
 }
-.mprjDigital-outer-text p{
+.mprjDigital-outer-text p {
   color: var(--white);
   margin-left: 80px;
   text-align: right;
@@ -38,23 +40,26 @@
   grid-area: mprjInfo;
   text-align: left;
   margin-left: 40px;
+  padding-right: 8vw;
+  justify-content: center;
 }
 .mprjDigital-itemOuter {
   display: flex;
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.mprjDigital-itemOuter img{
+.mprjDigital-itemOuter img {
   width: 70px;
   height: 65px;
-  margin-top: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-right: 30px;
 }
-.mprjDigital-itemOuter-text  {
+.mprjDigital-itemOuter-text {
   display: flex;
   flex-direction: column;
 }
-.mprjDigital-itemOuter-text h6  {
+.mprjDigital-itemOuter-text h6 {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
@@ -71,20 +76,20 @@
   .mprjDigital-outer-text h1, h6 {
     font-size: 20px ;
   }
-  .mprjDigital-outer{
+  .mprjDigital-outer {
     display: flex;
     flex-direction: column;
   }
   .mprjDigital-moreInfo {
     margin: 0 auto;
   }
-  .mprjDigital-itemOuter{
+  .mprjDigital-itemOuter {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .mprjDigital-itemOuter-text h6  {
+  .mprjDigital-itemOuter-text h6 {
     text-align: center;
   }
   .mprjDigital-itemOuter {
@@ -104,8 +109,11 @@
   }
   .mprjDigital-outer-text h1, p{
     text-align: center;
+    margin-left: 30px;
   }
   .mprjDigital-outer-text {
     height: 270px;
+    padding: 0;
+    text-align: center;
   }
 }
