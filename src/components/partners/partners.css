@@ -5,7 +5,7 @@
   width: 100%;
   height: 60vh;
 }
-.partners-outer h1, p {
+.partners-outer h1, .partners-outer p {
   text-align: left;
   color: var(--white);
   font-family: var(--robotRegular);
@@ -29,7 +29,7 @@
 }
 .partners-itemList {
   align-items: center;
- 
+
 }
 @media (max-width: 480px){
   .partners-outer h1 {
@@ -49,7 +49,7 @@
   }
   .partners-header{
     top: -37px;
-  } 
+  }
 }
 @media (min-width: 480px) and (max-width: 796px){
   .partners-itemList img{
