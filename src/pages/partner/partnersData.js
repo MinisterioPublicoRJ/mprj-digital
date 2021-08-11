@@ -17,9 +17,9 @@ import GEOTAG from '../../assets/geoReferenceIcon.svg';
 
 export const PARTNERS_CONST = [
   {
-    id: 'cadg',
-    name: 'GADG',
+    id: 'gadg',
     img: GADG,
+    name: 'GADG',
     imgBg: BGHome,
     desc: 'Gerência de Análise, Diagnósticos e Geografia',
     subpages: [
@@ -31,7 +31,7 @@ export const PARTNERS_CONST = [
             id: 'quemSomos',
             title: 'Quem somos?',
             smalltext:
-              'A Coordenadoria de Análises, Diagnósticos e Geoprocessamento (CADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados.',
+              'A Gerência de Análises, Diagnósticos e Geoprocessamento (GADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados.',
             subsmalltext:
               'A equipe é responsável pela plataforma MPRJ em Mapas e todas as ferramentas, sistemas e aplicações ali concentradas. O foco de seu trabalho é entregar soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
             title2: 'Nossos pilares',
@@ -82,7 +82,7 @@ export const PARTNERS_CONST = [
             background: 'transparent',
             title: 'Georreferenciamento',
             smalltext:
-              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a CADG é conhecida por se valer de recursos geográficos.',
+              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a GADG é conhecida por se valer de recursos geográficos.',
             link: '',
             call: '',
             img: GEOTAG,
@@ -108,19 +108,19 @@ export const PARTNERS_CONST = [
         ],
         cards: [
           {
-            id: 'parquetDigital',
+            id: 'painelParquetDigital',
             type: 'second',
             background: 'white',
             title: 'Parquet Digital',
             smalltext:
               'O robô das promotorias, que auxilia na visão, gestão e resolução do acervo.',
-            link: 'https://parquetdigital.mprj.mp.br/',
+            link: '/produto/parquet_digital',
             call: 'Conheça a solução >',
             img: '/Parquet_Digital.png',
-            alt: 'Img alt',
+            alt: 'Logo parquet Digital',
           },
           {
-            id: 'painel2',
+            id: 'painelInloco',
             type: 'second',
             background: 'white',
             title: 'In loco',
@@ -132,7 +132,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo In loco',
           },
           {
-            id: 'painel3',
+            id: 'painelDiagnostico',
             type: 'second',
             background: 'white',
             title: 'Diágnostico de Promotorias',
@@ -143,7 +143,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Diágnostico de Promotorias',
           },
           {
-            id: 'painel4',
+            id: 'painelLyra',
             type: 'second',
             background: 'white',
             title: 'Lyra',
@@ -155,7 +155,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Lyra',
           },
           {
-            id: 'painel5',
+            id: 'painelPaines',
             type: 'second',
             background: 'white',
             title: 'Painéis',
@@ -166,7 +166,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Painéis temáticos',
           },
           {
-            id: 'painel6',
+            id: 'painelMprj+',
             type: 'second',
             background: 'white',
             title: 'Mprj+',
@@ -177,7 +177,7 @@ export const PARTNERS_CONST = [
             alt: 'Logo Mprj+',
           },
           {
-            id: 'painel7',
+            id: 'painelDominio',
             type: 'second',
             background: 'white',
             title: 'Domínio',
@@ -188,19 +188,20 @@ export const PARTNERS_CONST = [
             alt: 'Logo Domínio',
           },
           {
-            id: 'painel8',
+            id: 'painelPainel',
             type: 'second',
             background: 'white',
             title: 'Painel',
             smalltext: 'Listagem de procedimentos, sua mesa e alguns alertas.',
             link: 'http://apps.mprj.mp.br/sistema/dominio/#/',
             call: 'Conheça a solução >',
-            img: '/painel.png',
+            img: '/Painel.png',
             alt: 'Logo Painel ',
           },
         ],
       },
-      /* {
+      {
+        /* {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
@@ -231,8 +232,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
           {
             id: 'reclamacao',
@@ -243,8 +244,8 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
           {
             id: 'elogios',
@@ -255,10 +256,11 @@ export const PARTNERS_CONST = [
             link: '',
             call: '',
             action: 'openForm()',
-            img: CADG,
-            alt: 'Img alt',
+            img: GADG,
+            alt: 'Logo Gadg',
           },
         ],
+      }, */
       },
       /* {
         id: 'nosso-time',

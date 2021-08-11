@@ -1,22 +1,17 @@
 .partners-outer {
-  background: url(../../assets/bg-parceiros.png);
-  height: 50vh;
-  padding: var(--sectionVerticalPadding) 20%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  background-repeat: no-repeat ;
+  position: relative;
 }
-
+.partners-outer > img {
+  width: 100%;
+  height: 60vh;
+}
 .partners-outer h1, p {
   text-align: left;
   color: var(--white);
-  font-family: var(--robotRegular) ;
+  font-family: var(--robotRegular);
+  margin-bottom: 10px;
 }
-.partners-header {
-  flex: 1;
-}
-.partners-itemList {
+.partners-itemList{
   align-items: center;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -24,19 +19,41 @@
   grid-gap: 6vw 5vw;
   flex: 2;
 }
-.partners-itemList a {
-  cursor: default;
+.partners-header {
+  padding: var(--sectionVerticalPadding) 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  top: -30px
 }
-.partner-itemAnchor {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  height: 100%;
-  width: 100%;
+.partners-itemList {
+  align-items: center;
+ 
 }
-@media (max-width: 380px){
+@media (max-width: 480px){
   .partners-outer h1 {
     font-size: 20px;
+    text-align: center;
+  }
+  .partners-itemList{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 6vw 25vw;
+  }
+  .partners-itemList img{
+    width: 35px;
+    height: 35px;
+  }
+  .partners-outer p{
+    text-align: center;
+  }
+  .partners-header{
+    top: -37px;
+  } 
+}
+@media (min-width: 480px) and (max-width: 796px){
+  .partners-itemList img{
+    width: 50px;
+    height: 50px;
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './OpenDataPosts.css';
@@ -13,12 +14,13 @@ export default function OpenDataPosts({ posts }) {
             <p className="openData-description">{item.description}</p>
             <p>
               <span>Setor Responsável:</span>
+              {' '}
               {item.owner}
             </p>
             <p>
               <span>Atualização:</span>
               {' '}
-              {new Date(item.date).toLocaleDateString()}
+              {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
           </div>
           <p>
@@ -54,5 +56,5 @@ export default function OpenDataPosts({ posts }) {
   );
 }
 OpenDataPosts.propTypes = {
-  posts: PropTypes.func.isRequired,
+  posts: PropTypes.node.isRequired,
 };

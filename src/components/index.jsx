@@ -7,3 +7,4 @@ export { default as Partners } from './partners/Partners';
 export { default as PartnersPageComponent } from './partnersPageComponent/PartnersPageComponent';
 export { default as Products } from './products/Products';
 export { default as TalkToUs } from './talkToUs/talkToUs';
+export { default as Pagination } from './pagination/Pagination';

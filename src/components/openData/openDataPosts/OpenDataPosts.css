@@ -1,20 +1,27 @@
-.openData-title {
-    margin-bottom: 5vh;
-}
+
 .openData-title h1 {
     letter-spacing: -1px;
     text-align: left;
     color: #311E1E;
 }
+#repositorios h1{
+    margin-bottom: 0px;
+}
 p.openData-score{
     color: #ffff;
 }
 .openData-counter {
+    margin-top: 50px;
+    display: flex;
+}
+.openData-counter span {
     text-align: left;
     font-size: 21px;
     color: #263859;
     opacity: 1;
     line-height: 42px;
+    margin-left: 30px;
+    margin-top: 34px;
 }
 .openData-linkToPanel {
     align-self: flex-end;
@@ -33,7 +40,7 @@ p.openData-score{
     text-align: left;
     font-size: 14px;
     color: #311E1E;
-    font-weight: var(--robotRegular);
+    font-weight: bold;
     opacity: 1;
 }
 .openData-item {
@@ -60,10 +67,11 @@ p.openData-description {
     text-decoration: underline;
     font-size: 18px;
     letter-spacing: -0.5px;
-    font-weight: var(--robotRegular);
     color: #311E1E;
     max-width: 500px;
     opacity: 1;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 .openData-score {
     width: 50px;

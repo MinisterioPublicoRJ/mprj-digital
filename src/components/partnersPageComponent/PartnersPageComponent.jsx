@@ -33,7 +33,10 @@ export default function PartnersPageComponent() {
       <div className="partners-itemList-page">
         <Slider id="slider" {...settings}>
           <div>
-            <img className="" src={GADG} alt="CADG" />
+            <img className="" src={GADG} alt="GADG" />
+          </div>
+          <div>
+            <img className="" src={INOVA} alt="INOVA" />
           </div>
           <div>
             <img className="" src={CSI} alt="CSI" />
@@ -42,16 +45,13 @@ export default function PartnersPageComponent() {
             <img className="" src={GATE} alt="GATE" />
           </div>
           <div>
-            <img className="" src={INOVA} alt="INOVA" />
-          </div>
-          <div>
             <img className="" src={SGMP} alt="SGMP" />
           </div>
           <div>
             <img className="" src={STIC} alt="STIC" />
           </div>
           <div>
-            <img className="" src={SUBADM} alt="CENPE" />
+            <img className="" src={SUBADM} alt="GADG" />
           </div>
           <div>
             <img className="" src={SUBPLAN} alt="CSI" />
