@@ -8,16 +8,15 @@ import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 export default function Products() {
   const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
   const [page, setPage] = useState(1);
-  const [productsPerPage, setProductsPerPage] = useState(8);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
+  const productsPerPage = 8
 
   useEffect(() => {
     const fetchData = async () => {
-
       const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
       setProducts(filteredProducts);
-      setTotalPages(Math.ceil(filteredProducts.length / 8));
+      setTotalPages(Math.ceil(filteredProducts.length / productsPerPage));
       setPage(1);
     };
     fetchData();
