@@ -1,46 +1,52 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './OpenDataPosts.css';
+import {
+  openDataItens,
+  mainInfos,
+  openDataScore,
+  openDataDescription,
+  openDataButton,
+} from './OpenDataPosts.modules.css';
 
 export default function OpenDataPosts({ posts }) {
   return (
-    <section className="openData-title">
+    <>
       {posts.map((item) => (
-        <section key={item.id} className="openData-item">
-          <div className="main-infos">
-            <p className="openData-score">{item.score.toFixed(2)}</p>
+        <section key={item.id} className={openDataItens}>
+          <div className={mainInfos}>
+            <p className={openDataScore}>{item.score.toFixed(2)}</p>
             <h4>{item.title}</h4>
-            <p className="openData-description">{item.description}</p>
-            <p style={{ color: '#311E1E' }}>
+            <p className={openDataDescription}>{item.description}</p>
+            <p>
               <span>Setor Responsável:</span>
               {' '}
               {item.owner}
             </p>
-            <p style={{ color: '#311E1E' }}>
+            <p>
               <span>Atualização:</span>
               {' '}
               {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
           </div>
-          <p style={{ color: '#311E1E' }}>
+          <p>
             <span>Utilização:</span>
             {' '}
             {item.purpose}
           </p>
-          <p style={{ color: '#311E1E' }}>
+          <p>
             <span>Estrutura do Dado:</span>
             {' '}
             {item.datatype}
           </p>
-          <p style={{ color: '#311E1E' }}>
+          <p>
             <span>Licença:</span>
             {' '}
             {item.license}
           </p>
           <button
             type="button"
-            className="openData-button"
+            className={openDataButton}
             onClick={(event) => {
               if (item.link) {
                 event.preventDefault();
@@ -52,7 +58,7 @@ export default function OpenDataPosts({ posts }) {
           </button>
         </section>
       ))}
-    </section>
+    </>
   );
 }
 OpenDataPosts.propTypes = {

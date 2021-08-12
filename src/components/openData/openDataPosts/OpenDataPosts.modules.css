@@ -1,50 +1,20 @@
 
-.openData-title h1 {
-    letter-spacing: -1px;
-    text-align: left;
-    color: #311E1E;
-}
-#repositorios h1{
-    margin-bottom: 0px;
-}
-p.openData-score{
+
+p.openDataScore{
     color: #ffff;
     text-align: center;
 }
-.openData-counter {
-    margin-top: 50px;
-    display: flex;
+.openDataItem p {
+    color: #311E1E;
 }
-.openData-counter span {
-    text-align: left;
-    font-size: 21px;
-    color: #263859;
-    opacity: 1;
-    line-height: 42px;
-    margin-left: 30px;
-    margin-top: 34px;
-}
-.openData-linkToPanel {
-    align-self: flex-end;
-    margin-top: -42px;
-    margin-bottom: 55px;
-}
-.openData-linkToPanel a {
-    text-decoration: underline;
-    font: normal normal normal 14px/16px Roboto;
-    letter-spacing: -0.32px;
-    color: #9dafbd;
-    opacity: 1;
-    line-height: 42px;
-}
-.openData-item span {
+.openDataItem span {
     text-align: left;
     font-size: 14px;
     color: #311E1E;
     font-weight: bold;
     opacity: 1;
 }
-.openData-item {
+.openDataItens {
     display: flex;
     text-align: left;
     flex-direction: column;
@@ -54,16 +24,19 @@ p.openData-score{
     margin-bottom: 2vh;
     padding: 20px;
 }
-.openData-item > h4, .openData-item p, .openData-item span {
+.openDataItens > h4, .openDataItens p, .openDataItens span {
     text-align: left;
 }
-p.openData-description {
+.mainInfos {
+    border-bottom: solid 1px #d1dbe3 ;
+}
+p.openDataDescription {
     color: #9DAFBD;
     font-size: 12px;
     margin-top: 10px;
     max-width: 600px;
 }
-.openData-item h4 {
+.openDataItem h4 {
     text-align: left;
     text-decoration: underline;
     font-size: 18px;
@@ -74,7 +47,7 @@ p.openData-description {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
 }
-.openData-score {
+.openDataScore {
     width: 50px;
     height: 38px;
     background: #4d8055 0% 0% no-repeat padding-box;
@@ -89,10 +62,8 @@ p.openData-description {
     text-align: center;
     line-height: 38px;
 }
-.main-infos {
-    border-bottom: solid 1px #d1dbe3 ;
-}
-.openData-button {
+
+.openDataButton {
     width: 108px;
     height: 38px;
     background: #6F2826 0% 0% no-repeat padding-box;
@@ -114,19 +85,19 @@ p.openData-description {
     }
 }
 @media (max-width: 1080px){
-    .mprjDigital-itemOuter p{
+    .mprjDigitalItemOuter p{
       text-align: center;
     }
-    .openData-button{
+    .openDataButton{
       width: 70px;
     }
-    .openData-score{
+    .openDataScore{
       width: 40px;
     }
-    .openData-title h1 {
+    .openDataTitle h1 {
       text-align: center;
     }
-    .openData-title p{
+    .openDataTitle p{
       text-align: center;
     }
 }
