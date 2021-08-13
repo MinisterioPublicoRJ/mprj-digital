@@ -4,10 +4,10 @@ p.openDataScore{
     color: #ffff;
     text-align: center;
 }
-.openDataItem p {
+.openDataItens p {
     color: var(--backgroundFooter);
 }
-.openDataItem span {
+.openDataItens span {
     text-align: left;
     font-size: 14px;
     color: var(--backgroundFooter);
@@ -36,7 +36,7 @@ p.openDataDescription {
     margin-top: 10px;
     max-width: 600px;
 }
-.openDataItem h4 {
+.openDataItens h4 {
     text-align: left;
     text-decoration: underline;
     font-size: 18px;
@@ -47,7 +47,7 @@ p.openDataDescription {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
 }
-.openDataScore {
+.mainInfos > button {
     width: 50px;
     height: 38px;
     background: #4d8055 0% 0% no-repeat padding-box;
@@ -55,12 +55,12 @@ p.openDataDescription {
     border-radius: 5px;
     font: normal normal 500 16px/19px Roboto;
     letter-spacing: -0.5px;
-    color: #ffffff;
     position: absolute;
-    right: 19.5vw;
+    right: 22.5vw;
     margin-top: 2vh;
+    color: #ffffff;
     text-align: center;
-    line-height: 38px;
+    border: 0;
 }
 
 .openDataButton {

@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 import {
   openDataItens,
   mainInfos,
-  openDataScore,
   openDataDescription,
   openDataButton,
-} from './OpenDataPosts.modules.css';
+} from './OpenDataPosts.module.css';
 
 export default function OpenDataPosts({ posts }) {
   return (
@@ -15,7 +14,9 @@ export default function OpenDataPosts({ posts }) {
       {posts.map((item) => (
         <section key={item.id} className={openDataItens}>
           <div className={mainInfos}>
-            <p className={openDataScore}>{item.score.toFixed(2)}</p>
+            <button type="button">
+              {item.score.toFixed(2)}
+            </button>
             <h4>{item.title}</h4>
             <p className={openDataDescription}>{item.description}</p>
             <p>
