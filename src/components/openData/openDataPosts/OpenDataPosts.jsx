@@ -3,9 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   openDataItens,
-  mainInfos,
+  openDatatexts,
   openDataDescription,
   openDataButton,
+  atualizationTitle,
+  openDataSubtitle,
 } from './OpenDataPosts.module.css';
 
 export default function OpenDataPosts({ posts }) {
@@ -13,7 +15,7 @@ export default function OpenDataPosts({ posts }) {
     <>
       {posts.map((item) => (
         <section key={item.id} className={openDataItens}>
-          <div className={mainInfos}>
+          <div className={openDatatexts}>
             <button type="button">
               {item.score.toFixed(2)}
             </button>
@@ -29,34 +31,37 @@ export default function OpenDataPosts({ posts }) {
               {' '}
               {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
+            <p className={atualizationTitle} />
+            <div className={openDataSubtitle}>
+              <p>
+                <span>Utilização:</span>
+                {' '}
+                {item.purpose}
+              </p>
+              <p>
+                <span>Estrutura do Dado:</span>
+                {' '}
+                {item.datatype}
+              </p>
+              <p>
+                <span>Licença:</span>
+                {' '}
+                {item.license}
+              </p>
+            </div>
+            <button
+              type="button"
+              className={openDataButton}
+              onClick={(event) => {
+                if (item.link) {
+                  event.preventDefault();
+                  window.open(item.link);
+                }
+              }}
+            >
+              Baixar
+            </button>
           </div>
-          <p>
-            <span>Utilização:</span>
-            {' '}
-            {item.purpose}
-          </p>
-          <p>
-            <span>Estrutura do Dado:</span>
-            {' '}
-            {item.datatype}
-          </p>
-          <p>
-            <span>Licença:</span>
-            {' '}
-            {item.license}
-          </p>
-          <button
-            type="button"
-            className={openDataButton}
-            onClick={(event) => {
-              if (item.link) {
-                event.preventDefault();
-                window.open(item.link);
-              }
-            }}
-          >
-            Baixar
-          </button>
         </section>
       ))}
     </>

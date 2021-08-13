@@ -90,7 +90,7 @@ export default function OpenData() {
   return (
     <section className={openData} id="repositorios">
       <h1>Repositório de Dados Abertos</h1>
-      <p style={{ color: '#9DAFBD' }}>
+      <p style={{ color: '#9DAFBD', textAlign: 'left'}}>
         Visando o aprimoramento das iniciativas e o fomento ao controle social exercido sociedade,
         as bases de dados e eventuais links de códigos de desenvolvimento estarão disponibilizados
         aqui. As bases de dados, que são o que dá vida aos nossos produtos, podem ter notas
