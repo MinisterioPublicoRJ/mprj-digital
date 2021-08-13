@@ -70,7 +70,7 @@ const PRODUCTS_CONST = {
   parquet_digital: {
     title: 'Parquet Digital',
     subId: 'Farol',
-    organ: 'GADG',
+    organ: 'GADG/MPRJ',
     service: 'Análise da Atuação das promotorias',
     background: bgParquet,
     header: {
