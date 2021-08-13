@@ -1,5 +1,5 @@
 #partners-outer {
-  background-color: #311E1E;
+  background-color: var(--backgroundFooter);
   height: 30vh;
   padding: var(--sectionVerticalPadding) 10%;
   display: flex;
