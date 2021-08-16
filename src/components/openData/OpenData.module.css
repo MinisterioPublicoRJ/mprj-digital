@@ -36,6 +36,7 @@
   color: #9dafbd;
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 .filterTitle:hover {
   color: #263859;

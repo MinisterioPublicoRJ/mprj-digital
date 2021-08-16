@@ -34,9 +34,13 @@
   background: transparent;
   color: #9dafbd;
   margin: 5px;
+  cursor: pointer;
+
 }
 .pagination-number-button.active {
   font-weight: bold;
   font-family: Roboto;
   color: #263859;
+  cursor: pointer;
+
 }

@@ -17,7 +17,7 @@ export default function OpenDataPosts({ posts }) {
         <section key={item.id} className={openDataItens}>
           <div className={openDatatexts}>
             <button type="button">
-              {item.score.toFixed(2)}
+              <span>{item.score.toFixed(2)}</span>
             </button>
             <h4>{item.title}</h4>
             <p className={openDataDescription}>{item.description}</p>
@@ -59,7 +59,7 @@ export default function OpenDataPosts({ posts }) {
                 }
               }}
             >
-              Baixar
+              <span>Baixar</span>
             </button>
           </div>
         </section>
