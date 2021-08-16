@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import DataProduct from './dataProductItem/DataProductItem';
 import './ProductPage.css';
 import PRODUCTS_CONST from './productsConsts';
 
 export default function Produto() {
   const { key } = useParams();
-  const { background, header, title, subpages, service, organ, tabs } = PRODUCTS_CONST[key];
+  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[key];
   const { icon: Icon } = header;
   const [changeData, setchangeData] = useState();
 
