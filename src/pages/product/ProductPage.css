@@ -70,7 +70,6 @@
   background: transparent;
   border: none;
   color: var(--blueLightProdutos);
-  cursor: pointer;
   display: flex;
   font-size: var(--defaultFontSize);
   height: calc(var(--titleFontSize) );
