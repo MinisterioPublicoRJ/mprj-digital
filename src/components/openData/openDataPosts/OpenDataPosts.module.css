@@ -64,7 +64,7 @@ p.openDataDescription {
     color: var(--white);
     text-align: center;
     margin: 0 auto;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 button.openDataButton {
