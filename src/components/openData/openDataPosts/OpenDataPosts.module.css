@@ -50,14 +50,14 @@ p.openDataDescription {
     display: flex;
     margin-left: auto;
 }
-.openDatatexts > button {
+.openDatatexts button.openDataScoreButton {
     width: 50px;
     height: 38px;
     background: #4d8055 0% 0% no-repeat padding-box;
     opacity: 1;
     border-radius: 5px;
     border: 0;
-    cursor: none;
+    cursor:unset;
 
 }
 .openDatatexts > button span {
