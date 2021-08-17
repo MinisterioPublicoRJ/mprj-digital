@@ -56,22 +56,6 @@ label {
   margin-left: 53px;
 }
 
-.partner-page-navigation a {
-  text-align: left;
-  font-size: var(--defaultFontSize);
-  letter-spacing: 0px;
-  color: #bbb8b8;
-  opacity: 1;
-  text-decoration: none;
-}
-.partner-page-navigation a:focus{
-  color: #C99E50;
-  font-weight: bold;
-}
-.partner-page-navigation a .active{
-  color: #C99E50;
-  font-weight: bold;
-}
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;
@@ -304,6 +288,23 @@ label {
   height: 24px;
   direction: rtl;
 }
+a.partner-page-link {
+  text-align: left;
+  font-size: var(--defaultFontSize);
+  letter-spacing: 0px;
+  color: #bbb8b8;
+  opacity: 1;
+  text-decoration: none;
+}
+a.partner-page-link.active{
+  color: #C99E50;
+  font-weight: bold;
+}
+a.productPage-navButtons-active{
+  color: #C99E50;
+  font-weight: bold;
+}
+
 @media (max-width: 600px){
   .partner-page-cards {
     display: flex;

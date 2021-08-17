@@ -1,14 +1,14 @@
-.navbar {
+.navBar {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.navbar-links {
+.navbarLinks {
   display: flex;
   justify-content: space-between;
 }
-.navbar-links a {
+.navbarLinks a {
   list-style: none;
   text-decoration: none;
   color: #6F2826;
@@ -16,25 +16,25 @@
   margin-right: 10px;
   font-family: Roboto, regular;
 }
-.logo{
+.icon{
   width: 130px;
   height: 40px;
   margin-top: -10px;
 }
-.dropdown-content {
+.dropdownContent {
   display: none;
   position: absolute;
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.dropdown-content a {
+.dropdownContent a {
   padding: 8px 30px 4px 0px;
   text-decoration: none;
   display: block;
   font-size: 15px;
 }
-.dropdown:hover .dropdown-content {
+.dropDown:hover .dropdownContent {
   display: block;
 }
 #basic-button {
@@ -51,11 +51,11 @@
   border-bottom: 0;
   border-left: 0.3em solid transparent;
 }
-.tooltip {
+.sectionToolTip {
   position: relative;
   display: inline-block;
 }
-.tooltip .tooltiptext {
+.sectionToolTip .tooltipText {
   visibility: hidden;
   width: 156px;
   border: 1px solid #702826;
@@ -73,7 +73,7 @@
   color: #702826;
   font-family: Roboto, regular;
 }
-.tooltip .tooltiptext::after {
+.sectionToolTip .tooltipText::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -83,7 +83,7 @@
   border-style: solid;
   border-color: var(--secondColor) transparent transparent transparent;
 }
-.tooltip:hover .tooltiptext {
+.sectionToolTip:hover .tooltipText {
   visibility: visible;
   opacity: 1;
 }
@@ -124,7 +124,7 @@
   height: 4px;
   box-shadow: 0 6px var(--white), 0 -6px var(--white);
 }
-.navbarMobile .navbar-links{
+.navbarMobile .navbarLinks{
   position: absolute;
   display: block;
   top: 80px;
@@ -135,8 +135,8 @@
   opacity: 0;
   pointer-events: none;
 }
-.navbarMobile .navbar-links a,
-.navbarMobile .navbar-links button{
+.navbarMobile .navbarLinks a,
+.navbarMobile .navbarLinks button{
   display: flex;
   flex-direction: column;
   background: none;
@@ -146,7 +146,7 @@
   border-bottom: 1px solid #eee;
   padding: 0.5rem 0;
 }
-.navbarMobileActive .navbar-links{
+.navbarMobileActive .navbarLinks{
   transition: 0.3s;
   transform: initial;
   opacity: 1 ;
@@ -154,7 +154,7 @@
   pointer-events: initial;
   margin-left: 30px;
 }
-.navbarMobile .tooltip{
+.navbarMobile .sectionToolTip{
   display: block;
 }
 @media (max-width: 1080px){
