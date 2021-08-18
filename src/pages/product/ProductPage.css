@@ -38,7 +38,7 @@
 
 .productPage-productName {
   align-items: center;
-  background-color: white;
+  background-color: var(--white);
   color: var(--darkBlue);
   display: flex;
   grid-row: 2 / 3;
