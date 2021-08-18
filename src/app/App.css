@@ -39,7 +39,3 @@ p {
   font-size: var(--defaultFontSize);
   text-align: center;
 }
-
-button {
-  cursor: pointer;
-}

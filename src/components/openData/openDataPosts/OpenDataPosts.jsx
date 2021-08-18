@@ -1,17 +1,26 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './OpenDataPosts.css';
+import {
+  openDataItens,
+  openDatatexts,
+  openDataDescription,
+  openDataButton,
+  atualizationTitle,
+  openDataSubtitle,
+} from './OpenDataPosts.module.css';
 
 export default function OpenDataPosts({ posts }) {
   return (
-    <section className="openData-title">
+    <>
       {posts.map((item) => (
-        <section key={item.id} className="openData-item">
-          <div className="main-infos">
-            <p className="openData-score">{item.score.toFixed(2)}</p>
+        <section key={item.id} className={openDataItens}>
+          <div className={openDatatexts}>
+            <button type="button">
+              <span>{item.score.toFixed(2)}</span>
+            </button>
             <h4>{item.title}</h4>
-            <p className="openData-description">{item.description}</p>
+            <p className={openDataDescription}>{item.description}</p>
             <p>
               <span>Setor Responsável:</span>
               {' '}
@@ -22,37 +31,40 @@ export default function OpenDataPosts({ posts }) {
               {' '}
               {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
+            <p className={atualizationTitle} />
+            <div className={openDataSubtitle}>
+              <p>
+                <span>Utilização:</span>
+                {' '}
+                {item.purpose}
+              </p>
+              <p>
+                <span>Estrutura do Dado:</span>
+                {' '}
+                {item.datatype}
+              </p>
+              <p>
+                <span>Licença:</span>
+                {' '}
+                {item.license}
+              </p>
+            </div>
+            <button
+              type="button"
+              className={openDataButton}
+              onClick={(event) => {
+                if (item.link) {
+                  event.preventDefault();
+                  window.open(item.link);
+                }
+              }}
+            >
+              <span>Baixar</span>
+            </button>
           </div>
-          <p>
-            <span>Utilização:</span>
-            {' '}
-            {item.purpose}
-          </p>
-          <p>
-            <span>Estrutura do Dado:</span>
-            {' '}
-            {item.datatype}
-          </p>
-          <p>
-            <span>Licença:</span>
-            {' '}
-            {item.license}
-          </p>
-          <button
-            type="button"
-            className="openData-button"
-            onClick={(event) => {
-              if (item.link) {
-                event.preventDefault();
-                window.open(item.link);
-              }
-            }}
-          >
-            Baixar
-          </button>
         </section>
       ))}
-    </section>
+    </>
   );
 }
 OpenDataPosts.propTypes = {

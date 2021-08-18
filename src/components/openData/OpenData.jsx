@@ -1,18 +1,26 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
-import './OpenData.css';
 import OPENDATA from './MockOpenData';
 import Pagination from '../pagination/Pagination';
 import OpenDataPosts from './openDataPosts/OpenDataPosts';
 
-export default function openData() {
+import {
+  openData,
+  openDataCounter,
+  inputOpenDataIcon,
+  productsFilterTitles,
+  filterTitle
+} from './OpenData.module.css';
+
+export default function OpenData() {
   const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
-  const [postPorPage, setPostPorPage] = useState(2);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const [productTitle, setProductTitle] = useState('');
   const [reverse, setReverse] = useState(false);
+  const postPorPage = 2
+
 
   const sortBy = (field, reverse, primer) => {
     let key = primer
@@ -47,7 +55,7 @@ export default function openData() {
       );
 
       setPosts(filteredRepositories);
-      setTotalPages(Math.ceil(filteredRepositories.length / 2));
+      setTotalPages(Math.ceil(filteredRepositories.length / postPorPage ));
       setPage(1);
     };
     fetchData();
@@ -80,9 +88,9 @@ export default function openData() {
   const currentPost = posts.slice(firstPost, lastPost);
 
   return (
-    <section className="openData" id="repositorios">
+    <section className={openData} id="repositorios">
       <h1>Repositório de Dados Abertos</h1>
-      <p>
+      <p style={{ color: '#9DAFBD', textAlign: 'left'}}>
         Visando o aprimoramento das iniciativas e o fomento ao controle social exercido sociedade,
         as bases de dados e eventuais links de códigos de desenvolvimento estarão disponibilizados
         aqui. As bases de dados, que são o que dá vida aos nossos produtos, podem ter notas
@@ -90,8 +98,8 @@ export default function openData() {
         atribuído, facilitando sua compreensão e o manuseio por quem quiser. Os dados que não estão
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
-      <div className="openData-counter">
-        <div className="input-openData-Icon">
+      <div className={openDataCounter}>
+        <div className={inputOpenDataIcon}>
           <input
             type="text"
             placeholder="Buscar um repositório"
@@ -102,19 +110,17 @@ export default function openData() {
         </div>
         <span>{OPENDATA.length} Repositórios</span>
       </div>
-      <div className="products-filter-titles">
+      <div className={productsFilterTitles}>
         <p>Ordenar por:</p>
         <button
           type="button"
-          onClick={() => setFilterByType('score')}
-          className="filter-title active"
-        >
+          onClick={() => setFilterByType('score')} className={filterTitle}>
           Qualidade da Base
         </button>
-        <button type="button" onClick={() => setFilterByType('date')} className="filter-title">
+        <button type="button" onClick={() => setFilterByType('date')} className={filterTitle}>
           Data da Atualização
         </button>
-        <button type="button" onClick={() => setFilterByType('datatype')} className="filter-title">
+        <button type="button" onClick={() => setFilterByType('datatype')} className={filterTitle}>
           Estrutura do Dado
         </button>
       </div>

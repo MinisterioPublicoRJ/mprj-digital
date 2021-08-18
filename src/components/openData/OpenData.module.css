@@ -1,0 +1,87 @@
+.openData {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+.openData h1{
+  color: var(--backgroundFooter);
+}
+.openDataCounter {
+  margin-top: 50px;
+  display: flex;
+}
+.openDataCounter span {
+  text-align: left;
+  font-size: 21px;
+  color: var(--backgroundFooter);
+  opacity: 1;
+  line-height: 42px;
+  margin-left: 30px;
+  margin-top: 34px;
+}
+
+.productsFilterTitles {
+  font-size: 14px;
+  display: flex;
+  margin-top: 37px;
+}
+.productsFilterTitles p {
+  font-size: 14px;
+  margin-bottom: 26px;
+  color: #263859;
+}
+.filterTitle {
+  margin: 0px 30px 4px 5px;
+  color: #9dafbd;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.filterTitle:hover {
+  color: #263859;
+}
+.productsFilterTitles button{
+  margin-left: 30px;
+}
+.openDataCounter input{
+  width: 255px;
+  height: 40px;
+  background: var(--white) 0% 0% no-repeat padding-box;
+  border: 1px solid #D1DBE3;
+  border-radius: 4px;
+  opacity: 1;
+  color: #9DAFBD;
+  outline: 0;
+  margin:8px 0;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+  text-indent: 10px;
+}
+.openDataCounter input:focus{
+  border-color: var(--backgroundFooter);
+  box-shadow:0 0 8px 0 var(--backgroundFooter);
+}
+.inputOpenDataIcon{
+  position:relative;
+  margin-top: 25px;
+ 
+}
+.inputOpenDataIcon i{
+  position:absolute;
+  left: 220px;
+  top: 10px;
+  padding:9px 8px;
+  color:black;
+  transition:.3s;
+}
+@media (max-width: 480px){
+  .openDataCounter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  
+}

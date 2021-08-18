@@ -15,8 +15,8 @@
   padding-left: 8vw;
   padding-right: 2vw;
 }
-.mprjDigital-outer-text h1 {
-  color: #c99e50;
+.mprjDigital-outer-text h1{
+  color: #C99E50;
 }
 .mprjDigital-outer-text h1.title {
   margin-top: 50px;
@@ -29,8 +29,7 @@
   margin-left: 80px;
   text-align: right;
 }
-.mprjDigital-outer-text h1,
-p {
+.mprjDigital-outer-text h1, .mprjDigital-outer-text p{
   margin-right: 30px;
   margin-top: 20px;
   text-align: right;
@@ -65,8 +64,7 @@ p {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.mprjDigital-itemOuter p,
-h6 {
+.mprjDigital-itemOuter p, h6 {
   text-align: left;
   color: #222222;
 }
@@ -74,10 +72,9 @@ h6 {
   margin-top: 0px;
 }
 
-@media (max-width: 1080px) {
-  .mprjDigital-outer-text h1,
-  h6 {
-    font-size: 20px;
+@media (max-width: 1080px){
+  .mprjDigital-outer-text h1, h6 {
+    font-size: 20px ;
   }
   .mprjDigital-outer {
     display: flex;
@@ -110,11 +107,7 @@ h6 {
     margin-bottom: 25px;
     margin-top: 40px;
   }
-  .mprjDigital-outer-text h1.title {
-    text-align: center;
-  }
-  .mprjDigital-outer-text p,
-  h1 {
+  .mprjDigital-outer-text h1, p{
     text-align: center;
     margin-left: 30px;
   }
