@@ -13,7 +13,7 @@ import {
   navBar,
   navbarMobile,
   mobileButtonActive,
-  dropDown,
+  dropdown,
   dropdownContent,
   mobileButton,
 } from './Navbar.module.css';
@@ -33,7 +33,7 @@ export default function Navbar() {
         />
       )}
       <section
-        id="navBar"
+        id={navBar}
         className={`${mobile ? `${navbarMobile}` : `${navBar}`} ${mobileMenu && `${mobileButtonActive}`}`}
       >
         <NavLink to="/">
@@ -43,7 +43,6 @@ export default function Navbar() {
           <div className={sectionToolTip}>
             <NavLink
               to="/"
-              className="dropdow-button"
               onClick={() =>
                 scroller.scrollTo('mprjDigital', {
                   smooth: true,
@@ -55,7 +54,7 @@ export default function Navbar() {
             </NavLink>
             <span className={tooltipText}>Conheça a nossa visão de dados abertos</span>
           </div>
-          <div className={dropDown}>
+          <div className={dropdown}>
             <div className={sectionToolTip}>
               <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
                 Parceiros
@@ -66,7 +65,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className={dropDown}>
+          <div className={dropdown}>
             <div className={sectionToolTip}>
               <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
                 Produtos
@@ -85,7 +84,6 @@ export default function Navbar() {
           <div className={sectionToolTip}>
             <NavLink
               to="/"
-              className="dropdow-button"
               onClick={() =>
                 scroller.scrollTo('repositorios', {
                   smooth: true,
@@ -113,7 +111,6 @@ export default function Navbar() {
           <div className={sectionToolTip}>
             <NavLink
               to="/"
-              className="dropdow-button"
               type="button"
               onClick={() =>
                 scroller.scrollTo('rodape', {

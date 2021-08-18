@@ -36,7 +36,7 @@
   font-size: 15px !important;
 }
 .slick-dots li.slick-active button::before{
-  color: #ffff !important;
+  color: var(--white) !important;
 }
 
 @media (max-width: 800px){
