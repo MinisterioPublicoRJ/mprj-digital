@@ -17,7 +17,6 @@
 
 .productPage-presentation {
   align-items: center;
-  color: white;
   display: flex;
   flex-direction: column;
   grid-row: 1 / 1;
@@ -29,6 +28,12 @@
 
 .productPage-presentation h2 {
   font-size: calc( 0.7 * var(--titleFontSize));
+}
+.productPage-presentation h2, p {
+  color: var(--white);
+}
+.productPage-presentation p {
+  font-weight: 300;
 }
 
 .productPage-productName {
