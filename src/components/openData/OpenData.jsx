@@ -103,7 +103,7 @@ export default function OpenData() {
         <div className={inputOpenDataIcon}>
           <input
             type="text"
-            placeholder="Buscar um repositório"
+            placeholder="Buscar uma base dados"
             value={productTitle}
             onChange={(event) => setProductTitle(event.target.value)}
           />
