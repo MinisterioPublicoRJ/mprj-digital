@@ -1,30 +1,31 @@
 .navBar {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  background-color: var(--mainRedColor);
+  height: 147px;
 }
 .navbarLinks {
   display: flex;
   justify-content: space-between;
+  margin-top: 60px;
 }
 .navbarLinks a {
   list-style: none;
   text-decoration: none;
-  color: var(--mainColor);
+  color: var(--white);
   margin-left: 10px;
   margin-right: 10px;
-  font-family: Roboto, regular;
+  font-weight: 300;
 }
 .icon{
   width: 130px;
   height: 40px;
-  margin-top: -10px;
+  margin-top: 60px;
 }
 .dropdownContent {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: var(--mainRedColor);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -37,19 +38,18 @@
 .dropdown:hover .dropdownContent {
   display: block;
 }
-#basic-button {
-  color: var(--mainColor);
+.dropbtnButton {
+  color: var(--white);
   display: flex;
 }
-#basic-button:after {
-  margin-left: 4px;
-  align-self: flex-end;
-  padding-bottom: 7px;
+.dropbtnButton:after {
+  margin: 6px;
   content: '';
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
-  border-bottom: 0;
   border-left: 0.3em solid transparent;
+  color: var(--white);
+  align-self: flex-end;
 }
 .sectionToolTip {
   position: relative;
@@ -58,7 +58,8 @@
 .sectionToolTip .tooltipText {
   visibility: hidden;
   width: 156px;
-  border: 1px solid var(--secondColor);
+  border: 1px solid var(--mainColor);
+  background-color: var(--white);
   text-align: center;
   border-radius: 6px;
   padding: 1px;
@@ -70,8 +71,8 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  color: var(--secondColor);
-  font-family: Roboto, regular;
+  color: var(--mainColor);
+  font-family: var(--robotRegular);
 }
 .sectionToolTip .tooltipText::after {
   content: '';
@@ -81,7 +82,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: var(--secondColor) transparent transparent transparent;
+  border-color: var(--white) transparent transparent transparent;
 }
 .sectionToolTip:hover .tooltipText {
   visibility: visible;

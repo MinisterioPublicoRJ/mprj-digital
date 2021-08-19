@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
-import logo from '../../assets/logoNovo.png';
+import logoMp from '../../assets/logoMp.svg';
 import {
   icon,
   navbarLinks,
@@ -16,6 +16,7 @@ import {
   dropdown,
   dropdownContent,
   mobileButton,
+  dropbtnButton,
 } from './Navbar.module.css';
 
 
@@ -37,7 +38,7 @@ export default function Navbar() {
         className={`${mobile ? `${navbarMobile}` : `${navBar}`} ${mobileMenu && `${mobileButtonActive}`}`}
       >
         <NavLink to="/">
-          <img className={icon} src={logo} alt="logo-Mp" />
+          <img className={icon} src={logoMp} alt="logo-Mp" />
         </NavLink>
         <section className={navbarLinks}>
           <div className={sectionToolTip}>
@@ -56,7 +57,7 @@ export default function Navbar() {
           </div>
           <div className={dropdown}>
             <div className={sectionToolTip}>
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+              <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Parceiros
               </NavLink>
               <span className={tooltipText}>Conheça os setores envolvidos nessa iniciativa</span>
@@ -67,7 +68,7 @@ export default function Navbar() {
           </div>
           <div className={dropdown}>
             <div className={sectionToolTip}>
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+              <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Produtos
               </NavLink>
               <span className={tooltipText}>Navegue e conheça nossos produtos e sistemas</span>
