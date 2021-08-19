@@ -78,7 +78,7 @@ label {
   width: 25vw;
   margin-top: -20vh;
   margin-bottom: 10vh;
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border-radius: 10px 10px 0px 0px;
 }
 .partner-page-logo {
@@ -166,7 +166,7 @@ label {
 .partner-page-topics-button input{
   width: 300px;
   height: 60px;
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #D1DBE3;
   opacity: 1;
   color: #9DAFBD;
@@ -200,7 +200,7 @@ label {
   flex: 0 0 21%;
   margin: 20px 4px;
   padding: 5px 10px;
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   border-bottom: 6px solid #aba6a6;
   text-align-last: left;
   border-radius: 10px 10px 0px 0px;
@@ -229,7 +229,7 @@ label {
   text-align-last: center;
   border-bottom: 6px solid #6792ff;
   border-radius: 3px;
-  background-color: var(--white);
+  background-color: var(--colorWhite);
 }
 .partner-page-card h4 {
   text-align: center;
@@ -240,7 +240,7 @@ label {
   opacity: 1;
 }
 .partner-dynamic-content {
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   padding: 1vw;
 }
 
@@ -248,7 +248,7 @@ label {
   font: normal normal medium 18px/24px Roboto;
 }
 .partner-contact-form input {
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #d1dbe3;
   border-radius: 4px;
   width: 12vw;
@@ -267,7 +267,7 @@ label {
   color: #9dafbd;
 }
 .partner-contact-form textarea {
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #d1dbe3;
   border-radius: 5px;
   margin: 5px 10px 5px 0px;

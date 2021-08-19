@@ -30,7 +30,7 @@
   font-size: calc( 0.7 * var(--titleFontSize));
 }
 .productPage-presentation h2, p {
-  color: var(--white);
+  color: var(--colorWhite);
 }
 .productPage-presentation p {
   font-weight: 300;
@@ -38,7 +38,7 @@
 
 .productPage-productName {
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   color: var(--darkBlue);
   display: flex;
   grid-row: 2 / 3;

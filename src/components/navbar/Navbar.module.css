@@ -12,7 +12,7 @@
 .navbarLinks a {
   list-style: none;
   text-decoration: none;
-  color: var(--white);
+  color: var(--colorWhite);
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 300;
@@ -39,7 +39,7 @@
   display: block;
 }
 .dropbtnButton {
-  color: var(--white);
+  color: var(--colorWhite);
   display: flex;
 }
 .dropbtnButton:after {
@@ -48,7 +48,7 @@
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
   border-left: 0.3em solid transparent;
-  color: var(--white);
+  color: var(--colorWhite);
   align-self: flex-end;
 }
 .sectionToolTip {
@@ -59,7 +59,7 @@
   visibility: hidden;
   width: 156px;
   border: 1px solid var(--mainColor);
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   text-align: center;
   border-radius: 6px;
   padding: 1px;
@@ -82,7 +82,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: var(--white) transparent transparent transparent;
+  border-color: var(--colorWhite) transparent transparent transparent;
 }
 .sectionToolTip:hover .tooltipText {
   visibility: visible;
@@ -107,8 +107,8 @@
   width: 1.2rem;
   height: 2px;
   border-radius: 2px;
-  background-color: var(--white);
-  box-shadow: 0 6px var(--white), 0 -6px var(--white);
+  background-color: var(--colorWhite);
+  box-shadow: 0 6px var(--colorWhite), 0 -6px var(--colorWhite);
   transition: 0.2s;
 }
 .mobileButton:hover,
@@ -123,14 +123,14 @@
   transform: rotate(90deg);
   width: 4px;
   height: 4px;
-  box-shadow: 0 6px var(--white), 0 -6px var(--white);
+  box-shadow: 0 6px var(--colorWhite), 0 -6px var(--colorWhite);
 }
 .navbarMobile .navbarLinks{
   position: absolute;
   display: block;
   top: 80px;
   padding: 0 1rem;
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2 );
   transform: translate(-10px);
   opacity: 0;

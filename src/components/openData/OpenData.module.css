@@ -47,7 +47,7 @@
 .openDataCounter input{
   width: 255px;
   height: 40px;
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #D1DBE3;
   border-radius: 4px;
   opacity: 1;

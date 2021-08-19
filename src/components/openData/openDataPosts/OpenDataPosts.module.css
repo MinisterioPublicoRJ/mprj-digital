@@ -63,7 +63,7 @@ p.openDataDescription {
 .openDatatexts > button span {
     font: normal normal 500 16px/19px Roboto;
     letter-spacing: -0.5px;
-    color: var(--white);
+    color: var(--colorWhite);
     text-align: center;
     margin: 0 auto;
     margin-top: 10px;
