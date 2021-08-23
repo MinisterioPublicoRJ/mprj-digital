@@ -6,10 +6,10 @@ const Router = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
     <Route exact path="/produto/:key" element={<ProductPage />} />
-    <Route path="/parceiro/:partnerId">
-      <Route path=":subpageId" element={<PartnerPage />} />
+    <Route path="/parceiro/:partnerId/:subpageId" element={<PartnerPage />} />
+    {/* <Route path=":subpageId" element={<PartnerPage />} />
       <Route path="" element={<PartnerPage />} />
-    </Route>
+    </Route> */}
   </Routes>
 );
 

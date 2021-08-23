@@ -65,6 +65,7 @@ export default function PartnerPage() {
             {partnerFiltered[0].subpages.map((subpage) => (
               <div>
                 <NavLink
+                  activeClassName="productPage-navButtons-active"
                   className={` ${
                    partnerFiltered[0].subpages.id ? 'productPage-navButtons-active' : 'partner-page-link '
                   }`}
