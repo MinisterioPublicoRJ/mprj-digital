@@ -1,0 +1,36 @@
+.sectionInfoProducts{
+    color: var(--colorWhite);
+    margin-top: 100px;
+}
+.sectionInfoProducts h2{
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: var(--robotRegular);
+	font-family: Montserrat,Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.sectionInfoProducts p{
+    text-align: left;
+    font-weight: 300;
+    margin-top: 5px;
+    font-family: var(--robotRegular);
+    line-height: 1.5;
+    font-size: 16px;
+}
+.sectionInfoProducts button{
+    width: 164px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    color: #B1B1B1;
+}
+
+@media (max-width: 1080px){
+    .section-info-products{
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+}

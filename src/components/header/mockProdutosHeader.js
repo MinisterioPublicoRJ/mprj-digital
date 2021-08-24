@@ -1,35 +1,15 @@
-import {
-  FAROLBG,
-  MPBG,
-  PARQUET,
-  FAROL,
-  PLANILHAFAROL,
-  PLANILHAPARQUET,
-  ARROW,
-  REPOSITORIO,
-  SEARCH,
-  CLOCK,
-  DOCFAROL,
-  DOCPARQUET,
-  ROBOT,
-} from './index';
+import { FAROLBG, MPBG, PARQUET } from './index';
 
 export const MOCKPRODUTOSHEADER = [
   {
     id: 'MPRJDigital',
     imgBg: MPBG,
     colorBtn: '#C99E50',
-    colorBar: '#702826',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
-    icon1: REPOSITORIO,
-    title1: 'Repositório',
-    icon2: SEARCH,
-    title2: 'Nome da Base',
-    icon3: ARROW,
-    title3: 'Qualidade da Base',
-    icon4: CLOCK,
-    title4: 'Última Atualização',
+    title: 'Mprj Digital',
+    subtittle:
+      'No topo, a transparência efetiva como um compromisso; no meio, o catálogo de produtos para trazer facilidade; e, na base de tudo, as bases de dados que dão vida a toda esta cadeia de valor produzida. Conheça o MPRJ Digital navegando abaixo ou clique na barra ao lado para uma busca específica.',
   },
   {
     id: 'Farol',
@@ -38,14 +18,9 @@ export const MOCKPRODUTOSHEADER = [
     colorBar: '#AB662C',
     corTitleBtn: '#FFFF',
     titleBtn: 'Procurar',
-    icon1: FAROL,
-    title1: 'Conheça o Farol',
-    icon2: PLANILHAFAROL,
-    title2: 'Planilhas',
-    icon3: DOCFAROL,
-    title3: 'Documentos',
-    icon4: DOCFAROL,
-    title4: 'Notas Técnicas',
+    title: 'Farol',
+    subtittle:
+      'Fomentar a gestão comparada a partir da construção de indicadores e buscar por maior capacidade de resposta do MPRJ. O Farol permite olhar o mesmo parâmetro em diferentes unidades do MPRJ e sinalizar o que pode ser aprimorado.',
   },
   {
     id: 'ParquetDigital',
@@ -54,14 +29,9 @@ export const MOCKPRODUTOSHEADER = [
     colorBar: '#3781BD',
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
-    icon1: ROBOT,
-    title1: 'Um Robô em cada Promotoria',
-    icon2: PLANILHAPARQUET,
-    title2: 'Perfil de Atuação',
-    icon3: DOCPARQUET,
-    title3: 'Documentos',
-    icon4: DOCPARQUET,
-    title4: 'Documentação',
+    title: 'Parquet Digital',
+    subtittle:
+      'O Parquet Digital é uma solução que nasceu do trabalho coletivo de vários profissionais e setores do Ministério Público do Estado do Rio de Janeiro, e propõe uma significativa mudança de paradigma na atuação dos Promotores de Justiça.',
   },
 ];
 export default MOCKPRODUTOSHEADER;

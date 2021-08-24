@@ -1,19 +1,25 @@
-/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable */
 import React, { useState } from 'react';
-import './Header.css';
 import { BgHeader, NavHeader, ButtonHeader } from './index';
-
+import ArrowIcon from '../../utils/ArrowIcon';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
+import {
+  header,
+  sectionProducts,
+  sectionProductsBtn,
+  sectionProductsInput,
+  sectionProductsArrow
+} from './Header.module.css';
 
 export default function Header() {
   const [changeData, setchangeData] = useState('MPRJDigital');
 
   return (
-    <header className="header">
+    <header className={header}>
       <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
-      <section className="section-products">
-        <div className="section-products-btn">
+      <section className={sectionProducts}>
+        <div className={sectionProductsBtn}>
           {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
             <ButtonHeader
               onClick={() => {
@@ -26,8 +32,18 @@ export default function Header() {
           ))}
         </div>
         <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+        <div className={sectionProductsInput}> 
+          <i className="fa fa-search" aria-hidden="true" />
+          <input
+            type="text"
+            value=''
+            //onChange={(event) => setProductTitle(event.target.value)}
+            
+          />
+         <p>Buscar base dados</p>
+        </div>
       </section>
-      <section className="section-explore">
+      {/*<section className="section-explore">
         <div className="section-explore-texts">
           <h3>O que é o MPRJ Digital?</h3>
           <p>
@@ -50,7 +66,7 @@ export default function Header() {
             o que for interessante para realizar suas pesquisas, estudos e soluções.
           </p>
         </div>
-      </section>
+        </section>*/}
     </header>
   );
 }
