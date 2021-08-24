@@ -62,7 +62,7 @@ export default function Navbar() {
               </NavLink>
               <span className={tooltipText}>Conheça os setores envolvidos nessa iniciativa</span>
               <div className={dropdownContent}>
-                <NavLink to="/parceiro/gadg">Gadg</NavLink>
+                <NavLink to="/parceiro/gadg/sobre">Gadg</NavLink>
               </div>
             </div>
           </div>
