@@ -7,7 +7,7 @@
 }
 .partners-outer h1, .partners-outer p {
   text-align: left;
-  color: var(--white);
+  color: var(--colorWhite);
   font-family: var(--robotRegular);
   margin-bottom: 10px;
 }

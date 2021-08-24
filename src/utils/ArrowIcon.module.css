@@ -1,0 +1,12 @@
+.InputOpenDataIcon{
+    position:relative;
+    margin-top: -54px;
+}
+.InputOpenDataIcon i{
+    position:absolute;
+    left: 220px;
+    top: 8px;
+    padding:9px 8px;
+    color:black;
+    transition:.3s;
+}

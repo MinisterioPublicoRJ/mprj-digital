@@ -25,7 +25,7 @@
   max-width: 500px;
 }
 .mprjDigital-outer-text p {
-  color: var(--white);
+  color: var(--colorWhite);
   margin-left: 80px;
   text-align: right;
 }

@@ -8,6 +8,8 @@ import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
+import ArrowIcon from '../../utils/ArrowIcon';
+
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
@@ -61,13 +63,11 @@ export default function PartnerPage() {
           </div>
           <div className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
-              <div key={subpage.id}>
+              <div>
                 <NavLink
-                  className="partner-page-link"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#C99E50"
-                  }}
+                  className={` ${
+                   partnerFiltered[0].subpages.id ? 'productPage-navButtons-active' : 'partner-page-link '
+                  }`}
                   to={`/parceiro/${partnerId}/${subpage.id}`}
                 >
                   {subpage.call}
@@ -111,7 +111,7 @@ export default function PartnerPage() {
                     onChange={(event) => setCardstTitle(event.target.value)}
                     onMouseOver={() => setCardstTitle("")}
                   />
-                  <i className="fa fa-search" aria-hidden="true" style={{ left: 250, top: 20}}/>
+                 <ArrowIcon />
                 </div>
               ) : null}
             </div>
