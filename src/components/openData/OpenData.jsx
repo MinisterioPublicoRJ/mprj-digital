@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import OPENDATA from './MockOpenData';
 import Pagination from '../pagination/Pagination';
 import OpenDataPosts from './openDataPosts/OpenDataPosts';
+import ArrowIcon from '../../utils/ArrowIcon';
 
 import {
   openData,
@@ -102,11 +103,11 @@ export default function OpenData() {
         <div className={inputOpenDataIcon}>
           <input
             type="text"
-            placeholder="Buscar um repositório"
+            placeholder="Buscar uma base dados"
             value={productTitle}
             onChange={(event) => setProductTitle(event.target.value)}
           />
-          <i className="fa fa-search" aria-hidden="true"></i>
+         <ArrowIcon />
         </div>
         <span>{OPENDATA.length} Repositórios</span>
       </div>

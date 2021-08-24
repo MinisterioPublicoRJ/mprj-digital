@@ -18,7 +18,7 @@
   opacity: 1;
   line-height: 42px;
   margin-left: 30px;
-  margin-top: 34px;
+  margin-top: 7px;
 }
 
 .productsFilterTitles {
@@ -47,7 +47,7 @@
 .openDataCounter input{
   width: 255px;
   height: 40px;
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #D1DBE3;
   border-radius: 4px;
   opacity: 1;
@@ -57,25 +57,13 @@
   padding:8px;
   box-sizing:border-box;
   transition:.3s;
-  text-indent: 10px;
+  text-indent: 20px;
 }
 .openDataCounter input:focus{
   border-color: var(--backgroundFooter);
   box-shadow:0 0 8px 0 var(--backgroundFooter);
 }
-.inputOpenDataIcon{
-  position:relative;
-  margin-top: 25px;
- 
-}
-.inputOpenDataIcon i{
-  position:absolute;
-  left: 220px;
-  top: 10px;
-  padding:9px 8px;
-  color:black;
-  transition:.3s;
-}
+
 @media (max-width: 480px){
   .openDataCounter {
     display: flex;

@@ -4,7 +4,7 @@ import React from 'react';
 import './Footer.css';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
-import logo from '../../assets/logoNovo.png';
+import logoMp from '../../assets/logoMp.svg';
 import logoOuvidoria from '../../assets/Ouvidoria.png';
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="footer-outer" id="rodape">
       <div className="footer-menu">
         <div className="footer-menu-column">
-          <img className="logo-footer" src={logo} alt="logo" />
+          <img className="logo-footer" src={logoMp} alt="logo" />
           <span className="create-space">© Ministério Público do Estado do Rio de Janeiro</span>
           <div className="footer-menu-icons">
             <a

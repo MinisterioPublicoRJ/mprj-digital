@@ -17,7 +17,6 @@
 
 .productPage-presentation {
   align-items: center;
-  color: white;
   display: flex;
   flex-direction: column;
   grid-row: 1 / 1;
@@ -30,10 +29,16 @@
 .productPage-presentation h2 {
   font-size: calc( 0.7 * var(--titleFontSize));
 }
+.productPage-presentation h2, p {
+  color: var(--colorWhite);
+}
+.productPage-presentation p {
+  font-weight: 300;
+}
 
 .productPage-productName {
   align-items: center;
-  background-color: white;
+  background-color: var(--colorWhite);
   color: var(--darkBlue);
   display: flex;
   grid-row: 2 / 3;
@@ -70,7 +75,6 @@
   background: transparent;
   border: none;
   color: var(--blueLightProdutos);
-  cursor: pointer;
   display: flex;
   font-size: var(--defaultFontSize);
   height: calc(var(--titleFontSize) );

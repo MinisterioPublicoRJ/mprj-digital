@@ -56,22 +56,6 @@ label {
   margin-left: 53px;
 }
 
-.partner-page-navigation a {
-  text-align: left;
-  font-size: var(--defaultFontSize);
-  letter-spacing: 0px;
-  color: #bbb8b8;
-  opacity: 1;
-  text-decoration: none;
-}
-.partner-page-navigation a:focus{
-  color: #C99E50;
-  font-weight: bold;
-}
-.partner-page-navigation a .active{
-  color: #C99E50;
-  font-weight: bold;
-}
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;
@@ -94,7 +78,7 @@ label {
   width: 25vw;
   margin-top: -20vh;
   margin-bottom: 10vh;
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border-radius: 10px 10px 0px 0px;
 }
 .partner-page-logo {
@@ -182,13 +166,13 @@ label {
 .partner-page-topics-button input{
   width: 300px;
   height: 60px;
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #D1DBE3;
   opacity: 1;
   color: #9DAFBD;
   outline: 0;
-  margin:8px 0;
-  padding:8px;
+  margin-top: 20px;
+  padding: 8px;
   box-sizing:border-box;
   transition:.3s;
   text-indent: 10px;
@@ -216,7 +200,7 @@ label {
   flex: 0 0 21%;
   margin: 20px 4px;
   padding: 5px 10px;
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   border-bottom: 6px solid #aba6a6;
   text-align-last: left;
   border-radius: 10px 10px 0px 0px;
@@ -245,7 +229,7 @@ label {
   text-align-last: center;
   border-bottom: 6px solid #6792ff;
   border-radius: 3px;
-  background-color: var(--white);
+  background-color: var(--colorWhite);
 }
 .partner-page-card h4 {
   text-align: center;
@@ -256,7 +240,7 @@ label {
   opacity: 1;
 }
 .partner-dynamic-content {
-  background-color: var(--white);
+  background-color: var(--colorWhite);
   padding: 1vw;
 }
 
@@ -264,7 +248,7 @@ label {
   font: normal normal medium 18px/24px Roboto;
 }
 .partner-contact-form input {
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #d1dbe3;
   border-radius: 4px;
   width: 12vw;
@@ -283,7 +267,7 @@ label {
   color: #9dafbd;
 }
 .partner-contact-form textarea {
-  background: var(--white) 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border: 1px solid #d1dbe3;
   border-radius: 5px;
   margin: 5px 10px 5px 0px;
@@ -304,6 +288,23 @@ label {
   height: 24px;
   direction: rtl;
 }
+a.partner-page-link {
+  text-align: left;
+  font-size: var(--defaultFontSize);
+  letter-spacing: 0px;
+  color: #bbb8b8;
+  opacity: 1;
+  text-decoration: none;
+}
+a.partner-page-link.active{
+  color: #C99E50;
+  font-weight: bold;
+}
+a.productPage-navButtons-active{
+  color: #C99E50;
+  font-weight: bold;
+}
+
 @media (max-width: 600px){
   .partner-page-cards {
     display: flex;
@@ -322,10 +323,6 @@ label {
     display: flex;
     flex-direction: column;
   }
-  .input-openData-Icon{
-    margin: 0 auto;
-  }
-
 }
 @media (max-width: 1080px){
   .partner-page-content {

@@ -7,7 +7,7 @@
   opacity: 0.92;
 }
 .partners-header-Page {
-  color: var(--white);
+  color: var(--colorWhite);
   text-align: center;
   margin-bottom: 30px;
 }
@@ -36,7 +36,7 @@
   font-size: 15px !important;
 }
 .slick-dots li.slick-active button::before{
-  color: #ffff !important;
+  color: var(--colorWhite) !important;
 }
 
 @media (max-width: 800px){

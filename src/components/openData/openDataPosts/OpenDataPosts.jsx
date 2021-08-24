@@ -8,6 +8,7 @@ import {
   openDataButton,
   atualizationTitle,
   openDataSubtitle,
+  openDataScoreButton,
 } from './OpenDataPosts.module.css';
 
 export default function OpenDataPosts({ posts }) {
@@ -16,7 +17,7 @@ export default function OpenDataPosts({ posts }) {
       {posts.map((item) => (
         <section key={item.id} className={openDataItens}>
           <div className={openDatatexts}>
-            <button type="button">
+            <button type="button" className={openDataScoreButton}>
               <span>{item.score.toFixed(2)}</span>
             </button>
             <h4>{item.title}</h4>

@@ -1,12 +1,24 @@
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable no-constant-condition */
-/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable */
+
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
-import './Navbar.css';
-import logo from '../../assets/logoNovo.png';
+import logoMp from '../../assets/logoMp.svg';
+import {
+  icon,
+  navbarLinks,
+  sectionToolTip,
+  tooltipText,
+  navBar,
+  navbarMobile,
+  mobileButtonActive,
+  dropdown,
+  dropdownContent,
+  mobileButton,
+  dropbtnButton,
+} from './Navbar.module.css';
+
 
 export default function Navbar() {
   const mobile = useMedia('(max-width: 67.5rem)');
@@ -15,24 +27,23 @@ export default function Navbar() {
     <div id="allnavBar">
       {mobile && (
         <button
-          className={`${'mobileButton'} ${mobileMenu && 'mobileButtonActive'}`}
+          className={`${mobileButton}  ${mobileMenu && `${mobileButtonActive}`}`}
           aria-label="Menu"
           type="button"
           onClick={() => setMobileMenu(!mobileMenu)}
         />
       )}
       <section
-        id="navBar"
-        className={`${mobile ? 'navbarMobile' : 'navbar'} ${mobileMenu && 'navbarMobileActive'}`}
+        id={navBar}
+        className={`${mobile ? `${navbarMobile}` : `${navBar}`} ${mobileMenu && `${mobileButtonActive}`}`}
       >
         <NavLink to="/">
-          <img className="logo" src={logo} alt="logo" />
+          <img className={icon} src={logoMp} alt="logo-Mp" />
         </NavLink>
-        <section className="navbar-links">
-          <div className="tooltip">
+        <section className={navbarLinks}>
+          <div className={sectionToolTip}>
             <NavLink
               to="/"
-              className="dropdow-button"
               onClick={() =>
                 scroller.scrollTo('mprjDigital', {
                   smooth: true,
@@ -42,26 +53,26 @@ export default function Navbar() {
             >
               O que é o MPRJ Digital?
             </NavLink>
-            <span className="tooltiptext">Conheça a nossa visão de dados abertos</span>
+            <span className={tooltipText}>Conheça a nossa visão de dados abertos</span>
           </div>
-          <div className="dropdown">
-            <div className="tooltip">
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+          <div className={dropdown}>
+            <div className={sectionToolTip}>
+              <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Parceiros
               </NavLink>
-              <span className="tooltiptext">Conheça os setores envolvidos nessa iniciativa</span>
-              <div className="dropdown-content">
+              <span className={tooltipText}>Conheça os setores envolvidos nessa iniciativa</span>
+              <div className={dropdownContent}>
                 <NavLink to="/parceiro/gadg">Gadg</NavLink>
               </div>
             </div>
           </div>
-          <div className="dropdown">
-            <div className="tooltip">
-              <NavLink to="/" type="button" className="dropbtn-button" id="basic-button">
+          <div className={dropdown}>
+            <div className={sectionToolTip}>
+              <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Produtos
               </NavLink>
-              <span className="tooltiptext">Navegue e conheça nossos produtos e sistemas</span>
-              <div className="dropdown-content">
+              <span className={tooltipText}>Navegue e conheça nossos produtos e sistemas</span>
+              <div className={dropdownContent}>
                 <NavLink to="/produto/farol" type="button" className="dropbtn">
                   Farol
                 </NavLink>
@@ -71,10 +82,9 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className="tooltip">
+          <div className={sectionToolTip}>
             <NavLink
               to="/"
-              className="dropdow-button"
               onClick={() =>
                 scroller.scrollTo('repositorios', {
                   smooth: true,
@@ -84,7 +94,7 @@ export default function Navbar() {
             >
               Repositórios
             </NavLink>
-            <span className="tooltiptext">Encontre aqui todas as nossas Acervo de Dados</span>
+            <span className={tooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
           </div>
           {/* <div className="dropdown">
           <div className="tooltip">
@@ -99,10 +109,9 @@ export default function Navbar() {
             </div>
           </div>
         </div> */}
-          <div className="tooltip">
+          <div className={sectionToolTip}>
             <NavLink
               to="/"
-              className="dropdow-button"
               type="button"
               onClick={() =>
                 scroller.scrollTo('rodape', {
@@ -113,7 +122,7 @@ export default function Navbar() {
             >
               Denúncias e Reclamações
             </NavLink>
-            <span className="tooltiptext">Tem uma Reclamação ou precisa da nossa ajuda.</span>
+            <span className={tooltipText}>Tem uma Reclamação ou precisa da nossa ajuda.</span>
           </div>
         </section>
       </section>
