@@ -1,7 +1,3 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable import/no-cycle */
-/* eslint-disable no-shadow */
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
@@ -10,7 +6,6 @@ import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
 import ArrowIcon from '../../utils/ArrowIcon';
 
-
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
   const [formType, setFormType] = useState('');
@@ -18,7 +13,7 @@ export default function PartnerPage() {
   const [page, setPage] = useState(1);
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
-  const cardsPorPage = 8
+  const cardsPorPage = 8;
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -29,12 +24,11 @@ export default function PartnerPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const featuredCards = subpageData[0].cards.filter(
-        infoCards => infoCards.title
+      const featuredCards = subpageData[0].cards.filter((infoCards) => (
+        infoCards.title
           .toLowerCase()
           .replace(/[\u0300-\u036f]/g, '')
-          .includes(cardstTitle.toLowerCase()),
-      );
+          .includes(cardstTitle.toLowerCase())));
       setCards(featuredCards);
       setTotalCards(Math.ceil(featuredCards.length / cardsPorPage));
       setPage(1);
@@ -55,7 +49,7 @@ export default function PartnerPage() {
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})`}}
+          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
         >
           <div className="partner-page-title">
             <h1>{partnerFiltered[0].name}</h1>
@@ -63,10 +57,13 @@ export default function PartnerPage() {
           </div>
           <div className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
-              <div>
+              <div key={subpage.id}>
                 <NavLink
+                  activeClassName="productPage-navButtons-active"
                   className={` ${
-                   partnerFiltered[0].subpages.id ? 'productPage-navButtons-active' : 'partner-page-link '
+                    partnerFiltered[0].subpages.id
+                      ? 'productPage-navButtons-active'
+                      : 'partner-page-link '
                   }`}
                   to={`/parceiro/${partnerId}/${subpage.id}`}
                 >
@@ -109,22 +106,30 @@ export default function PartnerPage() {
                     placeholder="Pesquise sua solução..."
                     value={cardstTitle}
                     onChange={(event) => setCardstTitle(event.target.value)}
-                    onMouseOver={() => setCardstTitle("")}
+                    onFocus={() => setCardstTitle('')}
+                    onMouseOver={() => setCardstTitle('')}
                   />
-                 <ArrowIcon />
+                  <ArrowIcon />
                 </div>
               ) : null}
             </div>
             {subpageData[0].call === 'Soluções' ? (
               <>
                 <div
-                className={`${subpageData[0].call === 'Soluções' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'}`}
+                  className={`${
+                    subpageData[0].call === 'Soluções'
+                      ? 'partner-page-cards-solucoes '
+                      : 'partner-page-cards'
+                  }`}
                 >
                   {currentCards.map((card) => (
                     <div
                       key={card.id}
-                      className={`${subpageData[0].call === 'Soluções' ? 'partner-page-cards-next' : 'partner-page-card'`${card.type}`}`}
-
+                      className={`${
+                        subpageData[0].call === 'Soluções'
+                          ? 'partner-page-cards-next'
+                          : 'partner-page-card'`${card.type}`
+                      }`}
                       onClick={() => setFormType(card.id)}
                       onKeyDown={() => setFormType(card.id)}
                       aria-hidden="true"
@@ -137,11 +142,6 @@ export default function PartnerPage() {
                     </div>
                   ))}
                 </div>
-                {/*<Pagination
-                  handlePageClick={(page) => handlePageClick(page)}
-                  totalPages={totalCards}
-                  currentPage={page}
-                />*/}
               </>
             ) : (
               <div className="partner-page-cards">
