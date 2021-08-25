@@ -11,7 +11,11 @@
   margin-top: 10px;
   margin-left: 10px;
 }
-.sectionProductsBtn::before{
+.sectionProductsBtn > button:hover {
+  color: var(--colorWhite);
+  opacity: 1;
+}
+.sectionProductsBtn > span{
   content: '|';
   margin-left: 110px;
   background-color: var(--colorWhite);
@@ -22,14 +26,10 @@
   height: 1.8vh;
   display: inline-block;
 }
-.buttonMprj::before:hover{
+
+.buttonMprj button::before:hover{
   background-color: red;
   color: red;
- 
-}
-.sectionProductsBtn > button:hover {
-  color: var(--colorWhite);
-  opacity: 1;
 }
 @media (max-width: 1080px){
   .sectionProductsBtn  > button {

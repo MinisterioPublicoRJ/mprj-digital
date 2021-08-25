@@ -22,7 +22,7 @@ export default function Header() {
       <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
       <section className={sectionProducts}>
         <div className={sectionProductsBtn}>
-          {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
+          {MOCKBUTTONHEADER.map(({ id, title, titleBtn, colorIcon }) => (
             <ButtonHeader
               onClick={() => {
                 setchangeData(id);
@@ -30,6 +30,7 @@ export default function Header() {
               key={id}
               title={title}
               titleBtn={titleBtn}
+              colorIcon={colorIcon}
             />
           ))}
         </div>
