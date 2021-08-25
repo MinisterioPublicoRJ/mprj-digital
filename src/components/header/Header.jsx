@@ -22,7 +22,7 @@ export default function Header() {
       <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
       <section className={sectionProducts}>
         <div className={sectionProductsBtn}>
-          {MOCKBUTTONHEADER.map(({ id, title, titleBtn, colorIcon }) => (
+          {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
             <ButtonHeader
               onClick={() => {
                 setchangeData(id);
@@ -30,18 +30,19 @@ export default function Header() {
               key={id}
               title={title}
               titleBtn={titleBtn}
-              colorIcon={colorIcon}
+              colorId={id}
+              isActive={id === changeData}
             />
           ))}
         </div>
         <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
-        <div className={sectionProductsInput}> 
+        <div className={sectionProductsInput}>
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
             value=''
             //onChange={(event) => setProductTitle(event.target.value)}
-            
+
           />
          <p>Buscar base dados</p>
         </div>

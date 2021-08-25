@@ -11,15 +11,19 @@
   margin-top: 10px;
   margin-left: 10px;
 }
-.sectionProductsBtn > button:hover {
-  color: var(--colorWhite);
+
+.sectionProductsBtn:hover > button, .sectionProductsBtnActive > button {
   opacity: 1;
 }
-.sectionProductsBtn > span{
+
+.sectionProductsBtn:hover > span, .sectionProductsBtnActive span:only-of-type {
+  opacity: 1;
+}
+
+.sectionProductsBtn span {
   content: '|';
   margin-left: 110px;
   background-color: var(--colorWhite);
-  color: var(--colorWhite);
   opacity: 0.25;
   border-radius: 5px;
   width: 0.6vh;
@@ -27,10 +31,18 @@
   display: inline-block;
 }
 
-.buttonMprj button::before:hover{
-  background-color: red;
-  color: red;
+.sectionProductsBtnActive .MPRJDigitalCustomColor, .sectionProductsBtn:hover > span.MPRJDigitalCustomColor {
+  background-color: var(--mainRedColor);
 }
+
+.sectionProductsBtnActive .ParquetDigitalCustomColor, .sectionProductsBtn:hover > span.ParquetDigitalCustomColor {
+  background-color: var(--parquetBlue);
+}
+
+.sectionProductsBtnActive .FarolCustomColor, .sectionProductsBtn:hover > span.FarolCustomColor {
+  background-color: var(--farolOrange);
+}
+
 @media (max-width: 1080px){
   .sectionProductsBtn  > button {
    font-size: 16px;

@@ -1,19 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { sectionProductsBtn } from './ButtonHeader.module.css';
+import styles from './ButtonHeader.module.css';
 
-export default function ButtonHeader({ title, onClick, colorIcon }) {
+export default function ButtonHeader({ title, onClick, colorId, isActive }) {
+  const { sectionProductsBtn, sectionProductsBtnActive, ...colorStyles } = styles;
+
   return (
-    <div className={sectionProductsBtn}>
-      <span style={{ backgroundColor: colorIcon, color: colorIcon }} />
+    <div className={`${sectionProductsBtn} ${isActive ? sectionProductsBtnActive : ''}`}>
+      <span
+        className={
+          colorStyles[Object.keys(colorStyles).find((className) => className.includes(colorId))]
+        }
+      />
       <button onClick={onClick} type="button">
         {title}
       </button>
     </div>
   );
 }
+
 ButtonHeader.propTypes = {
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  colorIcon: PropTypes.string.isRequired,
+  colorId: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
