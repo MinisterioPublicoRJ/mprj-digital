@@ -1,12 +1,15 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { sectionProductsBtn, buttonHeader } from './ButtonHeader.module.css';
+import { sectionProductsBtn, buttonMprj, buttonParquet } from './ButtonHeader.module.css';
 
-export default function ButtonHeader({ title, onClick }) {
+export default function ButtonHeader({ title, onClick, colorIcon, id }) {
   return (
     <div className={sectionProductsBtn}>
-      <button className={`buttonHeader-${title}`}onClick={onClick} type="button">
+      <button
+        onClick={onClick}
+        type="button"
+        className={`${id === 'MPRJDigital' ? `{${buttonMprj}}` : `{${buttonParquet}}`}`}
+      >
         {title}
       </button>
     </div>
@@ -15,4 +18,6 @@ export default function ButtonHeader({ title, onClick }) {
 ButtonHeader.propTypes = {
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
+  colorIcon: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };

@@ -4,20 +4,14 @@ export const MOCKPRODUTOSHEADER = [
   {
     id: 'MPRJDigital',
     imgBg: MPBG,
-    colorBtn: '#C99E50',
-    corTitleBtn: '#FFF',
-    titleBtn: 'Procurar',
     title: 'Mprj Digital',
+    link: '',
     subtittle:
       'No topo, a transparência efetiva como um compromisso; no meio, o catálogo de produtos para trazer facilidade; e, na base de tudo, as bases de dados que dão vida a toda esta cadeia de valor produzida. Conheça o MPRJ Digital navegando abaixo ou clique na barra ao lado para uma busca específica.',
   },
   {
     id: 'Farol',
     imgBg: FAROLBG,
-    colorBtn: '#CCB0A3',
-    colorBar: '#AB662C',
-    corTitleBtn: '#FFFF',
-    titleBtn: 'Procurar',
     title: 'Farol',
     link: 'https://parquetdigital.mprj.mp.br/#/login',
     subtittle:
@@ -26,10 +20,6 @@ export const MOCKPRODUTOSHEADER = [
   {
     id: 'ParquetDigital',
     imgBg: PARQUET,
-    colorBtn: '#82D4FF',
-    colorBar: '#3781BD',
-    corTitleBtn: '#FFF',
-    titleBtn: 'Procurar',
     title: 'Parquet Digital',
     link: 'https://parquetdigital.mprj.mp.br/#/login',
     subtittle:

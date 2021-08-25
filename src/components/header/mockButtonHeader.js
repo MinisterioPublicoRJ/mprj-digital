@@ -6,14 +6,17 @@ export const MOCKBUTTONHEADER = [
   {
     id: 'MPRJDigital',
     title: 'MPRJ Digital',
+    colorIcon: '#B93B40',
   },
   {
     id: 'ParquetDigital',
     title: 'Parquet Digital',
+    colorIcon: '#B93B40',
   },
   {
     id: 'Farol',
     title: 'Farol',
+    colorIcon: '#B93B40',
   },
   // {
   //   id: 'Integra',

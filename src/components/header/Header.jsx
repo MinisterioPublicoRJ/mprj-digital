@@ -9,7 +9,9 @@ import {
   sectionProducts,
   sectionProductsBtn,
   sectionProductsInput,
-  sectionProductsArrow
+  sectionExplore,
+  sectionExploreTexts,
+  sectionBoxButton,
 } from './Header.module.css';
 
 export default function Header() {
@@ -43,30 +45,30 @@ export default function Header() {
          <p>Buscar base dados</p>
         </div>
       </section>
-      {/*<section className="section-explore">
-        <div className="section-explore-texts">
+      <section className={sectionExplore}>
+        <div className={sectionExploreTexts}>
           <h3>O que é o MPRJ Digital?</h3>
           <p>
             Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
             atividade baseada no modelo de governos digitais.
           </p>
         </div>
-        <div className="section-explore-texts">
+        <div className={sectionExploreTexts}>
           <h3>Parceiros e Produtos</h3>
           <p>
             Aqui você encontrará diversos produtos oriundos da política de governos digitais
             empreendida pelo MPRJ.
           </p>
-          <div className="section-box-button" />
+          <div className={sectionBoxButton} />
         </div>
-        <div className="section-explore-texts">
+        <div className={sectionExploreTexts}>
           <h3>Repositório de Dados</h3>
           <p>
             Confira a integridade de nossas soluções desde os dados e conheça, explore e baixe tudo
             o que for interessante para realizar suas pesquisas, estudos e soluções.
           </p>
         </div>
-        </section>*/}
+        </section>
     </header>
   );
 }
