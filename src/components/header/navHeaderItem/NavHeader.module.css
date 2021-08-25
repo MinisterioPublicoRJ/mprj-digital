@@ -27,6 +27,20 @@
     color: #B1B1B1;
     cursor: pointer;
 }
+.sectionProductsBtnActive .MPRJDigitalCustomColor , .sectionInfoProducts button.MPRJDigitalCustomColor:hover {
+    background-color: var(--mainRedColor);
+    color: var(--colorWhite);
+}
+  
+.sectionInfoProducts > button.ParquetDigitalCustomColor:hover {
+    background-color: var(--parquetBlue);
+    color: var(--colorWhite);
+}
+  
+.sectionInfoProducts > button.FarolCustomColor:hover {
+    background-color: var(--farolOrange);
+    color: var(--colorWhite);
+}
 
 @media (max-width: 1080px){
     .section-info-products{

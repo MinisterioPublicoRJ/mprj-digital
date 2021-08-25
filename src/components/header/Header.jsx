@@ -35,7 +35,7 @@ export default function Header() {
             />
           ))}
         </div>
-        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)}/>
         <div className={sectionProductsInput}>
           <i className="fa fa-search" aria-hidden="true" />
           <input
