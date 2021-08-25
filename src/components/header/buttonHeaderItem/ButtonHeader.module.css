@@ -15,13 +15,11 @@
   opacity: 1;
 }
 .buttonHeader-MPRJDigital:hover{
-  content: '';
   color:#C99E50;
   opacity: 1;
   font-weight: bold;
 } 
 .buttonHeader-Farol:hover{
-  content: '';
   color:#CCB0A3;
   opacity: 1;
   font-weight: bold;

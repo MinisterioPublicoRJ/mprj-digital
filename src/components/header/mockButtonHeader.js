@@ -10,13 +10,10 @@ export const MOCKBUTTONHEADER = [
   {
     id: 'ParquetDigital',
     title: 'Parquet Digital',
-    link: 'https://parquetdigital.mprj.mp.br/#/login',
   },
   {
     id: 'Farol',
-    titleBtn: 'Farol',
     title: 'Farol',
-    link: 'https://parquetdigital.mprj.mp.br/#/login',
   },
   // {
   //   id: 'Integra',

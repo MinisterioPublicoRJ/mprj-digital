@@ -19,6 +19,7 @@ export const MOCKPRODUTOSHEADER = [
     corTitleBtn: '#FFFF',
     titleBtn: 'Procurar',
     title: 'Farol',
+    link: 'https://parquetdigital.mprj.mp.br/#/login',
     subtittle:
       'Fomentar a gestão comparada a partir da construção de indicadores e buscar por maior capacidade de resposta do MPRJ. O Farol permite olhar o mesmo parâmetro em diferentes unidades do MPRJ e sinalizar o que pode ser aprimorado.',
   },
@@ -30,6 +31,7 @@ export const MOCKPRODUTOSHEADER = [
     corTitleBtn: '#FFF',
     titleBtn: 'Procurar',
     title: 'Parquet Digital',
+    link: 'https://parquetdigital.mprj.mp.br/#/login',
     subtittle:
       'O Parquet Digital é uma solução que nasceu do trabalho coletivo de vários profissionais e setores do Ministério Público do Estado do Rio de Janeiro, e propõe uma significativa mudança de paradigma na atuação dos Promotores de Justiça.',
   },
