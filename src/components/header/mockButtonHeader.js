@@ -11,12 +11,12 @@ export const MOCKBUTTONHEADER = [
   {
     id: 'ParquetDigital',
     title: 'Parquet Digital',
-    colorIcon: '#B93B40',
+    colorIcon: '#3781BD',
   },
   {
     id: 'Farol',
     title: 'Farol',
-    colorIcon: '#B93B40',
+    colorIcon: '#AB662C',
   },
   // {
   //   id: 'Integra',
