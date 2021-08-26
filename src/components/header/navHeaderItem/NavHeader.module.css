@@ -1,51 +1,62 @@
-.sectionInfoProducts{
-    color: var(--colorWhite);
-    margin-top: 100px;
-}
-.sectionInfoProducts h2{
-    font-size: 30px;
-    text-align: left;
-    text-transform: uppercase;
-    font-family: var(--robotRegular);
-	font-family: Montserrat,Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
-.sectionInfoProducts p{
-    text-align: left;
-    font-weight: 300;
-    margin-top: 5px;
-    font-family: var(--robotRegular);
-    line-height: 1.5;
-    font-size: 16px;
-}
-.sectionInfoProducts button{
-    width: 164px;
-    height: 40px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 8px;
-    color: #B1B1B1;
-    cursor: pointer;
-}
-.sectionProductsBtnActive .MPRJDigitalCustomColor , .sectionInfoProducts button.MPRJDigitalCustomColor:hover {
-    background-color: var(--mainRedColor);
-    color: var(--colorWhite);
-}
-  
-.sectionInfoProducts > button.ParquetDigitalCustomColor:hover {
-    background-color: var(--parquetBlue);
-    color: var(--colorWhite);
-}
-  
-.sectionInfoProducts > button.FarolCustomColor:hover {
-    background-color: var(--farolOrange);
-    color: var(--colorWhite);
+.sectionInfoProducts {
+  color: var(--colorWhite);
+  margin-top: 100px;
 }
 
-@media (max-width: 1080px){
-    .section-info-products{
-        max-width: 100%;
-        margin: 0 auto;
-        margin-top: 60px;
-    }
+.sectionInfoProducts h2 {
+  font-size: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: var(--robotRegular);
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.sectionInfoProducts p {
+  /* font-weight: 300; */
+  /* line-height: 1.5; */
+  /* algo sobre essa fonte está errado */
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: var(--robotRegular);
+  font-size: var(--defaultFontSize);
+}
+
+.sectionInfoProducts a {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: #b1b1b1;
+  font-size: var(--smallFont);
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  /* align-items: center; */
+  /* cursor: pointer; */
+  /* height: 40px; */
+  /* width: 164px; */
+}
+
+.sectionInfoProducts a.MPRJDigitalCustomColor:hover {
+  background-color: var(--mainRedColor);
+  color: var(--colorWhite);
+}
+
+.sectionInfoProducts > a.ParquetDigitalCustomColor:hover {
+  background-color: var(--parquetBlue);
+  color: var(--colorWhite);
+}
+
+.sectionInfoProducts > a.FarolCustomColor:hover {
+  background-color: var(--farolOrange);
+  color: var(--colorWhite);
+}
+
+@media (max-width: 1080px) {
+  .section-info-products {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
 }

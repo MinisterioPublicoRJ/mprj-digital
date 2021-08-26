@@ -2,33 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NavHeader.module.css';
 
-export default function NavHeader({ title, subtitle, link, colorId, isActive }) {
+export default function NavHeader({ title, subtitle, link, id }) {
   const { sectionInfoProducts, sectionProductsBtnActive, ...colorStyles } = styles;
-  console.log(sectionInfoProducts);
 
   return (
-    <section className={`${sectionInfoProducts} ${isActive ? sectionProductsBtnActive : ''}`}>
+    <section className={sectionInfoProducts}>
       <h2>{title}</h2>
       <p>{subtitle}</p>
-      <a target="new" href={link}>
-        {title === 'Mprj Digital' ? null : (
-          <button
-            type="button"
-            className={
-              colorStyles[Object.keys(colorStyles).find((className) => className.includes(colorId))]
-            }
-          >
-            Conheça a ferramenta
-          </button>
-        )}
-      </a>
+      {link ? (
+        <a
+          href={link}
+          target="new"
+          className={
+            colorStyles[Object.keys(colorStyles).find((className) => className.includes(id))]
+          }
+        >
+          Conheça a ferramenta
+        </a>
+      ) : null}
     </section>
   );
 }
+
 NavHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  colorId: PropTypes.string.isRequired,
-  isActive: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
