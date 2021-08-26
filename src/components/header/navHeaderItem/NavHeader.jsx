@@ -11,14 +11,16 @@ export default function NavHeader({ title, subtitle, link, colorId, isActive }) 
       <h2>{title}</h2>
       <p>{subtitle}</p>
       <a target="new" href={link}>
-        <button
-          type="button"
-          className={
-            colorStyles[Object.keys(colorStyles).find((className) => className.includes(colorId))]
-          }
-        >
-          Conheça a ferramenta
-        </button>
+        {title === 'Mprj Digital' ? null : (
+          <button
+            type="button"
+            className={
+              colorStyles[Object.keys(colorStyles).find((className) => className.includes(colorId))]
+            }
+          >
+            Conheça a ferramenta
+          </button>
+        )}
       </a>
     </section>
   );
