@@ -12,7 +12,6 @@ export default function NavHeader({ title, subtitle, link, id }) {
       {link ? (
         <a
           href={link}
-          target="new"
           className={
             colorStyles[Object.keys(colorStyles).find((className) => className.includes(id))]
           }
