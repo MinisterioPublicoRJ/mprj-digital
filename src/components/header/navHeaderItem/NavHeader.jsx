@@ -26,6 +26,10 @@ export default function NavHeader({ title, subtitle, link, id }) {
 NavHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   id: PropTypes.string.isRequired,
+};
+
+NavHeader.defaultProps = {
+  link: undefined,
 };
