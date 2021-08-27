@@ -13,14 +13,12 @@
 }
 
 .sectionInfoProducts p {
-  /* font-weight: 300; */
-  /* line-height: 1.5; */
-  /* algo sobre essa fonte está errado */
+  font-weight: 300; 
+  line-height: 1.5; 
   text-align: left;
   margin-top: 5px;
   margin-bottom: 20px;
   font-family: var(--robotRegular);
-  font-size: var(--defaultFontSize);
 }
 
 .sectionInfoProducts a {
@@ -32,10 +30,8 @@
   font-weight: bold;
   padding: 10px;
   text-decoration: none;
-  /* align-items: center; */
-  /* cursor: pointer; */
-  /* height: 40px; */
-  /* width: 164px; */
+  font-family: var(--robotRegular);
+  font-weight: 400; 
 }
 
 .sectionInfoProducts a.MPRJDigitalCustomColor:hover {
@@ -54,9 +50,16 @@
 }
 
 @media (max-width: 1080px) {
-  .section-info-products {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 60px;
+  .sectionInfoProducts {
+    margin-top: 40px;
+  }
+  .sectionInfoProducts h2 {
+    text-align: center;
+  }
+  .sectionInfoProducts p {
+    text-align: center;
+  }
+  .sectionInfoProducts a {
+    display: none;
   }
 }

@@ -77,6 +77,22 @@
   header{
     position: absolute;
   }
+  .sectionProductsInput{
+    margin: 0 auto;
+    width: 280px;
+  }
+  .sectionProductsInput input{
+    width: 200px;
+  }
+  .sectionProductsInput p{
+    font-size: 8px;
+    padding-left: 190px;
+  }
+  .sectionProducts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+  }
   .sectionExploreTexts > P{
     text-align: center;
   }
