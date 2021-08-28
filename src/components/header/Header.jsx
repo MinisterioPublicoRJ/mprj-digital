@@ -1,19 +1,42 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from 'react';
-import './Header.css';
+/* eslint-disable */
+import React, { useEffect, useState } from 'react';
 import { BgHeader, NavHeader, ButtonHeader } from './index';
-
+import OPENDATA from '../openData/MockOpenData';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
+import {
+  header,
+  sectionProducts,
+  sectionProductsBtn,
+  sectionProductsInput,
+  sectionExplore,
+  sectionExploreTexts,
+  sectionBoxButton,
+} from './Header.module.css';
 
 export default function Header() {
   const [changeData, setchangeData] = useState('MPRJDigital');
+  const [productTitle, setProductTitle] = useState('');
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const filteredRepositories = OPENDATA.filter((repositories) =>
+        repositories.title
+          .toLowerCase()
+          .replace(/[\u0300-\u036f]/g, '')
+          .includes(productTitle.toLowerCase()),
+      );
+
+    };
+    fetchData();
+  }, [productTitle]);
 
   return (
-    <header className="header">
+    <header className={header}>
       <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
-      <section className="section-products">
-        <div className="section-products-btn">
+      <section className={sectionProducts}>
+        <div className={sectionProductsBtn}>
           {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
             <ButtonHeader
               onClick={() => {
@@ -22,13 +45,26 @@ export default function Header() {
               key={id}
               title={title}
               titleBtn={titleBtn}
+              colorId={id}
+              isActive={id === changeData}
             />
           ))}
         </div>
-        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+        
+        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)}/>
+        <div className={sectionProductsInput}>
+          <i className="fa fa-search" aria-hidden="true" />
+          <input
+            type="text"
+            value={productTitle}
+            onChange={(event) => setProductTitle(event.target.value)}
+
+          />
+         <p>Buscar base dados</p>
+        </div>
       </section>
-      <section className="section-explore">
-        <div className="section-explore-texts">
+      <section className={sectionExplore}>
+        <div className={sectionExploreTexts}>
           <h3>O que é o MPRJ Digital?</h3>
           <p>
             Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
@@ -38,7 +74,7 @@ export default function Header() {
             <a href="/produto/parquet_digital">Saiba mais</a>
           </div>
         </div>
-        <div className="section-explore-texts">
+        <div className={sectionExploreTexts}>
           <h3>Parceiros e Produtos</h3>
           <p>
             Aqui você encontrará diversos produtos oriundos da política de governos digitais
@@ -49,7 +85,7 @@ export default function Header() {
             <a href="/produto/parquet_digital">Produtos</a>
           </div>
         </div>
-        <div className="section-explore-texts">
+        <div className={sectionExploreTexts}>
           <h3>Repositório de Dados</h3>
           <p>
             Confira a integridade de nossas soluções desde os dados e conheça, explore e baixe tudo
@@ -59,7 +95,7 @@ export default function Header() {
             <a href="/produto/parquet_digital">Acessar</a>
           </div>
         </div>
-      </section>
+        </section>
     </header>
   );
 }

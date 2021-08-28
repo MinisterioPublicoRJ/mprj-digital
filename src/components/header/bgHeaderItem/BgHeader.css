@@ -1,5 +1,6 @@
 .section-products-bg img{
-    width: 100%;
+    width: 100vw;
+    height: 60vh;
 }
 @media (max-width: 1080px){
     .section-products-bg img{

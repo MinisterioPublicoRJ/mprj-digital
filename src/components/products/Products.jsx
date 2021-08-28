@@ -27,7 +27,7 @@ export default function Products() {
     setPage(nextPage);
   }
 
-  
+
   const lastProduct = page * productsPerPage;
   const firstProduct = lastProduct - productsPerPage;
   const currentProductPage = products.slice(firstProduct, lastProduct);

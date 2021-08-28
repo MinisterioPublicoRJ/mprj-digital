@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.sectionProducts{
+  position: absolute;
+  display: grid;
+  margin-top: 120px;
+  grid-template-columns: 25% 30% 45%;
+}
+.sectionProductsInput{
+  width: 380px;
+  height: 48px; 
+  border-radius: 10px;
+  border: none;
+  margin-left: 150px;
+  margin-top: 130px;
+  background-color: var(--colorWhite);
+}
+.sectionProductsInput input{
+  color: #B1B1B1;
+  width: 227px;
+  height: 35px;
+  border: none;
+  text-indent: 50px;
+  background-color: #F2F3F8;
+  border-radius: 10px;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+.sectionProductsInput input:focus{
+  outline-style: none;
+}
+.sectionProductsInput p{
+  color: #B93B40;
+  margin-left: 15px;
+  margin-top: -24px;
+  padding-left: 220px;
+  font-family: 'Poppins',;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+.sectionProductsInput i {
+  margin-left: 20px;
+  transition:.3s;
+  margin-top: 16px;
+  position: absolute;
+  color: #B93B40;
+}
+.sectionExplore {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+.sectionExploreTexts {
+  font-weight: normal;
+  color: var(--secondColor);
+  max-width: 330px;
+  border-bottom: 2px solid var(--secondColor);
+}
+.sectionExploreTexts > h3 {
+  font-weight: normal;
+  color: var(--secondColor);
+  font-size: 26px;
+}
+.sectionExploreTexts > P {
+  color: var(--secondColor);
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1080px){
+  header{
+    position: absolute;
+  }
+  .sectionProductsInput{
+    margin: 0 auto;
+    width: 280px;
+  }
+  .sectionProductsInput input{
+    width: 200px;
+  }
+  .sectionProductsInput p{
+    font-size: 8px;
+    padding-left: 190px;
+  }
+  .sectionProducts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  .sectionExploreTexts > P{
+    text-align: center;
+  }
+  .sectionExplore{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .sectionExploreTexts > h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .sectionExploreTexts > P {
+    margin-bottom: 30px;
+  }
+  .sectionProductsBtn {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
+
+
+
