@@ -7,7 +7,6 @@ import {
 } from './BgHeader.module.css';
 
 export default function BgHeader({ currentTab, bgList }) {
-  console.log('hi', currentTab, bgList);
   return (
     <div className={sectionProductsBgOuter}>
       {bgList.map(({ id, imgBg }) => (
