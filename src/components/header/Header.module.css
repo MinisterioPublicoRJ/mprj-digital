@@ -42,6 +42,36 @@
   font-weight: 500;
   font-size: 12px;
 }
+
+/*.sectionExploreTexts{
+	  position: relative;
+}*/
+.sectionBoxButton button{
+  width: 120px;
+  height: 40px; 
+  /*display: none;*/
+  background-color: #C99E50;
+  border: none;
+  border-radius: 5px;
+  color: var(--colorWhite);
+  font-size: var(--smallFont);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--robotRegular);
+  font-weight: 400; 
+}
+/*.sectionExploreTexts:hover .sectionBoxLinks{ 
+	display:block;
+}*/
+.sectionBoxButton a{
+  color: var(--colorWhite);
+  font-size: var(--smallFont);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--robotRegular);
+  font-weight: 400; 
+}
+
 .sectionProductsInput i {
   margin-left: 20px;
   transition:.3s;

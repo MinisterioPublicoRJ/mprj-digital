@@ -12,6 +12,7 @@ import {
   sectionExplore,
   sectionExploreTexts,
   sectionBoxButton,
+  sectionBoxLinks,
 } from './Header.module.css';
 
 export default function Header() {
@@ -70,8 +71,10 @@ export default function Header() {
             Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
             atividade baseada no modelo de governos digitais.
           </p>
-          <div className="section-box-button">
-            <a href="/produto/parquet_digital">Saiba mais</a>
+        <div className={sectionBoxButton}>
+            <button>
+            <a className={sectionBoxLinks} href="/produto/parquet_digital">Saiba mais</a>
+            </button>
           </div>
         </div>
         <div className={sectionExploreTexts}>
@@ -80,9 +83,13 @@ export default function Header() {
             Aqui você encontrará diversos produtos oriundos da política de governos digitais
             empreendida pelo MPRJ.
           </p>
-          <div className="section-box-button">
-            <a href="/produto/parquet_digital">Parceiros</a>
-            <a href="/produto/parquet_digital">Produtos</a>
+          <div className={sectionBoxButton}>
+            <button>
+              <a className={sectionBoxLinks} href="/produto/parquet_digital">Parceiros</a>
+            </button>
+            <button>
+            <a className={sectionBoxLinks} href="/produto/parquet_digital">Produtos</a>
+            </button>
           </div>
         </div>
         <div className={sectionExploreTexts}>
@@ -91,8 +98,10 @@ export default function Header() {
             Confira a integridade de nossas soluções desde os dados e conheça, explore e baixe tudo
             o que for interessante para realizar suas pesquisas, estudos e soluções.
           </p>
-          <div className="section-box-button">
-            <a href="/produto/parquet_digital">Acessar</a>
+          <div className={sectionBoxButton}>
+            <button>
+            <a className={sectionBoxLinks} href="/produto/parquet_digital">Acessar</a>
+            </button>
           </div>
         </div>
         </section>
