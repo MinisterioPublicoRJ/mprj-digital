@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable prettier/prettier */
@@ -19,14 +20,24 @@ import {
   sectionBoxLinks,
   sectionBoxLine,
   sectionExploreTextsMain,
+  searchButton,
 } from './Header.module.css';
+import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
+  const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [changeData, setchangeData] = useState('MPRJDigital');
+  const [productTitle, setProductTitle] = useState('');
+
+  function handleSearch() {
+    searchInputRef.current.scrollIntoView();
+    searchInputRef.current.focus();
+    setCurrentSearchTerm(productTitle);
+  }
 
   return (
     <header className={header}>
-      <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+      <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
       <section className={sectionProducts}>
         <div className={sectionProductsBtn}>
           {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
@@ -48,10 +59,11 @@ export default function Header() {
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
-            value=""
-            onChange=""
+            value={productTitle}
+            onChange={({ target: { value } }) => setProductTitle(value)}
+
           />
-          <p>Buscar base dados</p>
+          <button type="button" className={searchButton} onClick={handleSearch}>Buscar base de dados</button>
         </div>
       </section>
       <section className={sectionExplore}>
