@@ -104,9 +104,11 @@
   .searchButton {
     color: var(--mainRedColor);
     background: none;
-    border: none;
-    font-size: 11px;
-    width: 10%;
+    margin-left: 5px;
+    font-size: 12px;
+    width: 20%;
+    position: relative;
+    bottom: 8px;
   }
   .sectionExploreTexts > P{
     text-align: center;
