@@ -18,6 +18,7 @@ import {
   sectionBoxButton,
   sectionBoxLinks,
   sectionBoxLine,
+  sectionExploreTextsMain,
 } from './Header.module.css';
 
 export default function Header() {
@@ -54,7 +55,7 @@ export default function Header() {
         </div>
       </section>
       <section className={sectionExplore}>
-        <div>
+        <div className={sectionExploreTextsMain}>
           <div className={sectionExploreTexts}>
             <h3>O que é o MPRJ Digital?</h3>
             <p>
@@ -78,7 +79,7 @@ export default function Header() {
           </div>
           <div className={sectionBoxLine} />
         </div>
-        <div>
+        <div className={sectionExploreTextsMain}>
           <div className={sectionExploreTexts}>
             <h3>Parceiros e Produtos</h3>
             <p>
@@ -116,7 +117,7 @@ export default function Header() {
           </div>
           <div className={sectionBoxLine} />
         </div>
-        <div>
+        <div className={sectionExploreTextsMain}>
           <div className={sectionExploreTexts}>
             <h3>Repositório de Dados</h3>
             <p>

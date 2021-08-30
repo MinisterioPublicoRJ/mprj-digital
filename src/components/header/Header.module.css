@@ -42,9 +42,6 @@
   font-weight: 500;
   font-size: 12px;
 }
-.sectionExploreTexts{
-	position: relative;
-}
 .sectionBoxButton{
   display: flex;
 }
@@ -68,20 +65,7 @@
   text-align: center;
   margin-top: 12px;
 }
-.sectionExploreTexts:hover a.sectionBoxLinks,
-.sectionExploreTexts:hover h3{ 
-  color: #C99E50;
-  font-weight: 400;
-	display:block;
-  -webkit-transition: 0.3s ease-in;
-  -moz-transition: 0.3s ease-in; 
-  -o-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-.sectionExploreTexts:hover h3{
-  margin-top: 20px;
 
-}
 .sectionProductsInput i {
   margin-left: 20px;
   transition:.3s;
@@ -93,18 +77,40 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 60px;
-  height: 15vh;
+  height: 30vh;
 }
 .sectionExploreTexts {
   max-width: 360px;
-  height: 18vh;
+  margin-top: 70px;
+  height: 10vh;
+}
+.sectionExploreTexts:hover{
+  margin-top: 30px;
+  height: 10vh;
 }
 .sectionBoxLine{
   border-bottom: 2px solid var(--secondColor);
   margin-top: 40px;
-
+  content: "";
 }
+.sectionExploreTexts:hover a.sectionBoxLinks,
+.sectionExploreTexts:hover h3{ 
+  color: #C99E50;
+  font-weight: 400;
+	display:block;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in; 
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.sectionExploreTextsMain{
+  height: 30vh;
+  background: lightblue;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
 .sectionExploreTexts > h3 {
   font-weight: normal;
   color: var(--secondColor);
