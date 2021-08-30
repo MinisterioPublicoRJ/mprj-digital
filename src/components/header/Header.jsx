@@ -12,6 +12,7 @@ import {
   sectionExplore,
   sectionExploreTexts,
   sectionBoxButton,
+  searchButton,
 } from './Header.module.css';
 import { useHomeContext } from '../../pages/home/HomeContext';
 
@@ -52,7 +53,7 @@ export default function Header() {
             onChange={({ target: { value } }) => setProductTitle(value)}
 
           />
-        <button type="button" onClick={handleSearch}>Buscar base dados</button>
+        <button type="button" className={searchButton} onClick={handleSearch}>FAÇA SUA BUSCA</button>
         </div>
       </section>
       <section className={sectionExplore}>

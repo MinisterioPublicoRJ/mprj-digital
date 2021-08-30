@@ -49,6 +49,14 @@
   position: absolute;
   color: #B93B40;
 }
+.searchButton {
+  color: var(--mainRedColor);
+  background: none;
+  border: none;
+  margin-left: 24px;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
 .sectionExplore {
   display: flex;
   justify-content: space-around;
@@ -92,6 +100,13 @@
     display: flex;
     flex-direction: column;
     margin-top: 120px;
+  }
+  .searchButton {
+    color: var(--mainRedColor);
+    background: none;
+    border: none;
+    font-size: 11px;
+    width: 10%;
   }
   .sectionExploreTexts > P{
     text-align: center;
