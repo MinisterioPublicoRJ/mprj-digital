@@ -53,7 +53,7 @@ export default function Header() {
             onChange={({ target: { value } }) => setProductTitle(value)}
 
           />
-        <button type="button" className={searchButton} onClick={handleSearch}>FAÇA SUA BUSCA</button>
+        <button type="button" className={searchButton} onClick={handleSearch}>Faça sua busca</button>
         </div>
       </section>
       <section className={sectionExplore}>

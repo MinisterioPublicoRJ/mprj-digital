@@ -55,7 +55,7 @@
   border: none;
   margin-left: 24px;
   font-size: 14px;
-  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 .sectionExplore {
   display: flex;
