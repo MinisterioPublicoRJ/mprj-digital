@@ -42,36 +42,46 @@
   font-weight: 500;
   font-size: 12px;
 }
-
-/*.sectionExploreTexts{
-	  position: relative;
-}*/
-.sectionBoxButton button{
+.sectionExploreTexts{
+	position: relative;
+}
+.sectionBoxButton{
+  display: flex;
+}
+.sectionBoxButton a{
   width: 120px;
   height: 40px; 
-  /*display: none;*/
+  display: none;
   background-color: #C99E50;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  text-decoration: none;
+  opacity: 1;
+}
+.sectionBoxButton p{
   color: var(--colorWhite);
   font-size: var(--smallFont);
-  font-weight: bold;
-  text-decoration: none;
   font-family: var(--robotRegular);
   font-weight: 400; 
+  text-align: center;
+  margin-top: 12px;
 }
-/*.sectionExploreTexts:hover .sectionBoxLinks{ 
+.sectionExploreTexts:hover a.sectionBoxLinks,
+.sectionExploreTexts:hover h3{ 
+  color: #C99E50;
+  font-weight: 400;
 	display:block;
-}*/
-.sectionBoxButton a{
-  color: var(--colorWhite);
-  font-size: var(--smallFont);
-  font-weight: bold;
-  text-decoration: none;
-  font-family: var(--robotRegular);
-  font-weight: 400; 
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in; 
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
 }
+.sectionExploreTexts:hover h3{
+  margin-top: 20px;
 
+}
 .sectionProductsInput i {
   margin-left: 20px;
   transition:.3s;
@@ -83,13 +93,17 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 40px;
+  margin-top: 60px;
+  height: 15vh;
 }
 .sectionExploreTexts {
-  font-weight: normal;
-  color: var(--secondColor);
-  max-width: 330px;
+  max-width: 360px;
+  height: 18vh;
+}
+.sectionBoxLine{
   border-bottom: 2px solid var(--secondColor);
+  margin-top: 40px;
+
 }
 .sectionExploreTexts > h3 {
   font-weight: normal;
@@ -99,7 +113,8 @@
 .sectionExploreTexts > P {
   color: var(--secondColor);
   text-align: left;
-  font-size: 14px;
+  font-weight: normal;
+  font-size: var(--defaultFontSize);
   margin-bottom: 10px;
 }
 
