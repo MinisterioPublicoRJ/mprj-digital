@@ -12,29 +12,24 @@ import {
   sectionExplore,
   sectionExploreTexts,
   sectionBoxButton,
+  searchButton,
 } from './Header.module.css';
+import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
+  const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [changeData, setchangeData] = useState('MPRJDigital');
   const [productTitle, setProductTitle] = useState('');
 
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const filteredRepositories = OPENDATA.filter((repositories) =>
-        repositories.title
-          .toLowerCase()
-          .replace(/[\u0300-\u036f]/g, '')
-          .includes(productTitle.toLowerCase()),
-      );
-
-    };
-    fetchData();
-  }, [productTitle]);
+  function handleSearch() {
+    searchInputRef.current.scrollIntoView();
+    searchInputRef.current.focus();
+    setCurrentSearchTerm(productTitle);
+  }
 
   return (
     <header className={header}>
-      <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+      <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({id, imgBg}))} />
       <section className={sectionProducts}>
         <div className={sectionProductsBtn}>
           {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
@@ -50,17 +45,17 @@ export default function Header() {
             />
           ))}
         </div>
-        
+
         <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)}/>
         <div className={sectionProductsInput}>
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
             value={productTitle}
-            onChange={(event) => setProductTitle(event.target.value)}
+            onChange={({ target: { value } }) => setProductTitle(value)}
 
           />
-         <p>Buscar base dados</p>
+        <button type="button" className={searchButton} onClick={handleSearch}>Faça sua busca</button>
         </div>
       </section>
       <section className={sectionExplore}>

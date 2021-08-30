@@ -4,6 +4,7 @@ import OPENDATA from './MockOpenData';
 import Pagination from '../pagination/Pagination';
 import OpenDataPosts from './openDataPosts/OpenDataPosts';
 import ArrowIcon from '../../utils/ArrowIcon';
+import { useHomeContext } from '../../pages/home/HomeContext';
 
 import {
   openData,
@@ -14,11 +15,11 @@ import {
 } from './OpenData.module.css';
 
 export default function OpenData() {
+  const { currentSearchTerm, setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
-  const [productTitle, setProductTitle] = useState('');
   const [reverse, setReverse] = useState(false);
   const postPorPage = 2
 
@@ -52,7 +53,7 @@ export default function OpenData() {
         repositories.title
           .toLowerCase()
           .replace(/[\u0300-\u036f]/g, '')
-          .includes(productTitle.toLowerCase()),
+          .includes(currentSearchTerm.toLowerCase()),
       );
 
       setPosts(filteredRepositories);
@@ -60,7 +61,7 @@ export default function OpenData() {
       setPage(1);
     };
     fetchData();
-  }, [productTitle]);
+  }, [currentSearchTerm]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -102,10 +103,11 @@ export default function OpenData() {
       <div className={openDataCounter}>
         <div className={inputOpenDataIcon}>
           <input
+            ref={searchInputRef}
             type="text"
             placeholder="Buscar uma base dados"
-            value={productTitle}
-            onChange={(event) => setProductTitle(event.target.value)}
+            value={currentSearchTerm}
+            onChange={({ target: { value } }) => setCurrentSearchTerm(value)}
           />
          <ArrowIcon />
         </div>

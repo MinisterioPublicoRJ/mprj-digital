@@ -1,14 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './BgHeader.css';
+import {
+  sectionProductsBgOuter,
+  sectionProductBgImage,
+  sectionProductBgImageActive,
+} from './BgHeader.module.css';
 
-export default function BgHeader({ imgBg }) {
+export default function BgHeader({ currentTab, bgList }) {
   return (
-    <div className="section-products-bg">
-      <img alt={imgBg} src={imgBg} />
+    <div className={sectionProductsBgOuter}>
+      {bgList.map(({ id, imgBg }) => (
+        <img
+          key={id}
+          alt={imgBg}
+          src={imgBg}
+          className={`${sectionProductBgImage} ${
+            currentTab === id ? sectionProductBgImageActive : ''
+          }`}
+        />
+      ))}
     </div>
   );
 }
 BgHeader.propTypes = {
-  imgBg: PropTypes.string.isRequired,
+  currentTab: PropTypes.string.isRequired,
+  bgList: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
