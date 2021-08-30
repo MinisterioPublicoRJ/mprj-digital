@@ -15,7 +15,7 @@ import {
 } from './OpenData.module.css';
 
 export default function OpenData() {
-  const { currentSearchTerm, setCurrentSearchTerm } = useHomeContext();
+  const { currentSearchTerm, setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [posts, setPosts] = useState(OPENDATA);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -103,6 +103,7 @@ export default function OpenData() {
       <div className={openDataCounter}>
         <div className={inputOpenDataIcon}>
           <input
+            ref={searchInputRef}
             type="text"
             placeholder="Buscar uma base dados"
             value={currentSearchTerm}

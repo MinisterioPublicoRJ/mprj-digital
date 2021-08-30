@@ -1,14 +1,16 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 const HomeContext = createContext();
 
 const homeStoreCreator = () => {
   const [currentSearchTerm, setCurrentSearchTerm] = useState('');
+  const searchInputRef = useRef(null);
 
   return {
     currentSearchTerm,
     setCurrentSearchTerm,
+    searchInputRef,
   };
 };
 

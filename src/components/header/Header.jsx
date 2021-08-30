@@ -16,12 +16,14 @@ import {
 import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
-  const { setCurrentSearchTerm } = useHomeContext();
+  const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [changeData, setchangeData] = useState('MPRJDigital');
   const [productTitle, setProductTitle] = useState('');
 
   function handleSearch() {
-    () => setCurrentSearchTerm(productTitle);
+    searchInputRef.current.scrollIntoView();
+    searchInputRef.current.focus();
+    setCurrentSearchTerm(productTitle);
   }
 
   return (
