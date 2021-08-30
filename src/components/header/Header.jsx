@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className={header}>
-      <BgHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
+      <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({id, imgBg}))} />
       <section className={sectionProducts}>
         <div className={sectionProductsBtn}>
           {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
