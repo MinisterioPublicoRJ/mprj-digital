@@ -4,6 +4,7 @@ import { BgHeader, NavHeader, ButtonHeader } from './index';
 import OPENDATA from '../openData/MockOpenData';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
+import { scroller } from 'react-scroll';
 import {
   header,
   sectionProducts,
@@ -22,7 +23,10 @@ export default function Header() {
   const [productTitle, setProductTitle] = useState('');
 
   function handleSearch() {
-    searchInputRef.current.scrollIntoView();
+    scroller.scrollTo('repositorios', {
+      smooth: true,
+      duration: 600,
+    })
     searchInputRef.current.focus();
     setCurrentSearchTerm(productTitle);
   }

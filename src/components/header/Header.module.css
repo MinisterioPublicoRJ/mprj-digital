@@ -53,7 +53,7 @@
   color: var(--mainRedColor);
   background: none;
   border: none;
-  margin-left: 24px;
+  margin-left: 18px;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -103,7 +103,6 @@
   }
   .searchButton {
     color: var(--mainRedColor);
-    background: none;
     margin-left: 5px;
     font-size: 12px;
     width: 20%;
