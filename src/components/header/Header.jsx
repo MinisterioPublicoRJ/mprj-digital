@@ -32,7 +32,7 @@ export default function Header() {
     scroller.scrollTo('repositorios', {
       smooth: true,
       duration: 600,
-    })
+    });
     searchInputRef.current.focus();
     setCurrentSearchTerm(productTitle);
   }
