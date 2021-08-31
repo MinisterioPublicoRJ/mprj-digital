@@ -72,7 +72,7 @@ p.openDataDescription {
 button.openDataButton {
     width: 108px;
     height: 38px;
-    background: #6F2826 0% 0% no-repeat padding-box;
+    background: var(--mainRedColor) 0% 0% no-repeat padding-box;
     border-radius: 5px;
     opacity: 1;
     border: #6F2826;
