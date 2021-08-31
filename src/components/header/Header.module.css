@@ -3,7 +3,8 @@
   position: relative;
   flex-direction: column;
 }
-.sectionProducts{
+
+.sectionProducts {
   position: absolute;
   display: grid;
   margin-top: 120px;
@@ -11,7 +12,7 @@
 }
 .sectionProductsInput{
   width: 395px;
-  height: 48px; 
+  height: 48px;
   border-radius: 10px;
   border: none;
   margin-left: 150px;
@@ -19,8 +20,9 @@
   background-color: var(--colorWhite);
   display: flex;
 }
-.sectionProductsInput input{
-  color: #B1B1B1;
+
+.sectionProductsInput input {
+  color: #b1b1b1;
   width: 227px;
   height: 35px;
   border: none;
@@ -31,26 +33,53 @@
   text-indent: 40px;
 
 }
-.sectionProductsInput input:focus{
+
+.sectionProductsInput input:focus {
   outline-style: none;
 }
-.sectionProductsInput p{
-  color: #B93B40;
+
+.sectionProductsInput p {
+  color: #b93b40;
   margin-left: 15px;
   margin-top: -24px;
   padding-left: 220px;
-  font-family: 'Poppins',;
+  font-family: 'Poppins';
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
 }
+
+.sectionBoxButton {
+  display: flex;
+  height: 0;
+  transition: height 0.3s ease-in;
+}
+
+.sectionBoxButton a {
+  background-color: #c99e50;
+  border-radius: 5px;
+  height: 100%;
+  text-decoration: none;
+  width: 35%;
+}
+
+.sectionBoxButton p {
+  color: var(--colorWhite);
+  font-size: var(--smallFont);
+  font-family: var(--robotRegular);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 12px;
+}
+
 .sectionProductsInput i {
   margin-left: 20px;
-  transition:.3s;
+  transition: 0.3s;
   margin-top: 16px;
   position: absolute;
-  color: #B93B40;
+  color: #b93b40;
 }
+
 .searchButton {
   color: var(--mainRedColor);
   background: none;
@@ -58,51 +87,89 @@
   margin-left: 4px;
   font-size: 13px;
   text-transform: uppercase;
+  margin-left: 5px;
 }
+
 .sectionExplore {
+  align-items: flex-end;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 40px;
+  flex-direction: row;
+  height: 25vh;
+  justify-content: space-between;
+  margin: 0 12vw;
 }
-.sectionExploreTexts {
-  font-weight: normal;
-  color: var(--secondColor);
-  max-width: 330px;
+
+.sectionBoxLine {
   border-bottom: 2px solid var(--secondColor);
+  margin-top: 2vh;
+  content: '';
+  width: 100%;
 }
+
+.sectionExploreTextsMain {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.sectionExploreTextsMain:hover .sectionBoxButton {
+  height: 4vh;
+}
+
+.sectionExploreTexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15vh;
+  transition: 0.3s ease-in;
+}
+
+.sectionExploreTexts:hover {
+  height: 20vh;
+}
+
+.sectionExploreTexts:hover a.sectionBoxLinks,
+.sectionExploreTexts:hover h3 {
+  color: #c99e50;
+}
+
 .sectionExploreTexts > h3 {
   font-weight: normal;
   color: var(--secondColor);
   font-size: 26px;
 }
+
 .sectionExploreTexts > P {
   color: var(--secondColor);
   text-align: left;
-  font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
-@media (max-width: 1080px){
-  header{
+@media (max-width: 1080px) {
+  header {
     position: absolute;
   }
-  .sectionProductsInput{
+
+  .sectionProductsInput {
     margin: 0 auto;
     width: 280px;
   }
-  .sectionProductsInput input{
+
+  .sectionProductsInput input {
     width: 200px;
   }
-  .sectionProductsInput p{
+
+  .sectionProductsInput p {
     font-size: 8px;
     padding-left: 190px;
   }
-  .sectionProducts{
+
+  .sectionProducts {
     display: flex;
     flex-direction: column;
     margin-top: 120px;
   }
+
   .searchButton {
     color: var(--mainRedColor);
     margin-left: 5px;
@@ -111,10 +178,21 @@
     position: relative;
     bottom: 8px;
   }
-  .sectionExploreTexts > P{
+
+  .sectionExploreTexts > p {
     text-align: center;
   }
-  .sectionExplore{
+
+  .sectionExploreTexts > h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .sectionExploreTexts > p {
+    margin-bottom: 30px;
+  }
+
+  .sectionExplore {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -122,19 +200,11 @@
     align-items: center;
     margin-bottom: 20px;
   }
-  .sectionExploreTexts > h3 {
-    text-align: center;
-    font-size: 20px;
-  }
-  .sectionExploreTexts > P {
-    margin-bottom: 30px;
-  }
+
+
   .sectionProductsBtn {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
 }
-
-
-
