@@ -10,24 +10,26 @@
   grid-template-columns: 25% 30% 45%;
 }
 .sectionProductsInput{
-  width: 380px;
+  width: 395px;
   height: 48px; 
   border-radius: 10px;
   border: none;
   margin-left: 150px;
   margin-top: 130px;
   background-color: var(--colorWhite);
+  display: flex;
 }
 .sectionProductsInput input{
   color: #B1B1B1;
   width: 227px;
   height: 35px;
   border: none;
-  text-indent: 50px;
   background-color: #F2F3F8;
   border-radius: 10px;
   margin-top: 7px;
   margin-left: 10px;
+  text-indent: 40px;
+
 }
 .sectionProductsInput input:focus{
   outline-style: none;
@@ -53,8 +55,8 @@
   color: var(--mainRedColor);
   background: none;
   border: none;
-  margin-left: 18px;
-  font-size: 14px;
+  margin-left: 4px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 .sectionExplore {

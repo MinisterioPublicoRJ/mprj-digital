@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { BgHeader, NavHeader, ButtonHeader } from './index';
-import OPENDATA from '../openData/MockOpenData';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
 import { scroller } from 'react-scroll';
@@ -59,7 +58,7 @@ export default function Header() {
             onChange={({ target: { value } }) => setProductTitle(value)}
 
           />
-        <button type="button" className={searchButton} onClick={handleSearch}>Faça sua busca</button>
+        <button type="button" className={searchButton} onClick={handleSearch}>Buscar Base de Dados</button>
         </div>
       </section>
       <section className={sectionExplore}>
