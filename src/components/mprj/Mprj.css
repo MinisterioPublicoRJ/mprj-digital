@@ -9,14 +9,14 @@
 .mprjDigital-outer-text {
   grid-area: mprjTexts;
   margin: auto;
-  background-color: var(--mainColor);
-  height: 300px;
+  background-color: var(--mainRedColor);
+  height: 380px;
   border: 1px solid #707070;
   padding-left: 8vw;
   padding-right: 2vw;
 }
 .mprjDigital-outer-text h1{
-  color: #C99E50;
+  color: var(--colorWhite);
 }
 .mprjDigital-outer-text h1.title {
   margin-top: 50px;
