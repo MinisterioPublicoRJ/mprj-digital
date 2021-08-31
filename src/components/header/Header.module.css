@@ -10,9 +10,8 @@
   margin-top: 120px;
   grid-template-columns: 25% 30% 45%;
 }
-
-.sectionProductsInput {
-  width: 400px;
+.sectionProductsInput{
+  width: 395px;
   height: 48px;
   border-radius: 10px;
   border: none;
@@ -27,11 +26,12 @@
   width: 227px;
   height: 35px;
   border: none;
-  text-indent: 50px;
-  background-color: #f2f3f8;
+  background-color: #F2F3F8;
   border-radius: 10px;
   margin-top: 7px;
   margin-left: 10px;
+  text-indent: 40px;
+
 }
 
 .sectionProductsInput input:focus {
@@ -84,8 +84,8 @@
   color: var(--mainRedColor);
   background: none;
   border: none;
-  margin-left: 18px;
-  font-size: 14px;
+  margin-left: 4px;
+  font-size: 13px;
   text-transform: uppercase;
   margin-left: 5px;
 }
