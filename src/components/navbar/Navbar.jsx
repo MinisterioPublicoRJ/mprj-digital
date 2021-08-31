@@ -48,7 +48,7 @@ export default function Navbar() {
                 scroller.scrollTo('mprjDigital', {
                   smooth: true,
                   offset: -70,
-                  duration: 400,
+                  duration: 600,
                 })}
             >
               O que é o MPRJ Digital?
@@ -89,7 +89,7 @@ export default function Navbar() {
                 scroller.scrollTo('repositorios', {
                   smooth: true,
                   offset: -70,
-                  duration: 400,
+                  duration: 600,
                 })}
             >
               Repositórios
@@ -117,7 +117,7 @@ export default function Navbar() {
                 scroller.scrollTo('rodape', {
                   smooth: true,
                   offset: -70,
-                  duration: 400,
+                  duration: 600,
                 })}
             >
               Denúncias e Reclamações
