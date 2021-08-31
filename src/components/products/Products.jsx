@@ -10,7 +10,7 @@ export default function Products() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
-  const productsPerPage = 8
+  const productsPerPage = 8;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +27,7 @@ export default function Products() {
     setPage(nextPage);
   }
 
-  
+
   const lastProduct = page * productsPerPage;
   const firstProduct = lastProduct - productsPerPage;
   const currentProductPage = products.slice(firstProduct, lastProduct);

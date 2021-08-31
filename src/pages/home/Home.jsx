@@ -1,19 +1,19 @@
 import React from 'react';
 
 import './Home.css';
-
-import { Header, Mprj, OpenData, Partners, Products, TalkToUs } from '../../components';
+import HomeContextProvider from './HomeContext';
+import { Header, Mprj, OpenData, Partners, Products } from '../../components';
 
 export default function Home() {
   return (
-    <div className="home-outer">
-      <Header />
-      <Mprj />
-      <Partners />
-      <Products />
-      <OpenData />
-      <TalkToUs />
-
-    </div>
+    <HomeContextProvider>
+      <div className="home-outer">
+        <Header />
+        <Mprj />
+        <Partners />
+        <Products />
+        <OpenData />
+      </div>
+    </HomeContextProvider>
   );
 }

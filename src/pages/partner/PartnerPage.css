@@ -28,10 +28,12 @@ label {
 .partner-page-header {
   height: 390px;
   padding-left: 34vw;
-  background-color: #6b778d;
   align-items: center;
   display: flex;
+  width: 100%;
+
 }
+
 .partner-page-title {
   margin-left: 50px;
   margin-top: 80px;
@@ -84,7 +86,7 @@ label {
 .partner-page-logo {
   width: 22vw;
   height: 35vh;
-  background: #6E2E2D 0% 0% no-repeat padding-box;
+  background: var(--mainRedColor) 0% 0% no-repeat padding-box;
   background-position: center;
   opacity: 1;
   display: flex;

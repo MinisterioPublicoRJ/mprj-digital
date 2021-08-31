@@ -69,5 +69,5 @@ export default function OpenDataPosts({ posts }) {
   );
 }
 OpenDataPosts.propTypes = {
-  posts: PropTypes.node.isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
