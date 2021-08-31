@@ -1,7 +1,6 @@
 .mainPagination {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
   margin-bottom: 70px;
 }
 .btnPaginationItem {
@@ -15,7 +14,6 @@
 .btnPaginationItem > button {
   color: var(--grayPagination);
   border: none;
-  cursor: pointer;
   background-color: transparent;
   font-size: 15px;
   opacity: 1;
@@ -35,6 +33,7 @@
   background: transparent;
   color: #9dafbd;
   margin: 5px;
+
 }
 .pagination-number-button.active {
   font-weight: bold;

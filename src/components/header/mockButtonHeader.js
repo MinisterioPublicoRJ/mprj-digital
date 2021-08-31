@@ -5,18 +5,15 @@ export const MOCKBUTTONHEADER = [
   }, */
   {
     id: 'MPRJDigital',
-    titleBtn: 'MPRJDigital',
     title: 'MPRJ Digital',
   },
   {
-    id: 'Farol',
-    titleBtn: 'Farol',
-    title: 'Farol',
+    id: 'ParquetDigital',
+    title: 'Parquet Digital',
   },
   {
-    id: 'ParquetDigital',
-    titleBtn: 'ParquetDigital',
-    title: 'Parquet Digital',
+    id: 'Farol',
+    title: 'Farol',
   },
   // {
   //   id: 'Integra',

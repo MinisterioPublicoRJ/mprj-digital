@@ -3,19 +3,24 @@ import './ProductItem.css';
 
 import PropTypes from 'prop-types';
 
-export default function ProductItem({ product }) {
+export default function ProductItem({ product: { url, imgUrl, title, text } }) {
   return (
     <>
       <div className="product">
-        <a href={product.url} rel="noreferrer">
-          <img src={process.env.PUBLIC_URL + product.imgUrl} alt={product.title} />
+        <a href={url} rel="noreferrer">
+          <img src={process.env.PUBLIC_URL + imgUrl} alt={title} />
         </a>
-        <h4>{product.title}</h4>
-        <p className="text">{product.text}</p>
+        <h4>{title}</h4>
+        <p className="text">{text}</p>
       </div>
     </>
   );
 }
 ProductItem.propTypes = {
-  product: PropTypes.node.isRequired,
+  product: PropTypes.shape({
+    url: PropTypes.string,
+    imgUrl: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string,
+  }).isRequired,
 };

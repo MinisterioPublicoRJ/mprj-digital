@@ -1,64 +1,64 @@
-.navbar {
+.navBar {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  background-color: var(--mainRedColor);
+  height: 147px;
 }
-.navbar-links {
+.navbarLinks {
   display: flex;
   justify-content: space-between;
+  margin-top: 60px;
 }
-.navbar-links a {
+.navbarLinks a {
   list-style: none;
   text-decoration: none;
-  color: #6F2826;
+  color: var(--colorWhite);
   margin-left: 10px;
   margin-right: 10px;
-  font-family: Roboto, regular;
+  font-weight: 300;
 }
-.logo{
+.icon{
   width: 130px;
   height: 40px;
-  margin-top: -10px;
+  margin-top: 60px;
 }
-.dropdown-content {
+.dropdownContent {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: var(--mainRedColor);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.dropdown-content a {
+.dropdownContent a {
   padding: 8px 30px 4px 0px;
   text-decoration: none;
   display: block;
   font-size: 15px;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdownContent {
   display: block;
 }
-#basic-button {
-  color: #6F2826;
+.dropbtnButton {
+  color: var(--colorWhite);
   display: flex;
 }
-#basic-button:after {
-  margin-left: 4px;
-  align-self: flex-end;
-  padding-bottom: 7px;
+.dropbtnButton:after {
+  margin: 6px;
   content: '';
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
-  border-bottom: 0;
   border-left: 0.3em solid transparent;
+  color: var(--colorWhite);
 }
-.tooltip {
+.sectionToolTip {
   position: relative;
   display: inline-block;
 }
-.tooltip .tooltiptext {
+.sectionToolTip .tooltipText {
   visibility: hidden;
   width: 156px;
-  border: 1px solid #702826;
+  border: 1px solid var(--mainColor);
+  background-color: var(--colorWhite);
   text-align: center;
   border-radius: 6px;
   padding: 1px;
@@ -70,10 +70,10 @@
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  color: #702826;
-  font-family: Roboto, regular;
+  color: var(--mainColor);
+  font-family: var(--robotRegular);
 }
-.tooltip .tooltiptext::after {
+.sectionToolTip .tooltipText::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -81,14 +81,14 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: var(--secondColor) transparent transparent transparent;
+  border-color: var(--colorWhite) transparent transparent transparent;
 }
-.tooltip:hover .tooltiptext {
+.sectionToolTip:hover .tooltipText {
   visibility: visible;
   opacity: 1;
 }
 .mobileButton {
-  background-color: var(--secondColor);
+  background-color: var(--mainRedColor);
   border-radius: 0.2rem;
   height: 50px;
   width: 50px;
@@ -106,15 +106,15 @@
   width: 1.2rem;
   height: 2px;
   border-radius: 2px;
-  background-color: var(--white);
-  box-shadow: 0 6px var(--white), 0 -6px var(--white);
+  background-color: var(--colorWhite);
+  box-shadow: 0 6px var(--colorWhite), 0 -6px var(--colorWhite);
   transition: 0.2s;
 }
 .mobileButton:hover,
 .mobileButton:focus,
 .mobileButtonActive{
   outline: none;
-  background-color: var(--secondColor);
+  background-color: var(--mainRedColor);
   color: rgb(212, 209, 204);
   opacity: 0.92;
 }
@@ -122,21 +122,21 @@
   transform: rotate(90deg);
   width: 4px;
   height: 4px;
-  box-shadow: 0 6px var(--white), 0 -6px var(--white);
+  box-shadow: 0 6px var(--colorWhite), 0 -6px var(--colorWhite);
 }
-.navbarMobile .navbar-links{
+.navbarMobile .navbarLinks{
   position: absolute;
   display: block;
   top: 80px;
   padding: 0 1rem;
-  background-color: #ffff;
+  background-color: var(--colorWhite);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2 );
   transform: translate(-10px);
   opacity: 0;
   pointer-events: none;
 }
-.navbarMobile .navbar-links a,
-.navbarMobile .navbar-links button{
+.navbarMobile .navbarLinks a,
+.navbarMobile .navbarLinks button{
   display: flex;
   flex-direction: column;
   background: none;
@@ -145,9 +145,8 @@
   border: none;
   border-bottom: 1px solid #eee;
   padding: 0.5rem 0;
-  cursor: pointer;
 }
-.navbarMobileActive .navbar-links{
+.navbarMobileActive .navbarLinks{
   transition: 0.3s;
   transform: initial;
   opacity: 1 ;
@@ -155,20 +154,17 @@
   pointer-events: initial;
   margin-left: 30px;
 }
-.navbarMobile .tooltip{
+.navbarMobile .sectionToolTip{
   display: block;
 }
 @media (max-width: 1080px){
-  .logo{
-   display: none;
-  }
-  .navbarMobile .tooltip .tooltiptext{
+  .icon{
     display: none;
   }
   #basic-button{
     font-size: 10px;
   }
-  .dropdown-content {
+  .dropdownContent{
     position: relative;
   }
  

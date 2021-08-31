@@ -7,6 +7,10 @@
 .products h4 {
   margin-top: 20px;
   text-align: center;
+  color: var(--backgroundFooter);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+
 }
 .products-title {
   margin: 12px 0;
@@ -19,12 +23,13 @@ p.products-text {
   color: #9dafbd;
   text-align: center;
   margin-right: 0px;
+  margin-bottom: 42px;
 
 }
 .products h1 {
   font-weight: normal;
   text-align: left;
-  color: #311E1E;
+  color: var(--backgroundFooter);
 }
 
 @media (max-width: 380px){
