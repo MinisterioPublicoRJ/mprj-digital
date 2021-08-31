@@ -60,7 +60,7 @@ export default function Navbar() {
               <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Parceiros
               </NavLink>
-              <span className={tooltipText}>Conheça os setores envolvidos nessa iniciativa</span>
+              <span className={tooltipText} style={{ marginBottom: 16}}>Conheça os setores envolvidos nessa iniciativa</span>
               <div className={dropdownContent}>
                 <NavLink to="/parceiro/gadg/sobre">Gadg</NavLink>
               </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
               <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Produtos
               </NavLink>
-              <span className={tooltipText}>Navegue e conheça nossos produtos e sistemas</span>
+              <span className={tooltipText} style={{ marginBottom: 16}}>Navegue e conheça nossos produtos e sistemas</span>
               <div className={dropdownContent}>
                 <NavLink to="/produto/farol" type="button" className="dropbtn">
                   Farol
