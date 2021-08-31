@@ -8,7 +8,6 @@ import { scroller } from 'react-scroll';
 import { BgHeader, NavHeader, ButtonHeader } from './index';
 import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 import { MOCKBUTTONHEADER } from './mockButtonHeader';
-
 import {
   header,
   sectionProducts,
@@ -30,7 +29,10 @@ export default function Header() {
   const [productTitle, setProductTitle] = useState('');
 
   function handleSearch() {
-    searchInputRef.current.scrollIntoView();
+    scroller.scrollTo('repositorios', {
+      smooth: true,
+      duration: 600,
+    })
     searchInputRef.current.focus();
     setCurrentSearchTerm(productTitle);
   }
