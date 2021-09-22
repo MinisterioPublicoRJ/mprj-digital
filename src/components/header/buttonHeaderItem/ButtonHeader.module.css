@@ -18,8 +18,8 @@
 
 .sectionProductsBtn:hover > span, .sectionProductsBtnActive span:only-of-type {
   opacity: 1;
-}
 
+}
 .sectionProductsBtn span {
   content: '|';
   margin-left: 110px;

@@ -1,5 +1,4 @@
 .sectionInfoProducts {
-  color: var(--colorWhite);
   margin-top: 100px;
 }
 
@@ -10,6 +9,7 @@
   font-family: var(--robotRegular);
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-weight: bold;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .sectionInfoProducts p {
@@ -19,8 +19,17 @@
   margin-top: 5px;
   margin-bottom: 20px;
   font-family: var(--robotRegular);
+  transition: opacity 0.8s ease-in-out;
 }
 
+.sectionInfoProductsActive h2{
+  opacity: 1;
+  color: var(--colorWhite);
+}
+.sectionInfoProductsActive p{
+  opacity: 1;
+  color: var(--colorWhite);
+}
 .sectionInfoProducts a {
   background-color: white;
   border: none;

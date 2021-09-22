@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable prettier/prettier */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import { BgHeader, NavHeader, ButtonHeader } from './index';
