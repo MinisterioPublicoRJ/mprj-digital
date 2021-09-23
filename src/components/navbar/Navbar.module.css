@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--mainRedColor);
-  height: 147px;
+  height: var(--navbarHeight);
 }
 .navbarLinks {
   display: flex;
@@ -167,5 +167,5 @@
   .dropdownContent{
     position: relative;
   }
- 
+
 }

@@ -1,45 +1,43 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-curly-newline */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { scroller } from 'react-scroll';
-import { BgHeader, NavHeader, ButtonHeader } from './index';
-import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
-import { MOCKBUTTONHEADER } from './mockButtonHeader';
+/* eslint-disable */
+import React from 'react';
+// import { Link } from 'react-router-dom';
+// import { scroller } from 'react-scroll';
+// import { BgHeader, NavHeader, ButtonHeader } from './index';
+// import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
+// import { MOCKBUTTONHEADER } from './mockButtonHeader';
 import {
   header,
-  sectionProducts,
-  sectionProductsBtn,
-  sectionProductsInput,
-  sectionExplore,
-  sectionExploreTexts,
-  sectionBoxButton,
-  sectionBoxLinks,
-  sectionBoxLine,
-  sectionExploreTextsMain,
-  searchButton,
+  // sectionProducts,
+  // sectionProductsBtn,
+  // sectionProductsInput,
+  // sectionExplore,
+  // sectionExploreTexts,
+  // sectionBoxButton,
+  // sectionBoxLinks,
+  // sectionBoxLine,
+  // sectionExploreTextsMain,
+  // searchButton,
 } from './Header.module.css';
-import { useHomeContext } from '../../pages/home/HomeContext';
+// import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
-  const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
-  const [changeData, setchangeData] = useState('MPRJDigital');
-  const [productTitle, setProductTitle] = useState('');
-
-  function handleSearch() {
-    scroller.scrollTo('repositorios', {
-      smooth: true,
-      duration: 600,
-    });
-    searchInputRef.current.focus();
-    setCurrentSearchTerm(productTitle);
-  }
+  // const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
+  // const [changeData, setchangeData] = useState('MPRJDigital');
+  // const [productTitle, setProductTitle] = useState('');
+  //
+  // function handleSearch() {
+  //   scroller.scrollTo('repositorios', {
+  //     smooth: true,
+  //     duration: 600,
+  //   });
+  //   searchInputRef.current.focus();
+  //   setCurrentSearchTerm(productTitle);
+  // }
 
   return (
     <header className={header}>
-      <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
+      hello, there
+      {/* <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
       <section className={sectionProducts}>
         <div className={sectionProductsBtn}>
           {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
@@ -154,7 +152,7 @@ export default function Header() {
           </div>
           <div className={sectionBoxLine} />
         </div>
-      </section>
+      </section> */}
     </header>
   );
 }

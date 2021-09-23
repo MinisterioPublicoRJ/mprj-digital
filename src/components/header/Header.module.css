@@ -1,16 +1,19 @@
 .header {
+  background-color: blue;
   display: flex;
-  position: relative;
   flex-direction: column;
+  height: calc(100vh - var(--navbarHeight) - var(--exploreSectionHeight));
+  position: relative;
 }
 
-.sectionProducts {
+/* .sectionProducts {
   position: absolute;
   display: grid;
   margin-top: 120px;
   grid-template-columns: 25% 30% 45%;
-}
-.sectionProductsInput{
+} */
+
+/* .sectionProductsInput{
   width: 395px;
   height: 48px;
   border-radius: 10px;
@@ -19,9 +22,9 @@
   margin-top: 130px;
   background-color: var(--colorWhite);
   display: flex;
-}
+} */
 
-.sectionProductsInput input {
+/* .sectionProductsInput input {
   color: #b1b1b1;
   width: 227px;
   height: 35px;
@@ -31,14 +34,13 @@
   margin-top: 7px;
   margin-left: 10px;
   text-indent: 40px;
+/* } */
 
-}
-
-.sectionProductsInput input:focus {
+/* .sectionProductsInput input:focus {
   outline-style: none;
-}
+} */
 
-.sectionProductsInput p {
+/* .sectionProductsInput p {
   color: #b93b40;
   margin-left: 15px;
   margin-top: -24px;
@@ -47,40 +49,17 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
-}
+} */
 
-.sectionBoxButton {
-  display: flex;
-  height: 0;
-  transition: height 0.3s ease-in;
-}
-
-.sectionBoxButton a {
-  background-color: #c99e50;
-  border-radius: 5px;
-  height: 100%;
-  text-decoration: none;
-  width: 35%;
-}
-
-.sectionBoxButton p {
-  color: var(--colorWhite);
-  font-size: var(--smallFont);
-  font-family: var(--robotRegular);
-  font-weight: 400;
-  text-align: center;
-  margin-top: 12px;
-}
-
-.sectionProductsInput i {
+/* .sectionProductsInput i {
   margin-left: 20px;
   transition: 0.3s;
   margin-top: 16px;
   position: absolute;
   color: #b93b40;
-}
+} */
 
-.searchButton {
+/* .searchButton {
   color: var(--mainRedColor);
   background: none;
   border: none;
@@ -88,64 +67,16 @@
   font-size: 13px;
   text-transform: uppercase;
   margin-left: 5px;
-}
+} */
 
-.sectionExplore {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: row;
-  height: 25vh;
-  justify-content: space-between;
-  margin: 0 12vw;
-}
-
-.sectionBoxLine {
+/* .sectionBoxLine {
   border-bottom: 2px solid var(--secondColor);
   margin-top: 2vh;
   content: '';
   width: 100%;
-}
+} */
 
-.sectionExploreTextsMain {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-
-.sectionExploreTextsMain:hover .sectionBoxButton {
-  height: 4vh;
-}
-
-.sectionExploreTexts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 15vh;
-  transition: 0.3s ease-in;
-}
-
-.sectionExploreTexts:hover {
-  height: 20vh;
-}
-
-.sectionExploreTexts:hover a.sectionBoxLinks,
-.sectionExploreTexts:hover h3 {
-  color: #c99e50;
-}
-
-.sectionExploreTexts > h3 {
-  font-weight: normal;
-  color: var(--secondColor);
-  font-size: 26px;
-}
-
-.sectionExploreTexts > P {
-  color: var(--secondColor);
-  text-align: left;
-  margin: 0;
-}
-
-@media (max-width: 1080px) {
+/* @media (max-width: 1080px) {
   header {
     position: absolute;
   }
@@ -179,19 +110,6 @@
     bottom: 8px;
   }
 
-  .sectionExploreTexts > p {
-    text-align: center;
-  }
-
-  .sectionExploreTexts > h3 {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .sectionExploreTexts > p {
-    margin-bottom: 30px;
-  }
-
   .sectionExplore {
     display: flex;
     flex-direction: column;
@@ -207,4 +125,4 @@
     justify-content: space-around;
     flex-direction: column;
   }
-}
+} */
