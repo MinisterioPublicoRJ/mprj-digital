@@ -9,9 +9,11 @@ export default function NavHeader({ title, subtitle, link, id, currentTab }) {
     sectionProductsBtnActive,
     ...colorStyles
   } = styles;
-  console.log(title, id);
+  console.log(id, currentTab);
   return (
-    <section className={`${sectionInfoProducts} ${title ? sectionInfoProductsActive : ''}`}>
+    <section
+      className={`${sectionInfoProducts} ${currentTab === id ? sectionInfoProductsActive : ''}`}
+    >
       <h2>{title}</h2>
       <p>{subtitle}</p>
       {link ? (
