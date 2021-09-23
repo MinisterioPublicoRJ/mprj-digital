@@ -1,158 +1,67 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 // import { scroller } from 'react-scroll';
-// import { BgHeader, NavHeader, ButtonHeader } from './index';
+import { ButtonHeader } from './index';
 // import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
 // import { MOCKBUTTONHEADER } from './mockButtonHeader';
+import HEADER_DATA from './headerData';
 import {
-  header,
-  // sectionProducts,
-  // sectionProductsBtn,
-  // sectionProductsInput,
+  headerOuter,
+  searchArea,
+  headerMenuArea,
+  searchAreaInput,
   // sectionExplore,
   // sectionExploreTexts,
   // sectionBoxButton,
   // sectionBoxLinks,
   // sectionBoxLine,
   // sectionExploreTextsMain,
-  // searchButton,
+  searchButton,
 } from './Header.module.css';
-// import { useHomeContext } from '../../pages/home/HomeContext';
+import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
-  // const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
-  // const [changeData, setchangeData] = useState('MPRJDigital');
-  // const [productTitle, setProductTitle] = useState('');
-  //
-  // function handleSearch() {
-  //   scroller.scrollTo('repositorios', {
-  //     smooth: true,
-  //     duration: 600,
-  //   });
-  //   searchInputRef.current.focus();
-  //   setCurrentSearchTerm(productTitle);
-  // }
+  const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
+  const [currentTab, setCurrentTab] = useState({ id: 'MPRJDigital', index: 0 });
+  const [productTitle, setProductTitle] = useState('');
+
+  function handleSearch() {
+    scroller.scrollTo('repositorios', {
+      smooth: true,
+      duration: 600,
+    });
+    searchInputRef.current.focus();
+    setCurrentSearchTerm(productTitle);
+  }
 
   return (
-    <header className={header}>
-      hello, there
-      {/* <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
-      <section className={sectionProducts}>
-        <div className={sectionProductsBtn}>
-          {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
-            <ButtonHeader
-              onClick={() => {
-                setchangeData(id);
-              }}
-              key={id}
-              title={title}
-              titleBtn={titleBtn}
-              colorId={id}
-              isActive={id === changeData}
-            />
-          ))}
-        </div>
-        <NavHeader currentTab={changeData} {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
-        <div className={sectionProductsInput}>
+    <header className={headerOuter}>
+      <div className={headerMenuArea}>
+        {HEADER_DATA.map(({ id, title }, i) => (
+          <ButtonHeader
+            key={id}
+            id={id}
+            title={title}
+            currentTab={currentTab}
+            onClick={() => setCurrentTab({ id, index: i })}
+          />
+        ))}
+      </div>
+      <section className={searchArea}>
+        {/* <NavHeader currentTab={changeData} {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} /> */}
+        <div className={searchAreaInput}>
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
             value={productTitle}
             onChange={({ target: { value } }) => setProductTitle(value)}
-
           />
           <button type="button" className={searchButton} onClick={handleSearch}>Buscar Base de Dados</button>
         </div>
       </section>
-      <section className={sectionExplore}>
-        <div className={sectionExploreTextsMain}>
-          <div className={sectionExploreTexts}>
-            <h3>O que é o MPRJ Digital?</h3>
-            <p>
-              Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
-              atividade baseada no modelo de governos digitais.
-            </p>
-            <div className={sectionBoxButton}>
-              <Link
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('mprjDigital', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-              }
-              >
-                <p>Saiba mais</p>
-              </Link>
-            </div>
-          </div>
-          <div className={sectionBoxLine} />
-        </div>
-        <div className={sectionExploreTextsMain}>
-          <div className={sectionExploreTexts}>
-            <h3>Parceiros e Produtos</h3>
-            <p>
-              Aqui você encontrará diversos produtos oriundos da política de governos digitais
-              empreendida pelo MPRJ.
-            </p>
-            <div className={sectionBoxButton}>
-              <Link
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('parceiros', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-              }
-              >
-                <p>Parceiros</p>
-              </Link>
-              <Link
-                type="button"
-                style={{ marginLeft: 30 }}
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('produtos', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-                }
-              >
-                <p>Produtos</p>
-              </Link>
-            </div>
-          </div>
-          <div className={sectionBoxLine} />
-        </div>
-        <div className={sectionExploreTextsMain}>
-          <div className={sectionExploreTexts}>
-            <h3>Repositório de Dados</h3>
-            <p>
-              Confira a integridade de nossas soluções desde os dados explore e baixe tudo
-              o que for interessante para realizar suas pesquisas.
-            </p>
-            <div className={sectionBoxButton}>
-              <Link
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('repositorios', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-                }
-              >
-                <p>Acessar</p>
-              </Link>
-            </div>
-          </div>
-          <div className={sectionBoxLine} />
-        </div>
-      </section> */}
+      {/* <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
+ */}
     </header>
   );
 }
