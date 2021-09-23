@@ -11,13 +11,15 @@ import {
   searchArea,
   headerMenuArea,
   searchAreaInput,
+  searchButton,
+  headerBackgroundImage,
+  headerBackgroundImageActive,
   // sectionExplore,
   // sectionExploreTexts,
   // sectionBoxButton,
   // sectionBoxLinks,
   // sectionBoxLine,
   // sectionExploreTextsMain,
-  searchButton,
 } from './Header.module.css';
 import { useHomeContext } from '../../pages/home/HomeContext';
 
@@ -37,6 +39,18 @@ export default function Header() {
 
   return (
     <header className={headerOuter}>
+      {/* Render background images that will transition */}
+      {HEADER_DATA.map(({ backgroundImage, id, title }) =>
+        <img
+          aria-hidden="true"
+          key={id}
+          alt={title}
+          src={backgroundImage}
+          className={`${headerBackgroundImage} ${
+            currentTab.id === id ? headerBackgroundImageActive : ''
+          }`}
+        />
+      )}
       <div className={headerMenuArea}>
         {HEADER_DATA.map(({ id, title }, i) => (
           <ButtonHeader
@@ -51,6 +65,7 @@ export default function Header() {
       <section className={searchArea}>
         {/* <NavHeader currentTab={changeData} {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} /> */}
         <div className={searchAreaInput}>
+          {/* TRANSFORMAR EM COMPONENTE DA MAPASTECA */}
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
@@ -58,9 +73,9 @@ export default function Header() {
             onChange={({ target: { value } }) => setProductTitle(value)}
           />
           <button type="button" className={searchButton} onClick={handleSearch}>Buscar Base de Dados</button>
+          {/* FIM DO COMPONENTE*/}
         </div>
       </section>
-      {/* <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
  */}
     </header>
   );
