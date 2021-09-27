@@ -38,7 +38,7 @@ export default function Navbar() {
         id={navBar}
         className={`${mobile ? `${navbarMobile}` : `${navBar}`} ${mobileMenu && `${mobileButtonActive}`}`}
       >
-        <NavLink to="/">
+        <NavLink to="/" > 
           <img className={icon} src={logoMp} alt="logo-Mp" />
         </NavLink>
         <section className={navbarLinks}>
