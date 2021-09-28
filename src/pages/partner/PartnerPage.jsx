@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, NavLink, Link } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
@@ -154,16 +155,16 @@ export default function PartnerPage() {
                 ))}
               </div>
             )}
-            {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
-              <div className="partner-dynamic-content">
-                <h5>No que podemos melhorar</h5>
-                <div className="rounded-border-box">
+            {subpageData[0].call === 'Podemos te ajudar?' ? (
+              <div className="partner-page-title">
+                <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
+                <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <NavLink to="#cidadao">Cidadão</NavLink>
+                      <Link to="#cidadao">Cidadão</Link>
                     </div>
                     <div>
-                      <NavLink to="#membro">Membro/Servidor</NavLink>
+                      <Link to="#membro">Membro/Servidor</Link>
                     </div>
                   </navbar>
                   <form className="partner-contact-form">
@@ -195,14 +196,13 @@ export default function PartnerPage() {
                       <textarea placeholder="No que podemos melhorar?" />
                     </div>
                   </form>
-                </div>
-                <div className="partner-contact-form-action">
                   <button type="button" className="partner-contact-button">
-                    enviar
+                    Enviar mensagem
                     {formType}
                   </button>
                 </div>
               </div>
+
             ) : null}
           </div>
         </div>

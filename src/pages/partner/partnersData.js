@@ -200,68 +200,22 @@ export const PARTNERS_CONST = [
           },
         ],
       },
+
       {
-        /* {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
           {
             id: 'oQueFazemos',
-            title: 'O que fazemos para melhorar nossos serviços?',
+            title: 'Podemos te ajudar?',
             smalltext:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+              'Espaço para entrar em contato direto com esta equipe, visando estabelecer o diálogo e melhorar nossa atuação. Adoraríamos receber sugestões, elogios e reclamações que possam nos ajudar no constante aprimoramento de nossas ações e produtos.',
             featured: true,
           },
-          {
-            id: 'nosDiga',
-            title: 'Nos diga, qual sua...?',
-            smalltext:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-            link: '',
-            call: '',
-            featured: false,
-          },
         ],
-        cards: [
-          {
-            id: 'sugestao',
-            type: 'third',
-            background: 'white',
-            title: 'Sugestão',
-            smalltext: 'No que podemos melhorar pra te ajudar?',
-            link: '',
-            call: '',
-            action: 'openForm()',
-            img: GADG,
-            alt: 'Logo Gadg',
-          },
-          {
-            id: 'reclamacao',
-            type: 'third',
-            background: 'white',
-            title: 'Reclamação',
-            smalltext: 'O que está te deixando insatisfeito ?',
-            link: '',
-            call: '',
-            action: 'openForm()',
-            img: GADG,
-            alt: 'Logo Gadg',
-          },
-          {
-            id: 'elogios',
-            type: 'third',
-            background: 'white',
-            title: 'Elogios',
-            smalltext: 'No que podemos melhorar pra te ajudar?',
-            link: '',
-            call: '',
-            action: 'openForm()',
-            img: GADG,
-            alt: 'Logo Gadg',
-          },
-        ],
-      }, */
+        cards: [],
       },
+
       /* {
         id: 'nosso-time',
         call: 'Nosso time',

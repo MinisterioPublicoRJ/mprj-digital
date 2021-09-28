@@ -14,11 +14,6 @@ small {
 label {
   display: inline-grid;
 }
-.rounded-border-box {
-  border: 1px solid #707070;
-  border-radius: 6px;
-  padding: 10px;
-}
 .text-justify {
   text-align: justify;
 }
@@ -30,7 +25,6 @@ label {
   padding-left: 34vw;
   align-items: center;
   display: flex;
-  width: 100%;
 
 }
 
@@ -55,7 +49,6 @@ label {
   border-radius: 3px;
   height: 40px;
   flex: auto;
-  margin-left: 53px;
 }
 
 .partner-page-header h1 {
@@ -77,7 +70,7 @@ label {
   margin: 3px 12vw;
 }
 .partner-page-left {
-  width: 25vw;
+  width: 22vw;
   margin-top: -20vh;
   margin-bottom: 10vh;
   background: var(--colorWhite) 0% 0% no-repeat padding-box;
@@ -233,6 +226,11 @@ label {
   border-radius: 3px;
   background-color: var(--colorWhite);
 }
+.partner-page-title h5{
+  font-size: 18px;
+  color: #24375B;
+  margin-bottom: 20px;
+}
 .partner-page-card h4 {
   text-align: center;
   font-size: 16px;
@@ -243,7 +241,9 @@ label {
 }
 .partner-dynamic-content {
   background-color: var(--colorWhite);
-  padding: 1vw;
+  padding: 2vw;
+  opacity: 1;
+  margin-bottom: 10vh;
 }
 
 .partner-contact-form label {
@@ -257,7 +257,6 @@ label {
   height: 40px;
   margin: 5px 10px 5px 0px;
   padding: 0 10px;
-  display: inline-flex;
 }
 .partner-contact-form #nome,
 .partner-contact-form #email {
@@ -278,17 +277,18 @@ label {
   height: 20vh;
   padding: 10px;
 }
-.partner-contact-form-action {
-  direction: rtl;
-  margin-top: 20px;
+.partner-contact-form label {
+  color: #24375B;
 }
 .partner-contact-button {
-  color: hsl(0, 1%, 49%);
-  background: #6792ff 0% 0% no-repeat padding-box;
+  color: var(--colorWhite);
+  background: #1D2933 0% 0% no-repeat padding-box;
   border: 0px solid #707070;
   border-radius: 10px;
-  height: 24px;
+  height: 34px;
   direction: rtl;
+  width: 139px;
+  margin-top: 30px;
 }
 a.partner-page-link {
   text-align: left;
