@@ -71,6 +71,28 @@
   margin-left: 5px;
 }
 
+.HeaderTextAreaEntering {
+  opacity: 0;
+  /* transform: scale(0.1); */
+}
+
+.HeaderTextAreaEntered {
+  opacity: 1;
+  /* transform: scale(1.0); */
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.HeaderTextAreaExiting {
+  /* opacity: 1; */
+  /* transform: scale(1.0); */
+}
+
+.HeaderTextAreaExited {
+  /* opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 300ms ease-in, transform 300ms ease-in; */
+}
+
 
 /* .sectionBoxLine {
   border-bottom: 2px solid var(--secondColor);
@@ -143,4 +165,10 @@
 
 .headerBackgroundImageActive {
   opacity: 1;
+}
+
+.headerTexts {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 2;
+  position: relative;
 }

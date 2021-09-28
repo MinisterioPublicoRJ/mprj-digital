@@ -1,0 +1,65 @@
+.headerTextAreaOuter {
+  width: 70%;
+}
+
+.headerTextAreaOuter h2 {
+  color: #ffff;
+  font-size: 30px;
+  font-family: var(--robotRegular);
+  font-family: Montserrat;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.headerTextAreaOuter p {
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: var(--robotRegular);
+}
+
+.headerTextAreaOuter a {
+  background-color: var(--colorWhite);
+  border: none;
+  border-radius: 5px;
+  color: #b1b1b1;
+  font-size: var(--smallFont);
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  font-family: var(--robotRegular);
+  font-weight: 400;
+}
+
+.headerTextAreaOuter a.MPRJDigitalCustomColor:hover {
+  background-color: var(--mainRedColor);
+  color: var(--colorWhite);
+}
+
+.headerTextAreaOuter > a.ParquetDigitalCustomColor:hover {
+  background-color: var(--parquetBlue);
+  color: var(--colorWhite);
+}
+
+.headerTextAreaOuter > a.FarolCustomColor:hover {
+  background-color: var(--farolOrange);
+  color: var(--colorWhite);
+}
+
+@media (max-width: 1080px) {
+  /* .headerTextAreaOuter {
+    margin-top: 40px;
+  }
+  .headerTextAreaOuter h2 {
+    text-align: center;
+  }
+  .headerTextAreaOuter p {
+    text-align: center;
+  }
+  .headerTextAreaOuter a {
+    display: none;
+  } */
+}
