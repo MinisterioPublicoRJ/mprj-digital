@@ -5,13 +5,7 @@ import { Link } from 'react-router-dom';
 import styles from './HeaderTextArea.module.css';
 
 export default function HeaderTextArea({ id, title, subtitle, currentTab, actionLink }) {
-  const {
-    headerTextAreaOuter,
-    // headerTextAreaOuterActive,
-    // sectionInfoProducts,
-    // sectionProductsBtnActive,
-    ...colorStyles
-  } = styles;
+  const { headerTextAreaOuter, ...colorStyles } = styles;
 
   return (
     <div className={headerTextAreaOuter}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { scroller } from 'react-scroll';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
@@ -25,6 +25,17 @@ export default function Header() {
   const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [currentTab, setCurrentTab] = useState({ id: 'MPRJDigital', index: 0 });
   const [productTitle, setProductTitle] = useState('');
+
+  useEffect(tabTimer, [currentTab]);
+
+  function tabTimer() {
+    const timer = setTimeout(() => {
+      const nextIndex = currentTab.index + 1 < HEADER_DATA.length ? currentTab.index + 1 : 0;
+      const { id } = HEADER_DATA[nextIndex];
+      setCurrentTab({ id, index: nextIndex });
+    }, 5000);
+    return () => clearTimeout(timer);
+  }
 
   function handleSearch() {
     scroller.scrollTo('repositorios', {
@@ -64,7 +75,7 @@ export default function Header() {
         <SwitchTransition component={null}>
           <CSSTransition
             key={currentTab.id}
-            timeout={300}
+            timeout={500}
             classNames={{
               enter: HeaderTextAreaEntering,
               enterActive: HeaderTextAreaEntered,
