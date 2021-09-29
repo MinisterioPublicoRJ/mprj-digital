@@ -19,10 +19,11 @@
   margin-top: 5px;
   margin-bottom: 20px;
   font-family: var(--robotRegular);
+  color: var(--colorWhite);
 }
 
 .sectionInfoProducts a {
-  background-color: white;
+  background-color: var(--colorWhite);
   border: none;
   border-radius: 5px;
   color: #b1b1b1;

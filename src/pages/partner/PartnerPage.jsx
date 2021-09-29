@@ -1,6 +1,5 @@
-/* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, Link } from 'react-router-dom';
+import { useParams, NavLink, Link, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
@@ -9,12 +8,14 @@ import ArrowIcon from '../../utils/ArrowIcon';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
-  const [formType, setFormType] = useState('cidadao');
+  const [formType, setFormType] = useState('');
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
   const cardsPorPage = 8;
+  const location = useLocation();
+  console.log(location);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -44,6 +45,10 @@ export default function PartnerPage() {
   const lastCard = page * cardsPorPage;
   const firstCard = lastCard - cardsPorPage;
   const currentCards = cards.slice(firstCard, lastCard);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+  }
 
   return (
     <>
@@ -161,48 +166,86 @@ export default function PartnerPage() {
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <Link to="#cidadao">Cidadão</Link>
+                      <Link type="button" to="#cidadao">Cidadão</Link>
                     </div>
                     <div>
-                      <Link to="#membro">Membro/Servidor</Link>
+                      <Link type="button" to="#membro">Membro/Servidor</Link>
                     </div>
                   </navbar>
-                  <form className="partner-contact-form">
-                    <div className="inputs-box">
-                      <label htmlFor="nome">
-                        Nome
-                        <input type="text" id="nome" name="nome" />
-                      </label>
-                      <label htmlFor="email">
-                        E-mail
-                        <input type="text" id="email" name="email" />
-                      </label>
-                    </div>
-                    <div className="inputs-box">
-                      <label htmlFor="dataNascimento">
-                        Data de nascimento
-                        <input type="text" id="dataNascimento" name="dataNascimento" />
-                      </label>
-                      <label htmlFor="sexo">
-                        Sexo
-                        <input type="text" id="sexo" name="sexo" />
-                      </label>
-                      <label htmlFor="profissao">
-                        Profissão / Ocupação
-                        <input type="text" id="profissao" name="profissao" />
-                      </label>
-                    </div>
-                    <div className="inputs-box">
-                      <textarea placeholder="No que podemos melhorar?" />
-                    </div>
-                  </form>
+                  {location.hash === '#cidadao' ? (
+                    <form className="partner-contact-form" onSubmit={handleSubmit}>
+                      <div className="inputs-box">
+                        <label htmlFor="nome">
+                          Nome
+                          <input type="text" id="nome" name="nome" />
+                        </label>
+                        <label htmlFor="email">
+                          E-mail
+                          <input type="text" id="email" name="email" />
+                        </label>
+                      </div>
+                      <div className="inputs-box">
+                        <label htmlFor="dataNascimento">
+                          Data de nascimento
+                          <input type="text" id="dataNascimento" name="dataNascimento" />
+                        </label>
+                        <label htmlFor="sexo">
+                          Sexo
+                          <input type="text" id="sexo" name="sexo" />
+                        </label>
+                        <label htmlFor="profissao">
+                          Profissão / Ocupação
+                          <input type="text" id="profissao" name="profissao" />
+                        </label>
+                      </div>
+                      <div className="inputs-box">
+                        <textarea placeholder="No que podemos melhorar?" />
+                      </div>
+                    </form>
+                  ) : (
+                    <form className="partner-contact-form" onSubmit={handleSubmit}>
+                      <div className="inputs-box">
+                        <label htmlFor="nome">
+                          Nome
+                          <input type="text" id="nome" name="nome" />
+                        </label>
+                        <label htmlFor="email">
+                          E-mail
+                          <input type="text" id="email" name="email" />
+                        </label>
+                      </div>
+                      <div className="inputs-box">
+                        <label htmlFor="dataNascimento">
+                          Data de nascimento
+                          <input type="text" id="dataNascimento" name="dataNascimento" />
+                        </label>
+                        <label htmlFor="sexo">
+                          Sexo
+                          <input type="text" id="sexo" name="sexo" />
+                        </label>
+                        <label htmlFor="profissao">
+                          Profissão / Ocupação
+                          <input type="text" id="profissao" name="profissao" />
+                        </label>
+                        <label htmlFor="profissao">
+                          Cargo / Setor de atuação
+                          <input type="text" id="profissao" name="profissao" />
+                        </label>
+                        <label htmlFor="profissao">
+                          Matrícula ativa
+                          <input type="text" id="profissao" name="profissao" />
+                        </label>
+                      </div>
+                      <div className="inputs-box">
+                        <textarea placeholder="No que podemos melhorar?" />
+                      </div>
+                    </form>
+                  )}
                   <button type="button" className="partner-contact-button">
                     Enviar mensagem
-                    {formType}
                   </button>
                 </div>
               </div>
-
             ) : null}
           </div>
         </div>
