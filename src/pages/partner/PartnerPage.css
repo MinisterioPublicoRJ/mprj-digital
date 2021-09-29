@@ -185,6 +185,10 @@ label {
   cursor: pointer;
   text-decoration: none;
 }
+.partner-page-navigation a:hover{
+  color: #1D2933;
+}
+
 .partner-page-cards p,
 .partner-page-cards h4 {
   text-align: center;

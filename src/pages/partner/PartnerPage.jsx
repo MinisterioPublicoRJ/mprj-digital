@@ -166,67 +166,43 @@ export default function PartnerPage() {
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <Link type="button" to="#cidadao">Cidadão</Link>
+                      <Link type="button" to="#cidadao">
+                        Cidadão
+                      </Link>
                     </div>
                     <div>
-                      <Link type="button" to="#membro">Membro/Servidor</Link>
+                      <Link type="button" to="#membro">
+                        Membro/Servidor
+                      </Link>
                     </div>
                   </navbar>
-                  {location.hash === '#cidadao' ? (
-                    <form className="partner-contact-form" onSubmit={handleSubmit}>
-                      <div className="inputs-box">
-                        <label htmlFor="nome">
-                          Nome
-                          <input type="text" id="nome" name="nome" />
-                        </label>
-                        <label htmlFor="email">
-                          E-mail
-                          <input type="text" id="email" name="email" />
-                        </label>
-                      </div>
-                      <div className="inputs-box">
-                        <label htmlFor="dataNascimento">
-                          Data de nascimento
-                          <input type="text" id="dataNascimento" name="dataNascimento" />
-                        </label>
-                        <label htmlFor="sexo">
-                          Sexo
-                          <input type="text" id="sexo" name="sexo" />
-                        </label>
-                        <label htmlFor="profissao">
-                          Profissão / Ocupação
-                          <input type="text" id="profissao" name="profissao" />
-                        </label>
-                      </div>
-                      <div className="inputs-box">
-                        <textarea placeholder="No que podemos melhorar?" />
-                      </div>
-                    </form>
-                  ) : (
-                    <form className="partner-contact-form" onSubmit={handleSubmit}>
-                      <div className="inputs-box">
-                        <label htmlFor="nome">
-                          Nome
-                          <input type="text" id="nome" name="nome" />
-                        </label>
-                        <label htmlFor="email">
-                          E-mail
-                          <input type="text" id="email" name="email" />
-                        </label>
-                      </div>
-                      <div className="inputs-box">
-                        <label htmlFor="dataNascimento">
-                          Data de nascimento
-                          <input type="text" id="dataNascimento" name="dataNascimento" />
-                        </label>
-                        <label htmlFor="sexo">
-                          Sexo
-                          <input type="text" id="sexo" name="sexo" />
-                        </label>
-                        <label htmlFor="profissao">
-                          Profissão / Ocupação
-                          <input type="text" id="profissao" name="profissao" />
-                        </label>
+                  <form className="partner-contact-form" onSubmit={handleSubmit}>
+                    <div className="inputs-box">
+                      <label htmlFor="nome">
+                        Nome
+                        <input type="text" id="nome" name="nome" />
+                      </label>
+                      <label htmlFor="email">
+                        E-mail
+                        <input type="text" id="email" name="email" />
+                      </label>
+                    </div>
+                    <div className="inputs-box">
+                      <label htmlFor="dataNascimento">
+                        Data de nascimento
+                        <input type="text" id="dataNascimento" name="dataNascimento" />
+                      </label>
+                      <label htmlFor="sexo">
+                        Sexo
+                        <input type="text" id="sexo" name="sexo" />
+                      </label>
+                      <label htmlFor="profissao">
+                        Profissão / Ocupação
+                        <input type="text" id="profissao" name="profissao" />
+                      </label>
+                    </div>
+                    {location.hash === '#membro' ? (
+                      <>
                         <label htmlFor="profissao">
                           Cargo / Setor de atuação
                           <input type="text" id="profissao" name="profissao" />
@@ -235,12 +211,12 @@ export default function PartnerPage() {
                           Matrícula ativa
                           <input type="text" id="profissao" name="profissao" />
                         </label>
-                      </div>
-                      <div className="inputs-box">
-                        <textarea placeholder="No que podemos melhorar?" />
-                      </div>
-                    </form>
-                  )}
+                      </>
+                    ) : null}
+                    <div className="inputs-box">
+                      <textarea placeholder="No que podemos melhorar?" />
+                    </div>
+                  </form>
                   <button type="button" className="partner-contact-button">
                     Enviar mensagem
                   </button>
