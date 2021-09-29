@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { scroller } from 'react-scroll';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
 import { ButtonHeader, HeaderTextArea } from './index';
 import HEADER_DATA from './headerData';
@@ -19,7 +19,6 @@ import {
   HeaderTextAreaExiting,
   HeaderTextAreaExited,
 } from './Header.module.css';
-// import './Header.css';
 import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
@@ -62,14 +61,15 @@ export default function Header() {
         ))}
       </section>
       <section className={headerTexts}>
-        <TransitionGroup component={null}>
+        <SwitchTransition component={null}>
           <CSSTransition
             key={currentTab.id}
+            timeout={300}
             classNames={{
-              entering: HeaderTextAreaEntering,
-              entered: HeaderTextAreaEntered,
-              exiting: HeaderTextAreaExiting,
-              exited: HeaderTextAreaExited,
+              enter: HeaderTextAreaEntering,
+              enterActive: HeaderTextAreaEntered,
+              exit: HeaderTextAreaExiting,
+              exitActive: HeaderTextAreaExited,
             }}
           >
             <HeaderTextArea
@@ -81,19 +81,7 @@ export default function Header() {
               actionLink={HEADER_DATA[currentTab.index].link}
             />
           </CSSTransition>
-        </TransitionGroup>
-        {/* HEADER_DATA.map(({ id, title, subtitle }) => (
-          <HeaderTextArea
-            key={id}
-            id={id}
-            title={title}
-            subtitle={subtitle}
-            currentTab={currentTab.id}
-          />
-        ))}
-        {HEADER_DATA[currentTab.index].link && (
-          <Link to={HEADER_DATA[currentTab.index].link}> Conheça a ferramenta </Link>
-        ) */}
+        </SwitchTransition>
       </section>
       <section className={searchArea}>
         <div className={searchAreaInput}>

@@ -73,24 +73,24 @@
 
 .HeaderTextAreaEntering {
   opacity: 0;
-  /* transform: scale(0.1); */
+  transform: scale(0.1);
 }
 
 .HeaderTextAreaEntered {
   opacity: 1;
-  /* transform: scale(1.0); */
+  transform: scale(1.0);
   transition: opacity 300ms ease-in, transform 300ms ease-in;
 }
 
 .HeaderTextAreaExiting {
-  /* opacity: 1; */
-  /* transform: scale(1.0); */
+  opacity: 1;
+  transform: scale(1.0);
 }
 
 .HeaderTextAreaExited {
-  /* opacity: 0;
+  opacity: 0;
   transform: scale(0.1);
-  transition: opacity 300ms ease-in, transform 300ms ease-in; */
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
 }
 
 

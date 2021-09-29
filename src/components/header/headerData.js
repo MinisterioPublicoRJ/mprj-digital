@@ -9,7 +9,7 @@ const HEADER_DATA = [
       'No topo, a transparência efetiva como um compromisso; no meio, o catálogo de produtos para trazer facilidade; e, na base de tudo, as bases de dados que dão vida a toda esta cadeia de valor produzida. Conheça o MPRJ Digital navegando abaixo ou clique na barra ao lado para uma busca específica.',
   },
   {
-    id: 'Farol',
+    id: 'ParquetDigital',
     backgroundImage: PARQUET,
     title: 'Parquet Digital',
     link: '/produto/parquet_digital',
@@ -17,7 +17,7 @@ const HEADER_DATA = [
       'O Parquet Digital é uma solução que nasceu do trabalho coletivo de vários profissionais e setores do Ministério Público do Estado do Rio de Janeiro, e propõe uma significativa mudança de paradigma na atuação dos Promotores de Justiça.',
   },
   {
-    id: 'ParquetDigital',
+    id: 'Farol',
     backgroundImage: FAROLBG,
     title: 'Farol',
     link: '/produto/farol',
