@@ -5,7 +5,6 @@
 --mainColor: #6F2826;
 --secondColor: #702826;
 --mainRedColor: #B93B40;
---darkBlue: #263859;
 --backgroundBoxProdutos: #453434;
 --yellonProdutos: #C99E50;
 --darkBlueProdutos: #6B778D;
@@ -14,9 +13,12 @@
 --colorWhite: #ffff;
 --darkBlue: #263859;
 --lightGray: #9dafbd;
---backgroundFooter: #311E1E;
 --parquetBlue: #3781BD;
 --farolOrange: #AB662C;
+
+/* --backgroundFooter: #311E1E; */
+--backgroundFooter: #2A323A;
+
 
 /* FONTS */
 --robotDefault: Roboto;
