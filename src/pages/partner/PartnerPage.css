@@ -244,6 +244,7 @@ label {
   padding: 2vw;
   opacity: 1;
   margin-bottom: 10vh;
+  width: 100%;
 }
 
 .partner-contact-form label {
@@ -260,7 +261,7 @@ label {
 }
 .partner-contact-form #nome,
 .partner-contact-form #email {
-  width: 19vw;
+  width: 21vw;
 }
 .partner-contact-form ::placeholder {
   font: normal normal normal 14px/16px Roboto;
@@ -273,9 +274,10 @@ label {
   border-radius: 5px;
   margin: 5px 10px 5px 0px;
   resize: none;
-  width: 41vw;
+  width: 44vw;
   height: 20vh;
   padding: 10px;
+  margin-top: 10px;
 }
 .partner-contact-form label {
   color: #24375B;
@@ -293,10 +295,10 @@ label {
 a.partner-page-link {
   text-align: left;
   font-size: var(--defaultFontSize);
-  letter-spacing: 0px;
   color: #bbb8b8;
   opacity: 1;
   text-decoration: none;
+  margin-left: 40px;
 }
 a.partner-page-link.active{
   color: #C99E50;
