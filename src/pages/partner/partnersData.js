@@ -202,7 +202,7 @@ export const PARTNERS_CONST = [
       },
 
       {
-        id: 'podemos-ajudar',
+        id: 'podemos-ajudar#cidadao',
         call: 'Podemos te ajudar?',
         topics: [
           {
