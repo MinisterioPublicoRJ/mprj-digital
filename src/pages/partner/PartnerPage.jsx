@@ -15,7 +15,6 @@ export default function PartnerPage() {
   const [cardstTitle, setCardstTitle] = useState('');
   const cardsPorPage = 8;
   const location = useLocation();
-  console.log(location);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
@@ -166,13 +165,27 @@ export default function PartnerPage() {
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <Link type="button" to="#cidadao">
+                      <Link
+                        style={{ marginLeft: 22 }}
+                        to="#cidadao"
+                        className={` ${
+                          location.hash === '#cidadao' ? 'help-navButtons-active' : ''
+                        }`}
+                      >
                         Cidadão
+                        <div />
                       </Link>
                     </div>
                     <div>
-                      <Link type="button" to="#membro">
+                      <Link
+                        style={{ marginLeft: -13 }}
+                        to="#membro"
+                        className={` ${
+                          location.hash === '#membro' ? 'help-navButtons-active' : ''
+                        }`}
+                      >
                         Membro/Servidor
+                        <div />
                       </Link>
                     </div>
                   </navbar>

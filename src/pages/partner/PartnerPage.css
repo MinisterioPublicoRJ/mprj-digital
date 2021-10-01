@@ -185,9 +185,7 @@ label {
   cursor: pointer;
   text-decoration: none;
 }
-.partner-page-navigation a:hover{
-  color: #1D2933;
-}
+
 
 .partner-page-cards p,
 .partner-page-cards h4 {
@@ -312,13 +310,20 @@ a.partner-page-link {
   text-decoration: none;
   margin-left: 40px;
 }
-a.partner-page-link.active{
-  color: var(--colorWhite);
-  font-weight: bold;
-}
+
 a.productPage-navButtons-active{
   color: var(--colorWhite);
   font-weight: bold;
+}
+
+a.help-navButtons-active {
+  color: #1D2933;
+  font-weight: bold;
+}
+a.help-navButtons-active div {
+  background-color: #1D2933;
+  width: 100px;
+  height: 2px;
 }
 
 @media (max-width: 600px){
