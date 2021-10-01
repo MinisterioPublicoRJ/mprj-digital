@@ -51,7 +51,7 @@ function Explore() {
               className={sectionBoxLinks}
               to="/"
               onClick={() => {
-                scroller.scrollTo('mprjDigital', {
+                scroller.scrollTo('parceiros', {
                   smooth: true,
                   offset: -70,
                   duration: 400,
@@ -66,7 +66,7 @@ function Explore() {
               className={sectionBoxLinks}
               to="/"
               onClick={() => {
-                scroller.scrollTo('mprjDigital', {
+                scroller.scrollTo('produtos', {
                   smooth: true,
                   offset: -70,
                   duration: 400,
