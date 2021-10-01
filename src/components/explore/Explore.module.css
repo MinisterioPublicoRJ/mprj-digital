@@ -1,0 +1,92 @@
+.exploreOuter {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  height: calc(var(--exploreSectionHeight) - 20px);
+  justify-content: space-between;
+  margin: 0 12vw 20px 12vw;
+}
+
+.exploreItemOuter {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.exploreItemOuter:hover .sectionBoxButton {
+  height: 4vh;
+}
+
+.sectionBoxLine {
+  border-bottom: 2px solid var(--secondColor);
+  margin-top: 2vh;
+  content: '';
+  width: 100%;
+}
+
+.exploreItemInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15vh;
+  transition: 0.3s ease-in;
+}
+
+.exploreItemInner:hover {
+  height: calc(var(--exploreSectionHeight) - 20px - 4vh);
+}
+
+.exploreItemInner:hover a.sectionBoxLinks,
+.exploreItemInner:hover h3 {
+  color: #c99e50;
+}
+
+.exploreItemInner > h3 {
+  font-weight: normal;
+  color: var(--secondColor);
+  font-size: 26px;
+}
+
+.exploreItemInner > p {
+  color: var(--secondColor);
+  text-align: left;
+  margin: 0;
+}
+
+.sectionBoxButton {
+  display: flex;
+  height: 0;
+  transition: height 0.3s ease-in;
+}
+
+.sectionBoxButton a {
+  background-color: #c99e50;
+  border-radius: 5px;
+  height: 100%;
+  text-decoration: none;
+  width: 35%;
+}
+
+.sectionBoxButton p {
+  color: var(--colorWhite);
+  font-size: var(--smallFont);
+  font-family: var(--robotRegular);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media (max-width: 1080px) {
+  .exploreItemInner > p {
+    text-align: center;
+  }
+
+  .exploreItemInner > h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .exploreItemInner > p {
+    margin-bottom: 30px;
+  }
+}
