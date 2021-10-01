@@ -2,13 +2,14 @@ import React from 'react';
 
 import './Home.css';
 import HomeContextProvider from './HomeContext';
-import { Header, Mprj, OpenData, Partners, Products } from '../../components';
+import { Header, Mprj, OpenData, Partners, Products, Explore } from '../../components';
 
 export default function Home() {
   return (
     <HomeContextProvider>
       <div className="home-outer">
         <Header />
+        <Explore />
         <Mprj />
         <Partners />
         <Products />

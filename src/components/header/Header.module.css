@@ -1,44 +1,48 @@
-.header {
-  display: flex;
+.headerOuter {
+  /* background-color: blue; */
+  /* padding is applied as empty space inside the grid */
+  --headerTopPadding: calc(var(--navbarHeight) * 0.8);
+  /* Takes all the available space above the folding line */
+  --headerHeight: calc(100vh - var(--navbarHeight) - var(--exploreSectionHeight));
+  display: grid;
+  grid-template-columns: 10vw 2fr 5fr 3fr 10vw;
+  grid-template-rows: var(--headerTopPadding) 30fr 60fr;
+  height: var(--headerHeight);
   position: relative;
-  flex-direction: column;
 }
 
-.sectionProducts {
-  position: absolute;
-  display: grid;
-  margin-top: 120px;
-  grid-template-columns: 25% 30% 45%;
+.headerMenuArea {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 2;
 }
-.sectionProductsInput{
-  width: 395px;
-  height: 48px;
+
+.searchArea {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 2;
+}
+
+.searchAreaInput{
+  background-color: var(--colorWhite);
   border-radius: 10px;
   border: none;
-  margin-left: 150px;
-  margin-top: 130px;
-  background-color: var(--colorWhite);
   display: flex;
+  height: 50px;
 }
 
-.sectionProductsInput input {
+.searchAreaInput input {
   color: #b1b1b1;
-  width: 227px;
-  height: 35px;
   border: none;
   background-color: #F2F3F8;
   border-radius: 10px;
-  margin-top: 7px;
   margin-left: 10px;
   text-indent: 40px;
-
 }
 
-.sectionProductsInput input:focus {
+.searchAreaInput input:focus {
   outline-style: none;
 }
 
-.sectionProductsInput p {
+/* .searchAreaInput p {
   color: #b93b40;
   margin-left: 15px;
   margin-top: -24px;
@@ -47,32 +51,9 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
-}
+} */
 
-.sectionBoxButton {
-  display: flex;
-  height: 0;
-  transition: height 0.3s ease-in;
-}
-
-.sectionBoxButton a {
-  background-color: #c99e50;
-  border-radius: 5px;
-  height: 100%;
-  text-decoration: none;
-  width: 35%;
-}
-
-.sectionBoxButton p {
-  color: var(--colorWhite);
-  font-size: var(--smallFont);
-  font-family: var(--robotRegular);
-  font-weight: 400;
-  text-align: center;
-  margin-top: 12px;
-}
-
-.sectionProductsInput i {
+.searchAreaInput i {
   margin-left: 20px;
   transition: 0.3s;
   margin-top: 16px;
@@ -87,84 +68,61 @@
   margin-left: 4px;
   font-size: 13px;
   text-transform: uppercase;
-  margin-left: 5px;
+  margin-left: 12px;
 }
 
-.sectionExplore {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: row;
-  height: 25vh;
-  justify-content: space-between;
-  margin: 0 12vw;
+.HeaderTextAreaEntering {
+  opacity: 0;
+  /* transform: scale(0.1); */
 }
 
-.sectionBoxLine {
+.HeaderTextAreaEntered {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+  /* transform: scale(1.0); */
+  /* transition: opacity 300ms ease-in, transform 300ms ease-in; */
+}
+
+.HeaderTextAreaExiting {
+  opacity: 1;
+  /* transform: scale(1.0); */
+}
+
+.HeaderTextAreaExited {
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  /* transform: scale(0.1); */
+  /* transition: opacity 300ms ease-in, transform 300ms ease-in; */
+}
+
+
+/* .sectionBoxLine {
   border-bottom: 2px solid var(--secondColor);
   margin-top: 2vh;
   content: '';
   width: 100%;
-}
+} */
 
-.sectionExploreTextsMain {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-
-.sectionExploreTextsMain:hover .sectionBoxButton {
-  height: 4vh;
-}
-
-.sectionExploreTexts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 15vh;
-  transition: 0.3s ease-in;
-}
-
-.sectionExploreTexts:hover {
-  height: 20vh;
-}
-
-.sectionExploreTexts:hover a.sectionBoxLinks,
-.sectionExploreTexts:hover h3 {
-  color: #c99e50;
-}
-
-.sectionExploreTexts > h3 {
-  font-weight: normal;
-  color: var(--secondColor);
-  font-size: 26px;
-}
-
-.sectionExploreTexts > P {
-  color: var(--secondColor);
-  text-align: left;
-  margin: 0;
-}
-
-@media (max-width: 1080px) {
+/* @media (max-width: 1080px) {
   header {
     position: absolute;
   }
 
-  .sectionProductsInput {
+  .searchAreaInput {
     margin: 0 auto;
     width: 280px;
   }
 
-  .sectionProductsInput input {
+  .searchAreaInput input {
     width: 200px;
   }
 
-  .sectionProductsInput p {
+  .searchAreaInput p {
     font-size: 8px;
     padding-left: 190px;
   }
 
-  .sectionProducts {
+  .searchArea {
     display: flex;
     flex-direction: column;
     margin-top: 120px;
@@ -179,19 +137,6 @@
     bottom: 8px;
   }
 
-  .sectionExploreTexts > p {
-    text-align: center;
-  }
-
-  .sectionExploreTexts > h3 {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .sectionExploreTexts > p {
-    margin-bottom: 30px;
-  }
-
   .sectionExplore {
     display: flex;
     flex-direction: column;
@@ -202,9 +147,30 @@
   }
 
 
-  .sectionProductsBtn {
+  .headerMenuArea {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
+} */
+
+.headerBackgroundImage {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.8s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.headerBackgroundImageActive {
+  opacity: 1;
+}
+
+.headerTexts {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 2;
+  position: relative;
 }

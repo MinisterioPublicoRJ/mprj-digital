@@ -1,34 +1,36 @@
-
-.sectionProductsBtn > button {
-  color: var(--colorWhite);
-	font-family: Montserrat,Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  border: none;
+.sectionProductsBtn {
   background: transparent;
-  text-transform: uppercase;
+  border: none;
+  color: var(--colorWhite);
+  display: block;
+  font-family: Montserrat;
+  font-size: 15px;
   font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
   opacity: 0.25;
-  margin-top: 10px;
-  margin-left: 10px;
 }
 
-.sectionProductsBtn:hover > button, .sectionProductsBtnActive > button {
+.sectionProductsBtn span {
+  background-color: var(--colorWhite);
+  border-radius: 5px;
+  content: '|';
+  display: inline-block;
+  height: 15px;
+  margin-right: 10px;
+  opacity: 0.25;
+  width: 0.6vh;
+  transition: margin-right 0.5s;
+}
+
+
+.sectionProductsBtn:hover, .sectionProductsBtnActive {
   opacity: 1;
 }
 
 .sectionProductsBtn:hover > span, .sectionProductsBtnActive span:only-of-type {
   opacity: 1;
-}
-
-.sectionProductsBtn span {
-  content: '|';
-  margin-left: 110px;
-  background-color: var(--colorWhite);
-  opacity: 0.25;
-  border-radius: 5px;
-  width: 0.6vh;
-  height: 16px;
-  display: inline-block;
+  margin-right: 20px;
 }
 
 .sectionProductsBtnActive .MPRJDigitalCustomColor, .sectionProductsBtn:hover > span.MPRJDigitalCustomColor {
@@ -43,8 +45,8 @@
   background-color: var(--farolOrange);
 }
 
-@media (max-width: 1080px){
+/* @media (max-width: 1080px){
   .sectionProductsBtn  > button {
    font-size: 16px;
   }
-}
+} */

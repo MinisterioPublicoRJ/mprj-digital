@@ -12,8 +12,9 @@
 
   /* SPACING */
   --sectionVerticalPadding: 7vh;
-  --navbarHeight: 3vh;
+  --navbarHeight: 147px;
   --footerHeight: 30vh;
+  --exploreSectionHeight: 25vh;
 
 }
 h1 {

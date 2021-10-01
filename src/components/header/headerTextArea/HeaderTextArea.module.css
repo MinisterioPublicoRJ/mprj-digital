@@ -1,20 +1,20 @@
-.sectionInfoProducts {
-  color: var(--colorWhite);
-  margin-top: 100px;
+.headerTextAreaOuter {
+  width: 70%;
 }
 
-.sectionInfoProducts h2 {
+.headerTextAreaOuter h2 {
+  color: #ffff;
   font-size: 30px;
+  font-family: var(--robotRegular);
+  font-family: Montserrat;
+  font-weight: bold;
   text-align: left;
   text-transform: uppercase;
-  font-family: var(--robotRegular);
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
-  font-weight: bold;
 }
 
-.sectionInfoProducts p {
-  font-weight: 300; 
-  line-height: 1.5; 
+.headerTextAreaOuter p {
+  font-weight: 300;
+  line-height: 1.5;
   text-align: left;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -22,7 +22,7 @@
   color: var(--colorWhite);
 }
 
-.sectionInfoProducts a {
+.headerTextAreaOuter a {
   background-color: var(--colorWhite);
   border: none;
   border-radius: 5px;
@@ -32,35 +32,35 @@
   padding: 10px;
   text-decoration: none;
   font-family: var(--robotRegular);
-  font-weight: 400; 
+  font-weight: 400;
 }
 
-.sectionInfoProducts a.MPRJDigitalCustomColor:hover {
+.headerTextAreaOuter a.MPRJDigitalCustomColor:hover {
   background-color: var(--mainRedColor);
   color: var(--colorWhite);
 }
 
-.sectionInfoProducts > a.ParquetDigitalCustomColor:hover {
+.headerTextAreaOuter > a.ParquetDigitalCustomColor:hover {
   background-color: var(--parquetBlue);
   color: var(--colorWhite);
 }
 
-.sectionInfoProducts > a.FarolCustomColor:hover {
+.headerTextAreaOuter > a.FarolCustomColor:hover {
   background-color: var(--farolOrange);
   color: var(--colorWhite);
 }
 
 @media (max-width: 1080px) {
-  .sectionInfoProducts {
+  /* .headerTextAreaOuter {
     margin-top: 40px;
   }
-  .sectionInfoProducts h2 {
+  .headerTextAreaOuter h2 {
     text-align: center;
   }
-  .sectionInfoProducts p {
+  .headerTextAreaOuter p {
     text-align: center;
   }
-  .sectionInfoProducts a {
+  .headerTextAreaOuter a {
     display: none;
-  }
+  } */
 }

@@ -202,7 +202,7 @@ export const PARTNERS_CONST = [
       },
 
       {
-        id: 'podemos-ajudar#cidadao',
+        id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
           {
@@ -210,7 +210,6 @@ export const PARTNERS_CONST = [
             title: 'Podemos te ajudar?',
             smalltext:
               'Espaço para entrar em contato direto com esta equipe, visando estabelecer o diálogo e melhorar nossa atuação. Adoraríamos receber sugestões, elogios e reclamações que possam nos ajudar no constante aprimoramento de nossas ações e produtos.',
-            featured: true,
           },
         ],
         cards: [],

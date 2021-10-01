@@ -17,10 +17,7 @@ export default function PartnerPage() {
   const location = useLocation();
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
-  const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
-  const subpageData = (partnerFiltered[0].subpages || []).filter(
-    (subpages) => subpages.id === subpageIdToLoad,
-  );
+  const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
   const featuredTopics = subpageData[0].topics;
 
   useEffect(() => {
