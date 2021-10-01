@@ -324,6 +324,11 @@ a.help-navButtons-active div {
   background-color: #1D2933;
   width: 100px;
   height: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.partner-contact-form{
+  margin-top: 20px;
 }
 
 @media (max-width: 600px){
