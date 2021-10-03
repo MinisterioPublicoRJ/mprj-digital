@@ -137,10 +137,10 @@ export default function PartnerPage() {
                       aria-hidden="true"
                     >
                       <a target="new" rel="noreferrer" href={card.link}>
-                        {card.img ? <img src={card.img} alt={card.alt} /> : null}
+                        {card.img && <img src={card.img} alt={card.alt} />}
                       </a>
                       <h4>{card.title}</h4>
-                      {card.smalltext ? <p>{card.smalltext}</p> : null}
+                      {card.smalltext && <p>{card.smalltext}</p>}
                     </div>
                   ))}
                 </div>
@@ -149,9 +149,9 @@ export default function PartnerPage() {
               <div className="partner-page-cards">
                 {(subpageData[0].cards || []).map((card) => (
                   <div key={card.id} className={`partner-page-card ${card.type}`}>
-                    <div>{card.img ? <img src={card.img} alt={card.alt} /> : null}</div>
+                    <div>{card.img && <img src={card.img} alt={card.alt} />}</div>
                     <h4>{card.title}</h4>
-                    {card.smalltext ? <p>{card.smalltext}</p> : null}
+                    {card.smalltext && <p>{card.smalltext}</p>}
                   </div>
                 ))}
               </div>
