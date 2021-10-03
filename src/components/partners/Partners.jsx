@@ -1,5 +1,4 @@
 import React from 'react';
-import bg from '../../assets/bg-parceiros.png';
 import './partners.css';
 import GADG from '../../assets/logos/gadg.png';
 import CSI from '../../assets/logos/csi.png';
