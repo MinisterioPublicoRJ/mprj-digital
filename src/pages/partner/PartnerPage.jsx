@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, Link, useLocation } from 'react-router-dom';
+import { useParams, NavLink, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
@@ -163,8 +163,8 @@ export default function PartnerPage() {
                   <navbar className="partner-page-navigation">
                     <div>
                       <NavLink
-                        style={{ marginLeft: 22 }}
                         to="#cidadao"
+                        style={{ marginLeft: 22 }}
                         className={` ${
                           location.hash === '#cidadao' ? 'help-navButtons-active' : ''
                         }`}
