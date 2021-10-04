@@ -2,9 +2,17 @@ import { PRODUCT_COMPONENT_DATA, PARTNER_PAGE_DATA, PRODUCT_PAGE_DATA } from './
 
 import { productMiniatureTransform } from './transforms';
 
-// export async function getPartnerPageData(partner) {
-//   const res = fetch(PARTNER_PAGE_DATA(partner));
-// }
+export async function getPartnerPageData(partner) {
+  const response = fetch(PARTNER_PAGE_DATA(partner));
+
+  // with async/await + fetch, failed 400 status don't throw errors
+  if (!response.ok) {
+    throw new Error(`A chamada falhou com status ${response.status}`);
+  }
+
+  const { result } = await response.json();
+  return result;
+}
 
 export async function getProductPageData(product) {
   const response = await fetch(PRODUCT_PAGE_DATA(product));
