@@ -33,7 +33,7 @@ export default function Header() {
       const nextIndex = currentTab.index + 1 < HEADER_DATA.length ? currentTab.index + 1 : 0;
       const { id } = HEADER_DATA[nextIndex];
       setCurrentTab({ id, index: nextIndex });
-    }, 5000);
+    }, 10000);
     return () => clearTimeout(timer);
   }
 
