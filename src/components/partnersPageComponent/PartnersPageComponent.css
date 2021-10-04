@@ -28,15 +28,14 @@
 .slick-next::before,
 .slick-prev::before{
   font-size: 40px !important;  
-  color: #B1B1B1 !important;
+  color: #6B778D !important;
   opacity: 1 !important;
- 
 }
 .slick-dots li button::before{
   font-size: 15px !important;
 }
 .slick-dots li.slick-active button::before{
-  color: var(--colorWhite) !important;
+  color: #6B778D !important;
 }
 
 @media (max-width: 800px){

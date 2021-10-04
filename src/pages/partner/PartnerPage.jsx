@@ -162,7 +162,7 @@ export default function PartnerPage() {
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <Link
+                      <NavLink
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
@@ -171,10 +171,10 @@ export default function PartnerPage() {
                       >
                         Cidadão
                         <div />
-                      </Link>
+                      </NavLink>
                     </div>
                     <div>
-                      <Link
+                      <NavLink
                         style={{ marginLeft: -13 }}
                         to="#membro"
                         className={` ${
@@ -183,7 +183,7 @@ export default function PartnerPage() {
                       >
                         Membro/Servidor
                         <div />
-                      </Link>
+                      </NavLink>
                     </div>
                   </navbar>
                   <form className="partner-contact-form" onSubmit={handleSubmit}>
