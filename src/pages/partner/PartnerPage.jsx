@@ -137,10 +137,10 @@ export default function PartnerPage() {
                       aria-hidden="true"
                     >
                       <a target="new" rel="noreferrer" href={card.link}>
-                        {card.img ? <img src={card.img} alt={card.alt} /> : null}
+                        {card.img && <img src={card.img} alt={card.alt} />}
                       </a>
                       <h4>{card.title}</h4>
-                      {card.smalltext ? <p>{card.smalltext}</p> : null}
+                      {card.smalltext && <p>{card.smalltext}</p>}
                     </div>
                   ))}
                 </div>
@@ -149,14 +149,14 @@ export default function PartnerPage() {
               <div className="partner-page-cards">
                 {(subpageData[0].cards || []).map((card) => (
                   <div key={card.id} className={`partner-page-card ${card.type}`}>
-                    <div>{card.img ? <img src={card.img} alt={card.alt} /> : null}</div>
+                    <div>{card.img && <img src={card.img} alt={card.alt} />}</div>
                     <h4>{card.title}</h4>
-                    {card.smalltext ? <p>{card.smalltext}</p> : null}
+                    {card.smalltext && <p>{card.smalltext}</p>}
                   </div>
                 ))}
               </div>
             )}
-            {subpageData[0].call === 'Podemos te ajudar?' ? (
+            {subpageData[0].call === 'Podemos te ajudar?' && (
               <div className="partner-page-title">
                 <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
                 <div className="partner-dynamic-content">
@@ -166,7 +166,7 @@ export default function PartnerPage() {
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
-                          location.hash === '#cidadao' ? 'help-navButtons-active' : ''
+                          ((location.hash === '#cidadao') || (location.hash === '')) ? 'help-navButtons-active' : ''
                         }`}
                       >
                         Cidadão
@@ -211,7 +211,7 @@ export default function PartnerPage() {
                         <input type="text" id="profissao" name="profissao" />
                       </label>
                     </div>
-                    {location.hash === '#membro' ? (
+                    {location.hash === '#membro' && (
                       <>
                         <label htmlFor="profissao">
                           Cargo / Setor de atuação
@@ -222,7 +222,7 @@ export default function PartnerPage() {
                           <input type="text" id="profissao" name="profissao" />
                         </label>
                       </>
-                    ) : null}
+                    )}
                     <div className="inputs-box">
                       <textarea placeholder="No que podemos melhorar?" />
                     </div>
@@ -232,7 +232,7 @@ export default function PartnerPage() {
                   </button>
                 </div>
               </div>
-            ) : null}
+            )}
           </div>
         </div>
       </section>

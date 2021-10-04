@@ -24,19 +24,17 @@
   margin-left: 28px;
 
 }
-/* The only way I've found to overwrite the library's css is using the important*/
-.slick-next::before,
-.slick-prev::before{
-  font-size: 40px !important;  
-  color: #B1B1B1 !important;
-  opacity: 1 !important;
- 
+.slick-slider .slick-next::before,
+.slick-slider .slick-prev::before{
+  font-size: 40px;  
+  color: #6B778D;
+  opacity: 1;
 }
-.slick-dots li button::before{
-  font-size: 15px !important;
+.slick-slider .slick-dots li button::before{
+  font-size: 15px;
 }
-.slick-dots li.slick-active button::before{
-  color: var(--colorWhite) !important;
+.slick-slider .slick-dots li.slick-active button::before{
+  color: #6B778D;
 }
 
 @media (max-width: 800px){

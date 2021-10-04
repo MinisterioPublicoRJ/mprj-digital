@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './HeaderTextArea.module.css';
 
-export default function HeaderTextArea({ id, title, subtitle, currentTab, actionLink }) {
+export default function HeaderTextArea({ id, title, subtitle, actionLink }) {
   const { headerTextAreaOuter, ...colorStyles } = styles;
 
   return (
@@ -30,7 +30,6 @@ HeaderTextArea.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   actionLink: PropTypes.string,
-  currentTab: PropTypes.string.isRequired,
 };
 
 HeaderTextArea.defaultProps = {
