@@ -1,21 +1,31 @@
-import { PARTNER_PAGE_DATA, PRODUCT_PAGE_DATA } from './endpoints';
+import { PRODUCT_COMPONENT_DATA, PARTNER_PAGE_DATA, PRODUCT_PAGE_DATA } from './endpoints';
 
-const fetchConfig = { mode: 'no-cors' };
+import { productMiniatureTransform } from './transforms';
 
-export async function getPartnerPageData(partner) {
-  const res = fetch(PARTNER_PAGE_DATA(partner), fetchConfig);
-  console.log(res);
-}
+// export async function getPartnerPageData(partner) {
+//   const res = fetch(PARTNER_PAGE_DATA(partner));
+// }
 
 export async function getProductPageData(product) {
-  const res = await fetch(PRODUCT_PAGE_DATA(product), fetchConfig);
-  // const teste = res.blob();
-  // console.log('hi', teste);
-  // fetch(PRODUCT_PAGE_DATA(product), fetchConfig)
-  //   .then((res) => {
-  //     const teste = res.json();
-  //     console.log('teste', teste);
-  //   })
-  //   .catch((err) => console.log(err));
-  console.log('oi', res);
+  const response = await fetch(PRODUCT_PAGE_DATA(product));
+
+  // with async/await + fetch, failed 400 status don't throw errors
+  if (!response.ok) {
+    throw new Error(`A chamada falhou com status ${response.status}`);
+  }
+
+  const { result } = await response.json();
+  return result;
+}
+
+export async function getProductComponentData() {
+  const response = await fetch(PRODUCT_COMPONENT_DATA);
+
+  // with async/await + fetch, failed 400 status don't throw errors
+  if (!response.ok) {
+    throw new Error(`A chamada falhou com status ${response.status}`);
+  }
+
+  const { result } = await response.json();
+  return productMiniatureTransform(result);
 }

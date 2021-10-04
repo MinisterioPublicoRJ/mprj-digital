@@ -4,6 +4,7 @@ import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
 import './Products.css';
 import { PRODUCTS_CONSTANTS } from './ProductsConstants';
+import { getProductComponentData } from '../../api/api';
 
 export default function Products() {
   const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
@@ -11,6 +12,8 @@ export default function Products() {
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const productsPerPage = 8;
+
+  useEffect(() => { loadProducts() }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +28,11 @@ export default function Products() {
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
+  }
+
+  async function loadProducts() {
+    const res = await getProductComponentData();
+    console.log('res', res);
   }
 
 
