@@ -163,8 +163,8 @@ export default function PartnerPage() {
                   <navbar className="partner-page-navigation">
                     <div>
                       <NavLink
-                        to="#cidadao"
                         style={{ marginLeft: 22 }}
+                        to="#cidadao"
                         className={` ${
                           location.hash === '#cidadao' ? 'help-navButtons-active' : ''
                         }`}
