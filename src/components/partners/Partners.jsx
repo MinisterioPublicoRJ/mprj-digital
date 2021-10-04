@@ -1,6 +1,6 @@
 import React from 'react';
 import './partners.css';
-import PARTNERS_DATA_CONST from './partnersData';
+import PARTNERS_DATA_CONST from './partnersDataComponent';
 
 export default function Partners() {
   return (
