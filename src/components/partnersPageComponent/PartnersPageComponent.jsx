@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import './PartnersPageComponent.css';
@@ -6,15 +5,7 @@ import '../partners/partners.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import GADG from '../../assets/logos/gadg.png';
-import CSI from '../../assets/logos/csi.png';
-import GATE from '../../assets/logos/gate.png';
-import INOVA from '../../assets/logos/inova.png';
-import SGMP from '../../assets/logos/sgmp.png';
-import STIC from '../../assets/logos/stic.png';
-import SUBADM from '../../assets/logos/subadm.png';
-import SUBPLAN from '../../assets/logos/subplan.png';
-import IEP from '../../assets/logos/iep.png';
+import PARTNERS_DATA_CONST from '../partners/partnersDataComponent';
 
 export default function PartnersPageComponent() {
   const settings = {
@@ -26,7 +17,6 @@ export default function PartnersPageComponent() {
     variableWidth: true,
     variableHeight: true,
     arrows: true,
-
   };
   return (
     <section id="partners-outer">
@@ -36,33 +26,18 @@ export default function PartnersPageComponent() {
       </div>
       <div className="partners-itemList-page">
         <Slider id="slider" {...settings}>
-          <div>
-            <img className="" src={GADG} alt="GADG" />
-          </div>
-          <div>
-            <img className="" src={INOVA} alt="INOVA" />
-          </div>
-          <div>
-            <img className="" src={CSI} alt="CSI" />
-          </div>
-          <div>
-            <img className="" src={GATE} alt="GATE" />
-          </div>
-          <div>
-            <img className="" src={SGMP} alt="SGMP" />
-          </div>
-          <div>
-            <img className="" src={STIC} alt="STIC" />
-          </div>
-          <div>
-            <img className="" src={SUBADM} alt="GADG" />
-          </div>
-          <div>
-            <img className="" src={SUBPLAN} alt="CSI" />
-          </div>
-          <div>
-            <img className="" src={IEP} alt="GATE" />
-          </div>
+          {PARTNERS_DATA_CONST.map((cards) => (
+            <div key={cards.id}>
+              <a
+                className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
+                target="new"
+                rel="noreferrer"
+                href={cards.actionLink}
+              >
+                <img src={cards.img} alt={cards.img} />
+              </a>
+            </div>
+          ))}
         </Slider>
       </div>
     </section>
