@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, Link, useLocation } from 'react-router-dom';
+import { useParams, NavLink, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
@@ -15,7 +15,6 @@ export default function PartnerPage() {
   const [cardstTitle, setCardstTitle] = useState('');
   const cardsPorPage = 8;
   const location = useLocation();
-  console.log(location);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
