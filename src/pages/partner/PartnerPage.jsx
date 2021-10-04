@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, NavLink, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
@@ -14,12 +14,10 @@ export default function PartnerPage() {
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
   const cardsPorPage = 8;
+  const location = useLocation();
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
-  const subpageIdToLoad = subpageId || partnerFiltered[0].subpages[0].id;
-  const subpageData = (partnerFiltered[0].subpages || []).filter(
-    (subpages) => subpages.id === subpageIdToLoad,
-  );
+  const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
   const featuredTopics = subpageData[0].topics;
 
   useEffect(() => {
@@ -43,6 +41,10 @@ export default function PartnerPage() {
   const lastCard = page * cardsPorPage;
   const firstCard = lastCard - cardsPorPage;
   const currentCards = cards.slice(firstCard, lastCard);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+  }
 
   return (
     <>
@@ -154,19 +156,37 @@ export default function PartnerPage() {
                 ))}
               </div>
             )}
-            {subpageIdToLoad === 'podemos-ajudar' && formType !== '' ? (
-              <div className="partner-dynamic-content">
-                <h5>No que podemos melhorar</h5>
-                <div className="rounded-border-box">
+            {subpageData[0].call === 'Podemos te ajudar?' ? (
+              <div className="partner-page-title">
+                <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
+                <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <NavLink to="#cidadao">Cidadão</NavLink>
+                      <NavLink
+                        style={{ marginLeft: 22 }}
+                        to="#cidadao"
+                        className={` ${
+                          location.hash === '#cidadao' ? 'help-navButtons-active' : ''
+                        }`}
+                      >
+                        Cidadão
+                        <div />
+                      </NavLink>
                     </div>
                     <div>
-                      <NavLink to="#membro">Membro/Servidor</NavLink>
+                      <NavLink
+                        style={{ marginLeft: -13 }}
+                        to="#membro"
+                        className={` ${
+                          location.hash === '#membro' ? 'help-navButtons-active' : ''
+                        }`}
+                      >
+                        Membro/Servidor
+                        <div />
+                      </NavLink>
                     </div>
                   </navbar>
-                  <form className="partner-contact-form">
+                  <form className="partner-contact-form" onSubmit={handleSubmit}>
                     <div className="inputs-box">
                       <label htmlFor="nome">
                         Nome
@@ -191,15 +211,24 @@ export default function PartnerPage() {
                         <input type="text" id="profissao" name="profissao" />
                       </label>
                     </div>
+                    {location.hash === '#membro' ? (
+                      <>
+                        <label htmlFor="profissao">
+                          Cargo / Setor de atuação
+                          <input type="text" id="profissao" name="profissao" />
+                        </label>
+                        <label htmlFor="profissao">
+                          Matrícula ativa
+                          <input type="text" id="profissao" name="profissao" />
+                        </label>
+                      </>
+                    ) : null}
                     <div className="inputs-box">
                       <textarea placeholder="No que podemos melhorar?" />
                     </div>
                   </form>
-                </div>
-                <div className="partner-contact-form-action">
                   <button type="button" className="partner-contact-button">
-                    enviar
-                    {formType}
+                    Enviar mensagem
                   </button>
                 </div>
               </div>

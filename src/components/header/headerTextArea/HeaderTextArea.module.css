@@ -19,6 +19,7 @@
   margin-top: 5px;
   margin-bottom: 20px;
   font-family: var(--robotRegular);
+  color: var(--colorWhite);
 }
 
 .headerTextAreaOuter a {
