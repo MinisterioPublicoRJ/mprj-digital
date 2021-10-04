@@ -15,6 +15,7 @@ export default function PartnerPage() {
   const [cardstTitle, setCardstTitle] = useState('');
   const cardsPorPage = 8;
   const location = useLocation();
+  console.log(location);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
@@ -162,7 +163,7 @@ export default function PartnerPage() {
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <Link
+                      <NavLink
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
@@ -171,10 +172,10 @@ export default function PartnerPage() {
                       >
                         Cidadão
                         <div />
-                      </Link>
+                      </NavLink>
                     </div>
                     <div>
-                      <Link
+                      <NavLink
                         style={{ marginLeft: -13 }}
                         to="#membro"
                         className={` ${
@@ -183,7 +184,7 @@ export default function PartnerPage() {
                       >
                         Membro/Servidor
                         <div />
-                      </Link>
+                      </NavLink>
                     </div>
                   </navbar>
                   <form className="partner-contact-form" onSubmit={handleSubmit}>
