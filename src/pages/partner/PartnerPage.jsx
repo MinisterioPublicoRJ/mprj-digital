@@ -5,6 +5,7 @@ import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
 import ArrowIcon from '../../utils/ArrowIcon';
+import { getPartnerPageData } from '../../api/api';
 
 export default function PartnerPage() {
   const { partnerId, subpageId } = useParams();
@@ -13,12 +14,29 @@ export default function PartnerPage() {
   const [page, setPage] = useState(1);
   const [totalCards, setTotalCards] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
+  const [partnersList, setPartnersList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const cardsPorPage = 8;
   const location = useLocation();
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
   const featuredTopics = subpageData[0].topics;
+
+  useEffect(() => {
+    const loadPagePartners = async () => {
+      try {
+        const response = await getPartnerPageData();
+        console.log(response, 'Lugar certo');
+      } catch (e) {
+        setPartnersList(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPagePartners();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,6 +64,9 @@ export default function PartnerPage() {
     e.preventDefault();
   }
 
+  if (loading) {
+    return <p>Carregando...</p>;
+  }
   return (
     <>
       <section className="partner-page-section">
@@ -166,7 +187,9 @@ export default function PartnerPage() {
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
-                          ((location.hash === '#cidadao') || (location.hash === '')) ? 'help-navButtons-active' : ''
+                          location.hash === '#cidadao' || location.hash === ''
+                            ? 'help-navButtons-active'
+                            : ''
                         }`}
                       >
                         Cidadão

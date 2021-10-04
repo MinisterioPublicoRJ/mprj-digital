@@ -1,6 +1,6 @@
 import { PRODUCT_COMPONENT_DATA, PARTNER_PAGE_DATA, PRODUCT_PAGE_DATA } from './endpoints';
 
-import { productMiniatureTransform } from './transforms';
+import { productMiniatureTransform, partnerstMiniatureTransform } from './transforms';
 
 export async function getPartnerPageData(partner) {
   const response = fetch(PARTNER_PAGE_DATA(partner));
@@ -11,7 +11,7 @@ export async function getPartnerPageData(partner) {
   }
 
   const { result } = await response.json();
-  return result;
+  return partnerstMiniatureTransform(result);
 }
 
 export async function getProductPageData(product) {
