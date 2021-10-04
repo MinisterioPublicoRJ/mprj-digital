@@ -166,7 +166,7 @@ export default function PartnerPage() {
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
-                          location.hash === '#cidadao' ? 'help-navButtons-active' : ''
+                          ((location.hash === '#cidadao') || (location.hash === '')) ? 'help-navButtons-active' : ''
                         }`}
                       >
                         Cidadão
