@@ -29,7 +29,10 @@
 }
 .partners-itemList {
   align-items: center;
-
+}
+a.cards-action-link-active{
+  cursor: none;
+  pointer-events: none;
 }
 @media (max-width: 480px){
   .partners-outer h1 {

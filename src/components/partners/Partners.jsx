@@ -11,41 +11,71 @@ import SUBPLAN from '../../assets/logos/subplan.png';
 import IEP from '../../assets/logos/iep.png';
 
 export default function Partners() {
+  const images = [
+    {
+      id: 1,
+      img: GADG,
+      actionLink: '/parceiro/gadg/sobre',
+    },
+    {
+      id: 2,
+      img: INOVA,
+      actionLink: '',
+    },
+    {
+      id: 3,
+      img: CSI,
+      actionLink: '',
+    },
+    {
+      id: 4,
+      img: GATE,
+      actionLink: '',
+    },
+    {
+      id: 5,
+      img: SGMP,
+      actionLink: '',
+    },
+    {
+      id: 6,
+      img: STIC,
+      actionLink: '',
+    },
+    {
+      id: 7,
+      img: SUBADM,
+      actionLink: '',
+    },
+    {
+      id: 8,
+      img: SUBPLAN,
+      actionLink: '',
+    },
+    {
+      id: 9,
+      img: IEP,
+      actionLink: '',
+    },
+  ];
   return (
     <section className="partners-outer" id="parceiros">
       <div className="partners-header">
         <h1>Parceiros</h1>
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
         <div className="partners-itemList">
-          <div>
-            <a href="/parceiro/gadg/sobre">
-              <img className="" src={GADG} alt="GADG" />
-            </a>
-          </div>
-          <div>
-            <img className="" src={INOVA} alt="INOVA" />
-          </div>
-          <div>
-            <img className="" src={CSI} alt="CSI" />
-          </div>
-          <div>
-            <img className="" src={GATE} alt="GATE" />
-          </div>
-          <div>
-            <img className="" src={SGMP} alt="SGMP" />
-          </div>
-          <div>
-            <img className="" src={STIC} alt="STIC" />
-          </div>
-          <div>
-            <img className="" src={SUBADM} alt="GADG" />
-          </div>
-          <div>
-            <img className="" src={SUBPLAN} alt="CSI" />
-          </div>
-          <div>
-            <img className="" src={IEP} alt="GATE" />
-          </div>
+          {images.map((cards) => (
+            <div key={cards.id}>
+              <a
+                className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
+                target="new"
+                rel="noreferrer"
+                href={cards.actionLink}
+              >
+                <img src={cards.img} alt={cards.img} />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
