@@ -100,7 +100,7 @@ export default function PartnerPage() {
           <div className="partner-page-left">
             <div
               className="partner-page-logo"
-              style={{ backgroundImage: `url(${partnersList.imageSrc})` }}
+              style={{ backgroundImage: `url(${partnersList})` }}
             />
             <div className="partner-page-featured">
               <h3>Quem Somos ?</h3>
