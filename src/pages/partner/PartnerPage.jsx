@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, useLocation } from 'react-router-dom';
+import { useParams, Link, NavLink, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
@@ -16,18 +16,18 @@ export default function PartnerPage() {
   const [cardstTitle, setCardstTitle] = useState('');
   const [partnersList, setPartnersList] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const cardsPorPage = 8;
   const location = useLocation();
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
-  const featuredTopics = subpageData[0].topics;
 
   useEffect(() => {
     const loadPagePartners = async () => {
+      setLoading(true);
       try {
-        const response = await getPartnerPageData();
+        const response = await getPartnerPageData(partnerId);
+        setPartnersList(response.partnersMiniatureArray[0]);
         console.log(response, 'Lugar certo');
       } catch (e) {
         setPartnersList(false);
@@ -36,7 +36,7 @@ export default function PartnerPage() {
       }
     };
     loadPagePartners();
-  }, []);
+  }, [subpageId]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,9 +64,9 @@ export default function PartnerPage() {
     e.preventDefault();
   }
 
-  if (loading) {
+  /* if (loading) {
     return <p>Carregando...</p>;
-  }
+  } */
   return (
     <>
       <section className="partner-page-section">
@@ -75,8 +75,8 @@ export default function PartnerPage() {
           style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
         >
           <div className="partner-page-title">
-            <h1>{partnerFiltered[0].name}</h1>
-            <p>{partnerFiltered[0].desc}</p>
+            <h1>{partnersList.title}</h1>
+            <p>{partnersList.description}</p>
           </div>
           <div className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
@@ -100,27 +100,24 @@ export default function PartnerPage() {
           <div className="partner-page-left">
             <div
               className="partner-page-logo"
-              style={{ backgroundImage: `url(${partnerFiltered[0].img})` }}
+              style={{ backgroundImage: `url(${partnersList.imageSrc})` }}
             />
             <div className="partner-page-featured">
-              {featuredTopics.map((featured) => (
-                <div key={featured.id}>
-                  <h3>{featured.title}</h3>
-                  <p>{featured.smalltext}</p>
-                  <p>{featured.subsmalltext}</p>
-                </div>
-              ))}
+              <h3>Quem Somos ?</h3>
+              <p>{partnersList.whoWeAre}</p>
             </div>
           </div>
           <div className="partner-page-right">
             <div className="partner-page-topics-button">
               <div className="partner-page-topics">
-                {featuredTopics.map((featured) => (
-                  <div key={featured.id}>
-                    <h3>{featured.title2}</h3>
-                    <p>{featured.smalltext2}</p>
-                  </div>
-                ))}
+                <div>
+                  <h3>Nossos pilares</h3>
+                  <p>
+                    Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e
+                    diferenciam o setor dos demais e são fatores críticos de sucesso, sem os quais
+                    seria impossível realizar os trabalhos.
+                  </p>
+                </div>
               </div>
               {subpageData[0].call === 'Soluções' ? (
                 <div className="input-openData-Icon">
@@ -171,8 +168,8 @@ export default function PartnerPage() {
                 {(subpageData[0].cards || []).map((card) => (
                   <div key={card.id} className={`partner-page-card ${card.type}`}>
                     <div>{card.img && <img src={card.img} alt={card.alt} />}</div>
-                    <h4>{card.title}</h4>
-                    {card.smalltext && <p>{card.smalltext}</p>}
+                    <h4>{partnersList.pilarTitulo1}</h4>
+                    <p>{partnersList.pilar1}</p>
                   </div>
                 ))}
               </div>
@@ -183,7 +180,7 @@ export default function PartnerPage() {
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <NavLink
+                      <Link
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
@@ -194,10 +191,10 @@ export default function PartnerPage() {
                       >
                         Cidadão
                         <div />
-                      </NavLink>
+                      </Link>
                     </div>
                     <div>
-                      <NavLink
+                      <Link
                         style={{ marginLeft: -13 }}
                         to="#membro"
                         className={` ${
@@ -206,7 +203,7 @@ export default function PartnerPage() {
                       >
                         Membro/Servidor
                         <div />
-                      </NavLink>
+                      </Link>
                     </div>
                   </navbar>
                   <form className="partner-contact-form" onSubmit={handleSubmit}>

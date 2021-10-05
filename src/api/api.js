@@ -3,7 +3,7 @@ import { PRODUCT_COMPONENT_DATA, PARTNER_PAGE_DATA, PRODUCT_PAGE_DATA } from './
 import { productMiniatureTransform, partnerstMiniatureTransform } from './transforms';
 
 export async function getPartnerPageData(partner) {
-  const response = fetch(PARTNER_PAGE_DATA(partner));
+  const response = await fetch(PARTNER_PAGE_DATA(partner));
 
   // with async/await + fetch, failed 400 status don't throw errors
   if (!response.ok) {
