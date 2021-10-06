@@ -32,7 +32,7 @@ export default function Products() {
 
   async function loadProducts() {
     const res = await getProductComponentData();
-    console.log('res', res);
+    // console.log('res', res);
   }
 
 

@@ -18,6 +18,7 @@ export default function PartnerPage() {
   const [loading, setLoading] = useState(true);
   const cardsPorPage = 8;
   const location = useLocation();
+  console.log(subpageId);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
@@ -111,15 +112,29 @@ export default function PartnerPage() {
             <div className="partner-page-topics-button">
               <div className="partner-page-topics">
                 <div>
-                  <h3>Nossos pilares</h3>
-                  <p>
-                    Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e
-                    diferenciam o setor dos demais e são fatores críticos de sucesso, sem os quais
-                    seria impossível realizar os trabalhos.
-                  </p>
+                  {subpageId === 'sobre' ? (
+                    <>
+                      <h3>Nossos pilares</h3>
+                      <p>
+                        Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e
+                        diferenciam o setor dos demais e são fatores críticos de sucesso, sem os
+                        quais seria impossível realizar os trabalhos.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <h3>Soluções</h3>
+                      <p>
+                        Soluções que exigem análise e visualização de dados, principalmente para
+                        problemas próprios do MPRJ, mas também para fortalecer a relação de
+                        transparência entre poder público (MPRJ e outros órgãos, quando possível) e
+                        a sociedade.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
-              {subpageData[0].call === 'Soluções' ? (
+              {subpageId === 'solucoes' ? (
                 <div className="input-openData-Icon">
                   <input
                     type="text"
@@ -133,7 +148,7 @@ export default function PartnerPage() {
                 </div>
               ) : null}
             </div>
-            {subpageData[0].call === 'Soluções' ? (
+            {subpageId === 'solucoes' ? (
               <>
                 <div
                   className={`${
@@ -165,16 +180,16 @@ export default function PartnerPage() {
               </>
             ) : (
               <div className="partner-page-cards">
-                {(subpageData[0].cards || []).map((card) => (
+                {(subpageData[0].cards || []).map((card, index) => (
                   <div key={card.id} className={`partner-page-card ${card.type}`}>
                     <div>{card.img && <img src={card.img} alt={card.alt} />}</div>
-                    <h4>{partnersList.pilarTitulo1}</h4>
-                    <p>{partnersList.pilar1}</p>
+                    <h4>{partnersList[`pilarTitulo${index + 1}`]}</h4>
+                    <p>{partnersList[`pilar${index + 1}`]}</p>
                   </div>
                 ))}
               </div>
             )}
-            {subpageData[0].call === 'Podemos te ajudar?' && (
+            {subpageId === 'podemos-ajudar' && (
               <div className="partner-page-title">
                 <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
                 <div className="partner-dynamic-content">

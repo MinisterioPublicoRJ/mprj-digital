@@ -29,14 +29,6 @@ export const PARTNERS_CONST = [
         topics: [
           {
             id: 'quemSomos',
-            title: 'Quem somos?',
-            smalltext:
-              'A Gerência de Análises, Diagnósticos e Geoprocessamento (GADG) é o setor do MPRJ responsável por trabalhos com ciência de dados. O setor se destaca por ter equipe multidisciplinar e aplicar técnicas de design na compreensão de problemas e desenho de soluções adequadas a eles, além de empreender análises estatísticas e apontar impactos territoriais/geográficos dos dados.',
-            subsmalltext:
-              'A equipe é responsável pela plataforma MPRJ em Mapas e todas as ferramentas, sistemas e aplicações ali concentradas. O foco de seu trabalho é entregar soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
-            title2: 'Nossos pilares',
-            smalltext2:
-              'Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e diferenciam o setor dos demais e são fatores críticos de sucesso, sem os quais seria impossível realizar os trabalhos.',
           },
         ],
         cards: [
@@ -45,10 +37,7 @@ export const PARTNERS_CONST = [
             type: 'first',
             background: 'transparent',
             title: 'Equipe Multidisciplinar',
-            smalltext:
-              'Uma equipe com profissionais de vários ramos do conhecimento permite a entrega de soluções de maior valor. A diversidade da equipe auxilia desde a melhor identificação do problema até a elaboração da melhor visualização final.',
             link: '',
-            call: '',
             img: GEAR,
             alt: 'Img alt',
           },
@@ -57,10 +46,6 @@ export const PARTNERS_CONST = [
             type: 'first',
             background: 'transparent',
             title: 'Big Data',
-            smalltext:
-              'Para realizar as análises e chegar às soluções, trabalhamos com grandes quantidades de dados, que vêm tanto de bases internas do MPRJ quanto de parceiros externos e definem o valor das soluções. Para trabalhar isso tudo, utilizamos uma infraestrutura consistente.',
-            link: '',
-            call: '',
             img: BIGDATA,
             alt: 'Img bigdata',
           },
@@ -69,10 +54,6 @@ export const PARTNERS_CONST = [
             type: 'first',
             background: 'transparent',
             title: 'Ciência de Dados',
-            smalltext:
-              'Mais do que ter dados, aplicamos análises que extraem inteligência deles. O objetivo é conseguir descrever cenários e hipóteses e entregar visualizações de fácil compreensão.',
-            link: '',
-            call: '',
             img: DATASCIENCE,
             alt: 'Img datascience',
           },
@@ -81,10 +62,6 @@ export const PARTNERS_CONST = [
             type: 'first',
             background: 'transparent',
             title: 'Georreferenciamento',
-            smalltext:
-              'Além de análises de dados que descrevem cenários situados no tempo, um pilar da GADG  é identificá-los no espaço. Por isso, desde os primeiros trabalhos, a GADG é conhecida por se valer de recursos geográficos.',
-            link: '',
-            call: '',
             img: GEOTAG,
             alt: 'Img geotag',
           },
@@ -201,7 +178,7 @@ export const PARTNERS_CONST = [
         ],
       },
 
-      {
+      /* {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
