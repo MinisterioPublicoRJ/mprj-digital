@@ -67,8 +67,8 @@ export default function Products() {
         </button>
       </div>
       <div className="all-products">
-        {products.map((item) => (
-          <ProductItem product={item} key={item.id}/>
+        {products.map(({ name, title, description, imageSrc }) => (
+          <ProductItem key={name} name={name} title={title} description={description} imageSrc={imageSrc} />
         ))}
       </div>
       <Pagination
