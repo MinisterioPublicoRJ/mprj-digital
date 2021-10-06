@@ -1,7 +1,6 @@
 export default function productMiniatureTransform(rawData) {
-  console.log('data', rawData);
   const { count, results } = rawData;
-  const productMiniatureArray = results.map((product) => {
+  const productsArray = results.map((product) => {
     const thumbnailImgIndex = product.res_name.indexOf('thumbnail');
     return {
       title: product.title,
@@ -12,6 +11,6 @@ export default function productMiniatureTransform(rawData) {
   });
   return {
     total: count,
-    productMiniatureArray,
+    productsArray,
   };
 }

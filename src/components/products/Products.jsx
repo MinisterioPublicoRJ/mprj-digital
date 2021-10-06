@@ -7,38 +7,42 @@ import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 import { getProductComponentData } from '../../api/api';
 
 export default function Products() {
-  const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
-  const [page, setPage] = useState(1);
+  const perPage = 8;
+  const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
-  const productsPerPage = 8;
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => { loadProducts() }, []);
+  useEffect(() => { loadProducts() }, [currentPage, productType]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
-      setProducts(filteredProducts);
-      setTotalPages(Math.ceil(filteredProducts.length / productsPerPage));
-      setPage(1);
-    };
-    fetchData();
-  }, [productType]);
+  async function loadProducts() {
+    try {
+      const { total, productsArray } = await getProductComponentData();
+      setProducts(productsArray);
+      setTotalPages(Math.ceil(total / perPage));
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  }
 
-  function handlePageClick(nextPage) {
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
+  //     setProducts(filteredProducts);
+  //     setTotalPages(Math.ceil(filteredProducts.length / productsPerPage));
+  //     setPage(1);
+  //   };
+  //   fetchData();
+  // }, [productType]);
+
+  function handlePageClick() {
+    const nextPage = currentPage + 1;
     if (nextPage < 1 || nextPage > totalPages) return;
     setPage(nextPage);
   }
-
-  async function loadProducts() {
-    const res = await getProductComponentData();
-    console.log('res', res);
-  }
-
-
-  const lastProduct = page * productsPerPage;
-  const firstProduct = lastProduct - productsPerPage;
-  const currentProductPage = products.slice(firstProduct, lastProduct);
 
   return (
     <section className="products" id="produtos">
@@ -63,14 +67,14 @@ export default function Products() {
         </button>
       </div>
       <div className="all-products">
-        {currentProductPage.map((product) => (
-          <ProductItem product={product} key={product.id}/>
+        {products.map((item) => (
+          <ProductItem product={item} key={item.id}/>
         ))}
       </div>
       <Pagination
-        handlePageClick={(page) => handlePageClick(page)}
+        handlePageClick={() => handlePageClick()}
         totalPages={totalPages}
-        currentPage={page}
+        currentPage={currentPage}
       />
     </section>
   );
