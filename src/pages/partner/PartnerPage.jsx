@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, NavLink, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
@@ -18,7 +19,7 @@ export default function PartnerPage() {
   const [loading, setLoading] = useState(true);
   const cardsPorPage = 8;
   const location = useLocation();
-  console.log(subpageId);
+  // console.log(subpageId);
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
   const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
@@ -37,7 +38,7 @@ export default function PartnerPage() {
       }
     };
     loadPagePartners();
-  }, [subpageId]);
+  }, [partnerId]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,15 +66,31 @@ export default function PartnerPage() {
     e.preventDefault();
   }
 
-  /* if (loading) {
-    return <p>Carregando...</p>;
-  } */
+  let titleSubpage;
+  let subtitleSubpage;
+
+  switch (subpageId) {
+    case 'sobre':
+      titleSubpage = 'Nossos Pilares';
+      subtitleSubpage =
+        ' Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e diferenciam o setor dos demais e são fatores críticos de sucesso, sem os quais seria impossível realizar os trabalhos.';
+      break;
+    case 'solucoes':
+      titleSubpage = 'Soluções';
+      subtitleSubpage =
+        ' Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.';
+      break;
+    default:
+      titleSubpage = '';
+  }
   return (
     <>
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
+          style={{
+            backgroundImage: `url(${partnersList.arrayImgs?.[1].url}`,
+          }}
         >
           <div className="partner-page-title">
             <h1>{partnersList.title}</h1>
@@ -101,7 +118,9 @@ export default function PartnerPage() {
           <div className="partner-page-left">
             <div
               className="partner-page-logo"
-              style={{ backgroundImage: `url(${partnersList})` }}
+              style={{
+                backgroundImage: `url(${partnersList.arrayImgs?.[0].url})`,
+              }}
             />
             <div className="partner-page-featured">
               <h3>Quem Somos ?</h3>
@@ -111,28 +130,8 @@ export default function PartnerPage() {
           <div className="partner-page-right">
             <div className="partner-page-topics-button">
               <div className="partner-page-topics">
-                <div>
-                  {subpageId === 'sobre' ? (
-                    <>
-                      <h3>Nossos pilares</h3>
-                      <p>
-                        Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e
-                        diferenciam o setor dos demais e são fatores críticos de sucesso, sem os
-                        quais seria impossível realizar os trabalhos.
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <h3>Soluções</h3>
-                      <p>
-                        Soluções que exigem análise e visualização de dados, principalmente para
-                        problemas próprios do MPRJ, mas também para fortalecer a relação de
-                        transparência entre poder público (MPRJ e outros órgãos, quando possível) e
-                        a sociedade.
-                      </p>
-                    </>
-                  )}
-                </div>
+                <h3>{titleSubpage}</h3>
+                <p>{subtitleSubpage}</p>
               </div>
               {subpageId === 'solucoes' ? (
                 <div className="input-openData-Icon">
@@ -180,9 +179,11 @@ export default function PartnerPage() {
               </>
             ) : (
               <div className="partner-page-cards">
-                {(subpageData[0].cards || []).map((card, index) => (
+                {(partnersList.arrayImgs || []).map((card, index) => (
                   <div key={card.id} className={`partner-page-card ${card.type}`}>
-                    <div>{card.img && <img src={card.img} alt={card.alt} />}</div>
+                    <div>
+                      <img src={card.url} alt={card.name} />
+                    </div>
                     <h4>{partnersList[`pilarTitulo${index + 1}`]}</h4>
                     <p>{partnersList[`pilar${index + 1}`]}</p>
                   </div>
