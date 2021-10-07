@@ -7,11 +7,11 @@ import './ProductItem.css';
 export default function ProductItem({ name, title, description, imageSrc }) {
   return (
     <div className="product">
-      <Link to={`/produto/${name}`} rel="noreferrer">
+      <Link to={`/produto/${name}`}>
         <img src={imageSrc} alt={title} />
-        <h4>{title}</h4>
-        <p className="text">{description}</p>
       </Link>
+      <h4>{title}</h4>
+      <p className="text">{description}</p>
     </div>
   );
 }
