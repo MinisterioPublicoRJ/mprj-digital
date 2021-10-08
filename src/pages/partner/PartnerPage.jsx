@@ -9,7 +9,8 @@ import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData } from '../../api/api';
 
 export default function PartnerPage() {
-  const { partnerId, subpageId } = useParams();
+  // const { partnerId, subpageId } = useParams();
+  const { partnerName, subpageId } = useParams();
   const [formType, setFormType] = useState('');
   const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
   const [page, setPage] = useState(1);
@@ -19,16 +20,17 @@ export default function PartnerPage() {
   const [loading, setLoading] = useState(true);
   const cardsPorPage = 8;
   const location = useLocation();
+  // console.log(partnerName);
   // console.log(subpageId);
 
-  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
-  const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
+  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerName);
+  const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === partnerName);
 
   useEffect(() => {
     const loadPagePartners = async () => {
       setLoading(true);
       try {
-        const response = await getPartnerPageData(partnerId);
+        const response = await getPartnerPageData(partnerName);
         setPartnersList(response.partnersMiniatureArray[0]);
         console.log(response, 'Lugar certo');
       } catch (e) {
@@ -38,9 +40,9 @@ export default function PartnerPage() {
       }
     };
     loadPagePartners();
-  }, [partnerId]);
+  }, []);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       const featuredCards = subpageData[0].cards.filter((infoCards) => (
         infoCards.title
@@ -52,7 +54,7 @@ export default function PartnerPage() {
       setPage(1);
     };
     fetchData();
-  }, [subpageId, cardstTitle]);
+  }, [subpageId, cardstTitle]); */
 
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalCards) return;
@@ -83,7 +85,8 @@ export default function PartnerPage() {
     default:
       titleSubpage = '';
   }
-  return (
+
+  return partnersList ? (
     <>
       <section className="partner-page-section">
         <div
@@ -106,7 +109,7 @@ export default function PartnerPage() {
                       ? 'productPage-navButtons-active'
                       : 'partner-page-link '
                   }`}
-                  to={`/parceiro/${partnerId}/${subpage.id}`}
+                  to={`/parceiro/${partnerName}/${subpage.id}`}
                 >
                   {subpage.call}
                 </NavLink>
@@ -147,13 +150,11 @@ export default function PartnerPage() {
                 </div>
               ) : null}
             </div>
-            {subpageId === 'solucoes' ? (
+            {/* {subpageId === 'solucoes' ? (
               <>
                 <div
                   className={`${
-                    subpageData[0].call === 'Soluções'
-                      ? 'partner-page-cards-solucoes '
-                      : 'partner-page-cards'
+                    subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
                   }`}
                 >
                   {currentCards.map((card) => (
@@ -189,7 +190,18 @@ export default function PartnerPage() {
                   </div>
                 ))}
               </div>
-            )}
+                )} */}
+            <div className="partner-page-cards">
+              {(partnersList.imageSrc || []).map((card, index) => (
+                <div key={card.id} className="partner-page-cards-first">
+                  <div>
+                    <img src={card.url} alt={card.name} />
+                  </div>
+                  <h4>{partnersList[`pilarTitulo${index + 1}`]}</h4>
+                  <p>{partnersList[`pilar${index + 1}`]}</p>
+                </div>
+              ))}
+            </div>
             {subpageId === 'podemos-ajudar' && (
               <div className="partner-page-title">
                 <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
@@ -274,6 +286,8 @@ export default function PartnerPage() {
       </section>
       <PartnersPageComponent />
     </>
+  ) : (
+    <div>Carregando...</div>
   );
 }
 

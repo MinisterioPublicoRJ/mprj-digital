@@ -10,11 +10,6 @@ import SUBPLAN from '../../assets/logos/subplan.png';
 import IEP from '../../assets/logos/iep.png';
 import BGHome from '../../assets/bg-home-produto.png';
 
-import GEAR from '../../assets/gearIcon.svg';
-import BIGDATA from '../../assets/bigDataIcon.svg';
-import DATASCIENCE from '../../assets/dataScienceIcon.svg';
-import GEOTAG from '../../assets/geoReferenceIcon.svg';
-
 export const PARTNERS_CONST = [
   {
     id: 'gadg',
@@ -31,41 +26,7 @@ export const PARTNERS_CONST = [
             id: 'quemSomos',
           },
         ],
-        cards: [
-          {
-            id: 'equipe-multidisciplinar',
-            type: 'first',
-            background: 'transparent',
-            title: 'Equipe Multidisciplinar',
-            link: '',
-            img: GEAR,
-            alt: 'Img alt',
-          },
-          {
-            id: 'big-data',
-            type: 'first',
-            background: 'transparent',
-            title: 'Big Data',
-            img: BIGDATA,
-            alt: 'Img bigdata',
-          },
-          {
-            id: 'ciencia-de-dados',
-            type: 'first',
-            background: 'transparent',
-            title: 'Ciência de Dados',
-            img: DATASCIENCE,
-            alt: 'Img datascience',
-          },
-          {
-            id: 'georreferenciamento',
-            type: 'first',
-            background: 'transparent',
-            title: 'Georreferenciamento',
-            img: GEOTAG,
-            alt: 'Img geotag',
-          },
-        ],
+        cards: [],
       },
       {
         id: 'solucoes',
@@ -74,13 +35,6 @@ export const PARTNERS_CONST = [
           {
             id: 'comoAjudar',
             title: 'Como elas podem te ajudar?',
-            smalltext:
-              'Para membros e servidores do MPRJ, aqui estarão soluções que se valem de análises de dados para responder problemas concretos enfrentados pela instituição nas atividades meio e fim, com foco em resolução mais rápida, mais qualificada ou ambos.',
-            subsmalltext:
-              'Para visitantes externos, aqui podem ser encontradas não só algumas ferramentas de trabalho do MPRJ e uma prestação de contas do setor para a sociedade (o que temos feito com o dinheiro público), mas também recursos digitais e bases de dados que fortalecem a transparência efetiva e podem indicar aos cidadãos quais são os cenários e problemas enfrentados no Estado do Rio de Janeiro.',
-            title2: 'Soluções',
-            smalltext2:
-              'Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.',
           },
         ],
         cards: [
@@ -201,7 +155,6 @@ export const PARTNERS_CONST = [
             title: 'Nosso time',
             smalltext:
               "Lorem  simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            featured: true,
           },
         ],
       }, */

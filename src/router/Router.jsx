@@ -21,7 +21,7 @@ function Router() {
     <Routes location={location}>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/produto/:key" element={<ProductPage />} />
-      <Route path="/parceiro/:partnerId/:subpageId" element={<PartnerPage />} />
+      <Route path="/parceiro/:partnerName/:subpageId" element={<PartnerPage />} />
     </Routes>
   );
 }
