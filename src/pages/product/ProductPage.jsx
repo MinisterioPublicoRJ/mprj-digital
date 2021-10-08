@@ -8,28 +8,30 @@ import { getProductPageData } from '../../api/api';
 
 export default function Produto() {
   const { productName } = useParams();
-  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[productName];
-  const { icon: Icon } = header;
   const [changeData, setchangeData] = useState();
   const [productData, setProductData] = useState();
+  const [Icon, setProductIcon] = useState();
 
   async function loadProductData() {
     const result = await getProductPageData(productName);
-    setProductData(result);
+    if (result) {
+      setProductData(result);
+      setchangeData(result.subsectionsArray[0].subsectionTitle);
+      setProductIcon(result.icon);
+    }
   }
 
-  useEffect(() => setchangeData(tabs[0].id), [tabs]);
   useEffect(() => console.log('productData: ', productData), [productData]);
 
-  useEffect(() => loadProductData(), []);
+  useEffect(() => loadProductData(), [productName]);
 
   return (
     productData
       ? (
         <article className="productPage-outer">
-          <div className="productPage-img" style={{ backgroundImage: `url(${background})` }} />
+          <div className="productPage-img" style={{ backgroundImage: `url(${productData.bannerUrl})` }} />
           <div className="productPage-presentation">
-            <Icon />
+            <img src={Icon} alt={`Ícone ${productData.title}`} />
             <h2>{productData.subtitle}</h2>
             <p>{productData.description}</p>
           </div>
@@ -57,7 +59,14 @@ export default function Produto() {
               </button>
             ))}
           </div>
-          <DataProduct {...tabs.find((tab) => tab.subsectionTitle === changeData)} />
+          <DataProduct
+            {...productData.subsectionsArray.find(
+              (subsection) => subsection.subsectionTitle === changeData,
+            )
+            }
+            textBtn={`Acessar ${productData.title}`}
+            url={productData.url}
+          />
         </article>
       )
       : <div>loading</div>
