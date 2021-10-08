@@ -16,7 +16,7 @@ export default function DataProductItem({
       </div>
       <div className="productItem-action">
         <img src={imgUrl} alt={subsectionTitle} />
-        <a href={url} target="new" rel="noreferrer">
+        <a href={url} target="_new" rel="noreferrer">
           {textBtn}
         </a>
       </div>
