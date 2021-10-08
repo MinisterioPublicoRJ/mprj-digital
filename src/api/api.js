@@ -31,8 +31,8 @@ export async function getProductNavbarData() {
   return result.results;
 }
 
-export async function getProductComponentData() {
-  const response = await fetch(PRODUCT_COMPONENT_DATA);
+export async function getProductComponentData(nextPos, extraFilter) {
+  const response = await fetch(PRODUCT_COMPONENT_DATA(nextPos, extraFilter));
 
   // with async/await + fetch, failed 400 status don't throw errors
   if (!response.ok) {
