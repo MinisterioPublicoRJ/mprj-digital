@@ -3,25 +3,20 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DataProduct from './dataProductItem/DataProductItem';
 import './ProductPage.css';
-import PRODUCTS_CONST from './productsConsts';
 import { getProductPageData } from '../../api/api';
 
 export default function Produto() {
   const { productName } = useParams();
   const [changeData, setchangeData] = useState();
   const [productData, setProductData] = useState();
-  const [Icon, setProductIcon] = useState();
 
   async function loadProductData() {
     const result = await getProductPageData(productName);
     if (result) {
       setProductData(result);
       setchangeData(result.subsectionsArray[0].subsectionTitle);
-      setProductIcon(result.icon);
     }
   }
-
-  useEffect(() => console.log('productData: ', productData), [productData]);
 
   useEffect(() => loadProductData(), [productName]);
 
@@ -31,7 +26,7 @@ export default function Produto() {
         <article className="productPage-outer">
           <div className="productPage-img" style={{ backgroundImage: `url(${productData.bannerUrl})` }} />
           <div className="productPage-presentation">
-            <img src={Icon} alt={`Ícone ${productData.title}`} />
+            <img src={productData.icon} alt={`Ícone ${productData.title}`} />
             <h2>{productData.subtitle}</h2>
             <p>{productData.description}</p>
           </div>
@@ -69,6 +64,6 @@ export default function Produto() {
           />
         </article>
       )
-      : <div>loading</div>
+      : <h1>Carregando</h1>
   );
 }

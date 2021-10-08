@@ -1,16 +1,5 @@
 export default function productPageTransform(rawData) {
-  /*  console.log('data.results[0]', rawData.results[0]); */
   const result = rawData.results[0];
-  /*   const { count, results } = rawData;
-  const productMiniatureArray = results.map((product) => {
-    const thumbnailImgIndex = product.res_name.indexOf('thumbnail');
-    return {
-      title: product.title,
-      name: product.name,
-      description: product.product_thumbnail_description,
-      imageSrc: product.res_url[thumbnailImgIndex],
-    };
-  }); */
   const answer = result ? {
     subtitle: result.product_page_subtitle,
     description: result.product_page_description,
