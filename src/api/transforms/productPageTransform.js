@@ -1,5 +1,6 @@
 export default function productPageTransform(rawData) {
-  console.log('data', rawData);
+  /*  console.log('data.results[0]', rawData.results[0]); */
+  const result = rawData.results[0];
   /*   const { count, results } = rawData;
   const productMiniatureArray = results.map((product) => {
     const thumbnailImgIndex = product.res_name.indexOf('thumbnail');
@@ -11,6 +12,15 @@ export default function productPageTransform(rawData) {
     };
   }); */
   return {
-    rawData,
+    productPageSubtitle: result.product_page_subtitle,
+    productPageDescription: result.product_page_description,
+    title: result.title,
+    service: result.service,
+    subsection1Title: result.subsection1_title,
+    subsection2Title: result.subsection2_title,
+    subsection3Title: result.subsection3_title,
+    subsection1_description: result.subsection1_description,
+    subsection2_description: result.subsection2_description,
+    subsection3_description: result.subsection3_description,
   };
 }
