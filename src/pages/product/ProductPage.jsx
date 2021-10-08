@@ -41,7 +41,7 @@ export default function Produto() {
         <span>Serviço</span>
       </div>
       <div className="productPage-tabNavigation">
-        {productData.subsectionsArray.map(({ subsectionTitle, subsectionDescription }) => (
+        {productData.subsectionsArray.map(({ subsectionTitle }) => (
           <button
             key={subsectionTitle}
             onClick={() => {
