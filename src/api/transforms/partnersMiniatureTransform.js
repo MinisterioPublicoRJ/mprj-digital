@@ -1,15 +1,12 @@
 export default function partnersMiniatureTransform(rawData) {
   const { count, results } = rawData;
-
-  // console.log('data', rawData);
-
+  console.log(results);
   const partnersMiniatureArray = results.map((partners) => {
     let imageSrc;
     if (partners.resources) {
       const sourceslImgs = partners.resources.splice(2, Number.MAX_VALUE);
       imageSrc = sourceslImgs;
     }
-    console.log(imageSrc);
 
     return {
       name: partners.name,

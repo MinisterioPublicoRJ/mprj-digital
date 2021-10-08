@@ -6,25 +6,20 @@ import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
 import ArrowIcon from '../../utils/ArrowIcon';
-import { getPartnerPageData } from '../../api/api';
+import { getPartnerPageData, getProductComponentData } from '../../api/api';
 
 export default function PartnerPage() {
-  // const { partnerId, subpageId } = useParams();
+  const cardsPorPage = 8;
   const { partnerName, subpageId } = useParams();
-  const [formType, setFormType] = useState('');
-  const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
-  const [page, setPage] = useState(1);
-  const [totalCards, setTotalCards] = useState(0);
-  const [cardstTitle, setCardstTitle] = useState('');
   const [partnersList, setPartnersList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const cardsPorPage = 8;
   const location = useLocation();
-  // console.log(partnerName);
-  // console.log(subpageId);
+  const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const [cardstTitle, setCardstTitle] = useState('');
 
   const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerName);
-  const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === partnerName);
 
   useEffect(() => {
     const loadPagePartners = async () => {
@@ -32,7 +27,6 @@ export default function PartnerPage() {
       try {
         const response = await getPartnerPageData(partnerName);
         setPartnersList(response.partnersMiniatureArray[0]);
-        console.log(response, 'Lugar certo');
       } catch (e) {
         setPartnersList(false);
       } finally {
@@ -42,27 +36,33 @@ export default function PartnerPage() {
     loadPagePartners();
   }, []);
 
-  /* useEffect(() => {
-    const fetchData = async () => {
-      const featuredCards = subpageData[0].cards.filter((infoCards) => (
-        infoCards.title
+  async function loadProducts() {
+    try {
+      const nextPos = (currentPage - 1) * cardsPorPage;
+      const productFilter = products.filter((cards) => (
+        cards.title
           .toLowerCase()
           .replace(/[\u0300-\u036f]/g, '')
           .includes(cardstTitle.toLowerCase())));
-      setCards(featuredCards);
-      setTotalCards(Math.ceil(featuredCards.length / cardsPorPage));
-      setPage(1);
-    };
-    fetchData();
-  }, [subpageId, cardstTitle]); */
 
-  function handlePageClick(nextPage) {
-    if (nextPage < 1 || nextPage > totalCards) return;
-    setPage(nextPage);
+      const { total, productsArray } = await getProductComponentData(nextPos, productFilter);
+      setProducts(productsArray);
+      setTotalPages(Math.ceil(total / cardsPorPage));
+    } catch (e) {
+      setProducts(null);
+    } finally {
+      setLoading(false);
+    }
   }
-  const lastCard = page * cardsPorPage;
-  const firstCard = lastCard - cardsPorPage;
-  const currentCards = cards.slice(firstCard, lastCard);
+  useEffect(() => {
+    loadProducts();
+  }, [currentPage, cardstTitle]);
+
+  function handlePageClick() {
+    const nextPage = currentPage + 1;
+    if (nextPage < 1 || nextPage > totalPages) return;
+    setCurrentPage(nextPage);
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -141,7 +141,7 @@ export default function PartnerPage() {
                   <input
                     type="text"
                     placeholder="Pesquise sua solução..."
-                    value={cardstTitle}
+                    value={products}
                     onChange={(event) => setCardstTitle(event.target.value)}
                     onFocus={() => setCardstTitle('')}
                     onMouseOver={() => setCardstTitle('')}
@@ -150,38 +150,40 @@ export default function PartnerPage() {
                 </div>
               ) : null}
             </div>
-            {/* {subpageId === 'solucoes' ? (
+            {subpageId === 'solucoes' ? (
               <>
                 <div
                   className={`${
                     subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
                   }`}
                 >
-                  {currentCards.map((card) => (
+                  {products.map((card) => (
                     <div
                       key={card.id}
                       className={`${
-                        subpageData[0].call === 'Soluções'
+                        subpageId === 'solucoes'
                           ? 'partner-page-cards-next'
                           : 'partner-page-card'`${card.type}`
                       }`}
-                      onClick={() => setFormType(card.id)}
-                      onKeyDown={() => setFormType(card.id)}
-                      aria-hidden="true"
                     >
                       <a target="new" rel="noreferrer" href={card.link}>
-                        {card.img && <img src={card.img} alt={card.alt} />}
+                        <img src={card.imageSrc} alt={card.alt} />
                       </a>
                       <h4>{card.title}</h4>
-                      {card.smalltext && <p>{card.smalltext}</p>}
+                      <p>{card.description}</p>
                     </div>
                   ))}
                 </div>
+                <Pagination
+                  handlePageClick={() => handlePageClick()}
+                  totalPages={totalPages}
+                  currentPage={currentPage}
+                />
               </>
             ) : (
               <div className="partner-page-cards">
-                {(partnersList.arrayImgs || []).map((card, index) => (
-                  <div key={card.id} className={`partner-page-card ${card.type}`}>
+                {(partnersList.imageSrc || []).map((card, index) => (
+                  <div key={card.id} className="partner-page-cards-first">
                     <div>
                       <img src={card.url} alt={card.name} />
                     </div>
@@ -190,18 +192,7 @@ export default function PartnerPage() {
                   </div>
                 ))}
               </div>
-                )} */}
-            <div className="partner-page-cards">
-              {(partnersList.imageSrc || []).map((card, index) => (
-                <div key={card.id} className="partner-page-cards-first">
-                  <div>
-                    <img src={card.url} alt={card.name} />
-                  </div>
-                  <h4>{partnersList[`pilarTitulo${index + 1}`]}</h4>
-                  <p>{partnersList[`pilar${index + 1}`]}</p>
-                </div>
-              ))}
-            </div>
+            )}
             {subpageId === 'podemos-ajudar' && (
               <div className="partner-page-title">
                 <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
