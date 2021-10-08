@@ -1,9 +1,7 @@
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
 import './Products.css';
-import { PRODUCTS_CONSTANTS } from './ProductsConstants';
 import { getProductComponentData } from '../../api/api';
 
 export default function Products() {
@@ -14,13 +12,15 @@ export default function Products() {
   const [productType, setProductType] = useState('');
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => { loadProducts() }, [currentPage, productType]);
+  useEffect(() => {
+    loadProducts();
+  }, [currentPage, productType]);
 
   async function loadProducts() {
     try {
       const nextPos = (currentPage - 1) * perPage;
       const productFilter = productType ? `product_category:${productType}` : productType;
-      const { total, productsArray } = await getProductComponentData(nextPos, productType);
+      const { total, productsArray } = await getProductComponentData(nextPos, productFilter);
       setProducts(productsArray);
       setTotalPages(Math.ceil(total / perPage));
     } catch (e) {
@@ -33,11 +33,11 @@ export default function Products() {
   function handlePageClick() {
     const nextPage = currentPage + 1;
     if (nextPage < 1 || nextPage > totalPages) return;
-    setPage(nextPage);
+    setCurrentPage(nextPage);
   }
 
   // if the products fail to load, don't show component at all
-  if(!loading && !products) {
+  if (!loading && !products) {
     return null;
   }
 
@@ -53,20 +53,28 @@ export default function Products() {
         <button type="button" onClick={() => setProductType('')} className="filter-title active">
           Todos os produtos
         </button>
-        <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
+        <button type="button" onClick={() => setProductType('painel')} className="filter-title">
           Painéis
         </button>
-        <button type="button" onClick={() => setProductType('Relatorio')} className="filter-title">
+        <button type="button" onClick={() => setProductType('relatorio')} className="filter-title">
           Relatórios
         </button>
-        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
+        <button type="button" onClick={() => setProductType('estudo')} className="filter-title">
           Estudos
         </button>
       </div>
       <div className="all-products">
-        {loading ? "Carregando..." : products.map(({ name, title, description, imageSrc }) => (
-          <ProductItem key={name} name={name} title={title} description={description} imageSrc={imageSrc} />
-        ))}
+        {loading
+          ? 'Carregando...'
+          : products.map(({ name, title, description, imageSrc }) => (
+            <ProductItem
+              key={name}
+              name={name}
+              title={title}
+              description={description}
+              imageSrc={imageSrc}
+            />
+          ))}
       </div>
       <Pagination
         handlePageClick={() => handlePageClick()}
