@@ -3,11 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './DataProductItem.css';
 
-export default function DataProductItem({ header, text, imgUrl, id, textBtn, url }) {
+export default function DataProductItem({ subsectionTitle, text, imgUrl, id, textBtn, url }) {
   return (
     <>
       <div className="productItem-texts">
-        <h3>{header}</h3>
+        <h3>
+          title:
+          {subsectionTitle}
+        </h3>
         <p>{text}</p>
       </div>
       <div className="productItem-action">
@@ -23,7 +26,7 @@ export default function DataProductItem({ header, text, imgUrl, id, textBtn, url
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  header: PropTypes.string.isRequired,
+  subsectionTitle: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   textBtn: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,

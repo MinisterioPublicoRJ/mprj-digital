@@ -43,21 +43,21 @@ export default function Produto() {
             <span>Serviço</span>
           </div>
           <div className="productPage-tabNavigation">
-            {tabs.map(({ id, subtitle }) => (
+            {productData.subsectionsArray.map(({ subsectionTitle, subsectionDescription }) => (
               <button
-                key={id}
+                key={subsectionTitle}
                 onClick={() => {
-                  setchangeData(id);
+                  setchangeData(subsectionTitle);
                 }}
-                className={`productPage-navButtons ${id === changeData ? 'productPage-navButtons-active' : ''
+                className={`productPage-navButtons ${subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
                 }`}
                 type="button"
               >
-                {subtitle}
+                {subsectionTitle}
               </button>
             ))}
           </div>
-          <DataProduct {...tabs.find((tab) => tab.id === changeData)} />
+          <DataProduct {...tabs.find((tab) => tab.subsectionTitle === changeData)} />
         </article>
       )
       : <div>loading</div>

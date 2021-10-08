@@ -17,11 +17,19 @@ export default function productPageTransform(rawData) {
     title: result.title,
     service: result.service,
     organ: result.organization.title,
-    subsection1Title: result.subsection1_title,
-    subsection2Title: result.subsection2_title,
-    subsection3Title: result.subsection3_title,
-    subsection1_description: result.subsection1_description,
-    subsection2_description: result.subsection2_description,
-    subsection3_description: result.subsection3_description,
+    subsectionsArray: [
+      {
+        subsectionTitle: result.subsection1_title,
+        subsectionDescription: result.subsection1_description,
+      },
+      {
+        subsectionTitle: result.subsection2_title,
+        subsectionDescription: result.subsection2_description,
+      },
+      {
+        subsectionTitle: result.subsection3_title,
+        subsectionDescription: result.subsection3_description,
+      },
+    ],
   };
 }
