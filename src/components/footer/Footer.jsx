@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="footer-menu-column">
           <h3>OUVIDORIA</h3>
           <a
-            href="http://www.mprj.mp.br/comunicacao/ouvidoria"
+            href="https://www.mprj.mp.br/comunicacao/ouvidoria/formulario"
             target="new"
             rel="noreferrer"
             className="create-space"
@@ -68,7 +68,7 @@ export default function Footer() {
             Denúncias e Reclamações
           </a>
           <a
-            href="http://www.mprj.mp.br/comunicacao/ouvidoria"
+            href="https://www.mprj.mp.br/comunicacao/ouvidoria/formulario"
             target="new"
             rel="noreferrer"
             className="create-space"
