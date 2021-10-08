@@ -4,14 +4,17 @@ import { useParams } from 'react-router-dom';
 import DataProduct from './dataProductItem/DataProductItem';
 import './ProductPage.css';
 import PRODUCTS_CONST from './productsConsts';
+import { getProductPageData } from '../../api/api';
 
 export default function Produto() {
-  const { key } = useParams();
-  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[key];
+  const { productName } = useParams();
+  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[productName];
   const { icon: Icon } = header;
   const [changeData, setchangeData] = useState();
 
   useEffect(() => setchangeData(tabs[0].id), [tabs]);
+
+  useEffect(() => getProductPageData(productName), []);
 
   return (
     <article className="productPage-outer">
@@ -37,8 +40,7 @@ export default function Produto() {
             onClick={() => {
               setchangeData(id);
             }}
-            className={`productPage-navButtons ${
-              id === changeData ? 'productPage-navButtons-active' : ''
+            className={`productPage-navButtons ${id === changeData ? 'productPage-navButtons-active' : ''
             }`}
             type="button"
           >

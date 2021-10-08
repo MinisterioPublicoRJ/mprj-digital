@@ -20,7 +20,7 @@ function Router() {
     </TransitionGroup> */
     <Routes location={location}>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/produto/:key" element={<ProductPage />} />
+      <Route exact path="/produto/:productName" element={<ProductPage />} />
       <Route path="/parceiro/:partnerId/:subpageId" element={<PartnerPage />} />
     </Routes>
   );

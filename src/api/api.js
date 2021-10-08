@@ -1,13 +1,13 @@
 import { PRODUCT_COMPONENT_DATA, PARTNER_PAGE_DATA, PRODUCT_PAGE_DATA } from './endpoints';
 
-import { productMiniatureTransform } from './transforms';
+import { productMiniatureTransform, productPageTransform } from './transforms';
 
 // export async function getPartnerPageData(partner) {
 //   const res = fetch(PARTNER_PAGE_DATA(partner));
 // }
 
-export async function getProductPageData(product) {
-  const response = await fetch(PRODUCT_PAGE_DATA(product));
+export async function getProductPageData(productName) {
+  const response = await fetch(PRODUCT_PAGE_DATA(productName));
 
   // with async/await + fetch, failed 400 status don't throw errors
   if (!response.ok) {
@@ -15,7 +15,7 @@ export async function getProductPageData(product) {
   }
 
   const { result } = await response.json();
-  return result;
+  return productPageTransform(result);
 }
 
 export async function getProductComponentData() {
