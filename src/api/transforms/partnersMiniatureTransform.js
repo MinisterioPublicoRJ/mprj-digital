@@ -1,6 +1,5 @@
 export default function partnersMiniatureTransform(rawData) {
   const { count, results } = rawData;
-  console.log(results);
   const partnersMiniatureArray = results.map((partners) => {
     let imageSrc;
     if (partners.resources) {
