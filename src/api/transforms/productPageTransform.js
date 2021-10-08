@@ -12,10 +12,11 @@ export default function productPageTransform(rawData) {
     };
   }); */
   return {
-    productPageSubtitle: result.product_page_subtitle,
-    productPageDescription: result.product_page_description,
+    subtitle: result.product_page_subtitle,
+    description: result.product_page_description,
     title: result.title,
     service: result.service,
+    organ: result.organization.title,
     subsection1Title: result.subsection1_title,
     subsection2Title: result.subsection2_title,
     subsection3Title: result.subsection3_title,
