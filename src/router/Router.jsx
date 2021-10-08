@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+// import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Home, ProductPage, PartnerPage } from '../pages';
 
 import './Router.css';
@@ -20,7 +20,7 @@ function Router() {
     </TransitionGroup> */
     <Routes location={location}>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/produto/:key" element={<ProductPage />} />
+      <Route exact path="/produto/:productName" element={<ProductPage />} />
       <Route path="/parceiro/:partnerName/:subpageId" element={<PartnerPage />} />
     </Routes>
   );
