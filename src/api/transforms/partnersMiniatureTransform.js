@@ -6,8 +6,8 @@ export default function partnersMiniatureTransform(rawData) {
       const sourceslImgs = partners.resources.splice(2, Number.MAX_VALUE);
       imageSrc = sourceslImgs;
     }
-
     return {
+      id: partners.organization?.id,
       name: partners.name,
       title: partners.titulo_pagina,
       description: partners.subtitulo_pagina,

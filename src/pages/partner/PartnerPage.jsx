@@ -9,11 +9,11 @@ import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData, getProductComponentData } from '../../api/api';
 
 export default function PartnerPage() {
+  const location = useLocation();
   const cardsPorPage = 8;
   const { partnerName, subpageId } = useParams();
   const [partnersList, setPartnersList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const location = useLocation();
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -39,12 +39,7 @@ export default function PartnerPage() {
   async function loadProducts() {
     try {
       const nextPos = (currentPage - 1) * cardsPorPage;
-      const productFilter = products.filter((cards) => (
-        cards.title
-          .toLowerCase()
-          .replace(/[\u0300-\u036f]/g, '')
-          .includes(cardstTitle.toLowerCase())));
-
+      const productFilter = `owner_org:${partnersList.id}`;
       const { total, productsArray } = await getProductComponentData(nextPos, productFilter);
       setProducts(productsArray);
       setTotalPages(Math.ceil(total / cardsPorPage));
@@ -54,9 +49,12 @@ export default function PartnerPage() {
       setLoading(false);
     }
   }
+
   useEffect(() => {
-    loadProducts();
-  }, [currentPage, cardstTitle]);
+    if (partnersList.id) {
+      loadProducts();
+    }
+  }, [currentPage, cardstTitle, partnersList]);
 
   function handlePageClick() {
     const nextPage = currentPage + 1;
