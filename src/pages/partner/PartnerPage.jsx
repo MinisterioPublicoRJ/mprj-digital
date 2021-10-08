@@ -39,12 +39,14 @@ export default function PartnerPage() {
   async function loadProducts() {
     try {
       const nextPos = (currentPage - 1) * cardsPorPage;
-      const productFilter = `owner_org:${partnersList.id}`;
+      const orgFilter = `owner_org:${partnersList.id}`;
+      const searchFilter = cardstTitle ? `+title:/${cardstTitle}.*/` : '';
+      const productFilter = orgFilter + searchFilter;
       const { total, productsArray } = await getProductComponentData(nextPos, productFilter);
       setProducts(productsArray);
       setTotalPages(Math.ceil(total / cardsPorPage));
     } catch (e) {
-      setProducts(null);
+      setProducts([]);
     } finally {
       setLoading(false);
     }
@@ -139,10 +141,7 @@ export default function PartnerPage() {
                   <input
                     type="text"
                     placeholder="Pesquise sua solução..."
-                    value={products}
                     onChange={(event) => setCardstTitle(event.target.value)}
-                    onFocus={() => setCardstTitle('')}
-                    onMouseOver={() => setCardstTitle('')}
                   />
                   <ArrowIcon />
                 </div>
