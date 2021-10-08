@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
 import logoMp from '../../assets/logoMp.svg';
+import { getProductNavbarData } from '../../api/api';
 
 import {
   icon,
@@ -24,6 +25,18 @@ import {
 export default function Navbar() {
   const mobile = useMedia('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [productNavbarData, setProductNavbarData] = useState();
+
+
+  async function loadProductNavbarData() {
+    const result = await getProductNavbarData();
+    if (result) {
+      setProductNavbarData(result);
+    }
+  }
+
+  useEffect(() => loadProductNavbarData(), []);
+
   return (
     <div id="allnavBar">
       {mobile && (
@@ -74,12 +87,12 @@ export default function Navbar() {
               </NavLink>
               <span className={tooltipText} style={{ marginBottom: 16}}>Navegue e conheça nossos produtos e sistemas</span>
               <div className={dropdownContent}>
-                <NavLink to="/produto/farol" type="button" className="dropbtn">
-                  Farol
-                </NavLink>
-                <NavLink to="/produto/parquet_digital" type="button" className="dropbtn">
-                  Parquet Digital
-                </NavLink>
+                {productNavbarData ? productNavbarData.map(
+                  ({title, name}) =>
+                  <NavLink to={`/produto/${name}`} type="button" className="dropbtn">
+                    {title}
+                  </NavLink>)
+                  : null}
               </div>
             </div>
           </div>

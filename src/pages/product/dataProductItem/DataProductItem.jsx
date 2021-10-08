@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './DataProductItem.css';
 
 export default function DataProductItem({
-  subsectionTitle, subsectionDescription, imgUrl, id, textBtn, url,
+  subsectionTitle, subsectionDescription, imgUrl, textBtn, url,
 }) {
   return (
     <>
@@ -15,7 +15,7 @@ export default function DataProductItem({
         <p>{subsectionDescription}</p>
       </div>
       <div className="productItem-action">
-        <img src={imgUrl} alt={id} />
+        <img src={imgUrl} alt={subsectionTitle} />
         <a href={url} target="new" rel="noreferrer">
           {textBtn}
         </a>
@@ -26,7 +26,6 @@ export default function DataProductItem({
 
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   subsectionTitle: PropTypes.string.isRequired,
   subsectionDescription: PropTypes.string.isRequired,
   textBtn: PropTypes.string.isRequired,

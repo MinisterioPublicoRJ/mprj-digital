@@ -18,33 +18,33 @@ export default function productPageTransform(rawData) {
     service: result.service,
     organ: result.organization.title,
     url: result.product_url,
-    bannerUrl: result.resources.find(
+    bannerUrl: result.resources?.find(
       (image) => image.name === 'product_banner',
-    ).url,
-    icon: result.resources.find(
+    )?.url,
+    icon: result.resources?.find(
       (image) => image.name === 'product_icon',
-    ).url,
+    )?.url,
     subsectionsArray: [
       {
         subsectionTitle: result.subsection1_title,
         subsectionDescription: result.subsection1_description,
-        imgUrl: result.resources.find(
+        imgUrl: result.resources?.find(
           (image) => image.name === 'subsection_1',
-        ).url,
+        )?.url,
       },
       {
         subsectionTitle: result.subsection2_title,
         subsectionDescription: result.subsection2_description,
-        imgUrl: result.resources.find(
+        imgUrl: result.resources?.find(
           (image) => image.name === 'subsection_2',
-        ).url,
+        )?.url,
       },
       {
         subsectionTitle: result.subsection3_title,
         subsectionDescription: result.subsection3_description,
-        imgUrl: result.resources.find(
+        imgUrl: result.resources?.find(
           (image) => image.name === 'subsection_2',
-        ).url,
+        )?.url,
       },
     ],
   } : null;
