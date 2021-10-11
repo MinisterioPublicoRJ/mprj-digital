@@ -1,6 +1,7 @@
 import {
   PRODUCT_COMPONENT_DATA,
   PARTNER_PAGE_DATA,
+  PARTNER_COMPONENT_DATA,
   PRODUCT_PAGE_DATA,
   PRODUCT_NAVBAR_DATA,
   PARTNER_NAVBAR_DATA,
@@ -10,6 +11,7 @@ import {
   productMiniatureTransform,
   partnerstPageTransform,
   productPageTransform,
+  partnersMiniatureTransform,
 } from './transforms';
 
 export async function getPartnerPageData(partner) {
@@ -22,6 +24,17 @@ export async function getPartnerPageData(partner) {
 
   const { result } = await response.json();
   return partnerstPageTransform(result);
+}
+export async function getPartnertComponentData(partner) {
+  const response = await fetch(PARTNER_COMPONENT_DATA(partner));
+
+  // with async/await + fetch, failed 400 status don't throw errors
+  if (!response.ok) {
+    throw new Error(`A chamada falhou com status ${response.status}`);
+  }
+
+  const { result } = await response.json();
+  return partnersMiniatureTransform(result);
 }
 
 export async function getProductPageData(productName) {
