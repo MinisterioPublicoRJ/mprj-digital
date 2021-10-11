@@ -6,17 +6,6 @@
   opacity: 1;
   margin-top: 20px;
 }
-
-small {
-  font-size: var(--smallFont);
-  color: #9dafbd;
-}
-label {
-  display: inline-grid;
-}
-.text-justify {
-  text-align: justify;
-}
 .partner-page-section {
   background: #f9f9f9 0% 0% no-repeat padding-box;
 }
@@ -25,9 +14,7 @@ label {
   padding-left: 34vw;
   align-items: center;
   display: flex;
-
 }
-
 .partner-page-title {
   margin-left: 50px;
   margin-top: 80px;
@@ -50,7 +37,6 @@ label {
   height: 40px;
   flex: auto;
 }
-
 .partner-page-header h1 {
   text-align: left;
   font: normal normal bold 61px/73px Roboto;
@@ -63,7 +49,6 @@ label {
 }
 .partner-page-header p {
   line-height: unset;
-  margin: unset;
 }
 .partner-page-content {
   display: flex;
@@ -117,7 +102,7 @@ label {
   column-gap: 2%; 
   margin-bottom: 30px;
 }
-.partner-page-cards-solucoes .first{
+.partner-page-cards-first{
   flex: 0 0 40%;
   text-align: center;
   margin-top: 30px;
@@ -127,10 +112,6 @@ label {
   margin-top: 20px;
   color: #453434;
   font-weight: 400;
-}
-.partner-page-cards-next {
-  margin: 20px 0 20px 4px;
-  text-align: center;
 }
 .partner-page-cards .first {
   flex: 0 0 40%;
@@ -148,17 +129,9 @@ label {
 .partner-page-cards img {
   width: 80px;
 }
-.partner-page-cards .first-with-border {
-  flex: 0 0 47%;
-  margin: 0 10px;
-  text-align-last: center;
-  border-bottom: 6px solid #6792ff;
-  border-radius: 3px;
-}
 .partner-page-topics-button{
   display: flex;
 }
-
 .partner-page-topics-button input{
   width: 300px;
   height: 60px;
@@ -187,29 +160,15 @@ label {
   text-decoration: none;
 }
 
-
-.partner-page-cards p,
-.partner-page-cards h4 {
-  text-align: center;
-}
 .partner-page-cards p{
   color: #9DAFBD ;
-  margin-right: 0px;
+  margin-bottom: 20px;
 }
 .partner-page-cards .second {
   flex: 0 0 0%;
   margin: 20px 4px;
   text-align: center;
   
-}
-.partner-page-cards .second-with-border {
-  flex: 0 0 21%;
-  margin: 20px 4px;
-  padding: 5px 10px;
-  background-color: var(--colorWhite);
-  border-bottom: 6px solid #aba6a6;
-  text-align-last: left;
-  border-radius: 10px 10px 0px 0px;
 }
 .partner-page-cards .second-with-border:hover {
   margin-top: -10px;
@@ -222,41 +181,20 @@ label {
 .partner-page-cards .second div {
   text-align-last: right;
 }
-.partner-page-cards .second a {
-  font: normal normal normal 16px/21px Roboto;
-  letter-spacing: 0px;
-  color: #6792ff;
-  opacity: 1;
-  text-decoration: none;
-}
-.partner-page-cards .third {
-  flex: 0 0 30%;
-  margin: 0 10px;
-  text-align-last: center;
-  border-bottom: 6px solid #6792ff;
-  border-radius: 3px;
-  background-color: var(--colorWhite);
-}
 .partner-page-title h5{
   font-size: 18px;
   color: #24375B;
   margin-bottom: 20px;
 }
-.partner-page-card h4 {
+.partner-page-cards h4 {
   text-align: center;
   font-size: 16px;
   margin-top: 5px;
-  color: #453434;
+  color: #263859;
   font-weight: 400;
   opacity: 1;
 }
-.partner-dynamic-content {
-  background-color: var(--colorWhite);
-  padding: 2vw;
-  opacity: 1;
-  margin-bottom: 10vh;
-  width: 100%;
-}
+
 
 .partner-contact-form label {
   font: normal normal medium 18px/24px Roboto;
