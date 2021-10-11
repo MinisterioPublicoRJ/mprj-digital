@@ -113,6 +113,9 @@
   color: #453434;
   font-weight: 400;
 }
+.partner-page-cards-next{
+  text-align: center;
+}
 .partner-page-cards .first {
   flex: 0 0 40%;
   text-align: center;
