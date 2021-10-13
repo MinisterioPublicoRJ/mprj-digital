@@ -19,18 +19,19 @@ export default function OpenData() {
   const perPage = 2;
   const [loading, setLoading] = useState(true);
   const [dataArray, setDataArray] = useState(null);
-  const [page, setPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   //
   const { currentSearchTerm, setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const [reverse, setReverse] = useState(false);
 
-  useEffect(() => loadInfo(), []);
+  useEffect(() => loadInfo(), [currentPage]);
 
   async function loadInfo() {
     try {
-      const { total, openDataItemsArray } = await getOpenDataComponentInfo(0, '');
+      const nextPos = (currentPage - 1) * perPage;
+      const { total, openDataItemsArray } = await getOpenDataComponentInfo(nextPos, perPage, '');
       setDataArray(openDataItemsArray);
       setTotalPages(Math.ceil(total / perPage));
     } catch (e) {
@@ -77,7 +78,7 @@ export default function OpenData() {
   //
   //     setPosts(filteredRepositories);
   //     setTotalPages(Math.ceil(filteredRepositories.length / perPage ));
-  //     setPage(1);
+  //     setCurrentPage(1);
   //   };
   //   fetchData();
   // }, [currentSearchTerm]);
@@ -90,14 +91,14 @@ export default function OpenData() {
   //
   //     setPosts(filteredRepositories);
   //     setTotalPages(Math.ceil(filteredRepositories.length / 2));
-  //     setPage(1);
+  //     setCurrentPage(1);
   //   };
   //   fetchData();
   // }, [productType, reverse]);
 
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
-    setPage(nextPage);
+    setCurrentPage(nextPage);
   }
 
   function setFilterByType(value) {
@@ -105,7 +106,7 @@ export default function OpenData() {
     setProductType(value);
   }
 
-  // const lastPost = page * perPage;
+  // const lastPost = currentPage * perPage;
   // const firstPost = lastPost - perPage;
   // const currentPost = posts.slice(firstPost, lastPost);
 
@@ -149,9 +150,9 @@ export default function OpenData() {
       </div>
       {dataArray && <OpenDataPosts posts={dataArray} />}
       <Pagination
-        handlePageClick={(page) => handlePageClick(page)}
+        handlePageClick={(currentPage) => handlePageClick(currentPage)}
         totalPages={totalPages}
-        currentPage={page}
+        currentPage={currentPage}
       />
     </section>
   );

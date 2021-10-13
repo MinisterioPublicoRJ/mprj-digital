@@ -74,8 +74,8 @@ export async function getProductComponentData(nextPos, extraFilter) {
   return productMiniatureTransform(result);
 }
 
-export async function getOpenDataComponentInfo(nextPos, extraFilter) {
-  const response = await fetch(OPENDATA_COMPONENT(nextPos, extraFilter));
+export async function getOpenDataComponentInfo(nextPos, perPage, extraFilter) {
+  const response = await fetch(OPENDATA_COMPONENT(nextPos, perPage, extraFilter));
 
   // with async/await + fetch, failed 400 status don't throw errors
   if (!response.ok) {

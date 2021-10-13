@@ -16,4 +16,4 @@ export const PRODUCT_NAVBAR_DATA = `${BASE_URL}?q=type:produtos&fl=name,title`;
 
 export const PARTNER_NAVBAR_DATA = `${BASE_URL}?q=type:paginaparceiro&fl=name,title`;
 
-export const OPENDATA_COMPONENT = (nextPos, extraFilters) => `${BASE_URL}?q=type:repositorio&start=${nextPos}&fq=${extraFilters}`;
+export const OPENDATA_COMPONENT = (nextPos, perPage, extraFilters) => `${BASE_URL}?q=type:repositorio&start=${nextPos}&rows=${perPage}&fq=${extraFilters}`;
