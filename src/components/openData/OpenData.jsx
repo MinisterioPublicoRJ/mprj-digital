@@ -5,23 +5,42 @@ import Pagination from '../pagination/Pagination';
 import OpenDataPosts from './openDataPosts/OpenDataPosts';
 import ArrowIcon from '../../utils/ArrowIcon';
 import { useHomeContext } from '../../pages/home/HomeContext';
+import { getOpenDataComponentInfo } from '../../api/api';
 
 import {
   openData,
   openDataCounter,
   inputOpenDataIcon,
   productsFilterTitles,
-  filterTitle
+  filterTitle,
 } from './OpenData.module.css';
 
 export default function OpenData() {
-  const { currentSearchTerm, setCurrentSearchTerm, searchInputRef } = useHomeContext();
-  const [posts, setPosts] = useState(OPENDATA);
+  const perPage = 2;
+  const [loading, setLoading] = useState(true);
+  const [dataArray, setDataArray] = useState(null);
   const [page, setPage] = useState(1);
+  //
+  const { currentSearchTerm, setCurrentSearchTerm, searchInputRef } = useHomeContext();
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
   const [reverse, setReverse] = useState(false);
-  const postPorPage = 2
+
+  useEffect(() => loadInfo(), []);
+
+  async function loadInfo() {
+    try {
+      const { total, openDataItemsArray } = await getOpenDataComponentInfo(0, '');
+      setDataArray(openDataItemsArray);
+      setTotalPages(Math.ceil(total / perPage));
+    } catch (e) {
+      console.log('erro', e);
+      setDataArray([]);
+    } finally {
+      setLoading(false);
+    }
+
+  };
 
 
   const sortBy = (field, reverse, primer) => {
@@ -47,34 +66,34 @@ export default function OpenData() {
     };
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const filteredRepositories = OPENDATA.filter((repositories) =>
-        repositories.title
-          .toLowerCase()
-          .replace(/[\u0300-\u036f]/g, '')
-          .includes(currentSearchTerm.toLowerCase()),
-      );
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const filteredRepositories = OPENDATA.filter((repositories) =>
+  //       repositories.title
+  //         .toLowerCase()
+  //         .replace(/[\u0300-\u036f]/g, '')
+  //         .includes(currentSearchTerm.toLowerCase()),
+  //     );
+  //
+  //     setPosts(filteredRepositories);
+  //     setTotalPages(Math.ceil(filteredRepositories.length / perPage ));
+  //     setPage(1);
+  //   };
+  //   fetchData();
+  // }, [currentSearchTerm]);
 
-      setPosts(filteredRepositories);
-      setTotalPages(Math.ceil(filteredRepositories.length / postPorPage ));
-      setPage(1);
-    };
-    fetchData();
-  }, [currentSearchTerm]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const primer = productType === 'score' ? parseInt : null;
-
-      const filteredRepositories = OPENDATA.sort(sortBy(productType, reverse, primer));
-
-      setPosts(filteredRepositories);
-      setTotalPages(Math.ceil(filteredRepositories.length / 2));
-      setPage(1);
-    };
-    fetchData();
-  }, [productType, reverse]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const primer = productType === 'score' ? parseInt : null;
+  //
+  //     const filteredRepositories = OPENDATA.sort(sortBy(productType, reverse, primer));
+  //
+  //     setPosts(filteredRepositories);
+  //     setTotalPages(Math.ceil(filteredRepositories.length / 2));
+  //     setPage(1);
+  //   };
+  //   fetchData();
+  // }, [productType, reverse]);
 
   function handlePageClick(nextPage) {
     if (nextPage < 1 || nextPage > totalPages) return;
@@ -85,9 +104,10 @@ export default function OpenData() {
     value === productType ? setReverse((prevValue) => !prevValue) : setReverse(false);
     setProductType(value);
   }
-  const lastPost = page * postPorPage;
-  const firstPost = lastPost - postPorPage;
-  const currentPost = posts.slice(firstPost, lastPost);
+
+  // const lastPost = page * perPage;
+  // const firstPost = lastPost - perPage;
+  // const currentPost = posts.slice(firstPost, lastPost);
 
   return (
     <section className={openData} id="repositorios">
@@ -127,7 +147,7 @@ export default function OpenData() {
           Estrutura do Dado
         </button>
       </div>
-      <OpenDataPosts posts={currentPost} />
+      {dataArray && <OpenDataPosts posts={dataArray} />}
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
         totalPages={totalPages}
