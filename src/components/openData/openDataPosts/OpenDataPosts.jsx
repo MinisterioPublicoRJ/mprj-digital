@@ -18,7 +18,7 @@ export default function OpenDataPosts({ posts }) {
         <section key={item.id} className={openDataItens}>
           <div className={openDatatexts}>
             <button type="button" className={openDataScoreButton}>
-              <span>{item.score.toFixed(2)}</span>
+              <span>{item.score}</span>
             </button>
             <h4>{item.title}</h4>
             <p className={openDataDescription}>{item.description}</p>
@@ -29,8 +29,7 @@ export default function OpenDataPosts({ posts }) {
             </p>
             <p>
               <span>Atualização:</span>
-              {' '}
-              {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
+              {item.date}
             </p>
             <p className={atualizationTitle} />
             <div className={openDataSubtitle}>
