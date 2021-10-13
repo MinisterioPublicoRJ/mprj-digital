@@ -32,7 +32,7 @@ export const PARTNERS_CONST = [
         ],
       },
 
-      /* {
+      {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
         topics: [
@@ -43,7 +43,7 @@ export const PARTNERS_CONST = [
         ],
       },
 
-      /* {
+      {
         id: 'nosso-time',
         call: 'Nosso time',
         topics: [
@@ -52,7 +52,7 @@ export const PARTNERS_CONST = [
             title: 'Nosso time',
           },
         ],
-      }, */
+      },
     ],
   },
   {
