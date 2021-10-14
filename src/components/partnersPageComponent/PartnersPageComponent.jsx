@@ -32,6 +32,7 @@ export default function PartnersPageComponent() {
     dots: true,
     // infinite: partnersList.length > 3,
     infinite: true,
+
     slidesToShow: 5,
     slidesToScroll: 5,
     variableWidth: true,
@@ -44,9 +45,12 @@ export default function PartnersPageComponent() {
         <h1>Parceiros</h1>
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
       </div>
-      <div className="partners-itemList-page">
-        <Slider id="slider" {...settings}>
-          {/* {partnersList.map((partner) => (
+      {loading ? (
+        'Carregando...'
+      ) : (
+        <div className="partners-itemList-page">
+          <Slider id="slider" {...settings}>
+            {/* {partnersList.map((partner) => (
             <Link
               key={partner.name}
               target="new"
@@ -56,20 +60,21 @@ export default function PartnersPageComponent() {
               <img src={partner.resources[0].url} alt={partner.title} />
             </Link>
           ))} */}
-          {PARTNERS_DATA_CONST.map((cards) => (
-            <div key={cards.id}>
-              <a
-                className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
-                target="new"
-                rel="noreferrer"
-                href={cards.actionLink}
-              >
-                <img src={cards.img} alt={cards.img} />
-              </a>
-            </div>
-          ))}
-        </Slider>
-      </div>
+            {PARTNERS_DATA_CONST.map((cards) => (
+              <div key={cards.id}>
+                <a
+                  className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
+                  target="new"
+                  rel="noreferrer"
+                  href={cards.actionLink}
+                >
+                  <img src={cards.img} alt={cards.img} />
+                </a>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      )}
     </section>
   );
 }

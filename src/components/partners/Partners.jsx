@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './partners.css';
 import { Link } from 'react-router-dom';
 import { getPartnertComponentData } from '../../api/api';
+import PARTNERS_DATA_CONST from './partnersDataComponent';
 
 export default function Partners() {
   const [partnersList, setPartnersList] = useState([]);
@@ -32,7 +33,7 @@ export default function Partners() {
             'Carregando...'
           ) : (
             <div className="partners-itemList">
-              {partnersList.map((partner) => (
+              {/* {partnersList.map((partner) => (
                 <Link
                   key={partner.name}
                   target="new"
@@ -41,6 +42,18 @@ export default function Partners() {
                 >
                   <img src={partner.resources[0].url} alt={partner.title} />
                 </Link>
+              ))} */}
+              {PARTNERS_DATA_CONST.map((cards) => (
+                <div key={cards.id}>
+                  <a
+                    className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
+                    target="new"
+                    rel="noreferrer"
+                    href={cards.actionLink}
+                  >
+                    <img src={cards.img} alt={cards.img} />
+                  </a>
+                </div>
               ))}
             </div>
           )}
