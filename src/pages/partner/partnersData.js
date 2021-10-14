@@ -32,27 +32,26 @@ export const PARTNERS_CONST = [
         ],
       },
 
-      {
-        id: 'podemos-ajudar',
-        call: 'Podemos te ajudar?',
-        topics: [
-          {
-            id: 'oQueFazemos',
-            title: 'Podemos te ajudar?',
-          },
-        ],
-      },
-
-      {
-        id: 'nosso-time',
-        call: 'Nosso time',
-        topics: [
-          {
-            id: 'nosso-time',
-            title: 'Nosso time',
-          },
-        ],
-      },
+      /*      {
+             id: 'podemos-ajudar',
+             call: 'Podemos te ajudar?',
+             topics: [
+               {
+                 id: 'oQueFazemos',
+                 title: 'Podemos te ajudar?',
+               },
+             ],
+           },
+           {
+             id: 'nosso-time',
+             call: 'Nosso time',
+             topics: [
+               {
+                 id: 'nosso-time',
+                 title: 'Nosso time',
+               },
+             ],
+           }, */
     ],
   },
   {
