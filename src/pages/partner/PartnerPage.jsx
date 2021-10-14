@@ -86,7 +86,9 @@ export default function PartnerPage() {
       titleSubpage = '';
   }
 
-  return partnersList ? (
+  return loading ? (
+    'Carregando...'
+  ) : (
     <>
       <section className="partner-page-section">
         <div
@@ -274,8 +276,6 @@ export default function PartnerPage() {
       </section>
       <PartnersPageComponent />
     </>
-  ) : (
-    <div>Carregando...</div>
   );
 }
 

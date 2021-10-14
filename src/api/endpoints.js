@@ -3,7 +3,7 @@ const BASE_URL = 'https://d-ckan.mprj.mp.br/api/3/action/package_search';
 // gadg
 export const PARTNER_PAGE_DATA = (partnerName) => `${BASE_URL}?q=type:paginaparceiro&fq=name:${partnerName}`;
 
-export const PARTNER_COMPONENT_DATA = (partnerCardName) => `${BASE_URL}?q=type:paginaparceiro&fq=name:${partnerCardName}`;
+export const PARTNER_COMPONENT_DATA = `${BASE_URL}?q=type:paginaparceiro`;
 
 // parquet-digital
 // https://d-ckan.mprj.mp.br/api/3/action/package_search?q=type:produtos&rows=1&start=1&fl=id,name,extras_product_thumbnail_description

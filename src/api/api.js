@@ -11,7 +11,6 @@ import {
   productMiniatureTransform,
   partnerstPageTransform,
   productPageTransform,
-  partnersMiniatureTransform,
 } from './transforms';
 
 export async function getPartnerPageData(partner) {
@@ -25,8 +24,9 @@ export async function getPartnerPageData(partner) {
   const { result } = await response.json();
   return partnerstPageTransform(result);
 }
-export async function getPartnertComponentData(partner) {
-  const response = await fetch(PARTNER_COMPONENT_DATA(partner));
+
+export async function getPartnertComponentData() {
+  const response = await fetch(PARTNER_COMPONENT_DATA);
 
   // with async/await + fetch, failed 400 status don't throw errors
   if (!response.ok) {
@@ -34,7 +34,7 @@ export async function getPartnertComponentData(partner) {
   }
 
   const { result } = await response.json();
-  return partnersMiniatureTransform(result);
+  return result.results;
 }
 
 export async function getProductPageData(productName) {
