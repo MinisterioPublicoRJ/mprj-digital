@@ -198,6 +198,7 @@
 
 .partner-contact-form label {
   font: normal normal medium 18px/24px Roboto;
+  display: inline-grid;
 }
 .partner-contact-form input {
   background: var(--colorWhite) 0% 0% no-repeat padding-box;
@@ -210,7 +211,7 @@
 }
 .partner-contact-form #nome,
 .partner-contact-form #email {
-  width: 21vw;
+  width: 20vw;
 }
 .partner-contact-form ::placeholder {
   font: normal normal normal 14px/16px Roboto;

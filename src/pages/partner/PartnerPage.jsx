@@ -107,10 +107,9 @@ export default function PartnerPage() {
               <div key={subpage.id}>
                 <NavLink
                   activeClassName="productPage-navButtons-active"
-                  className={` ${
-                    partnerFiltered[0].subpages.id
-                      ? 'productPage-navButtons-active'
-                      : 'partner-page-link '
+                  className={` ${partnerFiltered[0].subpages.id
+                    ? 'productPage-navButtons-active'
+                    : 'partner-page-link '
                   }`}
                   to={`/parceiro/${partnerName}/${subpage.id}`}
                 >
@@ -150,20 +149,18 @@ export default function PartnerPage() {
                 </div>
               ) : null}
             </div>
-            {subpageId === 'solucoes' ? (
+            {subpageId === 'solucoes' && (
               <>
                 <div
-                  className={`${
-                    subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
+                  className={`${subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
                   }`}
                 >
                   {products.map((card) => (
                     <div
                       key={card.id}
-                      className={`${
-                        subpageId === 'solucoes'
-                          ? 'partner-page-cards-next'
-                          : 'partner-page-card'`${card.type}`
+                      className={`${subpageId === 'solucoes'
+                        ? 'partner-page-cards-next'
+                        : 'partner-page-card'`${card.type}`
                       }`}
                     >
                       <a target="new" rel="noreferrer" href={card.link}>
@@ -180,7 +177,8 @@ export default function PartnerPage() {
                   currentPage={currentPage}
                 />
               </>
-            ) : (
+            )}
+            {subpageId === 'sobre' && (
               <div className="partner-page-cards">
                 {(partnersList.imageSrc || []).map((card, index) => (
                   <div key={card.id} className="partner-page-cards-first">
@@ -203,10 +201,9 @@ export default function PartnerPage() {
                       <Link
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
-                        className={` ${
-                          location.hash === '#cidadao' || location.hash === ''
-                            ? 'help-navButtons-active'
-                            : ''
+                        className={` ${location.hash === '#cidadao' || location.hash === ''
+                          ? 'help-navButtons-active'
+                          : ''
                         }`}
                       >
                         Cidadão
@@ -217,8 +214,7 @@ export default function PartnerPage() {
                       <Link
                         style={{ marginLeft: -13 }}
                         to="#membro"
-                        className={` ${
-                          location.hash === '#membro' ? 'help-navButtons-active' : ''
+                        className={` ${location.hash === '#membro' ? 'help-navButtons-active' : ''
                         }`}
                       >
                         Membro/Servidor
