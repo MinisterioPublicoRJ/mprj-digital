@@ -19,13 +19,14 @@ export default function PartnerPage() {
   const [totalPages, setTotalPages] = useState(0);
   const [cardstTitle, setCardstTitle] = useState('');
 
-  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerName);
+  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerName || []);
 
   useEffect(() => {
     const loadPagePartners = async () => {
       setLoading(true);
       try {
         const response = await getPartnerPageData(partnerName);
+        console.log(response);
         setPartnersList(response.partnersMiniatureArray[0]);
       } catch (e) {
         setPartnersList(false);
@@ -94,7 +95,7 @@ export default function PartnerPage() {
         <div
           className="partner-page-header"
           style={{
-            backgroundImage: `url(${partnersList.arrayImgs?.[1].url}`,
+            backgroundImage: `url(${partnersList.bannerUrl}`,
           }}
         >
           <div className="partner-page-title">
@@ -124,7 +125,7 @@ export default function PartnerPage() {
             <div
               className="partner-page-logo"
               style={{
-                backgroundImage: `url(${partnersList.arrayImgs?.[0].url})`,
+                backgroundImage: `url(${partnersList.logoUrl})`,
               }}
             />
             <div className="partner-page-featured">
@@ -190,6 +191,7 @@ export default function PartnerPage() {
                     <p>{partnersList[`pilar${index + 1}`]}</p>
                   </div>
                 ))}
+                <p>{partnersList.pilar1}</p>
               </div>
             )}
             {subpageId === 'podemos-ajudar' && (

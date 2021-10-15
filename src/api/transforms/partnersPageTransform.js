@@ -22,6 +22,8 @@ export default function partnersPageTransform(rawData) {
       pilarTitulo4: partners.pilar_4_titulo,
       arrayImgs: partners.resources,
       imageSrc,
+      logoUrl: partners.resources?.find((image) => image.name === 'org_logo')?.url,
+      bannerUrl: partners.resources?.find((image) => image.name === 'org_banner')?.url,
     };
   });
   return {

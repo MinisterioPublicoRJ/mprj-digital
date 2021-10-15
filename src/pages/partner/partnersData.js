@@ -56,6 +56,53 @@ export const PARTNERS_CONST = [
     ],
   },
   {
+    id: 'inova',
+    name: 'INOVA',
+    subpages: [
+      {
+        id: 'sobre',
+        call: 'Sobre nós',
+        topics: [
+          {
+            id: 'quemSomos',
+          },
+        ],
+      },
+      {
+        id: 'solucoes',
+        call: 'Soluções',
+        topics: [
+          {
+            id: 'comoAjudar',
+            title: 'Como elas podem te ajudar?',
+          },
+        ],
+      },
+
+      /* {
+        id: 'podemos-ajudar',
+        call: 'Podemos te ajudar?',
+        topics: [
+          {
+            id: 'oQueFazemos',
+            title: 'Podemos te ajudar?',
+          },
+        ],
+      },
+
+      /* {
+        id: 'nosso-time',
+        call: 'Nosso time',
+        topics: [
+          {
+            id: 'nosso-time',
+            title: 'Nosso time',
+          },
+        ],
+      }, */
+    ],
+  },
+  {
     id: 'csi',
     name: 'CSI',
     img: CSI,
