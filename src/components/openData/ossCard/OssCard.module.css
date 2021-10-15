@@ -79,6 +79,14 @@ button.openDataButton {
     margin-top: -4vh;
 }
 
+.openDataTypeCasing{
+    text-transform: capitalize;
+}
+
+.openDataLicenseCasing{
+    text-transform: uppercase;
+}
+
 @media (max-width: 1080px){
     .mprjDigitalItemOuter p{
       text-align: center;

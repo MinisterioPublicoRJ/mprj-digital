@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import OPENDATA from './MockOpenData';
 import Pagination from '../pagination/Pagination';
-import OpenDataPosts from './openDataPosts/OpenDataPosts';
+import OssCard from './ossCard/OssCard';
 import ArrowIcon from '../../utils/ArrowIcon';
 import { useHomeContext } from '../../pages/home/HomeContext';
 import { getOpenDataComponentInfo } from '../../api/api';
@@ -148,7 +148,9 @@ export default function OpenData() {
           Estrutura do Dado
         </button>
       </div>
-      {dataArray && <OpenDataPosts posts={dataArray} />}
+      {dataArray && dataArray.map((curCard) => (
+        <OssCard ossObj={curCard} />
+      ))}
       <Pagination
         handlePageClick={(currentPage) => handlePageClick(currentPage)}
         totalPages={totalPages}
