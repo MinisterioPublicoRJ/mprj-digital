@@ -1,61 +1,103 @@
+/* eslint-disable operator-linebreak */
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, useLocation } from 'react-router-dom';
+import { useParams, Link, NavLink, useLocation } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
 import ArrowIcon from '../../utils/ArrowIcon';
+import { getPartnerPageData, getProductComponentData } from '../../api/api';
 
 export default function PartnerPage() {
-  const { partnerId, subpageId } = useParams();
-  const [formType, setFormType] = useState('');
-  const [cards, setCards] = useState(PARTNERS_CONST[0].subpages[0].cards);
-  const [page, setPage] = useState(1);
-  const [totalCards, setTotalCards] = useState(0);
-  const [cardstTitle, setCardstTitle] = useState('');
-  const cardsPorPage = 8;
   const location = useLocation();
+  const cardsPorPage = 8;
+  const { partnerName, subpageId } = useParams();
+  const [partnersList, setPartnersList] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const [cardstTitle, setCardstTitle] = useState('');
 
-  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerId);
-  const subpageData = partnerFiltered[0].subpages.filter((subpages) => subpages.id === subpageId);
-  const featuredTopics = subpageData[0].topics;
+  const partnerFiltered = PARTNERS_CONST.filter((partner) => partner.id === partnerName);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const featuredCards = subpageData[0].cards.filter((infoCards) => (
-        infoCards.title
-          .toLowerCase()
-          .replace(/[\u0300-\u036f]/g, '')
-          .includes(cardstTitle.toLowerCase())));
-      setCards(featuredCards);
-      setTotalCards(Math.ceil(featuredCards.length / cardsPorPage));
-      setPage(1);
+    const loadPagePartners = async () => {
+      setLoading(true);
+      try {
+        const response = await getPartnerPageData(partnerName);
+        setPartnersList(response.partnersMiniatureArray[0]);
+      } catch (e) {
+        setPartnersList(false);
+      } finally {
+        setLoading(false);
+      }
     };
-    fetchData();
-  }, [subpageId, cardstTitle]);
+    loadPagePartners();
+  }, []);
 
-  function handlePageClick(nextPage) {
-    if (nextPage < 1 || nextPage > totalCards) return;
-    setPage(nextPage);
+  async function loadProducts() {
+    try {
+      const nextPos = (currentPage - 1) * cardsPorPage;
+      const orgFilter = `owner_org:${partnersList.id}`;
+      const searchFilter = cardstTitle ? `+title:/${cardstTitle}.*/` : '';
+      const productFilter = orgFilter + searchFilter;
+      const { total, productsArray } = await getProductComponentData(nextPos, productFilter);
+      setProducts(productsArray);
+      setTotalPages(Math.ceil(total / cardsPorPage));
+    } catch (e) {
+      setProducts([]);
+    } finally {
+      setLoading(false);
+    }
   }
-  const lastCard = page * cardsPorPage;
-  const firstCard = lastCard - cardsPorPage;
-  const currentCards = cards.slice(firstCard, lastCard);
+
+  useEffect(() => {
+    if (partnersList.id) {
+      loadProducts();
+    }
+  }, [currentPage, cardstTitle, partnersList]);
+
+  function handlePageClick() {
+    const nextPage = currentPage + 1;
+    if (nextPage < 1 || nextPage > totalPages) return;
+    setCurrentPage(nextPage);
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
   }
 
-  return (
+  let titleSubpage;
+  let subtitleSubpage;
+
+  switch (subpageId) {
+    case 'sobre':
+      titleSubpage = 'Nossos Pilares';
+      subtitleSubpage =
+        ' Nossos pilares são aqueles elementos que, ao mesmo tempo, identificam e diferenciam o setor dos demais e são fatores críticos de sucesso, sem os quais seria impossível realizar os trabalhos.';
+      break;
+    case 'solucoes':
+      titleSubpage = 'Soluções';
+      subtitleSubpage =
+        ' Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.';
+      break;
+    default:
+      titleSubpage = '';
+  }
+
+  return partnersList ? (
     <>
       <section className="partner-page-section">
         <div
           className="partner-page-header"
-          style={{ backgroundImage: `url(${partnerFiltered[0].imgBg})` }}
+          style={{
+            backgroundImage: `url(${partnersList.arrayImgs?.[1].url}`,
+          }}
         >
           <div className="partner-page-title">
-            <h1>{partnerFiltered[0].name}</h1>
-            <p>{partnerFiltered[0].desc}</p>
+            <h1>{partnersList.title}</h1>
+            <p>{partnersList.description}</p>
           </div>
           <div className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
@@ -67,7 +109,7 @@ export default function PartnerPage() {
                       ? 'productPage-navButtons-active'
                       : 'partner-page-link '
                   }`}
-                  to={`/parceiro/${partnerId}/${subpage.id}`}
+                  to={`/parceiro/${partnerName}/${subpage.id}`}
                 >
                   {subpage.call}
                 </NavLink>
@@ -79,102 +121,96 @@ export default function PartnerPage() {
           <div className="partner-page-left">
             <div
               className="partner-page-logo"
-              style={{ backgroundImage: `url(${partnerFiltered[0].img})` }}
+              style={{
+                backgroundImage: `url(${partnersList.arrayImgs?.[0].url})`,
+              }}
             />
             <div className="partner-page-featured">
-              {featuredTopics.map((featured) => (
-                <div key={featured.id}>
-                  <h3>{featured.title}</h3>
-                  <p>{featured.smalltext}</p>
-                  <p>{featured.subsmalltext}</p>
-                </div>
-              ))}
+              <h3>Quem Somos ?</h3>
+              <p>{partnersList.whoWeAre}</p>
             </div>
           </div>
           <div className="partner-page-right">
             <div className="partner-page-topics-button">
               <div className="partner-page-topics">
-                {featuredTopics.map((featured) => (
-                  <div key={featured.id}>
-                    <h3>{featured.title2}</h3>
-                    <p>{featured.smalltext2}</p>
-                  </div>
-                ))}
+                <h3>{titleSubpage}</h3>
+                <p>{subtitleSubpage}</p>
               </div>
-              {subpageData[0].call === 'Soluções' ? (
+              {subpageId === 'solucoes' ? (
                 <div className="input-openData-Icon">
                   <input
                     type="text"
                     placeholder="Pesquise sua solução..."
-                    value={cardstTitle}
                     onChange={(event) => setCardstTitle(event.target.value)}
-                    onFocus={() => setCardstTitle('')}
-                    onMouseOver={() => setCardstTitle('')}
                   />
                   <ArrowIcon />
                 </div>
               ) : null}
             </div>
-            {subpageData[0].call === 'Soluções' ? (
+            {subpageId === 'solucoes' ? (
               <>
                 <div
                   className={`${
-                    subpageData[0].call === 'Soluções'
-                      ? 'partner-page-cards-solucoes '
-                      : 'partner-page-cards'
+                    subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
                   }`}
                 >
-                  {currentCards.map((card) => (
+                  {products.map((card) => (
                     <div
                       key={card.id}
                       className={`${
-                        subpageData[0].call === 'Soluções'
+                        subpageId === 'solucoes'
                           ? 'partner-page-cards-next'
                           : 'partner-page-card'`${card.type}`
                       }`}
-                      onClick={() => setFormType(card.id)}
-                      onKeyDown={() => setFormType(card.id)}
-                      aria-hidden="true"
                     >
                       <a target="new" rel="noreferrer" href={card.link}>
-                        {card.img && <img src={card.img} alt={card.alt} />}
+                        <img src={card.imageSrc} alt={card.alt} />
                       </a>
                       <h4>{card.title}</h4>
-                      {card.smalltext && <p>{card.smalltext}</p>}
+                      <p>{card.description}</p>
                     </div>
                   ))}
                 </div>
+                <Pagination
+                  handlePageClick={() => handlePageClick()}
+                  totalPages={totalPages}
+                  currentPage={currentPage}
+                />
               </>
             ) : (
               <div className="partner-page-cards">
-                {(subpageData[0].cards || []).map((card) => (
-                  <div key={card.id} className={`partner-page-card ${card.type}`}>
-                    <div>{card.img && <img src={card.img} alt={card.alt} />}</div>
-                    <h4>{card.title}</h4>
-                    {card.smalltext && <p>{card.smalltext}</p>}
+                {(partnersList.imageSrc || []).map((card, index) => (
+                  <div key={card.id} className="partner-page-cards-first">
+                    <div>
+                      <img src={card.url} alt={card.name} />
+                    </div>
+                    <h4>{partnersList[`pilarTitulo${index + 1}`]}</h4>
+                    <p>{partnersList[`pilar${index + 1}`]}</p>
                   </div>
                 ))}
               </div>
             )}
-            {subpageData[0].call === 'Podemos te ajudar?' && (
+            {subpageId === 'podemos-ajudar' && (
               <div className="partner-page-title">
                 <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
                 <div className="partner-dynamic-content">
                   <navbar className="partner-page-navigation">
                     <div>
-                      <NavLink
+                      <Link
                         style={{ marginLeft: 22 }}
                         to="#cidadao"
                         className={` ${
-                          ((location.hash === '#cidadao') || (location.hash === '')) ? 'help-navButtons-active' : ''
+                          location.hash === '#cidadao' || location.hash === ''
+                            ? 'help-navButtons-active'
+                            : ''
                         }`}
                       >
                         Cidadão
                         <div />
-                      </NavLink>
+                      </Link>
                     </div>
                     <div>
-                      <NavLink
+                      <Link
                         style={{ marginLeft: -13 }}
                         to="#membro"
                         className={` ${
@@ -183,7 +219,7 @@ export default function PartnerPage() {
                       >
                         Membro/Servidor
                         <div />
-                      </NavLink>
+                      </Link>
                     </div>
                   </navbar>
                   <form className="partner-contact-form" onSubmit={handleSubmit}>
@@ -238,6 +274,8 @@ export default function PartnerPage() {
       </section>
       <PartnersPageComponent />
     </>
+  ) : (
+    <div>Carregando...</div>
   );
 }
 

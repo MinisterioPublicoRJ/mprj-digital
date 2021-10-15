@@ -3,50 +3,67 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DataProduct from './dataProductItem/DataProductItem';
 import './ProductPage.css';
-import PRODUCTS_CONST from './productsConsts';
+import { getProductPageData } from '../../api/api';
 
 export default function Produto() {
-  const { key } = useParams();
-  const { background, header, title, service, organ, tabs } = PRODUCTS_CONST[key];
-  const { icon: Icon } = header;
+  const { productName } = useParams();
   const [changeData, setchangeData] = useState();
+  const [productData, setProductData] = useState();
 
-  useEffect(() => setchangeData(tabs[0].id), [tabs]);
+  async function loadProductData() {
+    const result = await getProductPageData(productName);
+    if (result) {
+      setProductData(result);
+      setchangeData(result.subsectionsArray[0].subsectionTitle);
+    }
+  }
+
+  useEffect(() => loadProductData(), [productName]);
 
   return (
-    <article className="productPage-outer">
-      <div className="productPage-img" style={{ backgroundImage: `url(${background})` }} />
-      <div className="productPage-presentation">
-        <Icon />
-        <h2>{header.title}</h2>
-        <p>{header.subtitle}</p>
-      </div>
-      <h1 className="productPage-productName">{title}</h1>
-      <div className="productPage-owner">
-        <span>{organ}</span>
-        <span>Orgão Responsável</span>
-      </div>
-      <div className="productPage-service">
-        <span>{service}</span>
-        <span>Serviço</span>
-      </div>
-      <div className="productPage-tabNavigation">
-        {tabs.map(({ id, subtitle }) => (
-          <button
-            key={id}
-            onClick={() => {
-              setchangeData(id);
-            }}
-            className={`productPage-navButtons ${
-              id === changeData ? 'productPage-navButtons-active' : ''
-            }`}
-            type="button"
-          >
-            {subtitle}
-          </button>
-        ))}
-      </div>
-      <DataProduct {...tabs.find((tab) => tab.id === changeData)} />
-    </article>
+    productData
+      ? (
+        <article className="productPage-outer">
+          <div className="productPage-img" style={{ backgroundImage: `url(${productData.bannerUrl})` }} />
+          <div className="productPage-presentation">
+            <img src={productData.icon} alt={`Ícone ${productData.title}`} />
+            <h2>{productData.subtitle}</h2>
+            <p>{productData.description}</p>
+          </div>
+          <h1 className="productPage-productName">{productData.title}</h1>
+          <div className="productPage-owner">
+            <span>{productData.organ}</span>
+            <span>Orgão Responsável</span>
+          </div>
+          <div className="productPage-service">
+            <span>{productData.service}</span>
+            <span>Serviço</span>
+          </div>
+          <div className="productPage-tabNavigation">
+            {productData.subsectionsArray.map(({ subsectionTitle }) => (
+              <button
+                key={subsectionTitle}
+                onClick={() => {
+                  setchangeData(subsectionTitle);
+                }}
+                className={`productPage-navButtons ${subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
+                }`}
+                type="button"
+              >
+                {subsectionTitle}
+              </button>
+            ))}
+          </div>
+          <DataProduct
+            {...productData.subsectionsArray.find(
+              (subsection) => subsection.subsectionTitle === changeData,
+            )
+            }
+            textBtn={`Acessar ${productData.title}`}
+            url={productData.url}
+          />
+        </article>
+      )
+      : <h1>Carregando</h1>
   );
 }

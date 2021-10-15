@@ -1,36 +1,45 @@
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
 import './Products.css';
-import { PRODUCTS_CONSTANTS } from './ProductsConstants';
+import { getProductComponentData } from '../../api/api';
 
 export default function Products() {
-  const [products, setProducts] = useState(PRODUCTS_CONSTANTS);
-  const [page, setPage] = useState(1);
+  const perPage = 8;
+  const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
-  const productsPerPage = 8;
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const filteredProducts = PRODUCTS_CONSTANTS.filter((product) => product.type.includes(productType));
-      setProducts(filteredProducts);
-      setTotalPages(Math.ceil(filteredProducts.length / productsPerPage));
-      setPage(1);
-    };
-    fetchData();
-  }, [productType]);
+    loadProducts();
+  }, [currentPage, productType]);
 
-  function handlePageClick(nextPage) {
-    if (nextPage < 1 || nextPage > totalPages) return;
-    setPage(nextPage);
+  async function loadProducts() {
+    try {
+      const nextPos = (currentPage - 1) * perPage;
+      const productFilter = productType ? `product_category:${productType}` : productType;
+      const { total, productsArray } = await getProductComponentData(nextPos, productFilter);
+      setProducts(productsArray);
+      setTotalPages(Math.ceil(total / perPage));
+    } catch (e) {
+      setProducts(null);
+    } finally {
+      setLoading(false);
+    }
   }
 
+  function handlePageClick() {
+    const nextPage = currentPage + 1;
+    if (nextPage < 1 || nextPage > totalPages) return;
+    setCurrentPage(nextPage);
+  }
 
-  const lastProduct = page * productsPerPage;
-  const firstProduct = lastProduct - productsPerPage;
-  const currentProductPage = products.slice(firstProduct, lastProduct);
+  // if the products fail to load, don't show component at all
+  if (!loading && !products) {
+    return null;
+  }
 
   return (
     <section className="products" id="produtos">
@@ -44,25 +53,33 @@ export default function Products() {
         <button type="button" onClick={() => setProductType('')} className="filter-title active">
           Todos os produtos
         </button>
-        <button type="button" onClick={() => setProductType('Painel')} className="filter-title">
+        <button type="button" onClick={() => setProductType('painel')} className="filter-title">
           Painéis
         </button>
-        <button type="button" onClick={() => setProductType('Relatorio')} className="filter-title">
+        <button type="button" onClick={() => setProductType('relatorio')} className="filter-title">
           Relatórios
         </button>
-        <button type="button" onClick={() => setProductType('Estudo')} className="filter-title">
+        <button type="button" onClick={() => setProductType('estudo')} className="filter-title">
           Estudos
         </button>
       </div>
       <div className="all-products">
-        {currentProductPage.map((product) => (
-          <ProductItem product={product} key={product.id}/>
-        ))}
+        {loading
+          ? 'Carregando...'
+          : products.map(({ name, title, description, imageSrc }) => (
+            <ProductItem
+              key={name}
+              name={name}
+              title={title}
+              description={description}
+              imageSrc={imageSrc}
+            />
+          ))}
       </div>
       <Pagination
-        handlePageClick={(page) => handlePageClick(page)}
+        handlePageClick={() => handlePageClick()}
         totalPages={totalPages}
-        currentPage={page}
+        currentPage={currentPage}
       />
     </section>
   );
