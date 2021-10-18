@@ -26,7 +26,6 @@ export default function PartnerPage() {
       setLoading(true);
       try {
         const response = await getPartnerPageData(partnerName);
-        console.log(response);
         setPartnersList(response.partnersMiniatureArray[0]);
       } catch (e) {
         setPartnersList(false);
@@ -35,7 +34,7 @@ export default function PartnerPage() {
       }
     };
     loadPagePartners();
-  }, []);
+  }, [partnerName]);
 
   async function loadProducts() {
     try {
@@ -183,7 +182,7 @@ export default function PartnerPage() {
             )}
             {subpageId === 'sobre' && (
               <div className="partner-page-cards">
-                {partnersList.subsectionsArray.map((partner) => (
+                {partnersList.sectionPilaresArray.map((partner) => (
                   <div key={partner.id} className="partner-page-cards-first">
                     <div>
                       <img src={partner.imgLogoPilar} alt={partner.name} />

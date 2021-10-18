@@ -16,7 +16,7 @@ export default function partnersPageTransform(rawData) {
       imageSrc,
       logoUrl: partners.resources?.find((image) => image.name === 'org_logo')?.url,
       bannerUrl: partners.resources?.find((image) => image.name === 'org_banner')?.url,
-      subsectionsArray: [
+      sectionPilaresArray: [
         {
           titlePilar: partners.pilar_1,
           subtitlePilar: partners.pilar_1_titulo,
