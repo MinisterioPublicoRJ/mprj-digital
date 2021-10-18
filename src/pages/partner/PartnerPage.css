@@ -17,10 +17,15 @@
 }
 .partner-page-title {
   margin-left: 50px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .partner-page-title > p {
   color: #bbb8b8;
+}
+.partner-dynamic-content{
+  background-color: var(--colorWhite);
+  padding: 30px;
+  margin-bottom: 50px;
 }
 .partner-page-header .partner-page-navigation {
   position: absolute;

@@ -149,7 +149,7 @@ export default function PartnerPage() {
                 </div>
               ) : null}
             </div>
-            {subpageId === 'solucoes' && (
+            {subpageId === 'solucoes' ? (
               <>
                 <div
                   className={`${
@@ -179,7 +179,7 @@ export default function PartnerPage() {
                   currentPage={currentPage}
                 />
               </>
-            )}
+            ) : null}
             {subpageId === 'sobre' && (
               <div className="partner-page-cards">
                 {partnersList.sectionPilaresArray.map((partner) => (
