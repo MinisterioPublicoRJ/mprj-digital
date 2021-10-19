@@ -36,37 +36,37 @@
 }
 
 .headerTextAreaOuter a.MPRJDigitalCustomColor:hover {
-  background-color: #B93B40;
+  background-color: var(--mainRedColor);
   color: var(--colorWhite);
 }
 
 .headerTextAreaOuter > a.ParquetDigitalCustomColor:hover {
-  background-color: #3781BD;
+  background-color: var(--parquetBlue);
   color: var(--colorWhite);
 }
 
 .headerTextAreaOuter > a.FarolCustomColor:hover {
-  background-color: #FF9032;
+  background-color: var(--farolOrange);
   color: var(--colorWhite);
 }
 .headerTextAreaOuter > a.DiagnosticoDasPromotoriasCustomColor:hover {
-  background-color: #6EE7FE;
+  background-color: var(--diagnosticoBlue);
   color: var(--colorWhite);
 }
 .headerTextAreaOuter > a.PainelDeComprasCustomColor:hover {
-  background-color: #EEE50A;
+  background-color: var(--painelComprasYellow);
   color: var(--colorWhite);
 }
 .headerTextAreaOuter > a.LyraCustomColor:hover {
-  background-color: #967AF9;
+  background-color: var(--lyraPurple);
   color: var(--colorWhite);
 }
 .headerTextAreaOuter > a.GestaoDoTerritorioCustomColor:hover {
-  background-color: #CB8E8A;
+  background-color: var(--territorioPink);
   color: var(--colorWhite);
 }
 .headerTextAreaOuter > a.PainelSaneamentoCustomColor:hover {
-  background-color: #57D254;
+  background-color: var(--saneamentoGreen);
   color: var(--colorWhite);
 }
 

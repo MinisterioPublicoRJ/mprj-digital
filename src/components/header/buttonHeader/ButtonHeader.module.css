@@ -36,25 +36,25 @@
 }
 
 .sectionProductsBtnActive .ParquetDigitalCustomColor, .sectionProductsBtn:hover > span.ParquetDigitalCustomColor {
-  background-color: #3781BD ;
+  background-color: var(--parquetBlue);
 }
 .sectionProductsBtnActive .FarolCustomColor, .sectionProductsBtn:hover > span.FarolCustomColor {
-  background-color: #FF9032  ;
+  background-color: var(--farolOrange);
 }
 .sectionProductsBtnActive .DiagnosticoDasPromotoriasCustomColor, .sectionProductsBtn:hover > span.DiagnosticoDasPromotoriasCustomColor {
-  background-color: #6EE7FE;
+  background-color: var(--diagnosticoBlue);
 }
 .sectionProductsBtnActive .PainelDeComprasCustomColor, .sectionProductsBtn:hover > span.PainelDeComprasCustomColor {
-  background-color: #EEE50A;
+  background-color: var(--painelComprasYellow);
 }
 .sectionProductsBtnActive .LyraCustomColor, .sectionProductsBtn:hover > span.LyraCustomColor {
-  background-color: #967AF9;
+  background-color: var(--lyraPurple);
 }
 .sectionProductsBtnActive .GestaoDoTerritorioCustomColor, .sectionProductsBtn:hover > span.GestaoDoTerritorioCustomColor {
-  background-color: #CB8E8A;
+  background-color: var(--territorioPink);
 }
 .sectionProductsBtnActive .PainelSaneamentoCustomColor, .sectionProductsBtn:hover > span.PainelSaneamentoCustomColor {
-  background-color: #57D254;
+  background-color: var(--saneamentoGreen);
 }
 
 /* @media (max-width: 1080px){
