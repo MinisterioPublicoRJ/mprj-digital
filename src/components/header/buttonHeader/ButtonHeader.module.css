@@ -27,22 +27,33 @@
 .sectionProductsBtn:hover, .sectionProductsBtnActive {
   opacity: 1;
 }
-
 .sectionProductsBtn:hover > span, .sectionProductsBtnActive span:only-of-type {
   opacity: 1;
   margin-right: 20px;
 }
-
 .sectionProductsBtnActive .MPRJDigitalCustomColor, .sectionProductsBtn:hover > span.MPRJDigitalCustomColor {
-  background-color: var(--mainRedColor);
+  background-color: #B93B40;
 }
-
 .sectionProductsBtnActive .ParquetDigitalCustomColor, .sectionProductsBtn:hover > span.ParquetDigitalCustomColor {
-  background-color: var(--parquetBlue);
+  background-color: #3781BD ;
 }
-
 .sectionProductsBtnActive .FarolCustomColor, .sectionProductsBtn:hover > span.FarolCustomColor {
-  background-color: var(--farolOrange);
+  background-color: #FF9032  ;
+}
+.sectionProductsBtnActive .DiagnosticoDasPromotoriasCustomColor, .sectionProductsBtn:hover > span.DiagnosticoDasPromotoriasCustomColor {
+  background-color: #6EE7FE;
+}
+.sectionProductsBtnActive .PainelDeComprasCustomColor, .sectionProductsBtn:hover > span.PainelDeComprasCustomColor {
+  background-color: #EEE50A;
+}
+.sectionProductsBtnActive .LyraCustomColor, .sectionProductsBtn:hover > span.LyraCustomColor {
+  background-color: #967AF9;
+}
+.sectionProductsBtnActive .GestaoDoTerritorioCustomColor, .sectionProductsBtn:hover > span.GestaoDoTerritorioCustomColor {
+  background-color: #CB8E8A;
+}
+.sectionProductsBtnActive .PainelSaneamentoCustomColor, .sectionProductsBtn:hover > span.PainelSaneamentoCustomColor {
+  background-color: #57D254;
 }
 
 /* @media (max-width: 1080px){
