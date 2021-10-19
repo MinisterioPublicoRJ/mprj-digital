@@ -1,7 +1,7 @@
 .partners-outer {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-color: var(--backgroundFooter);
 }
 
@@ -25,10 +25,6 @@
   flex-direction: column;
   text-align: left;
   position: absolute;
-  top: -30px
-}
-.partners-itemList {
-  align-items: center;
 }
 a.cards-action-link-active{
   cursor: none;

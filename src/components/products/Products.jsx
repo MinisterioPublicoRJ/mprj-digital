@@ -77,7 +77,7 @@ export default function Products() {
           ))}
       </div>
       <Pagination
-        handlePageClick={() => handlePageClick()}
+        handlePageClick={(page) => handlePageClick(page)}
         totalPages={totalPages}
         currentPage={currentPage}
       />
