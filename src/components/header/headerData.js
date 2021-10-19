@@ -25,7 +25,7 @@ const HEADER_DATA = [
       'Fomentar a gestão comparada a partir da construção de indicadores e buscar por maior capacidade de resposta do MPRJ. O Farol permite olhar o mesmo parâmetro em diferentes unidades do MPRJ e sinalizar o que pode ser aprimorado.',
   },
   {
-    id: 'DiagnósticoDasPromotorias',
+    id: 'DiagnosticoDasPromotorias',
     backgroundImage: DIAGNOSTICO,
     title: 'Diagnóstico das Promotorias',
     link: '/produto/farol',

@@ -49,6 +49,26 @@
   background-color: var(--farolOrange);
   color: var(--colorWhite);
 }
+.headerTextAreaOuter > a.DiagnosticoDasPromotoriasCustomColor:hover {
+  background-color: var(--diagnosticoBlue);
+  color: var(--colorWhite);
+}
+.headerTextAreaOuter > a.PainelDeComprasCustomColor:hover {
+  background-color: var(--painelComprasYellow);
+  color: var(--colorWhite);
+}
+.headerTextAreaOuter > a.LyraCustomColor:hover {
+  background-color: var(--lyraPurple);
+  color: var(--colorWhite);
+}
+.headerTextAreaOuter > a.GestaoDoTerritorioCustomColor:hover {
+  background-color: var(--territorioPink);
+  color: var(--colorWhite);
+}
+.headerTextAreaOuter > a.PainelSaneamentoCustomColor:hover {
+  background-color: var(--saneamentoGreen);
+  color: var(--colorWhite);
+}
 
 @media (max-width: 1080px) {
   /* .headerTextAreaOuter {
