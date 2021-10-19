@@ -32,8 +32,9 @@
   margin-right: 20px;
 }
 .sectionProductsBtnActive .MPRJDigitalCustomColor, .sectionProductsBtn:hover > span.MPRJDigitalCustomColor {
-  background-color: #B93B40;
+  background-color: var(--mainRedColor);
 }
+
 .sectionProductsBtnActive .ParquetDigitalCustomColor, .sectionProductsBtn:hover > span.ParquetDigitalCustomColor {
   background-color: #3781BD ;
 }
