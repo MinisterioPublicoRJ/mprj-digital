@@ -1,7 +1,7 @@
 .partners-outer {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-color: var(--backgroundFooter);
 }
 
@@ -19,17 +19,12 @@
   grid-gap: 6vw 5vw;
   flex: 2;
 }
-.partners-itemList img{
-  width: 140px;
-  height: 130px;
-}
 .partners-header {
   padding: var(--sectionVerticalPadding) 20%;
   display: flex;
   flex-direction: column;
   text-align: left;
   position: absolute;
-  top: -30px
 }
 a.cards-action-link-active{
   cursor: none;
