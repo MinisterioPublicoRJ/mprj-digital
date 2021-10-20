@@ -58,9 +58,7 @@ export default function PartnerPage() {
     }
   }, [currentPage, cardstTitle, partnersList]);
 
-  function handlePageClick() {
-    const nextPage = currentPage + 1;
-    if (nextPage < 1 || nextPage > totalPages) return;
+  function handlePageClick(nextPage) {
     setCurrentPage(nextPage);
   }
 
@@ -174,7 +172,7 @@ export default function PartnerPage() {
                   ))}
                 </div>
                 <Pagination
-                  handlePageClick={() => handlePageClick()}
+                  handlePageClick={(page) => handlePageClick(page)}
                   totalPages={totalPages}
                   currentPage={currentPage}
                 />

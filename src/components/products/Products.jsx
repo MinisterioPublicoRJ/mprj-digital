@@ -30,9 +30,7 @@ export default function Products() {
     }
   }
 
-  function handlePageClick() {
-    const nextPage = currentPage + 1;
-    if (nextPage < 1 || nextPage > totalPages) return;
+  function handlePageClick(nextPage) {
     setCurrentPage(nextPage);
   }
 
