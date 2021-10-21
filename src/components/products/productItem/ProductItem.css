@@ -9,7 +9,8 @@
   text-align: center;
 }
 .product img {
-  width: 170px;
+  width: 157px;
+  height: 157px;
   border-radius: 10px;
 }
 .products-filter-titles {
