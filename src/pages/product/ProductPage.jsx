@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import DataProduct from './dataProductItem/DataProductItem';
 import './ProductPage.css';
 import { getProductPageData } from '../../api/api';
+import iconProductDefault from '../../assets/produto-icon-default.svg';
+import bgProductDefault from '../../assets/produto-bg-default.png';
 
 export default function Produto() {
   const { productName } = useParams();
@@ -22,12 +24,19 @@ export default function Produto() {
 
   return productData ? (
     <article className="productPage-outer">
-      <div
-        className="productPage-img"
-        style={{ backgroundImage: `url(${productData.bannerUrl})` }}
-      />
+      <div className="productPage-img">
+        {!productData.bannerUrl ? (
+          <img src={bgProductDefault} alt="bg-default" />
+        ) : (
+          <img src={productData.bannerUrl} alt={productData.title} />
+        )}
+      </div>
       <div className="productPage-presentation">
-        <img src={productData.icon} alt={`Ícone ${productData.title}`} />
+        {!productData.icon ? (
+          <img src={iconProductDefault} alt="icone-defalut" />
+        ) : (
+          <img src={productData.icon} alt={`Ícone ${productData.title}`} />
+        )}
         <h2>{productData.subtitle}</h2>
         <p>{productData.description}</p>
       </div>

@@ -7,6 +7,7 @@ export default function productPageTransform(rawData) {
     service: result.service,
     organ: result.organization.title,
     url: result.product_url,
+
     bannerUrl: result.resources?.find(
       (image) => image.name === 'product_banner',
     )?.url,
