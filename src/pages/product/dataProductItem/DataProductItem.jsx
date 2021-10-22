@@ -2,20 +2,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './DataProductItem.css';
+import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
 
 export default function DataProductItem({
-  subsectionTitle, subsectionDescription, imgUrl, textBtn, url,
+  subsectionTitle,
+  subsectionDescription,
+  imgUrl,
+  textBtn,
+  url,
 }) {
   return (
     <>
       <div className="productItem-texts">
-        <h3>
-          {subsectionTitle}
-        </h3>
+        <h3>{subsectionTitle}</h3>
         <p>{subsectionDescription}</p>
       </div>
       <div className="productItem-action">
-        <img src={imgUrl} alt={subsectionTitle} />
+        {!imgUrl ? (
+          <img src={miniaturaDefault} alt="icon-miniatura-default" />
+        ) : (
+          <img src={imgUrl} alt={subsectionTitle} />
+        )}
         <a href={url} target="_blank" rel="noopener noreferrer">
           {textBtn}
         </a>

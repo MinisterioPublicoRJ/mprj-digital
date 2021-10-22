@@ -126,6 +126,7 @@
 .partner-page-cards-solucoes img {
   width: 157px;
   height: 157px;
+  border-radius: 10px;
 }
 .partner-page-cards-solucoes p{
   color: #9DAFBD;
