@@ -1,0 +1,25 @@
+.partner-page-cards-solucoes {
+    display: grid;
+    padding-top: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(320px, auto);
+    grid-column-gap: 2%;
+    column-gap: 2%; 
+    margin-bottom: 30px;
+}
+.partner-page-cards-solucoes img {
+    width: 157px;
+    height: 157px;
+    border-radius: 10px;
+}
+.partner-page-cards-solucoes p{
+    color: #9DAFBD;
+    margin-right: 0px;
+}
+@media (max-width: 480px){
+    .partner-page-cards-solucoes {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: minmax(320px, auto);
+    }
+}
