@@ -3,20 +3,11 @@ import PropTypes from 'prop-types';
 import './ProductPartnerItem.css';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
 
-export default function ProductPartnerItem({ subpageId, products }) {
+export default function ProductPartnerItem({ products }) {
   return (
-    <div
-      className={`${
-        subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
-      }`}
-    >
+    <div className="partner-page-cards">
       {products.map((card) => (
-        <div
-          key={card.id}
-          className={`${
-            subpageId === 'solucoes' ? 'partner-page-cards-next' : 'partner-page-card'`${card.type}`
-          }`}
-        >
+        <div key={card.id} className="partner-page-card">
           <a target="new" rel="noreferrer" href={card.link}>
             {!card.imageSrc ? (
               <img src={miniaturaDefault} alt={card.title} />
@@ -33,6 +24,5 @@ export default function ProductPartnerItem({ subpageId, products }) {
 }
 
 ProductPartnerItem.propTypes = {
-  subpageId: PropTypes.string.isRequired,
   products: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };

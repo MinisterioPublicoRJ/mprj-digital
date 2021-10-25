@@ -1,3 +1,13 @@
+.partner-page-cards-solucoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.partner-page-cards-solucoes-first{
+  flex: 0 0 40%;
+  text-align: center;
+  margin-top: 30px;
+}
 .partner-page-topics h3 {
   text-align: left;
   font: normal normal bold 34px/45px Roboto;
@@ -15,13 +25,7 @@
   align-items: center;
   display: flex;
 }
-.partner-page-title {
-  margin-left: 50px;
-  margin-top: 60px;
-}
-.partner-page-title > p {
-  color: #bbb8b8;
-}
+
 .partner-dynamic-content{
   background-color: var(--colorWhite);
   padding: 30px;
@@ -79,7 +83,7 @@
 }
 .partner-page-featured h3 {
   color: #1D2933;
-  font: normal normal bold 34px/45px Roboto;
+  font-weight: bold;
   margin-top: 20px;
   font-size: 30px;
 }
@@ -88,39 +92,21 @@
   text-align: left;
   color: #707070;
   margin-bottom: 40px;
-}
-.partner-page-right {
-  margin: 0 3vw;
-  margin-right: 4vh;
-}
-.partner-page-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.partner-page-cards-first{
-  flex: 0 0 40%;
-  text-align: center;
   margin-top: 30px;
-}
-.partner-page-cards-next h4, p{
-  text-align: center;
-  margin-top: 20px;
-  color: #453434;
-  font-weight: 400;
-}
-.partner-page-cards .first {
-  flex: 0 0 40%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.partner-page-cards img {
-  width: 80px;
 }
 .partner-page-topics-button{
   display: flex;
+}
+.partner-page-title {
+  margin-left: 50px;
+  margin-top: 60px;
+}
+.partner-page-title > p {
+  color: #bbb8b8;
+}.partner-page-title h5{
+  font-size: 18px;
+  color: #24375B;
+  margin-bottom: 20px;
 }
 .partner-page-topics-button input{
   width: 300px;
@@ -149,34 +135,15 @@
   cursor: pointer;
   text-decoration: none;
 }
-
-.partner-page-cards p{
+.partner-page-cards p,
+.partner-page-cards-solucoes-first p{
   color: #9DAFBD ;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
-.partner-page-cards .second {
-  flex: 0 0 0%;
-  margin: 20px 4px;
-  text-align: center;
-  
-}
-.partner-page-cards .second-with-border:hover {
-  margin-top: -10px;
-  margin-bottom: 50px;
-}
-.partner-page-cards .second img {
-  width: 150px;
-  height: 150px;
-}
-.partner-page-cards .second div {
-  text-align-last: right;
-}
-.partner-page-title h5{
-  font-size: 18px;
-  color: #24375B;
-  margin-bottom: 20px;
-}
-.partner-page-cards h4 {
+
+.partner-page-cards h4,
+.partner-page-cards-solucoes-first h4{
   text-align: center;
   font-size: 16px;
   margin-top: 5px;
@@ -184,8 +151,6 @@
   font-weight: 400;
   opacity: 1;
 }
-
-
 .partner-contact-form label {
   font: normal normal medium 18px/24px Roboto;
   display: inline-grid;
@@ -240,7 +205,9 @@ a.partner-page-link {
   text-decoration: none;
   margin-left: 40px;
 }
-
+.partner-page-right {
+  margin: 0 4vh 0 3vw;
+}
 a.productPage-navButtons-active{
   color: var(--colorWhite);
   font-weight: bold;
@@ -261,25 +228,6 @@ a.help-navButtons-active div {
   margin-top: 20px;
 }
 
-@media (max-width: 600px){
-  .partner-page-cards {
-    display: flex;
-    flex-direction: column;
-  }
-  .partner-page-right {
-    margin: 0;
-  }
-  .partner-page-topics h3{
-    text-align: center;
-  } 
-  .partner-page-topics p{
-    text-align: center;
-  }
-  .partner-page-topics-button{
-    display: flex;
-    flex-direction: column;
-  }
-}
 @media (max-width: 1080px){
   .partner-page-content {
     display: flex;
@@ -298,5 +246,11 @@ a.help-navButtons-active div {
   .partner-page-navigation{
     display: flex;
     width: 100%;
+  }
+}
+@media (max-width: 480px){
+  .partner-page-topics-button{
+    display: flex;
+    flex-direction: column;
   }
 }
