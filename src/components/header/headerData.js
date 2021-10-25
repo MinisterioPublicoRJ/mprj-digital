@@ -12,7 +12,7 @@ const HEADER_DATA = [
     id: 'ParquetDigital',
     backgroundImage: PARQUET,
     title: 'Parquet Digital',
-    link: '/produto/parquet_digital',
+    link: '/produto/parquet-digital',
     subtitle:
       'O Parquet Digital é uma solução que nasceu do trabalho coletivo de vários profissionais e setores do Ministério Público do Estado do Rio de Janeiro, e propõe uma significativa mudança de paradigma na atuação dos Promotores de Justiça.',
   },
@@ -28,7 +28,7 @@ const HEADER_DATA = [
     id: 'DiagnosticoDasPromotorias',
     backgroundImage: DIAGNOSTICO,
     title: 'Diagnóstico das Promotorias',
-    link: '/produto/farol',
+    link: '/produto/diagnostico-das-promotorias',
     subtitle:
       'Ferramenta que agrega dados de vistas abertas em procedimentos por promotoria, entregando visualizações em tempo real e permitindo o comparativo entre órgãos.',
   },
@@ -36,7 +36,7 @@ const HEADER_DATA = [
     id: 'PainelDeCompras',
     backgroundImage: PAINELDECOMPRAS,
     title: 'Painel de Compras',
-    link: '/produto/farol',
+    link: '/produto/painel-de-compras',
     subtitle:
       'Painel que se destina a apresentar todos os dados de compras públicas realizadas pelos órgãos de projeção estadual do Estado do Rio de Janeiro.',
   },
@@ -44,7 +44,7 @@ const HEADER_DATA = [
     id: 'Lyra',
     backgroundImage: LYRA,
     title: 'Lyra',
-    link: '/produto/farol',
+    link: '/produto/lyra',
     subtitle:
       'Um robô com a missão de auxiliar o cidadão fluminense e os Promotores de Justiça, capaz de ler todos os documentos do Tribunal de Justiça do Estado do Rio de Janeiro em velocidade inigualável e apontar quais demandas são repetitivas ou de caráter coletivo no Judiciário',
   },
@@ -52,7 +52,7 @@ const HEADER_DATA = [
     id: 'GestaoDoTerritorio',
     backgroundImage: GESTAODOTERRITORIO,
     title: 'Gestão do Território',
-    link: '/produto/farol',
+    link: '/produto/gestao-do-territorio',
     subtitle:
       'Ferramenta de mapas que permite o acesso a dados indispensáveis para o diagnóstico das ocorrências de ocupação irregular na cidade do Rio de Janeiro.',
   },
@@ -60,7 +60,7 @@ const HEADER_DATA = [
     id: 'PainelSaneamento',
     backgroundImage: PAINELSANEAMENTO,
     title: 'Painel Saneamento',
-    link: '/produto/farol',
+    link: '/produto/painel-saneamento',
     subtitle:
       'Ferramenta para a visualização de dados referentes a água, esgoto, drenagem e o orçamento público gasto com essas matérias nos 92 munícios do Estado. Traz contextualização territorial, comparativos e permite a elaboração de relatórios.',
   },
