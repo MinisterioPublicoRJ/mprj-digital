@@ -64,7 +64,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  grid-row: 3 / 4;
+  grid-row: 3 / 5;
   grid-column: 3 / 4;
   background-color: var(--colorWhite);
 }
@@ -74,6 +74,7 @@
   flex-direction: column;
   grid-row: 4 / 4;
   grid-column: 2 / 3;
+  background-color: var(--colorWhite);
 }
 
 .productPage-navButtons {
