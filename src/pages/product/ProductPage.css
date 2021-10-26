@@ -4,7 +4,7 @@
   grid-template-rows: 50% 12.5% 12.5% 25%;
   /* fits the whole page in the fold but the footer under it */
   height: calc(100vh - var(--navbarHeight) - 90px);
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 
 .productPage-img {
