@@ -19,24 +19,12 @@ export const PARTNERS_CONST = [
       {
         id: 'solucoes',
         call: 'Soluções',
-        topics: [
-          {
-            id: 'comoAjudar',
-            title: 'Como elas podem te ajudar?',
-          },
-        ],
       },
 
-      /* {
+      {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
-        topics: [
-          {
-            id: 'oQueFazemos',
-            title: 'Podemos te ajudar?',
-          },
-        ],
-      }, */
+      },
       /* {
         id: 'nosso-time',
         call: 'Nosso time',

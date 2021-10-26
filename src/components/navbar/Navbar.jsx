@@ -120,19 +120,6 @@ export default function Navbar() {
             </NavLink>
             <span className={tooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
           </div>
-          {/* <div className="dropdown">
-          <div className="tooltip">
-            <a href=".#" type="button" className="dropbtn" id="basic-button">
-              Repositórios
-            </a>
-            <span className="tooltiptext">Encontre aqui todas os nossos acervos de dados</span>
-            <div className="dropdown-content">
-              <NavLink to="/produto">Integra</NavLink>
-              <NavLink to="/produto">Farol</NavLink>
-              <NavLink to="/produto">Ouvidoria</NavLink>
-            </div>
-          </div>
-        </div> */}
           <div className={sectionToolTip}>
             <NavLink
               to="/"

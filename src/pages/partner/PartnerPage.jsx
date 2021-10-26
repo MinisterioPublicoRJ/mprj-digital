@@ -1,16 +1,16 @@
 /* eslint-disable operator-linebreak */
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, NavLink, useLocation } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import './PartnerPage.css';
 import { PartnersPageComponent } from '../../components';
 import Pagination from '../../components/pagination/Pagination';
 import { PARTNERS_CONST } from './partnersData';
 import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData, getProductComponentData } from '../../api/api';
-import miniaturaDefault from '../../assets/produto-miniatura-default.png';
+import ProductPartnerItem from './productsPartnerItem/ProductPartnerItem';
+import FormPartner from './formPartner/FormPartner';
 
 export default function PartnerPage() {
-  const location = useLocation();
   const cardsPorPage = 8;
   const { partnerName, subpageId } = useParams();
   const [partnersList, setPartnersList] = useState([]);
@@ -52,7 +52,6 @@ export default function PartnerPage() {
       setLoading(false);
     }
   }
-
   useEffect(() => {
     if (partnersList.id) {
       loadProducts();
@@ -61,10 +60,6 @@ export default function PartnerPage() {
 
   function handlePageClick(nextPage) {
     setCurrentPage(nextPage);
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
   }
 
   let titleSubpage;
@@ -150,32 +145,7 @@ export default function PartnerPage() {
             </div>
             {subpageId === 'solucoes' ? (
               <>
-                <div
-                  className={`${
-                    subpageId === 'solucoes' ? 'partner-page-cards-solucoes ' : 'partner-page-cards'
-                  }`}
-                >
-                  {products.map((card) => (
-                    <div
-                      key={card.id}
-                      className={`${
-                        subpageId === 'solucoes'
-                          ? 'partner-page-cards-next'
-                          : 'partner-page-card'`${card.type}`
-                      }`}
-                    >
-                      <a target="new" rel="noreferrer" href={card.link}>
-                        {!card.imageSrc ? (
-                          <img src={miniaturaDefault} alt={card.title} />
-                        ) : (
-                          <img src={card.imageSrc} alt={card.title} />
-                        )}
-                      </a>
-                      <h4>{card.title}</h4>
-                      <p>{card.description}</p>
-                    </div>
-                  ))}
-                </div>
+                <ProductPartnerItem products={products} />
                 <Pagination
                   handlePageClick={(page) => handlePageClick(page)}
                   totalPages={totalPages}
@@ -184,9 +154,9 @@ export default function PartnerPage() {
               </>
             ) : null}
             {subpageId === 'sobre' && (
-              <div className="partner-page-cards">
+              <div className="partner-page-cards-solucoes">
                 {partnersList.sectionPilaresArray.map((partner) => (
-                  <div key={partner.id} className="partner-page-cards-first">
+                  <div key={partner.id} className="partner-page-cards-solucoes-first">
                     <div>
                       <img src={partner.imgLogoPilar} alt={partner.name} />
                     </div>
@@ -196,85 +166,7 @@ export default function PartnerPage() {
                 ))}
               </div>
             )}
-            {subpageId === 'podemos-ajudar' && (
-              <div className="partner-page-title">
-                <h5>Quer entrar em contato direto conosco? Escreva aqui.</h5>
-                <div className="partner-dynamic-content">
-                  <navbar className="partner-page-navigation">
-                    <div>
-                      <Link
-                        style={{ marginLeft: 22 }}
-                        to="#cidadao"
-                        className={` ${
-                          location.hash === '#cidadao' || location.hash === ''
-                            ? 'help-navButtons-active'
-                            : ''
-                        }`}
-                      >
-                        Cidadão
-                        <div />
-                      </Link>
-                    </div>
-                    <div>
-                      <Link
-                        style={{ marginLeft: -13 }}
-                        to="#membro"
-                        className={` ${
-                          location.hash === '#membro' ? 'help-navButtons-active' : ''
-                        }`}
-                      >
-                        Membro/Servidor
-                        <div />
-                      </Link>
-                    </div>
-                  </navbar>
-                  <form className="partner-contact-form" onSubmit={handleSubmit}>
-                    <div className="inputs-box">
-                      <label htmlFor="nome">
-                        Nome
-                        <input type="text" id="nome" name="nome" />
-                      </label>
-                      <label htmlFor="email">
-                        E-mail
-                        <input type="text" id="email" name="email" />
-                      </label>
-                    </div>
-                    <div className="inputs-box">
-                      <label htmlFor="dataNascimento">
-                        Data de nascimento
-                        <input type="text" id="dataNascimento" name="dataNascimento" />
-                      </label>
-                      <label htmlFor="sexo">
-                        Sexo
-                        <input type="text" id="sexo" name="sexo" />
-                      </label>
-                      <label htmlFor="profissao">
-                        Profissão / Ocupação
-                        <input type="text" id="profissao" name="profissao" />
-                      </label>
-                    </div>
-                    {location.hash === '#membro' && (
-                      <>
-                        <label htmlFor="profissao">
-                          Cargo / Setor de atuação
-                          <input type="text" id="profissao" name="profissao" />
-                        </label>
-                        <label htmlFor="profissao">
-                          Matrícula ativa
-                          <input type="text" id="profissao" name="profissao" />
-                        </label>
-                      </>
-                    )}
-                    <div className="inputs-box">
-                      <textarea placeholder="No que podemos melhorar?" />
-                    </div>
-                  </form>
-                  <button type="button" className="partner-contact-button">
-                    Enviar mensagem
-                  </button>
-                </div>
-              </div>
-            )}
+            {subpageId === 'podemos-ajudar' && <FormPartner />}
           </div>
         </div>
       </section>
