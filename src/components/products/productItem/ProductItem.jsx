@@ -1,26 +1,29 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
+
 import './ProductItem.css';
 
-import PropTypes from 'prop-types';
-
-export default function ProductItem({ product: { url, imgUrl, title, text } }) {
+export default function ProductItem({ name, title, description, imageSrc }) {
   return (
-    <>
-      <div className="product">
-        <a href={url} rel="noreferrer">
-          <img src={process.env.PUBLIC_URL + imgUrl} alt={title} />
-        </a>
-        <h4>{title}</h4>
-        <p className="text">{text}</p>
-      </div>
-    </>
+    <div className="product">
+      <Link to={`/produto/${name}`}>
+        {!imageSrc ? (
+          <img src={miniaturaDefault} alt={title} />
+        ) : (
+          <img src={imageSrc} alt={title} />
+        )}
+      </Link>
+      <h4>{title}</h4>
+      <p className="text">{description}</p>
+    </div>
   );
 }
 ProductItem.propTypes = {
-  product: PropTypes.shape({
-    url: PropTypes.string,
-    imgUrl: PropTypes.string,
-    title: PropTypes.string,
-    text: PropTypes.string,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
 };

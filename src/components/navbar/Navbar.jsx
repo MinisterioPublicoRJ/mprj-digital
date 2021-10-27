@@ -1,10 +1,12 @@
 /* eslint-disable */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
 import logoMp from '../../assets/logoMp.svg';
+import { getProductNavbarData, getPartnerNavbarData } from '../../api/api';
+
 import {
   icon,
   navbarLinks,
@@ -23,6 +25,23 @@ import {
 export default function Navbar() {
   const mobile = useMedia('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [productNavbarData, setProductNavbarData] = useState();
+  const [partnerNavbarData, setPartnerNavbarData] = useState();
+
+  async function loadProductNavbarData() {
+    const productResponse = await getProductNavbarData();
+    if (productResponse) {
+      setProductNavbarData(productResponse);
+    }    
+    const partnerResponse = await getPartnerNavbarData();
+    if (partnerResponse) {
+      setPartnerNavbarData(partnerResponse);
+    }
+    
+  }
+
+  useEffect(() => loadProductNavbarData(), []);
+
   return (
     <div id="allnavBar">
       {mobile && (
@@ -37,7 +56,7 @@ export default function Navbar() {
         id={navBar}
         className={`${mobile ? `${navbarMobile}` : `${navBar}`} ${mobileMenu && `${mobileButtonActive}`}`}
       >
-        <NavLink to="/">
+        <NavLink to="/" > 
           <img className={icon} src={logoMp} alt="logo-Mp" />
         </NavLink>
         <section className={navbarLinks}>
@@ -60,9 +79,14 @@ export default function Navbar() {
               <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Parceiros
               </NavLink>
-              <span className={tooltipText} style={{ marginBottom: 16}}>Conheça os setores envolvidos nessa iniciativa</span>
+              <span className={tooltipText} style={{ marginBottom: 8}}>Conheça os setores envolvidos nessa iniciativa</span>
               <div className={dropdownContent}>
-                <NavLink to="/parceiro/gadg/sobre">Gadg</NavLink>
+                {partnerNavbarData ? partnerNavbarData.map(
+                  ({title, name}) =>
+                  <NavLink to={`/parceiro/${name}/sobre`} type="button" className="dropbtn">
+                    {title}
+                  </NavLink>)
+                  : null}               
               </div>
             </div>
           </div>
@@ -71,14 +95,14 @@ export default function Navbar() {
               <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
                 Produtos
               </NavLink>
-              <span className={tooltipText} style={{ marginBottom: 16}}>Navegue e conheça nossos produtos e sistemas</span>
+              <span className={tooltipText} style={{ marginBottom: 8}}>Navegue e conheça nossos produtos e sistemas</span>
               <div className={dropdownContent}>
-                <NavLink to="/produto/farol" type="button" className="dropbtn">
-                  Farol
-                </NavLink>
-                <NavLink to="/produto/parquet_digital" type="button" className="dropbtn">
-                  Parquet Digital
-                </NavLink>
+                {productNavbarData ? productNavbarData.map(
+                  ({title, name}) =>
+                  <NavLink to={`/produto/${name}`} type="button" className="dropbtn">
+                    {title}
+                  </NavLink>)
+                  : null}
               </div>
             </div>
           </div>
@@ -96,19 +120,6 @@ export default function Navbar() {
             </NavLink>
             <span className={tooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
           </div>
-          {/* <div className="dropdown">
-          <div className="tooltip">
-            <a href=".#" type="button" className="dropbtn" id="basic-button">
-              Repositórios
-            </a>
-            <span className="tooltiptext">Encontre aqui todas os nossos acervos de dados</span>
-            <div className="dropdown-content">
-              <NavLink to="/produto">Integra</NavLink>
-              <NavLink to="/produto">Farol</NavLink>
-              <NavLink to="/produto">Ouvidoria</NavLink>
-            </div>
-          </div>
-        </div> */}
           <div className={sectionToolTip}>
             <NavLink
               to="/"

@@ -2,17 +2,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './DataProductItem.css';
+import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
 
-export default function DataProductItem({ header, text, imgUrl, id, textBtn, url }) {
+export default function DataProductItem({
+  subsectionTitle,
+  subsectionDescription,
+  imgUrl,
+  textBtn,
+  url,
+}) {
   return (
     <>
       <div className="productItem-texts">
-        <h3>{header}</h3>
-        <p>{text}</p>
+        <h3>{subsectionTitle}</h3>
+        <p>{subsectionDescription}</p>
       </div>
       <div className="productItem-action">
-        <img src={imgUrl} alt={id} />
-        <a href={url} target="new" rel="noreferrer">
+        {!imgUrl ? (
+          <img src={miniaturaDefault} alt="icon-miniatura-default" />
+        ) : (
+          <img src={imgUrl} alt={subsectionTitle} />
+        )}
+        <a href={url} target="_blank" rel="noopener noreferrer">
           {textBtn}
         </a>
       </div>
@@ -22,9 +33,8 @@ export default function DataProductItem({ header, text, imgUrl, id, textBtn, url
 
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  header: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  subsectionTitle: PropTypes.string.isRequired,
+  subsectionDescription: PropTypes.string.isRequired,
   textBtn: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };

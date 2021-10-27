@@ -1,12 +1,14 @@
 .productItem-action {
   grid-row: 3 / 5;
   grid-column: 4 / 5;
+  background-color: var(--colorWhite);
 }
 
 .productItem-action img {
   width: 100%;
   /* Fill up the space minus the anchor with 1vh margins on top and bottom */
-  max-height: calc(100% - (3 * var(--smallFont) + 4vh))
+  max-height: calc(100% - (3 * var(--smallFont) + 4vh));
+  border-radius: 10px;
 }
 
 .productItem-action a {

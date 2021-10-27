@@ -1,32 +1,41 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-curly-newline */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable prettier/prettier */
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+
 import { scroller } from 'react-scroll';
-import { BgHeader, NavHeader, ButtonHeader } from './index';
-import { MOCKPRODUTOSHEADER } from './mockProdutosHeader';
-import { MOCKBUTTONHEADER } from './mockButtonHeader';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+
+import { ButtonHeader, HeaderTextArea } from './index';
+import HEADER_DATA from './headerData';
 import {
-  header,
-  sectionProducts,
-  sectionProductsBtn,
-  sectionProductsInput,
-  sectionExplore,
-  sectionExploreTexts,
-  sectionBoxButton,
-  sectionBoxLinks,
-  sectionBoxLine,
-  sectionExploreTextsMain,
+  headerOuter,
+  searchArea,
+  headerMenuArea,
+  searchAreaInput,
   searchButton,
+  headerBackgroundImage,
+  headerBackgroundImageActive,
+  headerTexts,
+  HeaderTextAreaEntering,
+  HeaderTextAreaEntered,
+  HeaderTextAreaExiting,
+  HeaderTextAreaExited,
 } from './Header.module.css';
 import { useHomeContext } from '../../pages/home/HomeContext';
 
 export default function Header() {
   const { setCurrentSearchTerm, searchInputRef } = useHomeContext();
-  const [changeData, setchangeData] = useState('MPRJDigital');
+  const [currentTab, setCurrentTab] = useState({ id: 'MPRJDigital', index: 0 });
   const [productTitle, setProductTitle] = useState('');
+
+  useEffect(tabTimer, [currentTab]);
+
+  function tabTimer() {
+    const timer = setTimeout(() => {
+      const nextIndex = currentTab.index + 1 < HEADER_DATA.length ? currentTab.index + 1 : 0;
+      const { id } = HEADER_DATA[nextIndex];
+      setCurrentTab({ id, index: nextIndex });
+    }, 8000);
+    return () => clearTimeout(timer);
+  }
 
   function handleSearch() {
     scroller.scrollTo('repositorios', {
@@ -38,122 +47,66 @@ export default function Header() {
   }
 
   return (
-    <header className={header}>
-      <BgHeader currentTab={changeData} bgList={MOCKPRODUTOSHEADER.map(({ id, imgBg }) => ({ id, imgBg }))} />
-      <section className={sectionProducts}>
-        <div className={sectionProductsBtn}>
-          {MOCKBUTTONHEADER.map(({ id, title, titleBtn }) => (
-            <ButtonHeader
-              onClick={() => {
-                setchangeData(id);
-              }}
-              key={id}
-              title={title}
-              titleBtn={titleBtn}
-              colorId={id}
-              isActive={id === changeData}
+    <header className={headerOuter}>
+      {/* Render background images that will transition */}
+      {HEADER_DATA.map(({ backgroundImage, id, title }) => (
+        <img
+          aria-hidden="true"
+          key={id}
+          alt={title}
+          src={backgroundImage}
+          className={`${headerBackgroundImage} ${
+            currentTab.id === id ? headerBackgroundImageActive : ''
+          }`}
+        />
+      ))}
+      <section className={headerMenuArea}>
+        {HEADER_DATA.map(({ id, title }, index) => (
+          <ButtonHeader
+            key={id}
+            id={id}
+            title={title}
+            currentTab={currentTab}
+            onClick={() => setCurrentTab({ id, index })}
+          />
+        ))}
+      </section>
+      <section className={headerTexts}>
+        <SwitchTransition component={null}>
+          <CSSTransition
+            key={currentTab.id}
+            timeout={500}
+            classNames={{
+              enter: HeaderTextAreaEntering,
+              enterActive: HeaderTextAreaEntered,
+              exit: HeaderTextAreaExiting,
+              exitActive: HeaderTextAreaExited,
+            }}
+          >
+            <HeaderTextArea
+              key={HEADER_DATA[currentTab.index].id}
+              id={HEADER_DATA[currentTab.index].id}
+              title={HEADER_DATA[currentTab.index].title}
+              subtitle={HEADER_DATA[currentTab.index].subtitle}
+              currentTab={currentTab.id}
+              actionLink={HEADER_DATA[currentTab.index].link}
             />
-          ))}
-        </div>
-
-        <NavHeader {...MOCKPRODUTOSHEADER.find((btn) => btn.id === changeData)} />
-        <div className={sectionProductsInput}>
+          </CSSTransition>
+        </SwitchTransition>
+      </section>
+      <section className={searchArea}>
+        <div className={searchAreaInput}>
+          {/* TRANSFORMAR EM COMPONENTE DA MAPASTECA */}
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
             value={productTitle}
             onChange={({ target: { value } }) => setProductTitle(value)}
-
           />
-          <button type="button" className={searchButton} onClick={handleSearch}>Buscar Base de Dados</button>
-        </div>
-      </section>
-      <section className={sectionExplore}>
-        <div className={sectionExploreTextsMain}>
-          <div className={sectionExploreTexts}>
-            <h3>O que é o MPRJ Digital?</h3>
-            <p>
-              Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
-              atividade baseada no modelo de governos digitais.
-            </p>
-            <div className={sectionBoxButton}>
-              <Link
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('mprjDigital', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-              }
-              >
-                <p>Saiba mais</p>
-              </Link>
-            </div>
-          </div>
-          <div className={sectionBoxLine} />
-        </div>
-        <div className={sectionExploreTextsMain}>
-          <div className={sectionExploreTexts}>
-            <h3>Parceiros e Produtos</h3>
-            <p>
-              Aqui você encontrará diversos produtos oriundos da política de governos digitais
-              empreendida pelo MPRJ.
-            </p>
-            <div className={sectionBoxButton}>
-              <Link
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('parceiros', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-              }
-              >
-                <p>Parceiros</p>
-              </Link>
-              <Link
-                type="button"
-                style={{ marginLeft: 30 }}
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('produtos', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-                }
-              >
-                <p>Produtos</p>
-              </Link>
-            </div>
-          </div>
-          <div className={sectionBoxLine} />
-        </div>
-        <div className={sectionExploreTextsMain}>
-          <div className={sectionExploreTexts}>
-            <h3>Repositório de Dados</h3>
-            <p>
-              Confira a integridade de nossas soluções desde os dados explore e baixe tudo
-              o que for interessante para realizar suas pesquisas.
-            </p>
-            <div className={sectionBoxButton}>
-              <Link
-                className={sectionBoxLinks}
-                to="/"
-                onClick={() => scroller.scrollTo('repositorios', {
-                  smooth: true,
-                  offset: -70,
-                  duration: 400,
-                })
-                }
-              >
-                <p>Acessar</p>
-              </Link>
-            </div>
-          </div>
-          <div className={sectionBoxLine} />
+          <button type="button" className={searchButton} onClick={handleSearch}>
+            Buscar Base de Dados
+          </button>
+          {/* FIM DO COMPONENTE */}
         </div>
       </section>
     </header>

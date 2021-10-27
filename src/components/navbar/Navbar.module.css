@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--mainRedColor);
-  height: 147px;
+  height: var(--navbarHeight);
 }
 .navbarLinks {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 48px;
 }
 .navbarLinks a {
   list-style: none;
@@ -20,7 +20,7 @@
 .icon{
   width: 130px;
   height: 40px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .dropdownContent {
   display: none;
@@ -167,5 +167,5 @@
   .dropdownContent{
     position: relative;
   }
- 
+
 }

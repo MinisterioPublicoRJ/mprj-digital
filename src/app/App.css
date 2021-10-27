@@ -12,8 +12,9 @@
 
   /* SPACING */
   --sectionVerticalPadding: 7vh;
-  --navbarHeight: 3vh;
+  --navbarHeight: 100px;
   --footerHeight: 30vh;
+  --exploreSectionHeight: 25vh;
 
 }
 h1 {
@@ -37,4 +38,7 @@ p {
   font-family: Roboto, regular;
   font-size: var(--defaultFontSize);
   text-align: center;
+}
+button, a{
+  cursor: pointer;
 }

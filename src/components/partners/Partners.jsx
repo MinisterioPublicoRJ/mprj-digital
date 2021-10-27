@@ -1,53 +1,63 @@
-import React from 'react';
-import bg from '../../assets/bg-parceiros.png';
+import React, { useState, useEffect } from 'react';
 import './partners.css';
-import GADG from '../../assets/logos/gadg.png';
-import CSI from '../../assets/logos/csi.png';
-import GATE from '../../assets/logos/gate.png';
-import INOVA from '../../assets/logos/inova.png';
-import SGMP from '../../assets/logos/sgmp.png';
-import STIC from '../../assets/logos/stic.png';
-import SUBADM from '../../assets/logos/subadm.png';
-import SUBPLAN from '../../assets/logos/subplan.png';
-import IEP from '../../assets/logos/iep.png';
+import { Link } from 'react-router-dom';
+import { getPartnertComponentData } from '../../api/api';
+import PARTNERS_DATA_CONST from './partnersDataComponent';
 
 export default function Partners() {
+  const [partnersList, setPartnersList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadPagePartners = async () => {
+      setLoading(true);
+      try {
+        const response = await getPartnertComponentData();
+        setPartnersList(response);
+      } catch (e) {
+        setPartnersList(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPagePartners();
+  }, []);
+
   return (
     <section className="partners-outer" id="parceiros">
       <div className="partners-header">
         <h1>Parceiros</h1>
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
-        <div className="partners-itemList">
-          <div>
-            <a href="/parceiro/gadg">
-              <img className="" src={GADG} alt="GADG" />
-            </a>
-          </div>
-          <div>
-            <img className="" src={INOVA} alt="INOVA" />
-          </div>
-          <div>
-            <img className="" src={CSI} alt="CSI" />
-          </div>
-          <div>
-            <img className="" src={GATE} alt="GATE" />
-          </div>
-          <div>
-            <img className="" src={SGMP} alt="SGMP" />
-          </div>
-          <div>
-            <img className="" src={STIC} alt="STIC" />
-          </div>
-          <div>
-            <img className="" src={SUBADM} alt="GADG" />
-          </div>
-          <div>
-            <img className="" src={SUBPLAN} alt="CSI" />
-          </div>
-          <div>
-            <img className="" src={IEP} alt="GATE" />
-          </div>
-        </div>
+        <>
+          {loading ? (
+            'Carregando...'
+          ) : (
+            <div className="partners-itemList">
+              {/* {partnersList.map((partner) => (
+                <Link
+                  key={partner.name}
+                  target="new"
+                  rel="noreferrer"
+                  to={`/parceiro/${partner.name}/sobre`}
+                >
+                  <img src={partner.resources[0].url} alt={partner.title} />
+                </Link>
+              ))} */}
+              {PARTNERS_DATA_CONST.map((cards) => (
+                <div key={cards.id}>
+                  <a
+                    className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
+                    target="new"
+                    rel="noreferrer"
+                    href={cards.actionLink}
+                  >
+                    <img src={cards.img} alt={cards.img} />
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       </div>
     </section>
   );
