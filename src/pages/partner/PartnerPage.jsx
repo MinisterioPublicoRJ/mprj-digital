@@ -9,6 +9,7 @@ import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData, getProductComponentData } from '../../api/api';
 import ProductPartnerItem from './productsPartnerItem/ProductPartnerItem';
 import FormPartner from './formPartner/FormPartner';
+import { ImgAjuda, ImgSolucoes } from '../../assets/verticalText';
 
 export default function PartnerPage() {
   const cardsPorPage = 8;
@@ -144,14 +145,17 @@ export default function PartnerPage() {
               ) : null}
             </div>
             {subpageId === 'solucoes' ? (
-              <>
+              <div className="partner-page-subpage-Wrapper">
+                <div className="partner-SVG-Solucoes-styling">
+                  <ImgSolucoes />
+                </div>
                 <ProductPartnerItem products={products} />
                 <Pagination
                   handlePageClick={(page) => handlePageClick(page)}
                   totalPages={totalPages}
                   currentPage={currentPage}
                 />
-              </>
+              </div>
             ) : null}
             {subpageId === 'sobre' && (
               <div className="partner-page-cards-solucoes">
@@ -166,7 +170,14 @@ export default function PartnerPage() {
                 ))}
               </div>
             )}
-            {subpageId === 'podemos-ajudar' && <FormPartner />}
+            {subpageId === 'podemos-ajudar' && (
+            <div className="partner-page-subpage-Wrapper">
+              <div className="partner-SVG-styling">
+                <ImgAjuda />
+              </div>
+              <FormPartner />
+            </div>
+            )}
           </div>
         </div>
       </section>
