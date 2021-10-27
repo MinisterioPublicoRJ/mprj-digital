@@ -149,12 +149,14 @@ export default function PartnerPage() {
                 <div className="partner-SVG-Solucoes-styling">
                   <ImgSolucoes />
                 </div>
-                <ProductPartnerItem products={products} />
-                <Pagination
-                  handlePageClick={(page) => handlePageClick(page)}
-                  totalPages={totalPages}
-                  currentPage={currentPage}
-                />
+                <div className="partner-products-wrapper">
+                  <ProductPartnerItem products={products} />
+                  <Pagination
+                    handlePageClick={(page) => handlePageClick(page)}
+                    totalPages={totalPages}
+                    currentPage={currentPage}
+                  />
+                </div>
               </div>
             ) : null}
             {subpageId === 'sobre' && (

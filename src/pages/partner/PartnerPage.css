@@ -233,12 +233,19 @@ a.help-navButtons-active div {
   height: auto;
 }
 .partner-SVG-styling{
+  margin-left:-20px;
+  margin-right:-20px;
   width: 6vw;
   top: 0;
 }
 .partner-SVG-Solucoes-styling{
-  width: 22vw;
+  margin-top: 40px;
+  margin-left:-40px;
+  width: 8vw;
   top: 0;
+}
+.partner-products-wrapper{
+  width:fit-content;
 }
 
 @media (max-width: 1080px){
@@ -259,6 +266,12 @@ a.help-navButtons-active div {
   .partner-page-navigation{
     display: flex;
     width: 100%;
+  }
+  .partner-SVG-Solucoes-styling{
+    display: none;
+  }
+  .partner-SVG-styling{
+    display: none;
   }
 }
 @media (max-width: 480px){
