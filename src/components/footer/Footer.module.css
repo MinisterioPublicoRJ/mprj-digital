@@ -1,4 +1,4 @@
-.footer-outer {
+.footerOuter {
   background-color: var(--backgroundFooter);
   position: relative;
   align-content: center;
@@ -7,11 +7,11 @@
   flex-direction: column;
   height: 40vh;
 }
-.logo-footer{
+.logoFooter{
   width: 130px;
   height: 40px;
 }
-.footer-menu {
+.footerMenu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -20,12 +20,12 @@
   padding-right: 200px;
   padding-left: 200px;
 }
-.footer-menu-column {
+.footerMenuColumn {
   display: flex;
   flex-direction: column;
   margin: 0 2vw;
 }
-.footer-menu-column span {
+.footerMenuColumn span {
   letter-spacing: -0.32px;
   color: var(--colorWhite);
   width: 12vw;
@@ -33,13 +33,13 @@
   margin-bottom:2vh ;
   font-size: 13px;
 }
-.footer-menu-column h3 {
+.footerMenuColumn  h3 {
   color: var(--blueLightProdutos);
   font-size: var(--defaultFontSize);
   letter-spacing: -0.32px;
   margin: 0 0 10px 0;
 }
-.footer-menu-column a {
+.footerMenuColumn  a {
   font-size: var(--smallFont);
   letter-spacing: -0.5px;
   color: var(--colorWhite);
@@ -47,36 +47,30 @@
   margin-bottom: 7px;
   font-size: 13px;
 }
-.footer-menu-icons a {
+.footerMenuIcons a {
   margin-right: 5px;
   display: inline-block;
-}
-.footer-menu-icon-twitter {
   text-indent: -9999px;
   width: 20px;
   height: 20px;
+}
+.footerMenuIconTwitter {
   background: url('../../assets/SocialMedia.svg') 50px 0;
 }
-.footer-menu-icon-instagram {
-  text-indent: -9999px;
-  width: 20px;
-  height: 20px;
+.footerMenuIconInstagram {
   background: url('../../assets/SocialMedia.svg') 0 0;
 }
-.footer-menu-icon-facebook {
-  text-indent: -9999px;
-  width: 20px;
-  height: 20px;
+.footerMenuIconFacebook {
   background: url('../../assets/SocialMedia.svg') 20px 0;
 }
-.create-space {
+.createSpace {
   flex-grow: 1;
 }
-.icon-ouvidoria {
+.iconOuvidoria {
   width: 80px;
   height: 50px;
 }
-.button-back-to-top {
+.buttonBackToTop {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,35 +82,35 @@
   background-color: var(--mainRedColor) ;
   text-decoration: none;
 }
-.button-back-to-top ::after {
+.buttonBackToTop ::after {
   content: "↑";
   font-size: 32px;
   font-weight: bold;
   color: var(--colorWhite);
 }
-.button-back-to-top:hover::after {
+.buttonBackToTop:hover::after {
   margin-top:-8px;
 }
 
 @media (max-width: 380px){
-  .icon-ouvidoria{
+  .iconOuvidoria{
     height: 40px;
   }
-  .logo-footer{
+  .logoFooter{
     width: 70px;
     height: 30px;
   }
 }
 @media (max-width: 1080px){
-  .icon-ouvidoria{
+  .iconOuvidoria{
     width: 70px;
     height: 50px;
   }
-  .footer-menu{
+  .footerMenu{
     padding: 0;
     
   }
-  .footer-menu-column span{
+  .footerMenuColumn span{
     width: 100%;
   }
 }
