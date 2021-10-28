@@ -7,17 +7,18 @@ export default function talkToUs() {
     <section className={styles.talkOuter}>
       <img className={styles.Footer} src={map} alt="mapa" />
       <div className={styles.formOuter}>
-        <h1>Fale conosco</h1>
+        <h1>Sobre o site</h1>
         <p>
-          Espaço aberto para ouvir suas dúvidas e comentários a respeito da plataforma, dos produtos
-          ou de algum dado que está a disposição.
+          Caso tenha alguma dúvida, problema, sugestões ou elogios sobre o site, use este formulário
+          para entrar em contato com a equipe responsável. Em caso de denúncias sobre
+          irregularidades, favor clicar no ícone da OUVIDORIA abaixo.
         </p>
         <div className={styles.formInputsOuter}>
           <div className={styles.formInputsTextOuter}>
-            <input type="text" value="Nome" />
-            <input type="email" value="Email" />
+            <input type="text" value="" placeholder="Nome" />
+            <input type="email" value="" placeholder="Email" />
           </div>
-          <textarea name="" id="" cols="30" rows="10" value="Mensagem" />
+          <textarea name="" id="" cols="30" rows="10" value="" placeholder="Mensagem" />
           <button className={styles.talkButton} type="button">
             Enviar
           </button>

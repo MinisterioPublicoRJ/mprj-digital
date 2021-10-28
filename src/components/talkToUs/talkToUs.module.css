@@ -1,33 +1,27 @@
 .talkOuter {
   position: relative;
-  align-content: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
   background-color: var(--backgroundFooter);
   height: 40vh;
-  opacity: 0.92;
   margin-top: 450px;
   margin-bottom: -40px;
-  text-align: center;
 }
 .talkButton {
   width: 108px;
   height: 38px;
-  background: #6F2826 0% 0% no-repeat padding-box;
-  border-radius: 5px;
+  background: var(--mainRedColor);
   opacity: 1;
   letter-spacing: -0.5px;
   color: #ffffff;
   cursor: pointer;
-  border: #6F2826;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
 }
 .talkOuter img{
-  height: 70vh;
-  width: 100%;
-  margin-bottom: -3px;
   position: absolute;
-  bottom: 240px
+  bottom: 240px;
+  width: 100%;
+  height: 60vh;
 }
 .talkOuter h1{
   font-size: var(--titleFontSize);
@@ -38,6 +32,8 @@
   text-align: center;
   font-size: 16px;
   letter-spacing: -0.5px;
+  max-width: 518px;
+  margin: 0px;
 }
 input,
 textarea{
@@ -61,7 +57,14 @@ textarea:focus {
   border: 1px solid #D1DBE3;
   border-radius: 5px;
   opacity: 1;
-  margin: 10px;
+  margin-top: 10px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+.formInputsTextOuter{
+  display: flex;
+  width: 100%;
+
 }
 .formInputsOuter{
   display: flex;
@@ -69,16 +72,18 @@ textarea:focus {
 }
 .formInputsOuter input{
   height: 40px;
+  margin-left:5px;
+  margin-right:5px;
   width: 100%;
 }
 .formInputsOuter textarea{
-  width: 97%;
+  width: 100%;
 }
 .formOuter{
   position: absolute;
-  width: 60%;
-  height: 75vh;
-  background-color: var(--white);
+  width: 50%;
+  height: 55vh;
+  background-color: var(--colorWhite);
   bottom: 40px ;
   border-radius: 5px;
   padding: 20px;
@@ -87,18 +92,34 @@ textarea:focus {
   left: 0;
   right: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center 
 
 }
-@media (max-width: 1080px){
+
+@media (max-width: 670px){
+  .formInputsTextOuter{
+    display: block;
+  }
+  .formInputsOuter input{
+    margin: 0;
+    margin-top: 10px;
+  }
+  .formOuter{
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 670px) and (max-width: 1200px){
   .formInputsOuter{
     display: flex;
     flex-direction: column;
     width: 100%;
   }
- 
-  .formOuter{
-    width: 100%;
-    padding: 0px;
-    height: 85vh;
+  .formInputsTextOuter{
+    display: flex;
   }
 }
+
+
