@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Home.css';
 import HomeContextProvider from './HomeContext';
-import { Header, Mprj, OpenData, Partners, Products, Explore } from '../../components';
+import { Header, Mprj, OpenData, Partners, Products, Explore, TalkToUs } from '../../components';
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
         <Partners />
         <Products />
         <OpenData />
+        <TalkToUs />
       </div>
     </HomeContextProvider>
   );

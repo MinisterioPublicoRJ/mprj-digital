@@ -1,4 +1,4 @@
-.talk-outer {
+.talkOuter {
   position: relative;
   align-content: center;
   justify-content: center;
@@ -11,7 +11,7 @@
   margin-bottom: -40px;
   text-align: center;
 }
-.talk-button {
+.talkButton {
   width: 108px;
   height: 38px;
   background: #6F2826 0% 0% no-repeat padding-box;
@@ -22,18 +22,18 @@
   cursor: pointer;
   border: #6F2826;
 }
-.talk-outer img{
+.talkOuter img{
   height: 70vh;
   width: 100%;
   margin-bottom: -3px;
   position: absolute;
   bottom: 240px
 }
-.talk-outer h1{
+.talkOuter h1{
   font-size: var(--titleFontSize);
   margin-top: 20px;
 }
-.talk-outer p{
+.talkOuter p{
   color: #9DAFBD;
   text-align: center;
   font-size: 16px;
@@ -48,14 +48,14 @@ textarea:focus {
   background-color: #F7F9FA 0% 0% no-repeat padding-box; 
   outline: 1px solid #D1DBE3;
 }
-.form-inputs-outer{
+.formInputsOuter{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
-.form-inputs-outer
+.formInputsOuter
  textarea,
  input{
   border: 1px solid #D1DBE3;
@@ -63,18 +63,18 @@ textarea:focus {
   opacity: 1;
   margin: 10px;
 }
-.form-inputs-text-outer{
+.formInputsOuter{
   display: flex;
   width: 100%;
 }
-.form-inputs-text-outer input{
+.formInputsOuter input{
   height: 40px;
   width: 100%;
 }
-.form-inputs-outer textarea{
+.formInputsOuter textarea{
   width: 97%;
 }
-.form-outer{
+.formOuter{
   position: absolute;
   width: 60%;
   height: 75vh;
@@ -90,19 +90,15 @@ textarea:focus {
 
 }
 @media (max-width: 1080px){
-  .form-inputs-text-outer{
+  .formInputsOuter{
     display: flex;
     flex-direction: column;
     width: 100%;
   }
  
-  .form-outer{
+  .formOuter{
     width: 100%;
     padding: 0px;
     height: 85vh;
   }
-  .talk-outer p{
-    font-size: 12px;
-  }
-
 }

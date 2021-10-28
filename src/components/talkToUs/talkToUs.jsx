@@ -1,24 +1,24 @@
 import React from 'react';
-import './talkToUs.css';
 import map from '../../assets/map.png';
+import styles from './talkToUs.module.css';
 
 export default function talkToUs() {
   return (
-    <section className="talk-outer">
-      <img className="logo-footer" src={map} alt="mapa" />
-      <div className="form-outer">
+    <section className={styles.talkOuter}>
+      <img className={styles.Footer} src={map} alt="mapa" />
+      <div className={styles.formOuter}>
         <h1>Fale conosco</h1>
         <p>
           Espaço aberto para ouvir suas dúvidas e comentários a respeito da plataforma, dos produtos
           ou de algum dado que está a disposição.
         </p>
-        <div className="form-inputs-outer">
-          <div className="form-inputs-text-outer">
+        <div className={styles.formInputsOuter}>
+          <div className={styles.formInputsTextOuter}>
             <input type="text" value="Nome" />
             <input type="email" value="Email" />
           </div>
           <textarea name="" id="" cols="30" rows="10" value="Mensagem" />
-          <button className="talk-button" type="button">
+          <button className={styles.talkButton} type="button">
             Enviar
           </button>
         </div>
