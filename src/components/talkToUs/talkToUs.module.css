@@ -39,6 +39,9 @@ input,
 textarea{
   color: #9DAFBD;
 }
+.messageSendForm{
+  margin-top: 15px;
+}
 input:focus,
 textarea:focus {
   background-color: #F7F9FA 0% 0% no-repeat padding-box; 
@@ -64,25 +67,24 @@ textarea:focus {
 .formInputsTextOuter{
   display: flex;
   width: 100%;
-
 }
 .formInputsOuter{
   display: flex;
   width: 100%;
 }
 .formInputsOuter input{
-  height: 40px;
+  height: 50px;
   margin-left:5px;
   margin-right:5px;
   width: 100%;
 }
 .formInputsOuter textarea{
-  width: 100%;
+  width: 99%;
 }
 .formOuter{
   position: absolute;
   width: 50%;
-  height: 55vh;
+  height: 60vh;
   background-color: var(--colorWhite);
   bottom: 40px ;
   border-radius: 5px;
@@ -96,7 +98,6 @@ textarea:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center 
-
 }
 
 @media (max-width: 670px){

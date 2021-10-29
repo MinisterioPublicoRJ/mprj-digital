@@ -25,5 +25,5 @@ ProductItem.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
+  imageSrc: PropTypes.node.isRequired,
 };
