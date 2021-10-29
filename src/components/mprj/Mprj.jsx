@@ -1,15 +1,24 @@
 import React from 'react';
-import './Mprj.css';
 
 import icon1 from '../../assets/icon1.png';
 import icon2 from '../../assets/icon2.png';
 import icon3 from '../../assets/icon3.png';
 
+import {
+  mprjDigitalOuter,
+  mprjDigital,
+  mprjDigitalOuterText,
+  title,
+  mprjDigitalMoreInfo,
+  mprjDigitalItemOuter,
+  mprjDigitalItemOuterText,
+} from './Mprj.module.css';
+
 export default function Mprj() {
   return (
-    <div className="mprjDigital-outer" id="mprjDigital">
-      <div className="mprjDigital-outer-text">
-        <h1 className="title"> MPRJ Digital </h1>
+    <div className={mprjDigitalOuter} id={mprjDigital}>
+      <div className={mprjDigitalOuterText}>
+        <h1 className={title}> MPRJ Digital </h1>
         <p>
           Solução colaborativa do MPRJ para centralizar a exibição e disponibilização de suas
           soluções digitais e promover a Transparência Efetiva, visando, ao mesmo tempo, subsidiar a
@@ -18,10 +27,10 @@ export default function Mprj() {
           unificada de conhecimento.
         </p>
       </div>
-      <div className="mprjDigital-moreInfo">
-        <div className="mprjDigital-itemOuter">
-          <img className="" src={icon2} alt="icon2" />
-          <div className="mprjDigital-itemOuter-text">
+      <div className={mprjDigitalMoreInfo}>
+        <div className={mprjDigitalItemOuter}>
+          <img src={icon2} alt="icon2" />
+          <div className={mprjDigitalItemOuterText}>
             <h6> Por quê? </h6>
             <p>
               Porque ainda que já existam iniciativas de transparência ativa (portal da
@@ -33,9 +42,9 @@ export default function Mprj() {
             </p>
           </div>
         </div>
-        <div className="mprjDigital-itemOuter">
-          <img className="" src={icon1} alt="icon1" />
-          <div className="mprjDigital-itemOuter-text">
+        <div className={mprjDigitalItemOuter}>
+          <img src={icon1} alt="icon1" />
+          <div className={mprjDigitalItemOuterText}>
             <h6> Como? </h6>
             <p>
               Por meio da disponibilização de acesso a produtos que servem de subsídio à atuação
@@ -49,9 +58,9 @@ export default function Mprj() {
             </p>
           </div>
         </div>
-        <div className="mprjDigital-itemOuter">
-          <img className="" src={icon3} alt="icon3" />
-          <div className="mprjDigital-itemOuter-text">
+        <div className={mprjDigitalItemOuter}>
+          <img src={icon3} alt="icon3" />
+          <div className={mprjDigitalItemOuterText}>
             <h6> Baseado em quê? </h6>
             <p>
               Nos valores de governos abertos: transparência, integridade, participação popular e
