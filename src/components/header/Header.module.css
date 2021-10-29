@@ -36,22 +36,13 @@
   border-radius: 10px;
   margin-left: 10px;
   text-indent: 40px;
+  height: 35px;
+  margin-top: 8px;
 }
 
 .searchAreaInput input:focus {
   outline-style: none;
 }
-
-/* .searchAreaInput p {
-  color: #b93b40;
-  margin-left: 15px;
-  margin-top: -24px;
-  padding-left: 220px;
-  font-family: 'Poppins';
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 12px;
-} */
 
 .searchAreaInput i {
   margin-left: 20px;
@@ -94,14 +85,6 @@
   /* transform: scale(0.1); */
   /* transition: opacity 300ms ease-in, transform 300ms ease-in; */
 }
-
-
-/* .sectionBoxLine {
-  border-bottom: 2px solid var(--secondColor);
-  margin-top: 2vh;
-  content: '';
-  width: 100%;
-} */
 
 /* @media (max-width: 1080px) {
   header {

@@ -23,7 +23,6 @@
   transition: margin-right 0.5s;
 }
 
-
 .sectionProductsBtn:hover, .sectionProductsBtnActive {
   opacity: 1;
 }
