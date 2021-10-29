@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Pagination.css';
-
 import WhiteArrowLeft from '../../assets/WhiteArrowLeft';
 import WhiteArrowRight from '../../assets/WhiteArrowRight';
+
+import {
+  paginationNumberButton,
+  paginationNumberButtonActive,
+  mainPagination,
+  btnPaginationItem,
+  paginationItem,
+} from './Pagination.module.css';
 
 const propTypes = {
   totalPages: PropTypes.number.isRequired,
@@ -28,7 +34,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
       <button
         key={number}
         type="button"
-        className={`pagination-number-button ${currentPage === number ? 'active' : ''}`}
+        className={currentPage === number ? paginationNumberButtonActive : paginationNumberButton}
         onClick={() => handlePageClick(number)}
       >
         {number}
@@ -38,15 +44,15 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
   }
 
   return (
-    <div className="mainPagination">
-      <div className="btnPaginationItem">
+    <div className={mainPagination}>
+      <div className={btnPaginationItem}>
         {currentPage > 1 ? (
           <button type="button" onClick={() => handlePageClick(currentPage - 1)}>
             <WhiteArrowLeft />
           </button>
         ) : null}
 
-        <div className="paginationItem">{renderPageNumberButtons()}</div>
+        <div className={paginationItem}>{renderPageNumberButtons()}</div>
 
         {currentPage < totalPages ? (
           <button type="button" onClick={() => handlePageClick(currentPage + 1)}>

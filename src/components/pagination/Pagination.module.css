@@ -1,0 +1,44 @@
+.mainPagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.btnPaginationItem {
+  display: flex;
+  color: var(--grayPagination);
+  margin-top: 10px;
+}
+.paginationItem {
+  margin-top: 9px;
+}
+.btnPaginationItem > button {
+  color: var(--grayPagination);
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  opacity: 1;
+}
+.btnPaginationItem > button span::after {
+  visibility: visible;
+  opacity: 1;
+  content: '';
+  border-style: solid;
+  border-color: var(--grayPagination);
+  background-color: var(--grayPagination);
+  border-width: var(--selectorArrowSize);
+  margin: 10px;
+}
+.paginationNumberButton {
+  border: 0;
+  background: transparent;
+  color: #9dafbd;
+  margin: 5px;
+}
+.paginationNumberButtonActive {
+  border: 0;
+  background: transparent;
+  margin: 5px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #263859;
+}
