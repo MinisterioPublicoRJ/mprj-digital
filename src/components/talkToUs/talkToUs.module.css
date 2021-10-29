@@ -27,6 +27,22 @@
   font-size: var(--titleFontSize);
   margin-top: 20px;
 }
+::-webkit-input-placeholder {
+  color:#9DAFBD;
+}
+
+::-moz-placeholder {
+  color:#9DAFBD;
+}
+
+::-ms-placeholder {
+  color:#9DAFBD;
+}
+
+::placeholder {
+  color:#9DAFBD;
+}
+
 .talkOuter p{
   color: #9DAFBD;
   text-align: center;
