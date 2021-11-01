@@ -21,10 +21,10 @@ export const PARTNERS_CONST = [
         call: 'Soluções',
       },
 
-      {
+      /* {
         id: 'podemos-ajudar',
         call: 'Podemos te ajudar?',
-      },
+      }, */
       /* {
         id: 'nosso-time',
         call: 'Nosso time',
