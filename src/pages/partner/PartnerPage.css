@@ -227,6 +227,26 @@ a.help-navButtons-active div {
 .partner-contact-form{
   margin-top: 20px;
 }
+.partner-page-subpage-Wrapper{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+.partner-SVG-styling{
+  margin-left:-20px;
+  margin-right:-20px;
+  width: 6vw;
+  top: 0;
+}
+.partner-SVG-Solucoes-styling{
+  margin-top: 40px;
+  margin-left:-40px;
+  width: 8vw;
+  top: 0;
+}
+.partner-products-wrapper{
+  width:fit-content;
+}
 
 @media (max-width: 1080px){
   .partner-page-content {
@@ -246,6 +266,12 @@ a.help-navButtons-active div {
   .partner-page-navigation{
     display: flex;
     width: 100%;
+  }
+  .partner-SVG-Solucoes-styling{
+    display: none;
+  }
+  .partner-SVG-styling{
+    display: none;
   }
 }
 @media (max-width: 480px){
