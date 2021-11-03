@@ -8,7 +8,7 @@ export default function talkToUs() {
   const [email, setEmail] = useState('');
   const [message, setMensagem] = useState('');
   const [loading, setLoading] = useState(false);
-  const [sentMessage, setsentMessage] = useState();
+  const [sentMessage, setSentMessage] = useState();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -18,7 +18,7 @@ export default function talkToUs() {
     formData.append('email', email);
     formData.append('message', message);
     const data = await setDataForm(formData);
-    setsentMessage(data);
+    setSentMessage(data);
     setLoading(false);
     setName('');
     setEmail('');
