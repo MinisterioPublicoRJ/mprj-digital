@@ -1,0 +1,21 @@
+#partnersOuter {
+  background-color: var(--backgroundFooter);
+  /*background-color: var(--mainRedColor);*/
+  height: 30vh;
+  padding: var(--sectionVerticalPadding) 10%;
+  display: flex;
+  flex-direction: column;
+}
+.partnersHeaderPage {
+  color: var(--colorWhite);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.partnersHeaderPage p {
+  color: #B1B1B1;
+  text-align: center;
+  margin-top: 10px;
+}
+.PartnersItemListPage{
+  margin-top: 30px;
+}
