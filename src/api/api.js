@@ -5,6 +5,7 @@ import {
   PRODUCT_PAGE_DATA,
   PRODUCT_NAVBAR_DATA,
   PARTNER_NAVBAR_DATA,
+  DATA_FORM,
 } from './endpoints';
 
 import {
@@ -83,4 +84,15 @@ export async function getProductComponentData(nextPos, extraFilter) {
 
   const { result } = await response.json();
   return productMiniatureTransform(result);
+}
+
+export async function setDataForm(formData) {
+  const response = await fetch(DATA_FORM, {
+    method: 'POST',
+    body: formData,
+  });
+  if (!response.ok) {
+    throw new Error(`A chamada falhou com status ${response.status}`);
+  }
+  return response.json();
 }

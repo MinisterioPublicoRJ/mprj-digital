@@ -1,7 +1,6 @@
 .headerTextAreaOuter {
   width: 70%;
 }
-
 .headerTextAreaOuter h2 {
   color: #ffff;
   font-size: 30px;
@@ -11,7 +10,6 @@
   text-align: left;
   text-transform: uppercase;
 }
-
 .headerTextAreaOuter p {
   font-weight: 300;
   line-height: 1.5;
@@ -21,7 +19,6 @@
   font-family: var(--robotRegular);
   color: var(--colorWhite);
 }
-
 .headerTextAreaOuter a {
   background-color: var(--colorWhite);
   border: none;
@@ -34,17 +31,14 @@
   font-family: var(--robotRegular);
   font-weight: 400;
 }
-
 .headerTextAreaOuter a.MPRJDigitalCustomColor:hover {
   background-color: var(--mainRedColor);
   color: var(--colorWhite);
 }
-
 .headerTextAreaOuter > a.ParquetDigitalCustomColor:hover {
   background-color: var(--parquetBlue);
   color: var(--colorWhite);
 }
-
 .headerTextAreaOuter > a.FarolCustomColor:hover {
   background-color: var(--farolOrange);
   color: var(--colorWhite);

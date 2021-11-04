@@ -17,3 +17,5 @@ export const PRODUCT_COMPONENT_DATA = (nextPos, extraFilters) => `${BASE_URL}?q=
 export const PRODUCT_NAVBAR_DATA = `${BASE_URL}?q=type:produtos&fl=name,title`;
 
 export const PARTNER_NAVBAR_DATA = `${BASE_URL}?q=type:paginaparceiro&fl=name,title`;
+
+export const DATA_FORM = 'https://d-apimpmapas.mprj.mp.br/mprjdigital/contact';
