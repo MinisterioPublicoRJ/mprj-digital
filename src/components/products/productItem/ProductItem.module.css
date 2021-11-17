@@ -1,0 +1,32 @@
+.product {
+  text-align: center;
+}
+.product img {
+  width: 157px;
+  height: 157px;
+  border-radius: 10px;
+}
+
+.product p {
+  color: #9dafbd;
+  text-align: center;
+  margin-right: 0px;
+  margin-bottom: 42px;
+}
+
+@media (max-width: 380px){
+  .product img{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 1080px){
+  .product img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+  }
+  .product .text {
+   text-align: center;
+  }
+}
