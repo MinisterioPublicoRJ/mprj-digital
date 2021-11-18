@@ -11,7 +11,7 @@ import {
 
 export default function Partners() {
   return (
-    <section className={partnersOuter} id={parceiros}>
+    <section className={partnersOuter} id="parceiros">
       <div className={partnersHeader}>
         <h1>Parceiros</h1>
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
