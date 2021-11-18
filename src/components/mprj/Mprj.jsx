@@ -6,19 +6,18 @@ import icon3 from '../../assets/icon3.png';
 
 import {
   mprjDigitalOuter,
-  mprjDigital,
   mprjDigitalOuterText,
-  title,
+  mprjDigitalTitle,
   mprjDigitalMoreInfo,
-  mprjDigitalItemOuter,
-  mprjDigitalItemOuterText,
+  mprjDigitalOuterItem,
+  mprjDigitalOuterItemText,
 } from './Mprj.module.css';
 
 export default function Mprj() {
   return (
-    <div className={mprjDigitalOuter} id={mprjDigital}>
+    <div className={mprjDigitalOuter} id="mprjDigital">
       <div className={mprjDigitalOuterText}>
-        <h1 className={title}> MPRJ Digital </h1>
+        <h1 className={mprjDigitalTitle}> MPRJ Digital </h1>
         <p>
           Solução colaborativa do MPRJ para centralizar a exibição e disponibilização de suas
           soluções digitais e promover a Transparência Efetiva, visando, ao mesmo tempo, subsidiar a
@@ -28,9 +27,9 @@ export default function Mprj() {
         </p>
       </div>
       <div className={mprjDigitalMoreInfo}>
-        <div className={mprjDigitalItemOuter}>
+        <div className={mprjDigitalOuterItem}>
           <img src={icon2} alt="icon2" />
-          <div className={mprjDigitalItemOuterText}>
+          <div className={mprjDigitalOuterItemText}>
             <h6> Por quê? </h6>
             <p>
               Porque ainda que já existam iniciativas de transparência ativa (portal da
@@ -42,9 +41,9 @@ export default function Mprj() {
             </p>
           </div>
         </div>
-        <div className={mprjDigitalItemOuter}>
+        <div className={mprjDigitalOuterItem}>
           <img src={icon1} alt="icon1" />
-          <div className={mprjDigitalItemOuterText}>
+          <div className={mprjDigitalOuterItemText}>
             <h6> Como? </h6>
             <p>
               Por meio da disponibilização de acesso a produtos que servem de subsídio à atuação
@@ -58,9 +57,9 @@ export default function Mprj() {
             </p>
           </div>
         </div>
-        <div className={mprjDigitalItemOuter}>
+        <div className={mprjDigitalOuterItem}>
           <img src={icon3} alt="icon3" />
-          <div className={mprjDigitalItemOuterText}>
+          <div className={mprjDigitalOuterItemText}>
             <h6> Baseado em quê? </h6>
             <p>
               Nos valores de governos abertos: transparência, integridade, participação popular e

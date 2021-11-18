@@ -18,10 +18,10 @@
 .mprjDigitalOuterText h1{
   color: var(--colorWhite);
 }
-.mprjDigitalOuterText h1.title {
+.mprjDigitalOuterText h1.mprjDigitalTitle {
   margin-top: 50px;
 }
-.mprjDigitalItemOuter-text p.p-subtitle {
+.mprjDigitalOuterItemText p.p-subtitle {
   max-width: 500px;
 }
 .mprjDigitalOuterText p {
@@ -43,32 +43,32 @@
   padding-right: 8vw;
   justify-content: center;
 }
-.mprjDigitalItemOuter {
+.mprjDigitalOuterItem {
   display: flex;
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.mprjDigitalItemOuter img {
+.mprjDigitalOuterItem img {
   width: 70px;
   height: 65px;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 30px;
 }
-.mprjDigitalItemOuter-text {
+.mprjDigitalOuterItemText {
   display: flex;
   flex-direction: column;
 }
-.mprjDigitalItemOuter-text h6 {
+.mprjDigitalOuterItemText h6 {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
 }
-.mprjDigitalItemOuter p, h6 {
+.mprjDigitalOuterItem p, h6 {
   text-align: left;
   color: #222222;
 }
-.mprjDigitalItemOuter p {
+.mprjDigitalOuterItem p {
   margin-top: 0px;
 }
 
@@ -83,26 +83,26 @@
   .mprjDigitalMoreInfo {
     margin: 0 auto;
   }
-  .mprjDigitalItemOuter {
+  .mprjDigitalOuterItem {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .mprjDigitalItemOuter-text h6 {
+  .mprjDigitalOuterItem-text h6 {
     text-align: center;
   }
-  .mprjDigitalItemOuter {
+  .mprjDigitalOuterItem {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  .mprjDigitalItemOuter img {
+  .mprjDigitalOuterItem img {
     display: flex;
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 40px;
   }
-  .mprjDigitalItemOuter p {
+  .mprjDigitalOuterItem p {
     width: 300px;
     margin-bottom: 25px;
     margin-top: 40px;
