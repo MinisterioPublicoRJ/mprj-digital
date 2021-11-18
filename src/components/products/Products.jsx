@@ -4,9 +4,9 @@ import ProductItem from './productItem/ProductItem';
 import {
   productsClass,
   productsTitle,
-  genDescriptionText,
-  productsFilterTitles,
-  filterTitle,
+  productsGenDescriptionText,
+  productsFilterWrapper,
+  productsFilterTitle,
   allProducts,
 } from './Products.module.css';
 import { getProductComponentData } from '../../api/api';
@@ -49,22 +49,22 @@ export default function Products() {
   return (
     <section className={productsClass} id="produtos">
       <h1 className={productsTitle}>Produtos</h1>
-      <p className={genDescriptionText}>
+      <p className={productsGenDescriptionText}>
         Painéis, estudos, relatórios e os mais variados formatos de soluções gerados pelos nossos
         parceiros. Fique a vontade para explorar cada um deles, e não esqueça de mandar seu
         feedback, ficaremos muito feliz em recebê-lo.
       </p>
-      <div className={productsFilterTitles}>
-        <button type="button" onClick={() => setProductType('')} className={filterTitle}>
+      <div className={productsFilterWrapper}>
+        <button type="button" onClick={() => setProductType('')} className={productsFilterTitle}>
           Todos os produtos
         </button>
-        <button type="button" onClick={() => setProductType('painel')} className={filterTitle}>
+        <button type="button" onClick={() => setProductType('painel')} className={productsFilterTitle}>
           Painéis
         </button>
-        <button type="button" onClick={() => setProductType('relatorio')} className={filterTitle}>
+        <button type="button" onClick={() => setProductType('relatorio')} className={productsFilterTitle}>
           Relatórios
         </button>
-        <button type="button" onClick={() => setProductType('estudo')} className={filterTitle}>
+        <button type="button" onClick={() => setProductType('estudo')} className={productsFilterTitle}>
           Estudos
         </button>
       </div>

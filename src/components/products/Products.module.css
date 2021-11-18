@@ -17,7 +17,7 @@
   margin: 12px 0;
 }
 
-.genDescriptionText {
+.productsFilterWrapper {
   text-align: left;
   color: #9DAFBD;
 }
@@ -36,23 +36,23 @@
   column-gap: 2%;
 }
 
-.productsFilterTitles {
+.productsFilterWrapper {
   font-size: 14px;
   display: flex;
   margin-top: 37px;
 }
-.productsFilterTitles p {
+.productsFilterWrapper p {
   font-size: 14px;
   margin-bottom: 26px;
   color: #263859;
 }
-.filterTitle {
+.productsFilterTitle {
   margin: 0px 30px 4px 5px;
   color: #9dafbd;
   background: transparent;
   border: 0;
 }
-.filterTitle:hover {
+.productsFilterTitle:hover {
   color: #263859;
 }
 
@@ -79,7 +79,7 @@
     align-items: center;
     margin-bottom: 20px;
   }
-  .productsFilterTitles {
+  .productsFilterWrapper {
     display: flex;
     justify-content: center;
   }
