@@ -8,7 +8,7 @@ import {
   paginationNumberButton,
   paginationNumberButtonActive,
   mainPagination,
-  btnPaginationItem,
+  paginationItemBtn,
   paginationItem,
 } from './Pagination.module.css';
 
@@ -45,7 +45,7 @@ const Pagination = ({ totalPages, handlePageClick, currentPage }) => {
 
   return (
     <div className={mainPagination}>
-      <div className={btnPaginationItem}>
+      <div className={paginationItemBtn}>
         {currentPage > 1 ? (
           <button type="button" onClick={() => handlePageClick(currentPage - 1)}>
             <WhiteArrowLeft />

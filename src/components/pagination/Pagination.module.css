@@ -3,7 +3,7 @@
   justify-content: center;
   margin-bottom: 70px;
 }
-.btnPaginationItem {
+.paginationItemBtn {
   display: flex;
   color: var(--grayPagination);
   margin-top: 10px;
@@ -11,14 +11,14 @@
 .paginationItem {
   margin-top: 9px;
 }
-.btnPaginationItem > button {
+.paginationItemBtn > button {
   color: var(--grayPagination);
   border: none;
   background-color: transparent;
   font-size: 15px;
   opacity: 1;
 }
-.btnPaginationItem > button span::after {
+.paginationItemBtn > button span::after {
   visibility: visible;
   opacity: 1;
   content: '';
