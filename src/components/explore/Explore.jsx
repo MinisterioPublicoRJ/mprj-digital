@@ -6,9 +6,9 @@ import {
   exploreOuter,
   exploreItemOuter,
   exploreItemInner,
-  sectionBoxButton,
-  sectionBoxLinks,
-  sectionBoxLine,
+  exploreSectionBoxButton,
+  exploreSectionBoxLinks,
+  exploreSectionBoxLine,
 } from './Explore.module.css';
 
 function Explore() {
@@ -21,9 +21,9 @@ function Explore() {
             Iniciativa de transparência efetiva do MPRJ para demonstrar os resultados de sua
             atividade baseada no modelo de governos digitais.
           </p>
-          <div className={sectionBoxButton}>
+          <div className={exploreSectionBoxButton}>
             <Link
-              className={sectionBoxLinks}
+              className={exploreSectionBoxLinks}
               to="/"
               onClick={() => {
                 scroller.scrollTo('mprjDigital', {
@@ -37,7 +37,7 @@ function Explore() {
             </Link>
           </div>
         </div>
-        <div className={sectionBoxLine} />
+        <div className={exploreSectionBoxLine} />
       </div>
       <div className={exploreItemOuter}>
         <div className={exploreItemInner}>
@@ -46,9 +46,9 @@ function Explore() {
             Aqui você encontrará diversos produtos oriundos da política de governos digitais
             empreendida pelo MPRJ.
           </p>
-          <div className={sectionBoxButton}>
+          <div className={exploreSectionBoxButton}>
             <Link
-              className={sectionBoxLinks}
+              className={exploreSectionBoxLinks}
               to="/"
               onClick={() => {
                 scroller.scrollTo('parceiros', {
@@ -63,7 +63,7 @@ function Explore() {
             <Link
               type="button"
               style={{ marginLeft: 30 }}
-              className={sectionBoxLinks}
+              className={exploreSectionBoxLinks}
               to="/"
               onClick={() => {
                 scroller.scrollTo('produtos', {
@@ -77,7 +77,7 @@ function Explore() {
             </Link>
           </div>
         </div>
-        <div className={sectionBoxLine} />
+        <div className={exploreSectionBoxLine} />
       </div>
       <div className={exploreItemOuter}>
         <div className={exploreItemInner}>
@@ -86,9 +86,9 @@ function Explore() {
             Confira a integridade de nossas soluções desde os dados explore e baixe tudo o que for
             interessante para realizar suas pesquisas.
           </p>
-          <div className={sectionBoxButton}>
+          <div className={exploreSectionBoxButton}>
             <Link
-              className={sectionBoxLinks}
+              className={exploreSectionBoxLinks}
               to="/"
               onClick={() => {
                 scroller.scrollTo('repositorios', {
@@ -102,7 +102,7 @@ function Explore() {
             </Link>
           </div>
         </div>
-        <div className={sectionBoxLine} />
+        <div className={exploreSectionBoxLine} />
       </div>
     </section>
   );
