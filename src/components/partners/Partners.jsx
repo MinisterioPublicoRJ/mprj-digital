@@ -3,10 +3,9 @@ import PARTNERS_DATA_CONST from './partnersDataComponent';
 
 import {
   partnersOuter,
-  parceiros,
   partnersHeader,
   partnersItemList,
-  cardsActionLinkActive,
+  partnersCardsActionLinkActive,
 } from './Partners.module.css';
 
 export default function Partners() {
@@ -19,7 +18,7 @@ export default function Partners() {
           {PARTNERS_DATA_CONST.map((cards) => (
             <div key={cards.id}>
               <a
-                className={cards.actionLink === '' ? cardsActionLinkActive : ''}
+                className={cards.actionLink === '' ? partnersCardsActionLinkActive : ''}
                 target="new"
                 rel="noreferrer"
                 href={cards.actionLink}
