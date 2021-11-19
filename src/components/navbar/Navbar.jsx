@@ -139,19 +139,14 @@ export default function Navbar() {
                 <span className={tooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
               </div>
               <div className={sectionToolTip}>
-                <NavLink
-                  to="/"
-                  type="button"
-                  onClick={() =>
-                    scroller.scrollTo('rodape', {
-                      smooth: true,
-                      offset: -70,
-                      duration: 600,
-                    })
-                  }
+                <a
+                  href="https://www.mprj.mp.br/comunicacao/ouvidoria/formulario"
+                  target="new"
+                  rel="noreferrer"
+                  className="create-space"
                 >
                   Denúncias e Reclamações
-                </NavLink>
+                </a>
                 <span className={tooltipText}>Tem uma Reclamação ou precisa da nossa ajuda.</span>
               </div>
             </section>
