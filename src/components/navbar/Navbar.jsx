@@ -123,7 +123,7 @@ export default function Navbar() {
                 duration: 600,
               })}
             >
-              Denúncias e Reclamações
+              Fale conosco
             </NavLink>
             <span className={navbarTooltipText}>Tem uma Reclamação ou precisa da nossa ajuda.</span>
           </div>
