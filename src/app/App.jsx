@@ -9,8 +9,10 @@ import { Footer, Navbar } from '../components';
 import '../themes/themes.css';
 
 const App = () => {
-  const trackingCode = process.env.ANALYTICS_CODE;
-  ReactGA.initialize(trackingCode);
+  const trackingId = process.env.REACT_APP_ANALYTICS_CODE;
+  ReactGA.initialize(trackingId, {
+    gaOptions: { cookieFlags: 'SameSite=None;Secure' },
+  });
   return (
     <BrowserRouter>
       <Navbar />
