@@ -1,0 +1,119 @@
+.mprjDigitalOuter {
+  font-family: Roboto;
+  display: grid;
+  grid-gap: 30px;
+  margin: 10vh 0;
+  grid-template-areas: 'mprjTexts mprjTexts mprjTexts mprjInfo mprjInfo mprjInfo';
+  height: 100vh;
+}
+.mprjDigitalOuterText {
+  grid-area: mprjTexts;
+  margin: auto;
+  background-color: var(--mainRedColor);
+  height: 380px;
+  border: 1px solid #707070;
+  padding-left: 8vw;
+  padding-right: 2vw;
+}
+.mprjDigitalOuterText h1{
+  color: var(--colorWhite);
+}
+.mprjDigitalOuterText h1.mprjDigitalTitle {
+  margin-top: 50px;
+}
+.mprjDigitalOuterItemText p.p-subtitle {
+  max-width: 500px;
+}
+.mprjDigitalOuterText p {
+  color: var(--colorWhite);
+  margin-left: 80px;
+  text-align: right;
+}
+.mprjDigitalOuterText h1, .mprjDigitalOuterText p{
+  margin-right: 30px;
+  margin-top: 20px;
+  text-align: right;
+}
+.mprjDigitalMoreInfo {
+  display: flex;
+  flex-direction: column;
+  grid-area: mprjInfo;
+  text-align: left;
+  margin-left: 40px;
+  padding-right: 8vw;
+  justify-content: center;
+}
+.mprjDigitalOuterItem {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.mprjDigitalOuterItem img {
+  width: 70px;
+  height: 65px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 30px;
+}
+.mprjDigitalOuterItemText {
+  display: flex;
+  flex-direction: column;
+}
+.mprjDigitalOuterItemText h6 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.mprjDigitalOuterItem p, h6 {
+  text-align: left;
+  color: #222222;
+}
+.mprjDigitalOuterItem p {
+  margin-top: 0px;
+}
+
+@media (max-width: 1080px){
+  .mprjDigitalOuterText h1, h6 {
+    font-size: 20px ;
+  }
+  .mprjDigitalOuter {
+    display: flex;
+    flex-direction: column;
+  }
+  .mprjDigitalMoreInfo {
+    margin: 0 auto;
+  }
+  .mprjDigitalOuterItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mprjDigitalOuterItem-text h6 {
+    text-align: center;
+  }
+  .mprjDigitalOuterItem {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .mprjDigitalOuterItem img {
+    display: flex;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .mprjDigitalOuterItem p {
+    width: 300px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  .mprjDigitalOuterText h1, p{
+    text-align: center;
+    margin-left: 30px;
+  }
+  .mprjDigitalOuterText {
+    height: 270px;
+    padding: 0;
+    text-align: center;
+  }
+}

@@ -1,33 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState, useEffect } from 'react';
-import './PartnersPageComponent.css';
-import '../partners/partners.css';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Link } from 'react-router-dom';
+import './PartnersPageComponentSlick.css';
 import PARTNERS_DATA_CONST from '../partners/partnersDataComponent';
-import { getPartnertComponentData } from '../../api/api';
+import {
+  partnersOuter,
+  partnersHeaderPage,
+  PartnersItemListPage,
+} from './PartnersPageComponent.module.css';
 
 export default function PartnersPageComponent() {
-  const [partnersList, setPartnersList] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadPagePartners = async () => {
-      setLoading(true);
-      try {
-        const response = await getPartnertComponentData();
-        setPartnersList(response);
-      } catch (e) {
-        setPartnersList(false);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadPagePartners();
-  }, []);
-
   const settings = {
     dots: true,
     // infinite: partnersList.length > 3,
@@ -40,41 +24,27 @@ export default function PartnersPageComponent() {
     arrows: true,
   };
   return (
-    <section id="partners-outer">
-      <div className="partners-header-Page">
+    <section id={partnersOuter}>
+      <div className={partnersHeaderPage}>
         <h1>Parceiros</h1>
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
       </div>
-      {loading ? (
-        'Carregando...'
-      ) : (
-        <div className="partners-itemList-page">
-          <Slider id="slider" {...settings}>
-            {/* {partnersList.map((partner) => (
-            <Link
-              key={partner.name}
-              target="new"
-              rel="noreferrer"
-              to={`/parceiro/${partner.name}/sobre`}
-            >
-              <img src={partner.resources[0].url} alt={partner.title} />
-            </Link>
-          ))} */}
-            {PARTNERS_DATA_CONST.map((cards) => (
-              <div key={cards.id}>
-                <a
-                  className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
-                  target="new"
-                  rel="noreferrer"
-                  href={cards.actionLink}
-                >
-                  <img src={cards.img} alt={cards.img} />
-                </a>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      )}
+      <div className={PartnersItemListPage}>
+        <Slider id="slider" {...settings}>
+          {PARTNERS_DATA_CONST.map((cards) => (
+            <div key={cards.id}>
+              <a
+                className={`${cards.actionLink === '' ? 'cards-action-link-active' : ''}`}
+                target="new"
+                rel="noreferrer"
+                href={cards.actionLink}
+              >
+                <img src={cards.img} alt={cards.img} />
+              </a>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </section>
   );
 }

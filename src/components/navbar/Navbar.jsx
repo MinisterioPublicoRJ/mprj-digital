@@ -8,17 +8,19 @@ import logoMp from '../../assets/logoMp.svg';
 import { getProductNavbarData, getPartnerNavbarData } from '../../api/api';
 
 import {
-  icon,
+  navbarLogo,
   navbarLinks,
-  sectionToolTip,
-  tooltipText,
-  navBar,
+  navbarSectionToolTip,
+  navbarTooltipText,
+  navbarClass,
   navbarMobile,
-  mobileButtonActive,
-  dropdown,
-  dropdownContent,
-  mobileButton,
-  dropbtnButton,
+  navbarMobileButtonActive,
+  navbarDropdown,
+  navbarDropdownContent,
+  navbarMobileButton,
+  navbarDropbtnButton,
+  navbarDropbtn,
+  navbarBasicButton,
 } from './Navbar.module.css';
 
 export default function Navbar() {
@@ -44,23 +46,23 @@ export default function Navbar() {
         <div id="allnavBar">
           {mobile && (
             <button
-              className={`${mobileButton}  ${mobileMenu && `${mobileButtonActive}`}`}
+              className={`${navbarMobileButton}  ${mobileMenu && `${navbarMobileButtonActive}`}`}
               aria-label="Menu"
               type="button"
               onClick={() => setMobileMenu(!mobileMenu)}
             />
           )}
           <section
-            id={navBar}
-            className={`${mobile ? `${navbarMobile}` : `${navBar}`} ${
-              mobileMenu && `${mobileButtonActive}`
+            id="navBar"
+            className={`${mobile ? `${navbarMobile}` : `${navbarClass}`} ${
+              mobileMenu && `${navbarMobileButtonActive}`
             }`}
           >
             <NavLink to="/">
-              <img className={icon} src={logoMp} alt="logo-Mp" />
+              <img className={navbarLogo} src={logoMp} alt="logo-Mp" />
             </NavLink>
             <section className={navbarLinks}>
-              <div className={sectionToolTip}>
+              <div className={navbarSectionToolTip}>
                 <NavLink
                   to="/"
                   onClick={() =>
@@ -73,24 +75,24 @@ export default function Navbar() {
                 >
                   O que é o MPRJ Digital?
                 </NavLink>
-                <span className={tooltipText}>Conheça a nossa visão de dados abertos</span>
+                <span className={navbarTooltipText}>Conheça a nossa visão de dados abertos</span>
               </div>
-              <div className={dropdown}>
-                <div className={sectionToolTip}>
-                  <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
+              <div className={navbarDropdown}>
+                <div className={navbarSectionToolTip}>
+                  <NavLink to="/" type="button" className={navbarDropbtnButton} id={navbarBasicButton}>
                     Parceiros
                   </NavLink>
-                  <span className={tooltipText} style={{ marginBottom: 8 }}>
+                  <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
                     Conheça os setores envolvidos nessa iniciativa
                   </span>
-                  <div className={dropdownContent}>
+                  <div className={navbarDropdownContent}>
                     {partnerNavbarData
                       ? partnerNavbarData.map(({ title, name }) => (
                           <NavLink
                             key={title}
                             to={`/parceiro/${name}/sobre`}
                             type="button"
-                            className="dropbtn"
+                            className={navbarDropbtn}
                           >
                             {title}
                           </NavLink>
@@ -99,22 +101,22 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className={dropdown}>
-                <div className={sectionToolTip}>
-                  <NavLink to="/" type="button" className={dropbtnButton} id="basic-button">
+              <div className={navbarDropdown}>
+                <div className={navbarSectionToolTip}>
+                  <NavLink to="/" type="button" className={navbarDropbtnButton} id={navbarBasicButton}>
                     Produtos
                   </NavLink>
-                  <span className={tooltipText} style={{ marginBottom: 8 }}>
+                  <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
                     Navegue e conheça nossos produtos e sistemas
                   </span>
-                  <div className={dropdownContent}>
+                  <div className={navbarDropdownContent}>
                     {productNavbarData
                       ? productNavbarData.map(({ title, name }) => (
                           <NavLink
                             key={title}
                             to={`/produto/${name}`}
                             type="button"
-                            className="dropbtn"
+                            className={navbarDropbtn}
                           >
                             {title}
                           </NavLink>
@@ -123,7 +125,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className={sectionToolTip}>
+              <div className={navbarSectionToolTip}>
                 <NavLink
                   to="/"
                   onClick={() =>
@@ -136,9 +138,9 @@ export default function Navbar() {
                 >
                   Repositórios
                 </NavLink>
-                <span className={tooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
+                <span className={navbarTooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
               </div>
-              <div className={sectionToolTip}>
+              <div className={navbarSectionToolTip}>
                 <NavLink
                   to="/"
                   type="button"
@@ -152,7 +154,7 @@ export default function Navbar() {
                 >
                   Denúncias e Reclamações
                 </NavLink>
-                <span className={tooltipText}>Tem uma Reclamação ou precisa da nossa ajuda.</span>
+                <span className={navbarTooltipText}>Tem uma Reclamação ou precisa da nossa ajuda.</span>
               </div>
             </section>
           </section>

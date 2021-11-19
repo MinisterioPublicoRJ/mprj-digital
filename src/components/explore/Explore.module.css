@@ -13,11 +13,11 @@
   width: 30%;
 }
 
-.exploreItemOuter:hover .sectionBoxButton {
+.exploreItemOuter:hover .exploreSectionBoxButton {
   height: 4vh;
 }
 
-.sectionBoxLine {
+.exploreSectionBoxLine {
   border-bottom: 2px solid var(--secondColor);
   margin-top: 2vh;
   content: '';
@@ -36,7 +36,7 @@
   height: calc(var(--exploreSectionHeight) - 20px - 4vh);
 }
 
-.exploreItemInner:hover a.sectionBoxLinks,
+.exploreItemInner:hover a.exploreSectionBoxLinks,
 .exploreItemInner:hover h3 {
   color: #c99e50;
 }
@@ -53,13 +53,13 @@
   margin: 0;
 }
 
-.sectionBoxButton {
+.exploreSectionBoxButton {
   display: flex;
   height: 0;
   transition: height 0.3s ease-in;
 }
 
-.sectionBoxButton a {
+.exploreSectionBoxButton a {
   background-color: #c99e50;
   border-radius: 5px;
   height: 100%;
@@ -67,7 +67,7 @@
   width: 35%;
 }
 
-.sectionBoxButton p {
+.exploreSectionBoxButton p {
   color: var(--colorWhite);
   font-size: var(--smallFont);
   font-family: var(--robotRegular);
