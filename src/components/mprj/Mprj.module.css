@@ -2,7 +2,7 @@
   font-family: Roboto;
   display: grid;
   grid-gap: 30px;
-  margin: 10vh 0;
+  margin: 10vh 0 0 0;
   grid-template-areas: 'mprjTexts mprjTexts mprjTexts mprjInfo mprjInfo mprjInfo';
   height: 100vh;
 }
