@@ -77,29 +77,12 @@ export default function Navbar() {
                 </NavLink>
                 <span className={navbarTooltipText}>Conheça a nossa visão de dados abertos</span>
               </div>
-              <div className={navbarDropdown}>
-                <div className={navbarSectionToolTip}>
-                  <NavLink to="/" type="button" className={navbarDropbtnButton} id={navbarBasicButton}>
-                    Parceiros
-                  </NavLink>
-                  <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
-                    Conheça os setores envolvidos nessa iniciativa
-                  </span>
-                  <div className={navbarDropdownContent}>
-                    {partnerNavbarData
-                      ? partnerNavbarData.map(({ title, name }) => (
-                          <NavLink
-                            key={title}
-                            to={`/parceiro/${name}/sobre`}
-                            type="button"
-                            className={navbarDropbtn}
-                          >
-                            {title}
-                          </NavLink>
-                        ))
-                      : null}
-                  </div>
-                </div>
+              <div className={navbarSectionToolTip}>
+                <NavLink
+                  to={`/parceiro/gadg/sobre`}
+                >
+                  Equipe
+                </NavLink>
               </div>
               <div className={navbarDropdown}>
                 <div className={navbarSectionToolTip}>
