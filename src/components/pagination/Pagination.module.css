@@ -1,7 +1,6 @@
 .mainPagination {
   display: flex;
   justify-content: center;
-  margin-bottom: 70px;
 }
 .paginationItemBtn {
   display: flex;

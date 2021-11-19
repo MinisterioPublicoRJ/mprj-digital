@@ -11,8 +11,8 @@ export default function Home() {
         <Header />
         <Explore />
         <Mprj />
-        <Partners />
         <Products />
+        <Partners />
         <OpenData />
         <TalkToUs />
       </div>
