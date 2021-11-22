@@ -1,4 +1,4 @@
-.navBar {
+.navbarClass {
   display: flex;
   justify-content: space-around;
   background-color: var(--mainRedColor);
@@ -17,32 +17,32 @@
   margin-right: 10px;
   font-weight: 300;
 }
-.icon{
+.navbarLogo{
   width: 130px;
   height: 40px;
   margin-top: 40px;
 }
-.dropdownContent {
+.navbarDropdownContent {
   display: none;
   position: absolute;
   background-color: var(--mainRedColor);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.dropdownContent a {
+.navbarDropdownContent a {
   padding: 8px 30px 4px 0px;
   text-decoration: none;
   display: block;
   font-size: 15px;
 }
-.dropdown:hover .dropdownContent {
+.navbarDropdown:hover .navbarDropdownContent {
   display: block;
 }
-.dropbtnButton {
+.navbarDropbtnButton {
   color: var(--colorWhite);
   display: flex;
 }
-.dropbtnButton:after {
+.navbarDropbtnButton:after {
   margin: 6px;
   content: '';
   border-top: 0.3em solid;
@@ -50,11 +50,11 @@
   border-left: 0.3em solid transparent;
   color: var(--colorWhite);
 }
-.sectionToolTip {
+.navbarSectionToolTip {
   position: relative;
   display: inline-block;
 }
-.sectionToolTip .tooltipText {
+.navbarSectionToolTip .navbarTooltipText {
   visibility: hidden;
   width: 156px;
   border: 1px solid var(--mainColor);
@@ -73,7 +73,7 @@
   color: var(--mainColor);
   font-family: var(--robotRegular);
 }
-.sectionToolTip .tooltipText::after {
+.navbarSectionToolTip .navbarTooltipText::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -83,11 +83,11 @@
   border-style: solid;
   border-color: var(--colorWhite) transparent transparent transparent;
 }
-.sectionToolTip:hover .tooltipText {
+.navbarSectionToolTip:hover .navbarTooltipText {
   visibility: visible;
   opacity: 1;
 }
-.mobileButton {
+.navbarMobileButton {
   background-color: var(--mainRedColor);
   border-radius: 0.2rem;
   height: 50px;
@@ -100,7 +100,7 @@
   transition: 0.1s;
   margin: 30px;
 }
-.mobileButton::after {
+.navbarMobileButton::after {
   content: '';
   display: block;
   width: 1.2rem;
@@ -110,15 +110,15 @@
   box-shadow: 0 6px var(--colorWhite), 0 -6px var(--colorWhite);
   transition: 0.2s;
 }
-.mobileButton:hover,
-.mobileButton:focus,
-.mobileButtonActive{
+.navbarMobileButton:hover,
+.navbarMobileButton:focus,
+.navbarMobileButtonActive{
   outline: none;
   background-color: var(--mainRedColor);
   color: rgb(212, 209, 204);
   opacity: 0.92;
 }
-.mobileButtonActive::after{
+.navbarMobileButtonActive::after{
   transform: rotate(90deg);
   width: 4px;
   height: 4px;
@@ -154,17 +154,17 @@
   pointer-events: initial;
   margin-left: 30px;
 }
-.navbarMobile .sectionToolTip{
+.navbarMobile .navbarSectionToolTip{
   display: block;
 }
 @media (max-width: 1080px){
-  .icon{
+  .navbarLogo{
     display: none;
   }
-  #basic-button{
+  #navbarBasicButton{
     font-size: 10px;
   }
-  .dropdownContent{
+  .navbarDropdownContent{
     position: relative;
   }
 

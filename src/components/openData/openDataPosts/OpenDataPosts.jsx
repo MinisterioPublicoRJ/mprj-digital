@@ -2,26 +2,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  openDataItens,
-  openDatatexts,
-  openDataDescription,
-  openDataButton,
-  atualizationTitle,
-  openDataSubtitle,
-  openDataScoreButton,
+  openDataPostsItens,
+  openDataPostsTexts,
+  openDataPostsDescription,
+  openDataPostsButton,
+  openDataPostsAtualizationTitle,
+  openDataPostsSubtitle,
+  openDataPostsScoreButton,
 } from './OpenDataPosts.module.css';
 
 export default function OpenDataPosts({ posts }) {
   return (
     <>
       {posts.map((item) => (
-        <section key={item.id} className={openDataItens}>
-          <div className={openDatatexts}>
-            <button type="button" className={openDataScoreButton}>
+        <section key={item.id} className={openDataPostsItens}>
+          <div className={openDataPostsTexts}>
+            <button type="button" className={openDataPostsScoreButton}>
               <span>{item.score.toFixed(2)}</span>
             </button>
             <h4>{item.title}</h4>
-            <p className={openDataDescription}>{item.description}</p>
+            <p className={openDataPostsDescription}>{item.description}</p>
             <p>
               <span>Setor Responsável:</span>
               {' '}
@@ -32,8 +32,8 @@ export default function OpenDataPosts({ posts }) {
               {' '}
               {Intl.DateTimeFormat('pt-br', { timeZone: 'UTC' }).format(new Date(item.date))}
             </p>
-            <p className={atualizationTitle} />
-            <div className={openDataSubtitle}>
+            <p className={openDataPostsAtualizationTitle} />
+            <div className={openDataPostsSubtitle}>
               <p>
                 <span>Utilização:</span>
                 {' '}
@@ -52,7 +52,7 @@ export default function OpenDataPosts({ posts }) {
             </div>
             <button
               type="button"
-              className={openDataButton}
+              className={openDataPostsButton}
               onClick={(event) => {
                 if (item.link) {
                   event.preventDefault();

@@ -1,0 +1,32 @@
+.productItemWrapper {
+  text-align: center;
+}
+.productItemWrapper img {
+  width: 157px;
+  height: 157px;
+  border-radius: 10px;
+}
+
+.productItemWrapper p {
+  color: #9dafbd;
+  text-align: center;
+  margin-right: 0px;
+  margin-bottom: 42px;
+}
+
+@media (max-width: 380px){
+  .productItemWrapper img{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 1080px){
+  .productItemWrapper img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+  }
+  .productItemWrapper .productItemText {
+   text-align: center;
+  }
+}

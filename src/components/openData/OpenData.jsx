@@ -7,11 +7,11 @@ import ArrowIcon from '../../utils/ArrowIcon';
 import { useHomeContext } from '../../pages/home/HomeContext';
 
 import {
-  openData,
+  openDataOuter,
   openDataCounter,
-  inputOpenDataIcon,
-  productsFilterTitles,
-  filterTitle
+  openDataInputIcon,
+  openDataProductsFilterTitles,
+  openDatailterTitle,
 } from './OpenData.module.css';
 
 export default function OpenData() {
@@ -90,7 +90,7 @@ export default function OpenData() {
   const currentPost = posts.slice(firstPost, lastPost);
 
   return (
-    <section className={openData} id="repositorios">
+    <section className={openDataOuter} id="repositorios">
       <h1>Repositório de Dados Abertos</h1>
       <p style={{ color: '#9DAFBD', textAlign: 'left'}}>
         Visando o aprimoramento das iniciativas e o fomento ao controle social exercido sociedade,
@@ -101,7 +101,7 @@ export default function OpenData() {
         disponíveis são aqueles que têm proteção legal, como dados pessoais ou sigilosos.
       </p>
       <div className={openDataCounter}>
-        <div className={inputOpenDataIcon}>
+        <div className={openDataInputIcon}>
           <input
             ref={searchInputRef}
             type="text"
@@ -113,17 +113,17 @@ export default function OpenData() {
         </div>
         <span>{OPENDATA.length} Repositórios</span>
       </div>
-      <div className={productsFilterTitles}>
+      <div className={openDataProductsFilterTitles}>
         <p>Ordenar por:</p>
         <button
           type="button"
-          onClick={() => setFilterByType('score')} className={filterTitle}>
+          onClick={() => setFilterByType('score')} className={openDatailterTitle}>
           Qualidade da Base
         </button>
-        <button type="button" onClick={() => setFilterByType('date')} className={filterTitle}>
+        <button type="button" onClick={() => setFilterByType('date')} className={openDatailterTitle}>
           Data da Atualização
         </button>
-        <button type="button" onClick={() => setFilterByType('datatype')} className={filterTitle}>
+        <button type="button" onClick={() => setFilterByType('datatype')} className={openDatailterTitle}>
           Estrutura do Dado
         </button>
       </div>
