@@ -12,6 +12,7 @@ import {
   productMiniatureTransform,
   partnerstPageTransform,
   productPageTransform,
+  partnersMiniatureTransform,
 } from './transforms';
 
 export async function getPartnerPageData(partner) {
@@ -35,7 +36,7 @@ export async function getPartnertComponentData() {
   }
 
   const { result } = await response.json();
-  return result.results;
+  return partnersMiniatureTransform(result);
 }
 
 export async function getProductPageData(productName) {
