@@ -10,6 +10,7 @@ import {
   partnersHeader,
   partnersItemList,
   partnersCardsActionLinkActive,
+  partnersItemCard,
 } from './Partners.module.css';
 
 export default function Partners() {
@@ -27,21 +28,21 @@ export default function Partners() {
 
   return (
     <section className={partnersOuter} id="parceiros">
-      <div className={partnersHeader}>
-        <h1>Parceiros</h1>
-        <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
-        <div className={partnersItemList}>
-          {partnersData && partnersData.map(({ id, name, imageSrc, hasPage }) => (
-            <Link
-              key={id}
-              to={`/parceiro/${name}/sobre`}
-              className={hasPage === '' ? partnersCardsActionLinkActive : ''}
-            >
-              <img src={imageSrc} alt={name} />
-            </Link>
-          ))}
-        </div>
+      <h1>Parceiros</h1>
+      <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
+      <div className={partnersItemList}>
+        {partnersData && partnersData.map(({ id, name, imageSrc, hasPage }) => (
+          <Link
+            key={id}
+            to={`/parceiro/${name}/sobre`}
+            className={`${partnersItemCard}`}
+          >
+            <img src={imageSrc} alt={name} className={partnersItemCard} />
+          </Link>
+        ))}
       </div>
+      {/* <div className={partnersHeader}>
+      </div> */}
     </section>
   );
 }
