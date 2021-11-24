@@ -3,15 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { getPartnertComponentData } from '../../api/api';
 
-// import PARTNERS_DATA_CONST from './partnersDataComponent';
-
-import {
-  partnersOuter,
-  partnersHeader,
-  partnersItemList,
-  partnersCardsActionLinkActive,
-  partnersItemCard,
-} from './Partners.module.css';
+import { partnersOuter, partnersItemList, partnersItemCard } from './Partners.module.css';
 
 export default function Partners() {
   const [partnersData, setPartnersData] = useState();
@@ -31,18 +23,17 @@ export default function Partners() {
       <h1>Parceiros</h1>
       <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
       <div className={partnersItemList}>
-        {partnersData && partnersData.map(({ id, name, imageSrc, hasPage }) => (
-          <Link
-            key={id}
-            to={`/parceiro/${name}/sobre`}
-            className={`${partnersItemCard}`}
-          >
-            <img src={imageSrc} alt={name} className={partnersItemCard} />
-          </Link>
-        ))}
+        {partnersData && partnersData.map(({ id, name, imageSrc, hasPage }) => {
+          if (hasPage) {
+            return (
+              <Link key={id} to={`/parceiro/${name}/sobre`}>
+                <img src={imageSrc} alt={name} className={partnersItemCard} />
+              </Link>
+            );
+          }
+          return <img key={id} src={imageSrc} alt={name} className={partnersItemCard} />;
+        })}
       </div>
-      {/* <div className={partnersHeader}>
-      </div> */}
     </section>
   );
 }

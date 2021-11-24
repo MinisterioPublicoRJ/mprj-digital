@@ -1,7 +1,5 @@
 .partnersOuter {
   background-color: var(--backgroundFooter);
-  display: flex;
-  flex-direction: column;
   height: calc(70vh - 2 * var(--sectionVerticalPadding));
   position: relative;
   padding: var(--sectionVerticalPadding) 15%;
@@ -17,15 +15,15 @@
 
 .partnersItemList {
   display: grid;
-  flex: 1;
-  grid-template-columns: repeat(4, minmax(0, 25%));
-  grid-template-rows: repeat(3, minmax(0, 33%));
-  grid-gap: 3vw 9vw;
-  margin-top: 3vw;
+  height: calc(90% - 3vh);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-gap: 4vh 10vw;
+  margin-top: 3vh;
 }
 
 .partnersItemCard {
-  height: 100%;
+  max-height: 100%;
   width: 100%;
 }
 
@@ -35,7 +33,7 @@
 } */
 
 @media (max-width: 480px) {
-  .partnersOuter h1 {
+  /* .partnersOuter h1 {
     font-size: 20px;
     text-align: center;
   }
@@ -56,12 +54,12 @@
 
   .partnersHeader {
     top: -37px;
-  }
+  } */
 }
 
 @media (min-width: 480px) and (max-width: 796px) {
-  .partnersItemList img {
+  /* .partnersItemList img {
     width: 50px;
     height: 50px;
-  }
+  } */
 }

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -11,18 +10,17 @@ import {
   PartnersItemListPage,
 } from './PartnersPageComponent.module.css';
 
-export default function PartnersPageComponent() {
-  const settings = {
-    dots: true,
-    // infinite: partnersList.length > 3,
-    infinite: true,
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  variableWidth: true,
+  variableHeight: true,
+  arrows: true,
+};
 
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    variableWidth: true,
-    variableHeight: true,
-    arrows: true,
-  };
+export default function PartnersPageComponent() {
   return (
     <section id={partnersOuter}>
       <div className={partnersHeaderPage}>
@@ -30,7 +28,8 @@ export default function PartnersPageComponent() {
         <p>Setores parceiros diretamente ligados na iniciativa MPRJ Digital.</p>
       </div>
       <div className={PartnersItemListPage}>
-        <Slider id="slider" {...settings}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Slider id="slider" {...sliderSettings}>
           {PARTNERS_DATA_CONST.map((cards) => (
             <div key={cards.id}>
               <a
