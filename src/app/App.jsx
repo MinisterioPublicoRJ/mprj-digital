@@ -10,10 +10,8 @@ import '../themes/themes.css';
 
 const App = () => {
   // will always be empty outside of prod
-  const trackingId = process.env.REACT_APP_ANALYTICS_CODE || '';
-  ReactGA.initialize(trackingId, {
-    gaOptions: { cookieFlags: 'SameSite=None;Secure' },
-  });
+  const trackingId = process.env.REACT_APP_ANALYTICS_CODE;
+  ReactGA.initialize(trackingId);
   return (
     <BrowserRouter>
       <Navbar />

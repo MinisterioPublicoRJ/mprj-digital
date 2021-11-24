@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 // import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 import { Home, ProductPage, PartnerPage } from '../pages';
 
 import './Router.css';
 
 function locationListener({ pathname }) {
-  console.log(`I am in ${JSON.stringify(pathname)}`);
   ReactGA.set({ page: pathname });
   ReactGA.pageview(pathname);
 }
