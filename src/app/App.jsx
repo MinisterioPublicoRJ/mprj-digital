@@ -9,7 +9,8 @@ import { Footer, Navbar } from '../components';
 import '../themes/themes.css';
 
 const App = () => {
-  const trackingId = process.env.REACT_APP_ANALYTICS_CODE;
+  // will always be empty outside of prod
+  const trackingId = process.env.REACT_APP_ANALYTICS_CODE || '';
   ReactGA.initialize(trackingId, {
     gaOptions: { cookieFlags: 'SameSite=None;Secure' },
   });
