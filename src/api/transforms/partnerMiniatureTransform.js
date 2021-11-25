@@ -1,6 +1,8 @@
 export default function partnersMiniatureTransform(rawData) {
   const { count, results } = rawData;
   const partnersMiniatureArray = results
+    .filter(({ name }) => name !== 'gadg') // removes our own organization from partners list
+    .sort((a, b) => +a.ordem_aparecimento - +b.ordem_aparecimento)
     .map((partner) => {
       let imageSrc;
       if (partner.resources) {
@@ -9,11 +11,10 @@ export default function partnersMiniatureTransform(rawData) {
       return {
         id: partner.id,
         name: partner.name,
-        hasPage: partner.quem_somos, // MUDAR CHECAGEM PRA USAR PILAR3
+        hasPage: partner.pilar_3,
         imageSrc,
       };
-    })
-    .filter(({ name }) => name !== 'gadg'); // removes our own team from partners list
+    });
   return {
     total: count,
     partnersMiniatureArray,

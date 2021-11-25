@@ -15,7 +15,7 @@
 
 .partnersItemList {
   display: grid;
-  height: calc(90% - 3vh);
+  height: calc(90% - 6vh);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
   grid-gap: 4vh 10vw;

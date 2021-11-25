@@ -10,7 +10,6 @@ export default function Partners() {
 
   async function onMount() {
     const { total, partnersMiniatureArray } = await getPartnertComponentData();
-    console.log('partnersRes', partnersMiniatureArray);
     setPartnersData(partnersMiniatureArray);
   }
 
