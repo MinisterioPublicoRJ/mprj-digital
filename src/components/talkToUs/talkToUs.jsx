@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import map from '../../assets/map.png';
+import map from '../../assets/NewMap.png';
 import styles from './talkToUs.module.css';
 import { setDataForm } from '../../api/api';
 

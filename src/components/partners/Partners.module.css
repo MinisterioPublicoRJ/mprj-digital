@@ -1,59 +1,65 @@
 .partnersOuter {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    background-color: var(--backgroundFooter);
+  background-color: var(--backgroundFooter);
+  height: calc(70vh - 2 * var(--sectionVerticalPadding));
+  position: relative;
+  padding: var(--sectionVerticalPadding) 15%;
+  width: 70%;
+}
+
+.partnersOuter h1,
+.partnersOuter p {
+  text-align: left;
+  color: var(--colorWhite);
+  margin-bottom: 10px;
+}
+
+.partnersItemList {
+  display: grid;
+  height: calc(90% - 6vh);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-gap: 4vh 10vw;
+  margin-top: 3vh;
+}
+
+.partnersItemCard {
+  max-height: 100%;
+  width: 100%;
+}
+
+/* .partnersCardsActionLinkActive {
+  cursor: none;
+  pointer-events: none;
+} */
+
+@media (max-width: 480px) {
+  /* .partnersOuter h1 {
+    font-size: 20px;
+    text-align: center;
   }
-  
-.partnersOuter h1, .partnersOuter p {
-    text-align: left;
-    color: var(--colorWhite);
-    font-family: var(--robotRegular);
-    margin-bottom: 10px;
-}
-.partnersItemList{
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-auto-flow: row;
-    grid-gap: 6vw 5vw;
-    flex: 2;
-}
-.partnersHeader {
-    padding: var(--sectionVerticalPadding) 20%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    position: absolute;
-}
-.partnersCardsActionLinkActive{
-    cursor: none;
-    pointer-events: none;
-}
-@media (max-width: 480px){
-    .partnersOuter h1 {
-      font-size: 20px;
-      text-align: center;
-    }
-    .partnersItemList{
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-gap: 6vw 25vw;
-    }
-    .partnersItemList img{
-      width: 35px;
-      height: 35px;
-    }
-    .partnersOuter p{
-      text-align: center;
-    }
-    .partnersHeader{
-      top: -37px;
-    }
+
+  .partnersItemList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 6vw 25vw;
   }
-@media (min-width: 480px) and (max-width: 796px){
-    .partnersItemList img{
-      width: 50px;
-      height: 50px;
-    }
+
+  .partnersItemList img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .partnersOuter p {
+    text-align: center;
+  }
+
+  .partnersHeader {
+    top: -37px;
+  } */
 }
-  
+
+@media (min-width: 480px) and (max-width: 796px) {
+  /* .partnersItemList img {
+    width: 50px;
+    height: 50px;
+  } */
+}

@@ -5,6 +5,7 @@
   margin-top: 450px;
   margin-bottom: -40px;
 }
+
 .talkButton {
   width: 108px;
   height: 38px;
@@ -17,16 +18,19 @@
   border: none;
   margin-top: 20px;
 }
-.talkOuter img{
+
+.talkOuter img {
   position: absolute;
   bottom: 240px;
   width: 100%;
-  height: 60vh;
+  /* height: 60vh; */
 }
-.talkOuter h1{
+
+.talkOuter h1 {
   font-size: var(--titleFontSize);
   margin-top: 20px;
 }
+
 ::-webkit-input-placeholder {
   color:#9DAFBD;
 }
@@ -43,7 +47,7 @@
   color:#9DAFBD;
 }
 
-.talkOuter p{
+.talkOuter p {
   color: #9DAFBD;
   text-align: center;
   font-size: 16px;
@@ -51,31 +55,37 @@
   max-width: 518px;
   margin: 0px;
 }
+
 input,
-textarea{
+textarea {
   color: #9DAFBD;
 }
-.messageSendForm{
+
+.messageSendForm {
   margin-top: 15px;
 }
+
 input:focus,
 textarea:focus {
-  background-color: #F7F9FA 0% 0% no-repeat padding-box; 
+  background-color: #F7F9FA 0% 0% no-repeat padding-box;
   outline: 1px solid #D1DBE3;
 }
-.formInputsOuter{
+
+.formInputsOuter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
-p.sentMensage{
+
+p.sentMensage {
   color: var(--mainRedColor);
 }
+
 .formInputsOuter
  textarea,
- input{
+ input {
   border: 1px solid #D1DBE3;
   border-radius: 5px;
   opacity: 1;
@@ -83,24 +93,29 @@ p.sentMensage{
   text-indent: 20px;
   font-size: 14px;
 }
-.formInputsTextOuter{
+
+.formInputsTextOuter {
   display: flex;
   width: 100%;
 }
-.formInputsOuter{
+
+.formInputsOuter {
   display: flex;
   width: 100%;
 }
-.formInputsOuter input{
+
+.formInputsOuter input {
   height: 50px;
   margin-left:5px;
   margin-right:5px;
   width: 100%;
 }
-.formInputsOuter textarea{
+
+.formInputsOuter textarea {
   width: 99%;
 }
-.formOuter{
+
+.formOuter {
   position: absolute;
   width: 50%;
   height: 60vh;
@@ -116,29 +131,31 @@ p.sentMensage{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center 
+  justify-content: center
 }
-@media (max-width: 670px){
-  .formInputsTextOuter{
+
+@media (max-width: 670px) {
+  .formInputsTextOuter {
     display: block;
   }
-  .formInputsOuter input{
+
+  .formInputsOuter input {
     margin: 0;
     margin-top: 10px;
   }
-  .formOuter{
+
+  .formOuter {
     height: 70vh;
   }
 }
 @media screen and (min-width: 670px) and (max-width: 1200px){
-  .formInputsOuter{
+  .formInputsOuter {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  .formInputsTextOuter{
+
+  .formInputsTextOuter {
     display: flex;
   }
 }
-
-

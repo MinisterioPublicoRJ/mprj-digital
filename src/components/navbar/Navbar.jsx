@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
 import logoMp from '../../assets/logoMp.svg';
-import { getProductNavbarData, getPartnerNavbarData } from '../../api/api';
+import { getProductNavbarData } from '../../api/api';
 import DropdownProducts from './dropdownProducts/DropdownProducts';
 
 import {
@@ -25,16 +25,11 @@ export default function Navbar() {
   const mobile = useMedia('(max-width: 67.5rem)');
   const [mobileMenu, setMobileMenu] = useState(false);
   const [productNavbarData, setProductNavbarData] = useState();
-  const [partnerNavbarData, setPartnerNavbarData] = useState();
 
   async function loadProductNavbarData() {
     const productResponse = await getProductNavbarData();
     if (productResponse) {
       setProductNavbarData(productResponse);
-    }
-    const partnerResponse = await getPartnerNavbarData();
-    if (partnerResponse) {
-      setPartnerNavbarData(partnerResponse);
     }
   }
 
