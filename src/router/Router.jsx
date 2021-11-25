@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import ReactGA from 'react-ga';
 // import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 import { Home, ProductPage, PartnerPage } from '../pages';
 
 import './Router.css';
 
+function locationListener({ pathname }) {
+  ReactGA.set({ page: pathname });
+  ReactGA.pageview(pathname);
+}
+
 function Router() {
   const location = useLocation();
+
+  useEffect(() => {
+    locationListener(location);
+  }, [location]);
 
   return (
     /* <TransitionGroup>

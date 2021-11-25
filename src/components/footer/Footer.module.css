@@ -7,7 +7,7 @@
   flex-direction: column;
   height: 40vh;
 }
-.logoFooter{
+.footerLogo{
   width: 130px;
   height: 40px;
 }
@@ -63,10 +63,10 @@
 .footerMenuIconFacebook {
   background: url('../../assets/SocialMedia.svg') 20px 0;
 }
-.createSpace {
+.footerCreateSpace {
   flex-grow: 1;
 }
-.iconOuvidoria {
+.footerIconOuvidoria {
   width: 80px;
   height: 50px;
 }
@@ -93,16 +93,16 @@
 }
 
 @media (max-width: 380px){
-  .iconOuvidoria{
+  .footerIconOuvidoria{
     height: 40px;
   }
-  .logoFooter{
+  .footerLogo{
     width: 70px;
     height: 30px;
   }
 }
 @media (max-width: 1080px){
-  .iconOuvidoria{
+  .footerIconOuvidoria{
     width: 70px;
     height: 50px;
   }

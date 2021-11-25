@@ -1,4 +1,4 @@
-.openDataItens {
+.openDataPostsItens {
     display: flex;
     text-align: left;
     flex-direction: column;
@@ -8,33 +8,33 @@
     margin-bottom: 2vh;
     padding: 30px;
 }
-.openDatatexts p {
+.openDataPostsTexts p {
     color: var(--backgroundFooter);
     margin-top: 5px ;
 }
-.openDatatexts span {
+.openDataPostsTexts span {
     text-align: left;
     font-size: 14px;
     color: var(--backgroundFooter);
     font-weight: bold;
     opacity: 1;
 }
-.openDatatexts > h4, .openDatatexts p, .openDatatexts span {
+.openDataPostsTexts > h4, .openDataPostsTexts p, .openDataPostsTexts span {
     text-align: left;
 }
-p.atualizationTitle {
+p.openDataPostsAtualizationTitle {
     border-bottom: solid 1px #d1dbe3 ;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-p.openDataDescription {
+p.openDataPostsDescription {
     color: #9DAFBD;
     font-size: 14px;
     max-width: 600px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.openDatatexts h4 {
+.openDataPostsTexts h4 {
     text-align: left;
     text-decoration: underline;
     font-size: 18px;
@@ -46,11 +46,11 @@ p.openDataDescription {
     font-weight: 300;
     margin-top: -34px;
 }
-.openDatatexts button {
+.openDataPostsTexts button {
     display: flex;
     margin-left: auto;
 }
-.openDatatexts button.openDataScoreButton {
+.openDataPostsTexts button.openDataPostsScoreButton {
     width: 50px;
     height: 38px;
     background: #4d8055 0% 0% no-repeat padding-box;
@@ -60,7 +60,7 @@ p.openDataDescription {
     cursor:unset;
 
 }
-.openDatatexts > button span {
+.openDataPostsTexts > button span {
     font: normal normal 500 16px/19px Roboto;
     letter-spacing: -0.5px;
     color: var(--colorWhite);
@@ -69,7 +69,7 @@ p.openDataDescription {
     margin-top: 10px;
 }
 
-button.openDataButton {
+button.openDataPostsButton {
     width: 108px;
     height: 38px;
     background: var(--mainRedColor) 0% 0% no-repeat padding-box;
@@ -83,19 +83,19 @@ button.openDataButton {
     .mprjDigitalItemOuter p{
       text-align: center;
     }
-    .openDataButton{
+    .openDataPostsButton{
       width: 70px;
     }
-    .openDataScore{
+    .openDataPostsScore{
       width: 40px;
     }
-    .openDataTitle h1 {
+    .openDataPostsTitle h1 {
       text-align: center;
     }
-    .openDataTitle p{
+    .openDataPostsTitle p{
       text-align: center;
     }
-    button.openDataButton {
+    button.openDataPostsButton {
         left: 29vw;
     }
 }
