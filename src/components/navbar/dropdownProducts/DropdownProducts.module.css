@@ -1,0 +1,26 @@
+.dropdownWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 600px;
+  margin: 30px 0px 30px 0px;
+}
+
+.dropdownWrapper div {
+  width: max-content;
+}
+
+.dropdownWrapper h2 {
+  color: var(--colorWhite);
+  font-family: var(--robotRegular);
+  font-weight: 350;
+  font-size: 18px;
+  width: max-content;
+}
+
+.dropdownButtonsWrapper {
+  margin-left: -10px;
+  flex: column;
+  height: max-content;
+  justify-content: space-evenly;
+}

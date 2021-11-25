@@ -28,6 +28,8 @@
   background-color: var(--mainRedColor);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  right: -250px;
+  top: 30px;
 }
 .navbarDropdownContent a {
   padding: 8px 30px 4px 0px;
