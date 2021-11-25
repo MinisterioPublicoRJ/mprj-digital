@@ -4,6 +4,7 @@ import { scroller } from 'react-scroll';
 import useMedia from '../hooks/Usemedia';
 import logoMp from '../../assets/logoMp.svg';
 import { getProductNavbarData, getPartnerNavbarData } from '../../api/api';
+import DropdownProducts from './dropdownProducts/DropdownProducts';
 
 import {
   navbarLogo,
@@ -17,7 +18,6 @@ import {
   navbarDropdownContent,
   navbarMobileButton,
   navbarDropbtnButton,
-  navbarDropbtn,
   navbarBasicButton,
 } from './Navbar.module.css';
 
@@ -85,18 +85,7 @@ export default function Navbar() {
                 Navegue e conheça nossos produtos e sistemas
               </span>
               <div className={navbarDropdownContent}>
-                {productNavbarData
-                  ? productNavbarData.map(({ title, name }) => (
-                    <NavLink
-                      key={title}
-                      to={`/produto/${name}`}
-                      type="button"
-                      className={navbarDropbtn}
-                    >
-                      {title}
-                    </NavLink>
-                  ))
-                  : null}
+                <DropdownProducts productsData={productNavbarData} />
               </div>
             </div>
           </div>
