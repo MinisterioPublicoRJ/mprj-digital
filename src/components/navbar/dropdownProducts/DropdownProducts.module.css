@@ -1,16 +1,15 @@
-.dropdownWrapper {
+.dropdownOuter {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 600px;
   margin: 30px 0px 30px 0px;
 }
 
-.dropdownWrapper div {
+.dropdownOuter div {
   width: max-content;
 }
 
-.dropdownWrapper h2 {
+.dropdownOuter h2 {
   color: var(--colorWhite);
   font-family: var(--robotRegular);
   font-weight: 350;
@@ -23,4 +22,14 @@
   margin-left: -8px;
   flex: column;
   height: max-content;
+}
+
+.dropdownColumns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.dropdownInner {
+  margin: 0px 10px 0px 10px;
 }
