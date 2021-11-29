@@ -11,6 +11,8 @@ export default function Produto() {
   const { productName } = useParams();
   const [changeData, setchangeData] = useState();
   const [productData, setProductData] = useState();
+  const [currentProductIndex, setCurrentProductIndex] = useState(0);
+  const subsectionTitles = ['Por que', 'A ferramenta', 'Os dados'];
 
   async function loadProductData() {
     const result = await getProductPageData(productName);
@@ -50,18 +52,21 @@ export default function Produto() {
         <span>Serviço</span>
       </div>
       <div className="productPage-tabNavigation">
-        {productData.subsectionsArray.map(({ subsectionTitle }) => (
+        {productData.subsectionsArray.map(({ subsectionTitle }, index) => (
           <button
             key={subsectionTitle}
             onClick={() => {
               setchangeData(subsectionTitle);
+              setCurrentProductIndex(index);
             }}
             className={`productPage-navButtons ${
               subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
             }`}
             type="button"
           >
-            {subsectionTitle}
+            {index === 0 && 'Por que'}
+            {index === 1 && 'A ferramenta'}
+            {index === 2 && 'Os dados'}
           </button>
         ))}
       </div>
@@ -69,6 +74,7 @@ export default function Produto() {
         {...productData.subsectionsArray.find(
           (subsection) => subsection.subsectionTitle === changeData,
         )}
+        subsectionTitle={subsectionTitles[currentProductIndex]}
         textBtn={`Acessar ${productData.title}`}
         url={productData.url}
       />
