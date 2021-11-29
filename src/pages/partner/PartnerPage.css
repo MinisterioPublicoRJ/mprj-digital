@@ -36,7 +36,7 @@
 }
 .partner-page-navigation {
   display: inline-flex;
-  place-self: flex-end; 
+  place-self: flex-end;
   width: 48%;
 }
 .partner-page-navigation div {
@@ -89,7 +89,7 @@
 }
 .partner-page-featured p,
 .partner-page-topics p {
-  text-align: left;
+  text-align: justify;
   color: #707070;
   margin-bottom: 40px;
   margin-top: 30px;
@@ -140,6 +140,7 @@
   color: #9DAFBD ;
   margin-bottom: 20px;
   margin-top: 10px;
+  text-align: justify;
 }
 
 .partner-page-cards h4,
