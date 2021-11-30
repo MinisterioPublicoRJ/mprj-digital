@@ -10,8 +10,14 @@ export default function DataProductItem({
   imgUrl,
   textBtn,
   url,
-  imageSrc,
+  thumbnailUrl,
 }) {
+  let image = <img src={miniaturaDefault} alt="icon-miniatura-default" />;
+  if (imgUrl) {
+    image = <img src={imgUrl} alt={`imagem ${subsectionTitle} ${subsectionDescription}`} />;
+  } else if (thumbnailUrl) {
+    image = <img src={thumbnailUrl} alt={subsectionTitle} />;
+  }
   return (
     <>
       <div className="productItem-texts">
@@ -19,11 +25,9 @@ export default function DataProductItem({
         <p>{subsectionDescription}</p>
       </div>
       <div className="productItem-action">
-        {!imageSrc ? (
-          <img src={miniaturaDefault} alt="icon-miniatura-default" />
-        ) : (
-          <img src={imageSrc} alt={subsectionTitle} />
-        )}
+        {
+          image
+        }
         {url ? (
           <a href={url} target="_blank" rel="noopener       noreferrer">
             {textBtn}
@@ -36,7 +40,7 @@ export default function DataProductItem({
 
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
+  thumbnailUrl: PropTypes.string.isRequired,
   subsectionTitle: PropTypes.string.isRequired,
   subsectionDescription: PropTypes.string.isRequired,
   textBtn: PropTypes.string.isRequired,
