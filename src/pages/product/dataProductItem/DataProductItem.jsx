@@ -23,9 +23,11 @@ export default function DataProductItem({
         ) : (
           <img src={imgUrl} alt={subsectionTitle} />
         )}
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          {textBtn}
-        </a>
+        {url ? (
+          <a href={url} target="_blank" rel="noopener       noreferrer">
+            {textBtn}
+          </a>
+        ) : null}
       </div>
     </>
   );
