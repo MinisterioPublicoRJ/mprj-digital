@@ -2,6 +2,7 @@
 
 export default function productMiniatureTransform(rawData) {
   const { count, results } = rawData;
+  console.log('\n\nresults:\n\n', results);
 
   const productsArray = results
     .map(

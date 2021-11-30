@@ -4,11 +4,12 @@ import './ProductPartnerItem.css';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
 
 export default function ProductPartnerItem({ products }) {
+  console.log(products);
   return (
     <div className="partner-page-cards">
       {products.map((card) => (
         <div key={card.id} className="partner-page-card">
-          <a target="new" rel="noreferrer" href={card.link}>
+          <a target="" rel="noreferrer" href={`/produto/${card.name}`}>
             {!card.imageSrc ? (
               <img src={miniaturaDefault} alt={card.title} />
             ) : (
