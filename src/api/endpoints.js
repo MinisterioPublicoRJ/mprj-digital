@@ -16,7 +16,7 @@ export const PRODUCT_PAGE_DATA = (productName) => `${BASE_URL}?q=type:produtos&f
 
 export const PRODUCT_COMPONENT_DATA = (nextPos, extraFilters) => `${BASE_URL}?q=type:produtos&start=${nextPos}&fq=${extraFilters}&fl=title,name,res_name,res_url,res_format,extras_product_thumbnail_description,extras_ordem_aparecimento&facet.limit=10&rows=8&sort=extras_ordem_aparecimento asc`;
 
-export const PRODUCT_NAVBAR_DATA = `${BASE_URL}?q=type:produtos&fl=name,title`;
+export const PRODUCT_NAVBAR_DATA = `${BASE_URL}?q=type:produtos&fl=name,title&sort=extras_ordem_aparecimento asc`;
 
 // export const PARTNER_NAVBAR_DATA = `${BASE_URL}?q=type:paginaparceiro&fl=name,title`;
 

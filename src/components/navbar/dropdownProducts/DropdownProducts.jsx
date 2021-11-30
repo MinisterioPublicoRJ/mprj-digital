@@ -12,7 +12,7 @@ import {
 
 function otherProductsData(remainingProductsData) {
   const tempArray = [remainingProductsData];
-  const mediumColumnSize = 4;
+  const mediumColumnSize = 5;
   const columnCount = Math.round(remainingProductsData.length / mediumColumnSize);
   const maxPerColumn = Math.ceil(remainingProductsData.length / columnCount);
 
@@ -25,7 +25,7 @@ function otherProductsData(remainingProductsData) {
 }
 
 export default function DropdownProducts({ productsData }) {
-  const highlitedCount = 2;
+  const highlitedCount = 5;
   const highlitedProductsData = productsData ? productsData.slice(0, highlitedCount) : null;
 
   return (
