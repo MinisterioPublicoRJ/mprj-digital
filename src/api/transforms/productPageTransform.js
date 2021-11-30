@@ -1,5 +1,6 @@
 export default function productPageTransform(rawData) {
   const result = rawData.results[0];
+  console.log(result);
   const answer = result ? {
     subtitle: result.product_page_subtitle,
     description: result.product_page_description,
@@ -13,6 +14,9 @@ export default function productPageTransform(rawData) {
     )?.url,
     icon: result.resources?.find(
       (image) => image.name === 'product_icon',
+    )?.url,
+    imageSrc: result.resources?.find(
+      (image) => image.name === 'thumbnail',
     )?.url,
     subsectionsArray: [
       {

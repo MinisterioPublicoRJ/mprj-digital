@@ -10,6 +10,7 @@ export default function DataProductItem({
   imgUrl,
   textBtn,
   url,
+  imageSrc,
 }) {
   return (
     <>
@@ -18,10 +19,10 @@ export default function DataProductItem({
         <p>{subsectionDescription}</p>
       </div>
       <div className="productItem-action">
-        {!imgUrl ? (
+        {!imageSrc ? (
           <img src={miniaturaDefault} alt="icon-miniatura-default" />
         ) : (
-          <img src={imgUrl} alt={subsectionTitle} />
+          <img src={imageSrc} alt={subsectionTitle} />
         )}
         {url ? (
           <a href={url} target="_blank" rel="noopener       noreferrer">
@@ -35,6 +36,7 @@ export default function DataProductItem({
 
 DataProductItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
   subsectionTitle: PropTypes.string.isRequired,
   subsectionDescription: PropTypes.string.isRequired,
   textBtn: PropTypes.string.isRequired,
