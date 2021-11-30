@@ -9,7 +9,7 @@ import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData, getProductComponentData } from '../../api/api';
 import ProductPartnerItem from './productsPartnerItem/ProductPartnerItem';
 import FormPartner from './formPartner/FormPartner';
-import { ImgAjuda, ImgSolucoes } from '../../assets/verticalText';
+import { ImgAjuda, ImgSolucoes, ImgSobreNos } from '../../assets/verticalText';
 
 export default function PartnerPage() {
   const cardsPorPage = 8;
@@ -160,25 +160,30 @@ export default function PartnerPage() {
               </div>
             ) : null}
             {subpageId === 'sobre' && (
-              <div className="partner-page-cards-solucoes">
-                {partnersList.sectionPilaresArray.map((partner) => (
-                  <div key={partner.id} className="partner-page-cards-solucoes-first">
-                    <div>
-                      <img src={partner.imgLogoPilar} alt={partner.name} />
+              <div className="partner-page-subpage-Wrapper">
+                <div className="partner-SVG-sobre-nos-styling">
+                  <ImgSobreNos />
+                </div>
+                <div className="partner-page-cards-solucoes">
+                  {partnersList.sectionPilaresArray.map((partner) => (
+                    <div key={partner.id} className="partner-page-cards-solucoes-first">
+                      <div>
+                        <img src={partner.imgLogoPilar} alt={partner.name} />
+                      </div>
+                      <h4>{partner.subtitlePilar}</h4>
+                      <p>{partner.titlePilar}</p>
                     </div>
-                    <h4>{partner.subtitlePilar}</h4>
-                    <p>{partner.titlePilar}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
             {subpageId === 'podemos-ajudar' && (
-            <div className="partner-page-subpage-Wrapper">
-              <div className="partner-SVG-styling">
-                <ImgAjuda />
+              <div className="partner-page-subpage-Wrapper">
+                <div className="partner-SVG-styling">
+                  <ImgAjuda />
+                </div>
+                <FormPartner />
               </div>
-              <FormPartner />
-            </div>
             )}
           </div>
         </div>
