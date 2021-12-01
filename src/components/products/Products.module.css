@@ -4,6 +4,10 @@
   margin-bottom: 40px;
 }
 
+.productsClass > p {
+  color:#9DAFBD;
+}
+
 .productsClass h4 {
   margin-top: 20px;
   text-align: center;
