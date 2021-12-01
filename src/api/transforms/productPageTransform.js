@@ -36,7 +36,7 @@ export default function productPageTransform(rawData) {
         subsectionTitle: result.subsection3_title,
         subsectionDescription: result.subsection3_description,
         imgUrl: result.resources?.find(
-          (image) => image.name === 'subsection_2',
+          (image) => image.name === 'subsection_3',
         )?.url,
       },
     ],
