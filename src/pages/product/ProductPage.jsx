@@ -66,7 +66,7 @@ export default function Produto() {
           >
             {index === 0 && 'Por que'}
             {index === 1 && 'A ferramenta'}
-            {index === 2 && 'Os dados'}
+            {/* index === 2 && 'Os dados' */}
           </button>
         ))}
       </div>
