@@ -12,7 +12,7 @@ export default function Produto() {
   const [changeData, setchangeData] = useState();
   const [productData, setProductData] = useState();
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
-  const subsectionTitles = ['Por que', 'A ferramenta', 'Os dados'];
+  const subsectionTitles = ['Por que ?', 'A ferramenta', 'Os dados'];
 
   async function loadProductData() {
     const result = await getProductPageData(productName);
@@ -64,7 +64,7 @@ export default function Produto() {
             }`}
             type="button"
           >
-            {index === 0 && 'Por que'}
+            {index === 0 && 'Por que ?'}
             {index === 1 && 'A ferramenta'}
             {index === 2 && 'Os dados'}
           </button>
