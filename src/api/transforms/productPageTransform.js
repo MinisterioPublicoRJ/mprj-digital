@@ -14,6 +14,9 @@ export default function productPageTransform(rawData) {
     icon: result.resources?.find(
       (image) => image.name === 'product_icon',
     )?.url,
+    thumbnailUrl: result.resources?.find(
+      (image) => image.name === 'thumbnail',
+    )?.url,
     subsectionsArray: [
       {
         subsectionTitle: result.subsection1_title,

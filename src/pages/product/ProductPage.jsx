@@ -77,6 +77,7 @@ export default function Produto() {
         subsectionTitle={subsectionTitles[currentProductIndex]}
         textBtn={`Acessar ${productData.title}`}
         url={productData.url}
+        thumbnailUrl={productData.thumbnailUrl}
       />
     </article>
   ) : (
