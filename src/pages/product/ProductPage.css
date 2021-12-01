@@ -90,6 +90,7 @@
   height: calc(var(--titleFontSize) );
   outline: none;
   text-align: left;
+  margin-left: 10px;
 }
 
 .productPage-navButtons span:hover, .productPage-navButtons-active{
