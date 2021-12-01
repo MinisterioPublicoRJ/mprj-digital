@@ -36,7 +36,7 @@
 .productPage-presentation h2 {
   font-size: calc( 0.7 * var(--titleFontSize));
 }
-.productPage-presentation h2, p {
+.productPage-presentation h2, .productPage-presentation p {
   color: var(--colorWhite);
 }
 .productPage-presentation p {
