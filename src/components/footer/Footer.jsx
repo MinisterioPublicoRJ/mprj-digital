@@ -60,8 +60,8 @@ export default function Footer() {
         </div>
         <div className={footerMenuColumn}>
           <h3>MPRJ DIGITAL</h3>
-          <a href="#mprjDigital">Quem Somos?</a>
-          <a href="#parceiros">Parceiros</a>
+          <a href="/#mprjDigital">Quem Somos?</a>
+          <a href="/#parceiros">Parceiros</a>
         </div>
         <div className={footerMenuColumn}>
           <h3>OUVIDORIA</h3>
