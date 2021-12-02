@@ -80,7 +80,7 @@ function Explore() {
         <div className={exploreSectionBoxLine} />
       </div>
       <div className={exploreItemOuter}>
-        <div className={exploreItemInner}>
+        {/* <div className={exploreItemInner}>
           <h3>Repositório de Dados</h3>
           <p>
             Confira a integridade de nossas soluções desde os dados explore e baixe tudo o que for
@@ -102,7 +102,7 @@ function Explore() {
             </Link>
           </div>
         </div>
-        <div className={exploreSectionBoxLine} />
+        <div className={exploreSectionBoxLine} /> */}
       </div>
     </section>
   );

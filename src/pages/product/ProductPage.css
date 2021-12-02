@@ -36,12 +36,11 @@
 .productPage-presentation h2 {
   font-size: calc( 0.7 * var(--titleFontSize));
 }
-.productPage-presentation h2 {
+.productPage-presentation h2, .productPage-presentation p {
   color: var(--colorWhite);
 }
 .productPage-presentation p {
   font-weight: 300;
-  text-align: left;
 }
 
 .productPage-productName {
@@ -91,7 +90,6 @@
   height: calc(var(--titleFontSize) );
   outline: none;
   text-align: left;
-  margin-left: 10px;
 }
 
 .productPage-navButtons span:hover, .productPage-navButtons-active{
