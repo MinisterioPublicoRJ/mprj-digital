@@ -31,7 +31,7 @@ export default function DropdownProducts({ productsData }) {
   return (
     <div className={dropdownOuter}>
       <div className={dropdownInner}>
-        <h2>Produtos em destaque</h2>
+        <h2>Produtos</h2>
         <div className={dropdownButtonsWrapper}>
           {highlitedProductsData
             ? highlitedProductsData.map(({ title, name }) => (
@@ -48,7 +48,6 @@ export default function DropdownProducts({ productsData }) {
         </div>
       </div>
       <div className={dropdownInner}>
-        <h2>Outros produtos</h2>
         <div className={dropdownColumns}>
           {productsData
             ? otherProductsData(productsData.slice(highlitedCount)).map((item) => (
