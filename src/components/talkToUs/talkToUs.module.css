@@ -1,9 +1,9 @@
 .talkOuter {
   position: relative;
-  background-color: var(--backgroundFooter);
-  height: 40vh;
-  margin-top: 450px;
-  margin-bottom: -40px;
+  /* background-color: var(--backgroundFooter); */
+  height: 60vh;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .talkButton {
@@ -116,11 +116,11 @@ p.sentMensage {
 }
 
 .formOuter {
-  position: absolute;
+  position: relative;
   width: 50%;
   height: 60vh;
   background-color: var(--colorWhite);
-  bottom: 7px ;
+  bottom: 0px ;
   border-radius: 5px;
   padding: 20px;
   margin-left: auto;
