@@ -1,5 +1,5 @@
 const BASE_URL = 'https://d-ckan.mprj.mp.br/api/3/action/package_search';
-export const DATA_FORM = process.env.REACT_APP_FORM_API;
+export const FORM_API = process.env.REACT_APP_FORM_API;
 
 // gadg
 export const PARTNER_PAGE_DATA = (partnerName) => `${BASE_URL}?q=type:paginaparceiro&fq=name:${partnerName}`;
