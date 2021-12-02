@@ -99,12 +99,15 @@ export default function PartnerPage() {
           <div className="partner-page-navigation">
             {partnerFiltered[0].subpages.map((subpage) => (
               <div key={subpage.id}>
+                {/* In React Router v6, activeClassName will be removed and you should use the
+                function className to apply classnames to either active or
+                inactive NavLink components. */}
                 <NavLink
+                  exact
                   activeClassName="productPage-navButtons-active"
-                  className={` ${
-                    partnerFiltered[0].subpages.id
-                      ? 'productPage-navButtons-active'
-                      : 'partner-page-link '
+                  className={` ${subpage.id === subpageId
+                    ? 'productPage-navButtons-active'
+                    : 'partner-page-link '
                   }`}
                   to={`/parceiro/${partnerName}/${subpage.id}`}
                 >
