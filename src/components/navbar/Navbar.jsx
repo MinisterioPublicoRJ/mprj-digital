@@ -85,7 +85,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className={navbarSectionToolTip}>
-            <NavLink
+            { /* <NavLink
               to="/"
               onClick={() => scroller.scrollTo('repositorios', {
                 smooth: true,
@@ -94,7 +94,7 @@ export default function Navbar() {
               })}
             >
               Repositórios
-            </NavLink>
+            </NavLink> */}
             <span className={navbarTooltipText}>Encontre aqui todas as nossas Acervo de Dados</span>
           </div>
           <div className={navbarSectionToolTip}>

@@ -94,6 +94,9 @@
   margin-bottom: 40px;
   margin-top: 30px;
 }
+.partner-page-topics p{
+  max-width: 550px;
+}
 .partner-page-topics-button{
   display: flex;
 }
@@ -244,6 +247,9 @@ a.help-navButtons-active div {
   margin-right:20px;
   margin-top: 40px;
   width: 8vw;
+}
+.input-openData-Icon input{
+  display: none;
 }
 .partner-SVG-sobre-nos-styling{
   margin-top: 40px;

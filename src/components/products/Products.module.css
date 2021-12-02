@@ -21,11 +21,6 @@
   margin: 12px 0;
 }
 
-.productsFilterWrapper {
-  text-align: left;
-  color: #9DAFBD;
-}
-
 .productsClass h1 {
   font-weight: normal;
   text-align: left;
@@ -44,6 +39,9 @@
   font-size: 14px;
   display: flex;
   margin-top: 37px;
+  text-align: left;
+  color: #9DAFBD;
+  display: none;
 }
 .productsFilterWrapper p {
   font-size: 14px;

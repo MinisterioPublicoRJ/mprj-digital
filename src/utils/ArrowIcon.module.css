@@ -1,6 +1,7 @@
 .InputOpenDataIcon{
     position:relative;
     margin-top: -54px;
+    display: none;
 }
 .InputOpenDataIcon i{
     position:absolute;

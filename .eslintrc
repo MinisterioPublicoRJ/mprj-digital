@@ -15,7 +15,7 @@
     "object-curly-newline": "warn",
     "jsx-a11y/anchor-has-content": "off",
     "linebreak-style": "off",
-    "endOfLine": 0
+    "endOfLine": "off"
   },
   "env": {
     "browser": true

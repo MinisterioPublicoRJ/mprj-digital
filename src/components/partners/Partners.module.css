@@ -16,10 +16,10 @@
 .partnersItemList {
   display: grid;
   height: calc(90% - 6vh);
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
-  grid-gap: 4vh 10vw;
-  margin-top: 3vh;
+  grid-gap: 3vh 6vw;
+  margin-top: 5vh;
 }
 
 .partnersItemCard {
