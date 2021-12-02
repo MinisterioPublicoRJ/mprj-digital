@@ -94,6 +94,9 @@
   margin-bottom: 40px;
   margin-top: 30px;
 }
+.partner-page-topics p{
+  max-width: 550px;
+}
 .partner-page-topics-button{
   display: flex;
 }
