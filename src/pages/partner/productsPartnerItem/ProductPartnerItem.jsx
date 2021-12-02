@@ -4,7 +4,6 @@ import './ProductPartnerItem.css';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
 
 export default function ProductPartnerItem({ products }) {
-  console.log(products);
   return (
     <div className="partner-page-cards">
       {products.map((card) => (
