@@ -13,7 +13,7 @@ export default function Home() {
         <Mprj />
         <Products />
         <Partners />
-        <OpenData />
+        {/* <OpenData /> */}
         <TalkToUs />
       </div>
     </HomeContextProvider>

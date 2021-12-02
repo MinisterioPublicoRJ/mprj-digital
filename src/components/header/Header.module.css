@@ -27,6 +27,7 @@
   border: none;
   display: flex;
   height: 50px;
+  display: none;
 }
 
 .searchAreaInput input {

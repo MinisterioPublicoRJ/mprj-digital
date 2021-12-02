@@ -4,6 +4,11 @@
   margin-bottom: 40px;
 }
 
+.productsClass > p {
+  color:#9DAFBD;
+  text-align: left;
+}
+
 .productsClass h4 {
   margin-top: 20px;
   text-align: center;
@@ -14,11 +19,6 @@
 
 .productsTitle {
   margin: 12px 0;
-}
-
-.productsFilterWrapper {
-  text-align: left;
-  color: #9DAFBD;
 }
 
 .productsClass h1 {
@@ -39,6 +39,9 @@
   font-size: 14px;
   display: flex;
   margin-top: 37px;
+  text-align: left;
+  color: #9DAFBD;
+  display: none;
 }
 .productsFilterWrapper p {
   font-size: 14px;

@@ -8,7 +8,7 @@ export default function ProductPartnerItem({ products }) {
     <div className="partner-page-cards">
       {products.map((card) => (
         <div key={card.id} className="partner-page-card">
-          <a target="new" rel="noreferrer" href={card.link}>
+          <a target="" rel="noreferrer" href={`/produto/${card.name}`}>
             {!card.imageSrc ? (
               <img src={miniaturaDefault} alt={card.title} />
             ) : (

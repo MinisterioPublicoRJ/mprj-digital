@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { FAROLBG, MPBG, PARQUET, DIAGNOSTICO, PAINELDECOMPRAS, LYRA, GESTAODOTERRITORIO, PAINELSANEAMENTO } from '../../assets/ImgsHeader';
 
 const HEADER_DATA = [
@@ -32,22 +33,22 @@ const HEADER_DATA = [
     subtitle:
       'Ferramenta que agrega dados de vistas abertas em procedimentos por promotoria, entregando visualizações em tempo real e permitindo o comparativo entre órgãos.',
   },
-  {
+  /* {
     id: 'PainelDeCompras',
     backgroundImage: PAINELDECOMPRAS,
     title: 'Painel de Compras',
     link: '/produto/painel-de-compras',
     subtitle:
       'Painel que se destina a apresentar todos os dados de compras públicas realizadas pelos órgãos de projeção estadual do Estado do Rio de Janeiro.',
-  },
-  {
+  }, */
+  /* {
     id: 'Lyra',
     backgroundImage: LYRA,
     title: 'Lyra',
     link: '/produto/lyra',
     subtitle:
       'Um robô com a missão de auxiliar o cidadão fluminense e os Promotores de Justiça, capaz de ler todos os documentos do Tribunal de Justiça do Estado do Rio de Janeiro em velocidade inigualável e apontar quais demandas são repetitivas ou de caráter coletivo no Judiciário',
-  },
+  }, */
   {
     id: 'GestaoDoTerritorio',
     backgroundImage: GESTAODOTERRITORIO,

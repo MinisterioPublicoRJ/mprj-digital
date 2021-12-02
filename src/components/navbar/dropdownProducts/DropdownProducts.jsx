@@ -12,7 +12,7 @@ import {
 
 function otherProductsData(remainingProductsData) {
   const tempArray = [remainingProductsData];
-  const mediumColumnSize = 4;
+  const mediumColumnSize = 5;
   const columnCount = Math.round(remainingProductsData.length / mediumColumnSize);
   const maxPerColumn = Math.ceil(remainingProductsData.length / columnCount);
 
@@ -25,13 +25,13 @@ function otherProductsData(remainingProductsData) {
 }
 
 export default function DropdownProducts({ productsData }) {
-  const highlitedCount = 2;
+  const highlitedCount = 5;
   const highlitedProductsData = productsData ? productsData.slice(0, highlitedCount) : null;
 
   return (
     <div className={dropdownOuter}>
       <div className={dropdownInner}>
-        <h2>Produtos em destaque</h2>
+        <h2>Produtos</h2>
         <div className={dropdownButtonsWrapper}>
           {highlitedProductsData
             ? highlitedProductsData.map(({ title, name }) => (
@@ -48,7 +48,6 @@ export default function DropdownProducts({ productsData }) {
         </div>
       </div>
       <div className={dropdownInner}>
-        <h2>Outros produtos</h2>
         <div className={dropdownColumns}>
           {productsData
             ? otherProductsData(productsData.slice(highlitedCount)).map((item) => (

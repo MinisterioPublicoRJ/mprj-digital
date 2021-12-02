@@ -6,11 +6,9 @@
   height: 157px;
   border-radius: 10px;
 }
-
 .productItemWrapper p {
   color: #9dafbd;
-  text-align: center;
-  margin-right: 0px;
+  text-align: left;
   margin-bottom: 42px;
 }
 
