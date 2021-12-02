@@ -5,7 +5,7 @@ import {
   PRODUCT_PAGE_DATA,
   PRODUCT_NAVBAR_DATA,
   // PARTNER_NAVBAR_DATA,
-  DATA_FORM,
+  FORM_API,
 } from './endpoints';
 
 import {
@@ -88,7 +88,7 @@ export async function getProductComponentData(nextPos, extraFilter) {
 }
 
 export async function setDataForm(formData) {
-  const response = await fetch(DATA_FORM, {
+  const response = await fetch(FORM_API, {
     method: 'POST',
     body: formData,
   });
