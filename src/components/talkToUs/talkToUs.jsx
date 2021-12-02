@@ -27,7 +27,7 @@ export default function talkToUs() {
 
   return (
     <section className={styles.talkOuter}>
-      <img className={styles.Footer} src={map} alt="mapa" />
+      {/*       <img className={styles.Footer} src={map} alt="mapa" /> */}
       <div className={styles.formOuter}>
         {sentMessage ? (
           <p className={styles.sentMensage}>
