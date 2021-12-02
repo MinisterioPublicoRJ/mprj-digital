@@ -1,4 +1,5 @@
 const BASE_URL = 'https://d-ckan.mprj.mp.br/api/3/action/package_search';
+export const DATA_FORM = process.env.REACT_APP_FORM_API;
 
 // gadg
 export const PARTNER_PAGE_DATA = (partnerName) => `${BASE_URL}?q=type:paginaparceiro&fq=name:${partnerName}`;
@@ -19,5 +20,3 @@ export const PRODUCT_COMPONENT_DATA = (nextPos, extraFilters) => `${BASE_URL}?q=
 export const PRODUCT_NAVBAR_DATA = `${BASE_URL}?q=type:produtos&fl=name,title&sort=extras_ordem_aparecimento asc`;
 
 // export const PARTNER_NAVBAR_DATA = `${BASE_URL}?q=type:paginaparceiro&fl=name,title`;
-
-export const DATA_FORM = 'https://d-apimpmapas.mprj.mp.br/mprjdigital/contact';
