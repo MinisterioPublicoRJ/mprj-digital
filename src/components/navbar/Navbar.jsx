@@ -30,6 +30,7 @@ export default function Navbar() {
 
   async function loadProductNavbarData() {
     const productResponse = await getProductNavbarData();
+    console.log(productResponse);
     if (productResponse) {
       setProductNavbarData(productResponse);
     }
@@ -84,7 +85,7 @@ export default function Navbar() {
               <div className={navbarDropdownContent} style={{ height: '50vh' }}>
                 <DropdownProducts value="Produtos" productsData={productNavbarData} />
                 <div className={prasheNavbarDropdownContent}>
-                  <p>Ver mais produtos...</p>
+                  <p>Ver todos os produtos...</p>
                   <div id={navbarDropdownContentMoreProducts}>
                     <DropdownProducts productsData={productNavbarData} />
                   </div>
