@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import {
   dropdownOuter,
@@ -24,14 +24,14 @@ function otherProductsData(remainingProductsData) {
   return tempArray;
 }
 
-export default function DropdownProducts({ productsData }) {
+export default function DropdownProducts({ productsData, value }) {
   const highlitedCount = 5;
   const highlitedProductsData = productsData ? productsData.slice(0, highlitedCount) : null;
 
   return (
     <div className={dropdownOuter}>
       <div className={dropdownInner}>
-        <h2>Produtos</h2>
+        <h2>{value}</h2>
         <div className={dropdownButtonsWrapper}>
           {highlitedProductsData
             ? highlitedProductsData.map(({ title, name }) => (
@@ -77,6 +77,7 @@ export default function DropdownProducts({ productsData }) {
 }
 
 DropdownProducts.propTypes = {
+  value: PropTypes.string.isRequired,
   productsData: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     name: PropTypes.string,

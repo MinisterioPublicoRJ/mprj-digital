@@ -82,7 +82,7 @@ export default function Navbar() {
                 Navegue e conheça nossos produtos e sistemas
               </span>
               <div className={navbarDropdownContent} style={{ height: '50vh' }}>
-                <DropdownProducts productsData={productNavbarData} />
+                <DropdownProducts value="Produtos" productsData={productNavbarData} />
                 <div className={prasheNavbarDropdownContent}>
                   <p>Ver mais produtos...</p>
                   <div id={navbarDropdownContentMoreProducts}>
