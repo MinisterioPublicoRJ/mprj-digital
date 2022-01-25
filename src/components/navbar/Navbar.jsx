@@ -19,8 +19,6 @@ import {
   navbarMobileButton,
   navbarDropbtnButton,
   navbarBasicButton,
-  navbarDropdownContentMoreProducts,
-  prasheNavbarDropdownContent,
 } from './Navbar.module.css';
 
 export default function Navbar() {
@@ -30,7 +28,6 @@ export default function Navbar() {
 
   async function loadProductNavbarData() {
     const productResponse = await getProductNavbarData();
-    console.log(productResponse);
     if (productResponse) {
       setProductNavbarData(productResponse);
     }
@@ -82,13 +79,10 @@ export default function Navbar() {
               <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
                 Navegue e conheça nossos produtos e sistemas
               </span>
-              <div className={navbarDropdownContent} style={{ height: '50vh' }}>
+              <div className={navbarDropdownContent} style={{ height: '67vh' }}>
                 <DropdownProducts value="Produtos" productsData={productNavbarData} />
-                <div className={prasheNavbarDropdownContent}>
+                <div>
                   <p>Ver todos os produtos...</p>
-                  <div id={navbarDropdownContentMoreProducts}>
-                    <DropdownProducts productsData={productNavbarData} />
-                  </div>
                 </div>
               </div>
             </div>

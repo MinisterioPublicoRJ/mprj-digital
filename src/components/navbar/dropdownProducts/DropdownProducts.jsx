@@ -7,22 +7,7 @@ import {
   dropdownInner,
   dropdownButtons,
   dropdownButtonsWrapper,
-  dropdownColumns,
 } from './DropdownProducts.module.css';
-
-function otherProductsData(remainingProductsData) {
-  const tempArray = [remainingProductsData];
-  const mediumColumnSize = 5;
-  const columnCount = Math.round(remainingProductsData.length / mediumColumnSize);
-  const maxPerColumn = Math.ceil(remainingProductsData.length / columnCount);
-
-  for (let i = 0; i < columnCount; i += 1) {
-    const start = i * maxPerColumn;
-    tempArray[i] = remainingProductsData.slice(start, start + maxPerColumn);
-  }
-
-  return tempArray;
-}
 
 export default function DropdownProducts({ productsData }) {
   return (
