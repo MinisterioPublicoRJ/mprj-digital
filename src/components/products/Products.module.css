@@ -3,11 +3,9 @@
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
 .productsTitle {
   margin: 12px 0;
 }
-
 .allProducts {
   display: grid;
   padding-top: 32px;
@@ -15,7 +13,6 @@
   grid-auto-rows: minmax(320px, auto);
   column-gap: 2%;
 }
-
 .productsFilterWrapper {
   font-size: 14px;
   display: flex;
@@ -38,7 +35,9 @@
 .productsFilterTitle:hover {
   color: #263859;
 }
-
+p.productsGenDescriptionText{
+  text-align: left;
+}
 @media (max-width: 1080px){
   .productsClass{
     text-align: center;

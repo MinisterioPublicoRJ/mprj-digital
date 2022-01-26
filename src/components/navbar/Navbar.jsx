@@ -83,7 +83,7 @@ export default function Navbar() {
               <div className={navbarDropdownContent} style={{ height: '70vh' }}>
                 <DropdownProducts value="Produtos" productsData={productNavbarData} />
                 <div className={navbarDropdownContentAllProducs}>
-                  <NavLink to="/produto/todososprodutos">Todos os produtos...</NavLink>
+                  <NavLink to="/produto/todososprodutos">Ver todos os produtos...</NavLink>
                 </div>
               </div>
             </div>

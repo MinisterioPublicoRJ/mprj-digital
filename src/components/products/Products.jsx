@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Pagination from '../pagination/Pagination';
 import ProductItem from './productItem/ProductItem';
-import SectionTitleProdutos from '../sectionTitle/SectionTitleProdutos';
 import {
   productsClass,
+  productsTitle,
+  productsGenDescriptionText,
   productsFilterWrapper,
   productsFilterTitle,
   allProducts,
@@ -47,7 +48,12 @@ export default function Products() {
 
   return (
     <section className={productsClass} id="produtos">
-      <SectionTitleProdutos />
+      <h1 className={productsTitle}>Produtos</h1>
+      <p className={productsGenDescriptionText}>
+        Painéis, estudos, relatórios e os mais variados formatos de soluções gerados pelos nossos
+        parceiros. Fique a vontade para explorar cada um deles, e não esqueça de mandar seu
+        feedback, ficaremos muito feliz em recebê-lo.
+      </p>
       <div className={productsFilterWrapper}>
         <button type="button" onClick={() => setProductType('')} className={productsFilterTitle}>
           Todos os produtos
