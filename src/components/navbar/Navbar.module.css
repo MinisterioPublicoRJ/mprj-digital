@@ -17,6 +17,10 @@
   margin-right: 10px;
   font-weight: 300;
 }
+.navbarDropdownContentAllProducs a{
+  text-align: center;
+  margin-bottom: 20px;
+}
 .navbarLogo{
   width: 130px;
   height: 40px;

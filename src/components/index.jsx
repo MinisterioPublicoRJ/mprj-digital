@@ -9,3 +9,5 @@ export { default as Products } from './products/Products';
 export { default as TalkToUs } from './talkToUs/talkToUs';
 export { default as Pagination } from './pagination/Pagination';
 export { default as Explore } from './explore/Explore';
+export { default as SectionTitle } from './sectionTitle/SectionTitleProdutos';
+
