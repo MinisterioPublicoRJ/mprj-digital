@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './SectionTitleProdutos.module.css';
 
 export default function SectionTitleProducts() {
- 
   return (
     <section className={styles.productsClass} id="produtos">
       <h1 className={styles.productsTitle}>Produtos</h1>
