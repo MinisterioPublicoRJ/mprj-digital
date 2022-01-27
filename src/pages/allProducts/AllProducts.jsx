@@ -1,11 +1,9 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Pagination from '../../components/pagination/Pagination';
 import ProductItem from '../../components/products/productItem/ProductItem';
-import {
-  productsClass,
-  productsTitle,
-  allProducts,
-} from '../../components/products/Products.module.css';
+import styles from './AllProducts.module.css';
 import { getProductComponentData } from '../../api/api';
 
 export default function AllProducts() {
@@ -43,20 +41,23 @@ export default function AllProducts() {
   }
 
   return (
-    <section className={productsClass} style={{ marginTop: '40px' }}>
-      <h1 className={productsTitle}>Todos os Produtos</h1>
-      <div className={allProducts}>
+    <section className={styles.allProductsClass}>
+      <h1 className={styles.productsTitle}>Todos os Produtos</h1>
+      <div className={styles.allProducts}>
         {loading
           ? 'Carregando...'
           : products.map(({ name, title, description, imageSrc }) => (
-            <ProductItem
-              key={name}
-              name={name}
-              title={title}
-              description={description}
-              imageSrc={imageSrc}
-            />
-          ))}
+          <div className={styles.allProductsCard} >
+            <div>
+              <img src={imageSrc} alt={title} />
+              <p>{title}</p>
+            </div>
+          <button type="button" key={name}>
+            <Link to={`/produto/${name}`} />
+           Conheça o produto
+          </button>
+          </div>
+        ))}
       </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
