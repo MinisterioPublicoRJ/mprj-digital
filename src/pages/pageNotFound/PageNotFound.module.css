@@ -1,0 +1,23 @@
+.pageNotFound {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorCode {
+  font-size: 180px;
+  font-weight: 100;
+
+  letter-spacing: 15px;
+  color: var(--mainRedColor);
+}
+
+.errorMessage {
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--mainRedColor);
+}

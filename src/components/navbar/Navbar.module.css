@@ -30,6 +30,8 @@
   z-index: 1;
   right: -250px;
   top: 30px;
+  color: var(--colorWhite);
+
 }
 .navbarDropdownContent a {
   padding: 8px 30px 4px 0px;
@@ -37,8 +39,21 @@
   display: block;
   font-size: 15px;
 }
+.navbarDropdownContent p {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
 .navbarDropdown:hover .navbarDropdownContent {
   display: block;
+}
+.prasheNavbarDropdownContent:hover #navbarDropdownContentMoreProducts {
+  visibility: visible;
+}
+#navbarDropdownContentMoreProducts{
+  visibility: hidden;
+  background-color: var(--mainRedColor);
+  height: 35vh;
+  transition: opacity 0.3s;
 }
 .navbarDropbtnButton {
   color: var(--colorWhite);
@@ -75,6 +90,10 @@
   color: var(--mainColor);
   font-family: var(--robotRegular);
 }
+.navbarSectionToolTip:hover .navbarTooltipText {
+  visibility: visible;
+  opacity: 1;
+}
 .navbarSectionToolTip .navbarTooltipText::after {
   content: '';
   position: absolute;
@@ -84,10 +103,6 @@
   border-width: 5px;
   border-style: solid;
   border-color: var(--colorWhite) transparent transparent transparent;
-}
-.navbarSectionToolTip:hover .navbarTooltipText {
-  visibility: visible;
-  opacity: 1;
 }
 .navbarMobileButton {
   background-color: var(--mainRedColor);
@@ -169,5 +184,4 @@
   .navbarDropdownContent{
     position: relative;
   }
-
 }

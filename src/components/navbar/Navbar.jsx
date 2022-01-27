@@ -19,6 +19,8 @@ import {
   navbarMobileButton,
   navbarDropbtnButton,
   navbarBasicButton,
+  navbarDropdownContentMoreProducts,
+  prasheNavbarDropdownContent,
 } from './Navbar.module.css';
 
 export default function Navbar() {
@@ -79,8 +81,14 @@ export default function Navbar() {
               <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
                 Navegue e conheça nossos produtos e sistemas
               </span>
-              <div className={navbarDropdownContent}>
+              <div className={navbarDropdownContent} style={{ height: '50vh' }}>
                 <DropdownProducts productsData={productNavbarData} />
+                <div className={prasheNavbarDropdownContent}>
+                  <p>Ver mais produtos...</p>
+                  <div id={navbarDropdownContentMoreProducts}>
+                    <DropdownProducts productsData={productNavbarData} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
