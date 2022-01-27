@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--mainRedColor);
-  height: var(--navbarHeight);
+  height: calc(var(--navbarHeight) * 1.2)
 }
 .navbarLinks {
   display: flex;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 55px;
 }
 .navbarLinks a {
   list-style: none;
@@ -75,7 +75,7 @@
 }
 .navbarSectionToolTip .navbarTooltipText {
   visibility: hidden;
-  width: 156px;
+  width: 162px;
   border: 1px solid var(--mainColor);
   background-color: var(--colorWhite);
   text-align: center;

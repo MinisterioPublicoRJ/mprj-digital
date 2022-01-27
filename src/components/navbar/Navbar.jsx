@@ -70,6 +70,21 @@ export default function Navbar() {
             <span className={navbarTooltipText}>Conheça a nossa visão de dados abertos</span>
           </div>
           <div className={navbarSectionToolTip}>
+            <NavLink
+              to="/"
+              onClick={() => scroller.scrollTo('parceiros', {
+                smooth: true,
+                offset: -70,
+                duration: 600,
+              })}
+            >
+              Parceiros
+            </NavLink>
+            <span className={navbarTooltipText}>
+              Conheça os setores do MPRJ envolvidos nessa iniciativa
+            </span>
+          </div>
+          <div className={navbarSectionToolTip}>
             <NavLink to="/parceiro/gadg/sobre">Equipe</NavLink>
           </div>
           <div className={navbarDropdown}>
