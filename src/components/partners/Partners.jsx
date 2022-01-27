@@ -9,7 +9,7 @@ export default function Partners() {
   const [partnersData, setPartnersData] = useState();
 
   async function onMount() {
-    const { total, partnersMiniatureArray } = await getPartnertComponentData();
+    const { partnersMiniatureArray } = await getPartnertComponentData();
     setPartnersData(partnersMiniatureArray);
   }
 

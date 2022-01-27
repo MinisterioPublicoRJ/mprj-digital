@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
@@ -69,7 +70,7 @@ export default function Navbar() {
             </NavLink>
             <span className={navbarTooltipText}>Conheça a nossa visão de dados abertos</span>
           </div>
-          <div className={navbarSectionToolTip}>
+          {/*<div className={navbarSectionToolTip}>
             <NavLink
               to="/"
               onClick={() => scroller.scrollTo('parceiros', {
@@ -83,7 +84,7 @@ export default function Navbar() {
             <span className={navbarTooltipText}>
               Conheça os setores do MPRJ envolvidos nessa iniciativa
             </span>
-          </div>
+            </div>*/}
           <div className={navbarSectionToolTip}>
             <NavLink to="/parceiro/gadg/sobre">Equipe</NavLink>
           </div>
