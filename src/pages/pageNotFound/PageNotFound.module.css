@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--backgroundFooter);
 }
 
 .errorCode {
@@ -12,7 +11,7 @@
   font-weight: 100;
 
   letter-spacing: 15px;
-  color: var(--colorWhite);
+  color: var(--mainRedColor);
 }
 
 .errorMessage {
@@ -20,5 +19,5 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: var(--lightGray);
+  color: var(--mainRedColor);
 }
