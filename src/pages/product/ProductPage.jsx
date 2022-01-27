@@ -6,6 +6,7 @@ import './ProductPage.css';
 import { getProductPageData } from '../../api/api';
 import iconProductDefault from '../../assets/produto-icon-default.svg';
 import bgProductDefault from '../../assets/produto-bg-default.png';
+import Error from '../../components/error/Error';
 
 export default function Produto() {
   const { productName } = useParams();
@@ -15,7 +16,8 @@ export default function Produto() {
   const subsectionTitles = ['Por que ?', 'A ferramenta', 'Os dados'];
 
   async function loadProductData() {
-    const result = await getProductPageData(productName);
+    // const result = await getProductPageData(productName);
+    const result = false;
     if (result) {
       setProductData(result);
       setchangeData(result.subsectionsArray[0].subsectionTitle);
@@ -81,6 +83,6 @@ export default function Produto() {
       />
     </article>
   ) : (
-    <h1>Carregando</h1>
+    <Error />
   );
 }
