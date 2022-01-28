@@ -7,7 +7,7 @@
 }
 
 .errorTitle {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 100;
   color: var(--mainRedColor);
   text-transform: uppercase;
@@ -27,7 +27,7 @@
 }
 
 .exclamationMark {
-  font-size: 180px;
+  font-size: 150px;
   font-weight: 400;
   display: inline-block;
   transform: rotate(10deg);
