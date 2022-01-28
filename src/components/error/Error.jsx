@@ -8,7 +8,7 @@ function Error() {
         Error
         <span className={styles.exclamationMark}>!</span>
       </h2>
-      <h2 className={styles.errorText}>Por favor, verifique sua conexão com a Internet.</h2>
+      <p className={styles.errorText}>Por favor, verifique sua conexão com a Internet.</p>
     </div>
   );
 }

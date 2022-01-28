@@ -7,7 +7,7 @@
 }
 
 .errorTitle {
-  font-size: 60px;
+  font-size: calc(var(--titleFontSize) * 1.5);
   font-weight: 100;
   color: var(--mainRedColor);
   text-transform: uppercase;
@@ -19,7 +19,7 @@
 .errorText {
   display: inline-block;
   margin-left: 20px;
-  font-size: 14px;
+  font-size: calc(var(--defaultFontSize) * 1.2);
   font-weight: 100;
   text-transform: uppercase;
   color: var(--mainRedColor);
