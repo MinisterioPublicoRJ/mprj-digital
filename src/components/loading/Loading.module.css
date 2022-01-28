@@ -1,12 +1,12 @@
 .textLoading{
   color: var(--mainRedColor);
-  font-size: 80px;
+  font-size: calc(var(--titleFontSize) * 1.5);
   font-weight: lighter;
-  letter-spacing: 5px;
+  letter-spacing: var(--errorLetterSpacing);
 }
 
 .wrapperLoading{
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
