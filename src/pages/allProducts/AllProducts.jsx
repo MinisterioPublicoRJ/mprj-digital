@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Pagination from '../../components/pagination/Pagination';
-import ProductItem from '../../components/products/productItem/ProductItem';
 import styles from './AllProducts.module.css';
 import { getProductComponentData } from '../../api/api';
 
@@ -42,11 +41,11 @@ export default function AllProducts() {
 
   return (
     <section className={styles.allProductsClass}>
-      <h1 className={styles.productsTitle}>Todos os Produtos</h1>
+      <h1 className={styles.productsTitle}>Conheça todos os nossos produtos</h1>
       <div className={styles.allProducts}>
         {loading
           ? 'Carregando...'
-          : products.map(({ name, title, description, imageSrc }) => (
+          : products.map(({ name, title, imageSrc }) => (
           <div className={styles.allProductsCard} >
             <div>
               <img src={imageSrc} alt={title} />
