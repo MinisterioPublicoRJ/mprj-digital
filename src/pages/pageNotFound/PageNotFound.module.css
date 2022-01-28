@@ -10,7 +10,7 @@
   font-size: 180px;
   font-weight: 100;
 
-  letter-spacing: 15px;
+  letter-spacing: calc(var(--errorLetterSpacing) * 2);
   color: var(--mainRedColor);
 }
 
@@ -18,6 +18,6 @@
   font-size: 18px;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: var(--errorLetterSpacing);
   color: var(--mainRedColor);
 }
