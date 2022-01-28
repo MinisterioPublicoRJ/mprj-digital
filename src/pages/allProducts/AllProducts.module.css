@@ -41,6 +41,10 @@
     color: white;
     font-size: var(--defaultFontSize);
 }
+.allProducts a {
+    text-decoration: none;
+    color: white;
+}
  @media (max-width: 980px){
     .allProducts{
       display: flex;
