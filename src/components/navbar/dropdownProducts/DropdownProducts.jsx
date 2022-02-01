@@ -10,6 +10,19 @@ import {
 } from './DropdownProducts.module.css';
 
 export default function DropdownProducts({ productsData }) {
+  function otherProductsData(remainingProductsData) {
+    const tempArray = [remainingProductsData];
+    const mediumColumnSize = 5;
+    const columnCount = Math.round(remainingProductsData.length / mediumColumnSize);
+    const maxPerColumn = Math.ceil(remainingProductsData.length / columnCount);
+  
+    for (let i = 0; i < columnCount; i += 1) {
+      const start = i * maxPerColumn;
+      tempArray[i] = remainingProductsData.slice(start, start + maxPerColumn);
+    }
+  
+    return tempArray;
+  }
   return (
     <div className={dropdownOuter}>
       <div className={dropdownInner}>

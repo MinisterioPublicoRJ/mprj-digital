@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--mainRedColor);
-  height: calc(var(--navbarHeight) * 1.2)
+  height: var(--navbarHeight);
 }
 .navbarLinks {
   display: flex;
