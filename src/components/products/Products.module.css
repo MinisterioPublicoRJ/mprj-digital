@@ -21,9 +21,6 @@
 
 .productsTitle {
   margin: 12px 0;
-}
-
-.productsClass h1 {
   font-weight: normal;
   text-align: left;
   color: var(--backgroundFooter);
