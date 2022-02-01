@@ -45,18 +45,19 @@ export default function AllProducts() {
       <div className={styles.allProducts}>
         {loading
           ? 'Carregando...'
-          : products.map(({ name, title, imageSrc }) => (
-          <div className={styles.allProductsCard} >
-            <div>
-              <img src={imageSrc} alt={title} />
-              <p>{title}</p>
+          : products.map(({ name, title, description, imageSrc }) => (
+            <div className={styles.allProductsCard} >
+              <div>
+                <img src={imageSrc} alt={title} />
+                <p>{title}</p>
+              </div>
+              <button type="button" key={name}>
+                <Link to={`/produto/${name}`}>
+                  Conheça o produto
+                </Link>
+              </button>
             </div>
-          <button type="button" key={name}>
-            <Link to={`/produto/${name}`} />
-           Conheça o produto
-          </button>
-          </div>
-        ))}
+          ))}
       </div>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
