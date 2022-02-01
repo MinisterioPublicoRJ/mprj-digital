@@ -1,13 +1,9 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Pagination from '../../components/pagination/Pagination';
-import Loading  from '../../components/loading/Loading';
-import Error  from '../../components/error/Error';
-
-
 import styles from './AllProducts.module.css';
 import { getProductComponentData } from '../../api/api';
+import { Pagination, Loading, Error } from '../../components';
 
 export default function AllProducts() {
   const perPage = 8;
