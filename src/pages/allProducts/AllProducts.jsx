@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Pagination from '../../components/pagination/Pagination';
+import Loading  from '../../components/loading/Loading';
+
 import styles from './AllProducts.module.css';
 import { getProductComponentData } from '../../api/api';
 
@@ -44,7 +46,7 @@ export default function AllProducts() {
       <h1 className={styles.productsTitle}>Conheça todos os nossos produtos</h1>
       <div className={styles.allProducts}>
         {loading
-          ? 'Carregando...'
+          ? <Loading />
           : products.map(({ name, title, description, imageSrc }) => (
             <div className={styles.allProductsCard} >
               <div>
