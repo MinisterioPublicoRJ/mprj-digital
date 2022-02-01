@@ -10,6 +10,7 @@ import {
   allProducts,
 } from './Products.module.css';
 import { getProductComponentData } from '../../api/api';
+import { Loading, Error } from '..';
 
 export default function Products() {
   const perPage = 8;
@@ -17,6 +18,7 @@ export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [productType, setProductType] = useState('');
+  const [failed, setFailed] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,6 +33,7 @@ export default function Products() {
       setProducts(productsArray);
       setTotalPages(Math.ceil(total / perPage));
     } catch (e) {
+      setFailed(true);
       setProducts(null);
     } finally {
       setLoading(false);
@@ -39,11 +42,6 @@ export default function Products() {
 
   function handlePageClick(nextPage) {
     setCurrentPage(nextPage);
-  }
-
-  // if the products fail to load, don't show component at all
-  if (!loading && !products) {
-    return null;
   }
 
   return (
@@ -68,19 +66,27 @@ export default function Products() {
           Estudos
         </button>
       </div>
-      <div className={allProducts}>
-        {loading
-          ? 'Carregando...'
-          : products.map(({ name, title, description, imageSrc }) => (
-            <ProductItem
-              key={name}
-              name={name}
-              title={title}
-              description={description}
-              imageSrc={imageSrc}
-            />
-          ))}
-      </div>
+      <>
+        {(loading && !failed) && (
+          <Loading />
+        )}
+        {(failed) && (
+          <Error />
+        )}
+        {(!loading && !failed) && (
+          <div className={allProducts}>
+            {products.map(({ name, title, description, imageSrc }) => (
+              <ProductItem
+                key={name}
+                name={name}
+                title={title}
+                description={description}
+                imageSrc={imageSrc}
+              />
+            ))}
+          </div>
+        )}
+      </>
       <Pagination
         handlePageClick={(page) => handlePageClick(page)}
         totalPages={totalPages}

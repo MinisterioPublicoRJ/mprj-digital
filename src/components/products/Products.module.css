@@ -5,7 +5,11 @@
 }
 .productsTitle {
   margin: 12px 0;
+  font-weight: normal;
+  text-align: left;
+  color: var(--backgroundFooter);
 }
+
 .allProducts {
   display: grid;
   padding-top: 32px;
