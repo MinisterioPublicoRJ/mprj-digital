@@ -1,0 +1,14 @@
+.textLoading{
+  color: var(--mainRedColor);
+  font-size: calc(var(--titleFontSize) * 1.5);
+  font-weight: lighter;
+  letter-spacing: var(--errorLetterSpacing);
+}
+
+.wrapperLoading{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

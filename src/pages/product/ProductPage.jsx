@@ -81,6 +81,6 @@ export default function Produto() {
       />
     </article>
   ) : (
-    <h1>Carregando</h1>
+    'Carregando'
   );
 }

@@ -1,0 +1,35 @@
+.errorWrapper {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.errorTitle {
+  font-size: calc(var(--titleFontSize) * 1.5);
+  font-weight: 100;
+  color: var(--mainRedColor);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorText {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: calc(var(--defaultFontSize) * 1.2);
+  font-weight: 100;
+  text-transform: uppercase;
+  color: var(--mainRedColor);
+  text-align: center;
+}
+
+.exclamationMark {
+  font-size: 150px;
+  font-weight: 400;
+  display: inline-block;
+  transform: rotate(10deg);
+  margin-left: 10px;
+}
