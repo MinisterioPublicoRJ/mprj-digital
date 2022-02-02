@@ -98,7 +98,7 @@ export default function Navbar() {
               <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
                 Navegue e conheça nossos produtos e sistemas
               </span>
-              <div className={navbarDropdownContent} style={{ height: '70vh' }}>
+              <div className={navbarDropdownContent}>
                 <DropdownProducts value="Produtos" productsData={productNavbarData} />
                 <div className={navbarDropdownContentAllProducs}>
                   <NavLink

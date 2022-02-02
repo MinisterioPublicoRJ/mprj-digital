@@ -34,6 +34,7 @@
   z-index: 1;
   top: 30px;
   color: var(--colorWhite);
+  right: -250px;
 }
 .navbarDropdownContent a {
   padding: 8px 30px 4px 0px;
