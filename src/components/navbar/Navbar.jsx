@@ -60,17 +60,19 @@ export default function Navbar() {
           <div className={navbarSectionToolTip}>
             <NavLink
               to="/"
-              onClick={() => scroller.scrollTo('mprjDigital', {
+              onClick={() =>
+                scroller.scrollTo('mprjDigital', {
                 smooth: true,
                 offset: -70,
                 duration: 600,
-              })}
+              })
+              }
             >
               O que é o MPRJ Digital?
             </NavLink>
             <span className={navbarTooltipText}>Conheça a nossa visão de dados abertos</span>
           </div>
-          {/*<div className={navbarSectionToolTip}>
+          {/* <div className={navbarSectionToolTip}>
             <NavLink
               to="/"
               onClick={() => scroller.scrollTo('parceiros', {
@@ -84,7 +86,7 @@ export default function Navbar() {
             <span className={navbarTooltipText}>
               Conheça os setores do MPRJ envolvidos nessa iniciativa
             </span>
-            </div>*/}
+            </div> */}
           <div className={navbarSectionToolTip}>
             <NavLink to="/parceiro/gadg/sobre">Equipe</NavLink>
           </div>
@@ -99,13 +101,24 @@ export default function Navbar() {
               <div className={navbarDropdownContent} style={{ height: '70vh' }}>
                 <DropdownProducts value="Produtos" productsData={productNavbarData} />
                 <div className={navbarDropdownContentAllProducs}>
-                  <NavLink to="/produto/todososprodutos">Ver todos os produtos...</NavLink>
+                  <NavLink
+                    to="/"
+                    onClick={() =>
+                      scroller.scrollTo('produtos', {
+                      smooth: true,
+                      offset: -70,
+                      duration: 600,
+                    })
+                    }
+                  >
+                    Conheça todos os produtos...
+                  </NavLink>{' '}
                 </div>
               </div>
             </div>
           </div>
           <div className={navbarSectionToolTip}>
-            { /* <NavLink
+            {/* <NavLink
               to="/"
               onClick={() => scroller.scrollTo('repositorios', {
                 smooth: true,
@@ -121,11 +134,13 @@ export default function Navbar() {
             <NavLink
               to="/"
               type="button"
-              onClick={() => scroller.scrollTo('rodape', {
+              onClick={() =>
+                scroller.scrollTo('rodape', {
                 smooth: true,
                 offset: -70,
                 duration: 600,
-              })}
+              })
+              }
             >
               Fale conosco
             </NavLink>

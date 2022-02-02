@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes, { object } from 'prop-types';
@@ -10,19 +11,19 @@ import {
 } from './DropdownProducts.module.css';
 
 export default function DropdownProducts({ productsData }) {
-  function otherProductsData(remainingProductsData) {
+  /* function otherProductsData(remainingProductsData) {
     const tempArray = [remainingProductsData];
     const mediumColumnSize = 5;
     const columnCount = Math.round(remainingProductsData.length / mediumColumnSize);
     const maxPerColumn = Math.ceil(remainingProductsData.length / columnCount);
-  
+
     for (let i = 0; i < columnCount; i += 1) {
       const start = i * maxPerColumn;
       tempArray[i] = remainingProductsData.slice(start, start + maxPerColumn);
     }
-  
+
     return tempArray;
-  }
+  } */
   return (
     <div className={dropdownOuter}>
       <div className={dropdownInner}>
@@ -30,7 +31,7 @@ export default function DropdownProducts({ productsData }) {
         <div className={dropdownButtonsWrapper}>
           {productsData
             ? productsData.map(({ title, name }) => (
-              <NavLink
+                <NavLink
                 key={title}
                 to={`/produto/${name}`}
                 type="button"
@@ -38,7 +39,7 @@ export default function DropdownProducts({ productsData }) {
               >
                 {title}
               </NavLink>
-            ))
+              ))
             : null}
         </div>
       </div>
@@ -47,8 +48,10 @@ export default function DropdownProducts({ productsData }) {
 }
 
 DropdownProducts.propTypes = {
-  productsData: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string,
-    name: PropTypes.string,
-  })).isRequired,
+  productsData: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      name: PropTypes.string,
+    }),
+  ).isRequired,
 };
