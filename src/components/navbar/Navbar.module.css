@@ -7,7 +7,7 @@
 .navbarLinks {
   display: flex;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 55px;
 }
 .navbarLinks a {
   list-style: none;
@@ -16,6 +16,10 @@
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 300;
+}
+.navbarDropdownContentAllProducs a{
+  text-align: center;
+  margin-bottom: 20px;
 }
 .navbarLogo{
   width: 130px;
@@ -28,10 +32,9 @@
   background-color: var(--mainRedColor);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  right: -250px;
   top: 30px;
   color: var(--colorWhite);
-
+  right: -250px;
 }
 .navbarDropdownContent a {
   padding: 8px 30px 4px 0px;
@@ -73,7 +76,7 @@
 }
 .navbarSectionToolTip .navbarTooltipText {
   visibility: hidden;
-  width: 156px;
+  width: 162px;
   border: 1px solid var(--mainColor);
   background-color: var(--colorWhite);
   text-align: center;

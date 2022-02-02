@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import map from '../../assets/NewMap.png';
 import styles from './talkToUs.module.css';
 import { setDataForm } from '../../api/api';
 
@@ -27,7 +26,6 @@ export default function talkToUs() {
 
   return (
     <section className={styles.talkOuter}>
-      {/*       <img className={styles.Footer} src={map} alt="mapa" /> */}
       <div className={styles.formOuter}>
         {sentMessage ? (
           <p className={styles.sentMensage}>
@@ -41,7 +39,6 @@ export default function talkToUs() {
               formulário para entrar em contato com a equipe responsável. Em caso de denúncias sobre
               irregularidades, favor clicar no ícone da OUVIDORIA abaixo.
             </p>
-
             <form onSubmit={handleSubmit} className={styles.formInputsOuter}>
               <div className={styles.formInputsTextOuter}>
                 <input

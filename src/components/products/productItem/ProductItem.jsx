@@ -3,15 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
-
-import {
-  productItemWrapper,
-  productItemText,
-} from './ProductItem.module.css';
+import styles from './ProductItem.module.css';
 
 export default function ProductItem({ name, title, description, imageSrc }) {
   return (
-    <div className={productItemWrapper}>
+    <div className={styles.productItemWrapper}>
       <Link to={`/produto/${name}`}>
         {!imageSrc ? (
           <img src={miniaturaDefault} alt={title} />
@@ -20,7 +16,7 @@ export default function ProductItem({ name, title, description, imageSrc }) {
         )}
       </Link>
       <h4>{title}</h4>
-      <p className={productItemText}>{description}</p>
+      <p className={styles.productItemText}>{description}</p>
     </div>
   );
 }

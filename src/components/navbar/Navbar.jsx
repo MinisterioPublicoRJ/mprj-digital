@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
@@ -19,8 +20,7 @@ import {
   navbarMobileButton,
   navbarDropbtnButton,
   navbarBasicButton,
-  navbarDropdownContentMoreProducts,
-  prasheNavbarDropdownContent,
+  navbarDropdownContentAllProducs,
 } from './Navbar.module.css';
 
 export default function Navbar() {
@@ -60,16 +60,33 @@ export default function Navbar() {
           <div className={navbarSectionToolTip}>
             <NavLink
               to="/"
-              onClick={() => scroller.scrollTo('mprjDigital', {
+              onClick={() =>
+                scroller.scrollTo('mprjDigital', {
                 smooth: true,
                 offset: -70,
                 duration: 600,
-              })}
+              })
+              }
             >
               O que é o MPRJ Digital?
             </NavLink>
             <span className={navbarTooltipText}>Conheça a nossa visão de dados abertos</span>
           </div>
+          {/* <div className={navbarSectionToolTip}>
+            <NavLink
+              to="/"
+              onClick={() => scroller.scrollTo('parceiros', {
+                smooth: true,
+                offset: -70,
+                duration: 600,
+              })}
+            >
+              Parceiros
+            </NavLink>
+            <span className={navbarTooltipText}>
+              Conheça os setores do MPRJ envolvidos nessa iniciativa
+            </span>
+            </div> */}
           <div className={navbarSectionToolTip}>
             <NavLink to="/parceiro/gadg/sobre">Equipe</NavLink>
           </div>
@@ -81,19 +98,27 @@ export default function Navbar() {
               <span className={navbarTooltipText} style={{ marginBottom: 8 }}>
                 Navegue e conheça nossos produtos e sistemas
               </span>
-              <div className={navbarDropdownContent} style={{ height: '50vh' }}>
-                <DropdownProducts productsData={productNavbarData} />
-                <div className={prasheNavbarDropdownContent}>
-                  <p>Ver mais produtos...</p>
-                  <div id={navbarDropdownContentMoreProducts}>
-                    <DropdownProducts productsData={productNavbarData} />
-                  </div>
+              <div className={navbarDropdownContent}>
+                <DropdownProducts value="Produtos" productsData={productNavbarData} />
+                <div className={navbarDropdownContentAllProducs}>
+                  <NavLink
+                    to="/"
+                    onClick={() =>
+                      scroller.scrollTo('produtos', {
+                      smooth: true,
+                      offset: -70,
+                      duration: 600,
+                    })
+                    }
+                  >
+                    Conheça todos os produtos...
+                  </NavLink>{' '}
                 </div>
               </div>
             </div>
           </div>
           <div className={navbarSectionToolTip}>
-            { /* <NavLink
+            {/* <NavLink
               to="/"
               onClick={() => scroller.scrollTo('repositorios', {
                 smooth: true,
@@ -109,11 +134,13 @@ export default function Navbar() {
             <NavLink
               to="/"
               type="button"
-              onClick={() => scroller.scrollTo('rodape', {
+              onClick={() =>
+                scroller.scrollTo('rodape', {
                 smooth: true,
                 offset: -70,
                 duration: 600,
-              })}
+              })
+              }
             >
               Fale conosco
             </NavLink>

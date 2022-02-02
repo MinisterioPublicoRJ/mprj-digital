@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import '../PartnerPage.css';
 import { Link, useLocation } from 'react-router-dom';
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './Home.css';
 import HomeContextProvider from './HomeContext';
 import { Header, Mprj, OpenData, Partners, Products, Explore, TalkToUs } from '../../components';
