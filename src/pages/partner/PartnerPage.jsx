@@ -81,18 +81,19 @@ export default function PartnerPage() {
       subtitleSubpage =
         ' Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.';
       break;
+    case 'equipe':
+      titleSubpage = 'Equipe';
+      subtitleSubpage =
+        'Painéis, estudos, relatórios, sistemas, aplicações e os mais variados formatos de soluções gerados pelos nossos parceiros. Fique à vontade para explorar cada um deles! Se puder nos enviar seu feedback, ficaremos muito felizes em recebê-lo.';
+      break;
     default:
       titleSubpage = '';
   }
   return (
     <>
-      {(loading && !failed) && (
-        <Loading />
-      )}
-      {(failed) && (
-        <Error />
-      )}
-      {(!loading && !failed) && (
+      {loading && !failed && <Loading />}
+      {failed && <Error />}
+      {!loading && !failed && (
         <>
           <section className="partner-page-section">
             <div
@@ -114,9 +115,10 @@ export default function PartnerPage() {
                     <NavLink
                       exact
                       activeClassName="productPage-navButtons-active"
-                      className={` ${subpage.id === subpageId
-                        ? 'productPage-navButtons-active'
-                        : 'partner-page-link '
+                      className={` ${
+                        subpage.id === subpageId
+                          ? 'productPage-navButtons-active'
+                          : 'partner-page-link '
                       }`}
                       to={`/parceiro/${partnerName}/${subpage.id}`}
                     >
