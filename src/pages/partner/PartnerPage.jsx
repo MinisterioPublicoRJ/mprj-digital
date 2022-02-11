@@ -189,11 +189,8 @@ export default function PartnerPage() {
                     </div>
                   </div>
                 )}
-                {subpageId === 'podemos-ajudar' && (
+                {subpageId === 'equipe' && (
                   <div className="partner-page-subpage-Wrapper">
-                    <div className="partner-SVG-styling">
-                      <ImgAjuda />
-                    </div>
                     <FormPartner />
                   </div>
                 )}
