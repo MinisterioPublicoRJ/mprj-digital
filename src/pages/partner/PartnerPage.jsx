@@ -193,7 +193,20 @@ export default function PartnerPage() {
                 )}
                 {subpageId === 'equipe' && (
                   <div className="partner-page-subpage-Wrapper">
-                    <FormPartner />
+                    <div className="partner-SVG-sobre-nos-styling">
+                      <ImgSobreNos />
+                    </div>
+                    <div className="partner-page-cards-solucoes">
+                      {partnersList.sectionPilaresArray.map((partner) => (
+                        <div key={partner.id} className="partner-page-cards-solucoes-first">
+                          <div>
+                            <img src={partner.imgLogoPilar} alt={partner.name} />
+                          </div>
+                          <h4>{partner.subtitlePilar}</h4>
+                          <p>{partner.titlePilar}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
