@@ -2,38 +2,38 @@
 
 export const TEAM_CONST = [
   {
-    id: 'csi',
+    id: '1',
     employeeName: 'Renata Andrade',
     // img: CSI,
   },
   {
-    id: 'gate',
-    name: 'GATE',
+    id: '2',
+    employeeName: 'Renata Andrade',
     // img: GATE,
   },
   {
-    id: 'inova',
-    name: 'INOVA',
+    id: '3',
+    employeeName: 'Renata Andrade',
     // img: INOVA,
   },
   {
-    id: 'sgmp',
-    name: 'SGMP',
+    id: '4',
+    employeeName: 'Renata Andrade',
     // img: SGMP,
   },
   {
-    id: 'stic',
-    name: 'STIC',
+    id: '5',
+    employeeName: 'Renata Andrade',
     // img: STIC,
   },
   {
-    id: 'subplan',
-    name: 'SUBPLAN',
+    id: '6',
+    employeeName: 'Renata Andrade',
     // img: SUBPLAN,
   },
   {
-    id: 'iep',
-    name: 'IEP',
+    id: '7',
+    employeeName: 'Renata Andrade',
     // img: IEP,
   },
 ];
