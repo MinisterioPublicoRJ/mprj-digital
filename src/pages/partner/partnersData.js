@@ -20,10 +20,10 @@ export const PARTNERS_CONST = [
         id: 'solucoes',
         call: 'Soluções',
       },
-      {
+      /* {
         id: 'equipe',
         call: 'Equipe',
-      },
+      }, */
     ],
   },
   {
