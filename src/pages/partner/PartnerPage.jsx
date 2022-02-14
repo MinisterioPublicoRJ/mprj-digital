@@ -8,7 +8,7 @@ import { PARTNERS_CONST } from './partnersData';
 import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData, getProductComponentData } from '../../api/api';
 import ProductPartnerItem from './productsPartnerItem/ProductPartnerItem';
-import FormPartner from './formPartner/FormPartner';
+import TeamPage from './teamPage/TeamPage';
 import { ImgAjuda, ImgSolucoes, ImgSobreNos } from '../../assets/verticalText';
 
 export default function PartnerPage() {
@@ -137,7 +137,7 @@ export default function PartnerPage() {
                   }}
                 />
                 <div className="partner-page-featured">
-                  <h3>Quem Somos ?</h3>
+                  <h3>Gerência de Análises, Diagnósticos e Geoprocessamento</h3>
                   <p>{partnersList.whoWeAre}</p>
                 </div>
               </div>
@@ -193,19 +193,8 @@ export default function PartnerPage() {
                 )}
                 {subpageId === 'equipe' && (
                   <div className="partner-page-subpage-Wrapper">
-                    <div className="partner-SVG-sobre-nos-styling">
-                      <ImgSobreNos />
-                    </div>
-                    <div className="partner-page-cards-solucoes">
-                      {partnersList.sectionPilaresArray.map((partner) => (
-                        <div key={partner.id} className="partner-page-cards-solucoes-first">
-                          <div>
-                            <img src={partner.imgLogoPilar} alt={partner.name} />
-                          </div>
-                          <h4>{partner.subtitlePilar}</h4>
-                          <p>{partner.titlePilar}</p>
-                        </div>
-                      ))}
+                    <div className="partner-products-wrapper">
+                      <TeamPage products={products} />
                     </div>
                   </div>
                 )}

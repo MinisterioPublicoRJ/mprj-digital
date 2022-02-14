@@ -78,14 +78,12 @@
   opacity: 1;
   display: flex;
 }
-.partner-page-featured {
-  margin: 0 2vw;
-}
+
 .partner-page-featured h3 {
-  color: #1D2933;
+  color: var(--mainRedColor);
   font-weight: bold;
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 18px;
 }
 .partner-page-featured p,
 .partner-page-topics p {

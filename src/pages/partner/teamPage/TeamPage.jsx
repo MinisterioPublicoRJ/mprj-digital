@@ -5,9 +5,9 @@ import styles from './TeamPage.module.css';
 
 export default function TeamPage({ products }) {
   return (
-    <div className="partner-page-cards">
+    <div className={styles.partnerPageCards}>
       {products.map((card) => (
-        <div key={card.id} className="partner-page-card">
+        <div key={card.id} className={styles.partnerPageCard}>
           <a target="" rel="noreferrer" href={`/produto/${card.name}`}>
             {!card.imageSrc ? (
               <img src={miniaturaDefault} alt={card.title} />
@@ -15,6 +15,9 @@ export default function TeamPage({ products }) {
               <img src={card.imageSrc} alt={card.title} />
             )}
           </a>
+          <div className={styles.partnerPageCardsTag}>
+            <p>Gerente</p>
+          </div>
           <h4>{card.title}</h4>
           <p>{card.description}</p>
         </div>
