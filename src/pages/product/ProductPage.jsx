@@ -33,67 +33,59 @@ export default function Produto() {
 
   return (
     <>
-      {(loading && !failed) && (
-        <Loading />
-      )}
-      {(failed) && (
-        <Error />
-      )}
-      {(!loading && !failed) && (
-        <article className="productPage-outer">
-          <div className="productPage-img">
-            {!productData.bannerUrl ? (
-              <img src={bgProductDefault} alt="bg-default" />
-            ) : (
-              <img src={productData.bannerUrl} alt={productData.title} />
-            )}
+      {loading && !failed && <Loading />}
+      {failed && <Error />}
+      {!loading && !failed && (
+        <article>
+          <div className="productPage-outer">
+            <div className="productPage-img">
+              {!productData.bannerUrl ? (
+                <img src={bgProductDefault} alt="bg-default" />
+              ) : (
+                <img src={productData.bannerUrl} alt={productData.title} />
+              )}
+            </div>
+            <div className="productPage-presentation">
+              {!productData.icon ? (
+                <img src={iconProductDefault} alt="icone-defalut" />
+              ) : (
+                <img src={productData.icon} alt={`Ícone ${productData.title}`} />
+              )}
+              <h2>{productData.subtitle}</h2>
+              <p>{productData.description}</p>
+            </div>
+            <div className="productPage-presentation-thumbnailUrl">
+              <img src={productData.thumbnailUrl} alt="logo-produto" />
+            </div>
           </div>
-          <div className="productPage-presentation">
-            {!productData.icon ? (
-              <img src={iconProductDefault} alt="icone-defalut" />
-            ) : (
-              <img src={productData.icon} alt={`Ícone ${productData.title}`} />
-            )}
-            <h2>{productData.subtitle}</h2>
-            <p>{productData.description}</p>
-          </div>
-          <h1 className="productPage-productName">{productData.title}</h1>
-          <div className="productPage-owner">
+          <div className="productPage-wrap">
+            <h1>{productData.title}</h1>
             <span>{productData.organ}</span>
             <span>Orgão Responsável</span>
+            <div className="productPage-service">
+              <span>{productData.service}</span>
+              <span>Serviço</span>
+            </div>
+            <div className="productPage-tabNavigation">
+              {productData.subsectionsArray.map(({ subsectionTitle }, index) => (
+                <button
+                  key={subsectionTitle}
+                  onClick={() => {
+                    setchangeData(subsectionTitle);
+                    setCurrentProductIndex(index);
+                  }}
+                  className={`productPage-navButtons ${
+                    subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
+                  }`}
+                  type="button"
+                >
+                  {index === 0 && 'Por que ?'}
+                  {index === 1 && 'A ferramenta'}
+                  {/* index === 2 && 'Os dados' */}
+                </button>
+              ))}
+            </div>
           </div>
-          <div className="productPage-service">
-            <span>{productData.service}</span>
-            <span>Serviço</span>
-          </div>
-          <div className="productPage-tabNavigation">
-            {productData.subsectionsArray.map(({ subsectionTitle }, index) => (
-              <button
-                key={subsectionTitle}
-                onClick={() => {
-                  setchangeData(subsectionTitle);
-                  setCurrentProductIndex(index);
-                }}
-                className={`productPage-navButtons ${
-                  subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
-                }`}
-                type="button"
-              >
-                {index === 0 && 'Por que ?'}
-                {index === 1 && 'A ferramenta'}
-                {/* index === 2 && 'Os dados' */}
-              </button>
-            ))}
-          </div>
-          <DataProduct
-            {...productData.subsectionsArray.find(
-              (subsection) => subsection.subsectionTitle === changeData,
-            )}
-            subsectionTitle={subsectionTitles[currentProductIndex]}
-            textBtn={`Acessar ${productData.title}`}
-            url={productData.url}
-            thumbnailUrl={productData.thumbnailUrl}
-          />
         </article>
       )}
     </>

@@ -2,13 +2,13 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: Roboto;
+  font-family: Poppins;
 }
 :root {
   /* FONTS */
-  --defaultFontSize: clamp(12px, 1.5vh, 18px);
+  --defaultFontSize: clamp(14px, 1.5vh, 18px);
   --smallFont: clamp(8px, 1.2vh, 12px);
-  --titleFontSize: calc(var(--defaultFontSize) * 3);
+  --titleFontSize: calc(var(--defaultFontSize) * 2.5);
   --errorLetterSpacing: 5px;
 
   /* SPACING */
@@ -38,7 +38,6 @@ h6 {
 p {
   font-family: Roboto, regular;
   font-size: var(--defaultFontSize);
-  text-align: center;
 }
 button, a{
   cursor: pointer;
