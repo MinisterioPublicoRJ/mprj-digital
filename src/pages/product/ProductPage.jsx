@@ -54,7 +54,7 @@ export default function Produto() {
               <div className="productPage-presentation-button">
                 {productData.url ? (
                   <a href={productData.url} target="_blank" rel="noopener       noreferrer">
-                    Acessar Solução
+                    Acessar
                   </a>
                 ) : null}
               </div>

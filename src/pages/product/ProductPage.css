@@ -23,6 +23,25 @@
   text-align: left;
   margin-left: 13vh;
 }
+.productPage-presentation-button {
+  width: 128px;
+  height: 34px;
+  background: var(--mainRedColor);
+  opacity: 1;
+  letter-spacing: -0.5px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.productPage-presentation-button a {
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 15px;
+}
 .productPage-presentation-thumbnailUrl{
   grid-row: 1 / 1;
   grid-column: 3/ 4;
