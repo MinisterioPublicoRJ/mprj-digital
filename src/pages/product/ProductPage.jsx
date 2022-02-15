@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './ProductPage.css';
 import { getProductPageData } from '../../api/api';
 import iconProductDefault from '../../assets/produto-icon-default.svg';
@@ -12,12 +12,10 @@ export default function Produto() {
   const [productData, setProductData] = useState();
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
-  const subsectionTitles = ['Por que ?', 'A ferramenta', 'Os dados'];
 
   async function loadProductData() {
     try {
       const result = await getProductPageData(productName);
-      console.log(result);
       setProductData(result);
     } catch (e) {
       setFailed(true);
