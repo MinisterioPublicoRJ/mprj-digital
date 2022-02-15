@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import DataProduct from './dataProductItem/DataProductItem';
+import { useParams, Link } from 'react-router-dom';
 import './ProductPage.css';
 import { getProductPageData } from '../../api/api';
 import iconProductDefault from '../../assets/produto-icon-default.svg';
@@ -10,18 +9,16 @@ import { Loading, Error } from '../../components';
 
 export default function Produto() {
   const { productName } = useParams();
-  const [changeData, setchangeData] = useState();
   const [productData, setProductData] = useState();
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
-  const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const subsectionTitles = ['Por que ?', 'A ferramenta', 'Os dados'];
 
   async function loadProductData() {
     try {
       const result = await getProductPageData(productName);
+      console.log(result);
       setProductData(result);
-      setchangeData(result.subsectionsArray[0].subsectionTitle);
     } catch (e) {
       setFailed(true);
     } finally {
@@ -56,33 +53,35 @@ export default function Produto() {
             </div>
             <div className="productPage-presentation-thumbnailUrl">
               <img src={productData.thumbnailUrl} alt="logo-produto" />
+              <div className="productPage-presentation-button">
+                {productData.url ? (
+                  <a href={productData.url} target="_blank" rel="noopener       noreferrer">
+                    Acessar Solução
+                  </a>
+                ) : null}
+              </div>
             </div>
           </div>
           <div className="productPage-wrap">
-            <h1>{productData.title}</h1>
-            <span>{productData.organ}</span>
-            <span>Orgão Responsável</span>
-            <div className="productPage-service">
-              <span>{productData.service}</span>
-              <span>Serviço</span>
+            <div className="productPage-wrap-texts">
+              <span>{productData.organ}</span>
+              <p>Orgão Responsável</p>
+              <h1>{productData.title}</h1>
+              <h4>{productData.service}</h4>
+              <p className="productPage-text-service">Serviço</p>
             </div>
             <div className="productPage-tabNavigation">
-              {productData.subsectionsArray.map(({ subsectionTitle }, index) => (
-                <button
-                  key={subsectionTitle}
-                  onClick={() => {
-                    setchangeData(subsectionTitle);
-                    setCurrentProductIndex(index);
-                  }}
-                  className={`productPage-navButtons ${
-                    subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
-                  }`}
-                  type="button"
-                >
-                  {index === 0 && 'Por que ?'}
-                  {index === 1 && 'A ferramenta'}
-                  {/* index === 2 && 'Os dados' */}
-                </button>
+              {productData.subsectionsArray.map(({ subsectionDescription }, index) => (
+                <>
+                  <div>
+                    <h2>
+                      {index === 0 && 'Por que ?'}
+                      {index === 1 && 'A ferramenta'}
+                      {index === 2 && 'Dados'}
+                    </h2>
+                    <p>{subsectionDescription}</p>
+                  </div>
+                </>
               ))}
             </div>
           </div>
