@@ -96,17 +96,3 @@ p.productPage-text-service{
   outline: none;
   text-align: left;
 }
-
-.productPage-navButtons span:hover, .productPage-navButtons-active{
-  color: var(--darkBlue);
-}
-
-.productPage-owner :first-child, .productPage-service :first-child {
-  color: var(--darkBlue);
-  font-size: var(--defaultFontSize);
-}
-
-.productPage-owner :nth-child(2), .productPage-service :nth-child(2) {
-  color: var(--blueLightProdutos);
-  font-size: var(--smallFont);
-}
