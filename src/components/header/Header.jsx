@@ -96,7 +96,6 @@ export default function Header() {
       </section>
       <section className={searchArea}>
         <div className={searchAreaInput}>
-          {/* TRANSFORMAR EM COMPONENTE DA MAPASTECA */}
           <i className="fa fa-search" aria-hidden="true" />
           <input
             type="text"
@@ -106,7 +105,6 @@ export default function Header() {
           <button type="button" className={searchButton} onClick={handleSearch}>
             Buscar Base de Dados
           </button>
-          {/* FIM DO COMPONENTE */}
         </div>
       </section>
     </header>
