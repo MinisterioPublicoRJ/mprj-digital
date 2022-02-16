@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './ProductPage.css';
 import { getProductPageData } from '../../api/api';
 import iconProductDefault from '../../assets/produto-icon-default.svg';
 import bgProductDefault from '../../assets/produto-bg-default.png';
 import { Loading, Error } from '../../components';
+import styles from './ProductPage.module.css';
 
 export default function Produto() {
   const { productName } = useParams();
@@ -32,15 +32,15 @@ export default function Produto() {
       {failed && <Error />}
       {!loading && !failed && (
         <article>
-          <div className="productPage-outer">
-            <div className="productPage-img">
+          <div className={styles.productPageOuter}>
+            <div className={styles.productPageImg}>
               {!productData.bannerUrl ? (
                 <img src={bgProductDefault} alt="bg-default" />
               ) : (
                 <img src={productData.bannerUrl} alt={productData.title} />
               )}
             </div>
-            <div className="productPage-presentation">
+            <div className={styles.productPagePresentation}>
               {!productData.icon ? (
                 <img src={iconProductDefault} alt="icone-defalut" />
               ) : (
@@ -48,16 +48,16 @@ export default function Produto() {
               )}
               <h2>{productData.subtitle}</h2>
               <p>{productData.description}</p>
-              <div className="productPage-access-level">
+              <div className={styles.productPageAccessLevel}>
                 <span>Nível de acesso :</span>
                 <div>
                   <p>Orgãos especificos</p>
                 </div>
               </div>
             </div>
-            <div className="productPage-presentation-thumbnailUrl">
+            <div className={styles.productPagePresentationThumbnailUrl}>
               <img src={productData.thumbnailUrl} alt="logo-produto" />
-              <div className="productPage-presentation-button">
+              <div className={styles.productPagePresentationButton}>
                 {productData.url ? (
                   <a href={productData.url} target="_blank" rel="noopener       noreferrer">
                     Acessar
@@ -66,26 +66,24 @@ export default function Produto() {
               </div>
             </div>
           </div>
-          <div className="productPage-wrap">
-            <div className="productPage-wrap-texts">
+          <div className={styles.productPageWrap}>
+            <div className={styles.productPageWrapTexts}>
               <span>{productData.organ}</span>
               <p>Orgão Responsável</p>
               <h1>{productData.title}</h1>
               <h4>{productData.service}</h4>
-              <p className="productPage-text-service">Serviço</p>
+              <p className={styles.productPageTextService}>Serviço</p>
             </div>
-            <div className="productPage-tabNavigation">
-              {productData.subsectionsArray.map(({ subsectionDescription }, index) => (
-                <>
-                  <div>
-                    <h2>
-                      {index === 0 && 'Por que ?'}
-                      {index === 1 && 'A ferramenta'}
-                      {index === 2 && 'Dados'}
-                    </h2>
-                    <p>{subsectionDescription}</p>
-                  </div>
-                </>
+            <div className={styles.productPageTabNavigation}>
+              {productData.subsectionsArray.map(({ subsectionDescription, id }, index) => (
+                <div key={id}>
+                  <h2>
+                    {index === 0 && 'Por que ?'}
+                    {index === 1 && 'A ferramenta'}
+                    {index === 2 && 'Dados'}
+                  </h2>
+                  <p>{subsectionDescription}</p>
+                </div>
               ))}
             </div>
           </div>
