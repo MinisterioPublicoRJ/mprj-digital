@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './ProductPartnerItem.css';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
@@ -15,8 +15,19 @@ export default function ProductPartnerItem({ products }) {
               <img src={card.imageSrc} alt={card.title} />
             )}
           </a>
-          <h4>{card.title}</h4>
-          <p>{card.description}</p>
+          <h4 className="partner-page-card--title">{card.title}</h4>
+          <p className="partner-page-card--description">{card.description}</p>
+          <div className="partner-page-links">
+            <a
+              href={`/produto/${card.name}`}
+              className="partner-page-link partner-page-link--button"
+            >
+              Saiba Mais
+            </a>
+            <a href="." className="partner-page-link partner-page-link--text">
+              Acessar
+            </a>
+          </div>
         </div>
       ))}
     </div>
