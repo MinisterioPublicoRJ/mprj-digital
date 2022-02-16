@@ -48,6 +48,12 @@ export default function Produto() {
               )}
               <h2>{productData.subtitle}</h2>
               <p>{productData.description}</p>
+              <div className="productPage-access-level">
+                <span>Nível de acesso :</span>
+                <div>
+                  <p>Orgãos especificos</p>
+                </div>
+              </div>
             </div>
             <div className="productPage-presentation-thumbnailUrl">
               <img src={productData.thumbnailUrl} alt="logo-produto" />

@@ -33,7 +33,23 @@
   border: none;
   margin: 0 auto;
   text-align: center;
-
+}
+.productPage-access-level {
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+.productPage-access-level span {
+  font-weight: 600;
+  color: #ffffff;
+}
+.productPage-access-level div{
+  width: 146px;
+  height: 24px;
+  background-color: #F06225;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: center;
 }
 .productPage-presentation-button a {
   letter-spacing: -0.5px;
