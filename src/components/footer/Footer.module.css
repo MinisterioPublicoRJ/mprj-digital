@@ -1,8 +1,7 @@
 .footerOuter {
   background-color: var(--backgroundFooter);
   position: relative;
-  align-content: center;
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
   flex-direction: column;
   height: 40vh;
@@ -14,7 +13,7 @@
 .footerMenu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 30px;
   padding-right: 200px;

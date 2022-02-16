@@ -50,20 +50,6 @@ export default function Footer() {
           </div>
         </div>
         <div className={footerMenuColumn}>
-          <h3>PRODUTOS EM DESTAQUE</h3>
-          <a href="/produto/parquet-digital" rel="noreferrer">
-            Parquet Digital
-          </a>
-          <a href="/produto/farol" rel="noreferrer">
-            Farol
-          </a>
-        </div>
-        <div className={footerMenuColumn}>
-          <h3>MPRJ DIGITAL</h3>
-          <a href="/#mprjDigital">Quem Somos?</a>
-          <a href="/#parceiros">Parceiros</a>
-        </div>
-        <div className={footerMenuColumn}>
           <h3>OUVIDORIA</h3>
           <a
             href="https://www.mprj.mp.br/comunicacao/ouvidoria/formulario"
