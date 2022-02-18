@@ -80,7 +80,7 @@ export default function Produto() {
                   <h2>
                     {index === 0 && 'Por que ?'}
                     {index === 1 && 'A ferramenta'}
-                    {index === 2 && 'Dados'}
+                    {index === 2 && 'Documentos'}
                   </h2>
                   <p>{subsectionDescription}</p>
                 </div>

@@ -73,9 +73,9 @@
   margin: 40px 13vw 12vw 12vw;
 }
 .productPageTabNavigation p{
-  max-width: 60vw;
+  max-width: 35vw;
   height: calc(var(--exploreSectionHeight) - 20px);
-  margin-right: 20px;
+  margin-right: 40px;
   color: var(--productsSubtitle);
 }
 .productPageTabNavigation h2{

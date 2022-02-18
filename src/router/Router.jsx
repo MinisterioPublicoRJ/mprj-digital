@@ -21,7 +21,6 @@ function Router() {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/produto/:productName" element={<ProductPage />} />
       <Route path="/parceiro/:partnerName/:subpageId" element={<PartnerPage />} />
-      <Route path="/produto/todososprodutos" element={<AllProducts />} />
       <Route exact path="*" element={<PageNotFound />} />
     </Routes>
   );
