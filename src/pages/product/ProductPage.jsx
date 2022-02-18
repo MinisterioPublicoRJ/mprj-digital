@@ -16,6 +16,7 @@ export default function Produto() {
   async function loadProductData() {
     try {
       const result = await getProductPageData(productName);
+      console.log(result);
       setProductData(result);
     } catch (e) {
       setFailed(true);
@@ -75,16 +76,18 @@ export default function Produto() {
               <p className={styles.productPageTextService}>Serviço</p>
             </div>
             <div className={styles.productPageTabNavigation}>
-              {productData.subsectionsArray.map(({ subsectionDescription, id }, index) => (
-                <div key={id}>
-                  <h2>
-                    {index === 0 && 'Por que ?'}
-                    {index === 1 && 'A ferramenta'}
-                    {index === 2 && 'Documentos'}
-                  </h2>
-                  <p>{subsectionDescription}</p>
-                </div>
-              ))}
+              {productData.subsectionsArray
+                .slice(0, 2)
+                .map(({ subsectionDescription, id }, index) => (
+                  <div key={id}>
+                    <h2>
+                      {index === 0 && 'Por que ?'}
+                      {index === 1 && 'A ferramenta'}
+                      {/* {index === 2 && 'Documentos'} */}
+                    </h2>
+                    <p>{subsectionDescription}</p>
+                  </div>
+                ))}
             </div>
           </div>
         </article>
