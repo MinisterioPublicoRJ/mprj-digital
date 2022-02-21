@@ -1,5 +1,8 @@
-.productItemWrapper {
+.productItemWrapper h4 {
   text-align: center;
+  color: var(--productsSubtitle);
+  font-weight: 400;
+  opacity: 1;
 }
 .productItemWrapper img {
   width: 157px;

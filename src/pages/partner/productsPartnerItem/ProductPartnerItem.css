@@ -39,6 +39,7 @@
 }
 
 .partner-page-card .partner-page-card--title {
+  color: var(--productsSubtitle);
   font-weight: 600;
   margin: 0;
 }

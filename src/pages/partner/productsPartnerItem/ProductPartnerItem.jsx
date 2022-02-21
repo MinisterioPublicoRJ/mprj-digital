@@ -7,7 +7,7 @@ import { getProductPageData } from '../../../api/api';
 export default function ProductPartnerItem({ products }) {
   async function accessProduct(productName) {
     const product = await getProductPageData(productName);
-    window.location.href = product.url;
+    window.open(product.url, '_blank');
   }
 
   return (
@@ -27,6 +27,8 @@ export default function ProductPartnerItem({ products }) {
             <a
               href={`/produto/${card.name}`}
               className="partner-page-link partner-page-link--button"
+              rel="noreferrer"
+              target="_blank"
             >
               Saiba Mais
             </a>

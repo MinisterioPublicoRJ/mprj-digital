@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
