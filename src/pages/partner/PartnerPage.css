@@ -5,7 +5,7 @@
 }
 .partner-page-cards-solucoes-first{
   flex: 0 0 40%;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
 }
 .partner-page-topics h3 {
@@ -149,7 +149,7 @@
   text-align: left;
   font-size: 16px;
   margin-top: 5px;
-  color: #263859;
+  color: var(--mainRedColor);
   font-weight: 400;
   opacity: 1;
 }
