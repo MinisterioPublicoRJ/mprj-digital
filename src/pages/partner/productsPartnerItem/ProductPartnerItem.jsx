@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductPartnerItem.css';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
+import { getProductPageData } from '../../../api/api';
 
 export default function ProductPartnerItem({ products }) {
+  async function accessProduct(productName) {
+    const product = await getProductPageData(productName);
+    window.location.href = product.url;
+  }
+
   return (
     <div className="partner-page-cards">
       {products.map((card) => (
@@ -24,7 +30,14 @@ export default function ProductPartnerItem({ products }) {
             >
               Saiba Mais
             </a>
-            <a href="." className="partner-page-link partner-page-link--text">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                accessProduct(card.name);
+              }}
+              href="./"
+              className="partner-page-link partner-page-link--text"
+            >
               Acessar
             </a>
           </div>
