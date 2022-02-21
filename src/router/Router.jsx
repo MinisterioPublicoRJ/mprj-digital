@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
-import { Home, ProductPage, PartnerPage, AllProducts, PageNotFound } from '../pages';
+import { Home, ProductPage, PartnerPage, PageNotFound } from '../pages';
 import './Router.css';
 
 function locationListener({ pathname }) {
