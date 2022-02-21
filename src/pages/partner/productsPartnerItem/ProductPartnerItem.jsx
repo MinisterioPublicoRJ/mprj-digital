@@ -15,7 +15,7 @@ export default function ProductPartnerItem({ products }) {
               <img src={card.imageSrc} alt={card.title} />
             )}
           </a>
-          <h4>{card.title}</h4>
+          <h4 style={{ color: '#3E3D3D' }}>{card.title}</h4>
           <p>{card.description}</p>
         </div>
       ))}

@@ -19,6 +19,9 @@
      grid-template-columns: repeat(2, 1fr);
      grid-auto-rows: minmax(320px, auto);
     }
+    .partner-page-cards h4, p{
+        text-align: center;
+    }
 }
 @media (max-width: 480px){
     .partner-page-cards {
