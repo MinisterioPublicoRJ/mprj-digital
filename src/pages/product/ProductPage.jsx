@@ -1,27 +1,23 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import DataProduct from './dataProductItem/DataProductItem';
-import './ProductPage.css';
 import { getProductPageData } from '../../api/api';
 import iconProductDefault from '../../assets/produto-icon-default.svg';
 import bgProductDefault from '../../assets/produto-bg-default.png';
 import { Loading, Error } from '../../components';
+import styles from './ProductPage.module.css';
 
 export default function Produto() {
   const { productName } = useParams();
-  const [changeData, setchangeData] = useState();
   const [productData, setProductData] = useState();
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
-  const [currentProductIndex, setCurrentProductIndex] = useState(0);
-  const subsectionTitles = ['Por que ?', 'A ferramenta', 'Os dados'];
 
   async function loadProductData() {
     try {
       const result = await getProductPageData(productName);
+      console.log(result);
       setProductData(result);
-      setchangeData(result.subsectionsArray[0].subsectionTitle);
     } catch (e) {
       setFailed(true);
     } finally {
@@ -33,67 +29,67 @@ export default function Produto() {
 
   return (
     <>
-      {(loading && !failed) && (
-        <Loading />
-      )}
-      {(failed) && (
-        <Error />
-      )}
-      {(!loading && !failed) && (
-        <article className="productPage-outer">
-          <div className="productPage-img">
-            {!productData.bannerUrl ? (
-              <img src={bgProductDefault} alt="bg-default" />
-            ) : (
-              <img src={productData.bannerUrl} alt={productData.title} />
-            )}
+      {loading && !failed && <Loading />}
+      {failed && <Error />}
+      {!loading && !failed && (
+        <article>
+          <div className={styles.productPageOuter}>
+            <div className={styles.productPageImg}>
+              {!productData.bannerUrl ? (
+                <img src={bgProductDefault} alt="bg-default" />
+              ) : (
+                <img src={productData.bannerUrl} alt={productData.title} />
+              )}
+            </div>
+            <div className={styles.productPagePresentation}>
+              {!productData.icon ? (
+                <img src={iconProductDefault} alt="icone-defalut" />
+              ) : (
+                <img src={productData.icon} alt={`Ícone ${productData.title}`} />
+              )}
+              <h2>{productData.subtitle}</h2>
+              <p>{productData.description}</p>
+              <div className={styles.productPageAccessLevel}>
+                <span>Nível de acesso :</span>
+                <div>
+                  <p>Orgãos especificos</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.productPagePresentationThumbnailUrl}>
+              <img src={productData.thumbnailUrl} alt="logo-produto" />
+              <div className={styles.productPagePresentationButton}>
+                {productData.url ? (
+                  <a href={productData.url} target="_blank" rel="noopener       noreferrer">
+                    Acessar
+                  </a>
+                ) : null}
+              </div>
+            </div>
           </div>
-          <div className="productPage-presentation">
-            {!productData.icon ? (
-              <img src={iconProductDefault} alt="icone-defalut" />
-            ) : (
-              <img src={productData.icon} alt={`Ícone ${productData.title}`} />
-            )}
-            <h2>{productData.subtitle}</h2>
-            <p>{productData.description}</p>
+          <div className={styles.productPageWrap}>
+            <div className={styles.productPageWrapTexts}>
+              <span>{productData.organ}</span>
+              <p>Orgão Responsável</p>
+              <h1>{productData.title}</h1>
+              <h4>{productData.service}</h4>
+              <p className={styles.productPageTextService}>Serviço</p>
+            </div>
+            <div className={styles.productPageTabNavigation}>
+              {productData.subsectionsArray
+                .slice(0, 2)
+                .map(({ subsectionDescription, id }, index) => (
+                  <div key={id}>
+                    <h2>
+                      {index === 0 && 'Por que ?'}
+                      {index === 1 && 'A ferramenta'}
+                      {/* {index === 2 && 'Documentos'} */}
+                    </h2>
+                    <p>{subsectionDescription}</p>
+                  </div>
+                ))}
+            </div>
           </div>
-          <h1 className="productPage-productName">{productData.title}</h1>
-          <div className="productPage-owner">
-            <span>{productData.organ}</span>
-            <span>Orgão Responsável</span>
-          </div>
-          <div className="productPage-service">
-            <span>{productData.service}</span>
-            <span>Serviço</span>
-          </div>
-          <div className="productPage-tabNavigation">
-            {productData.subsectionsArray.map(({ subsectionTitle }, index) => (
-              <button
-                key={subsectionTitle}
-                onClick={() => {
-                  setchangeData(subsectionTitle);
-                  setCurrentProductIndex(index);
-                }}
-                className={`productPage-navButtons ${
-                  subsectionTitle === changeData ? 'productPage-navButtons-active' : ''
-                }`}
-                type="button"
-              >
-                {index === 0 && 'Por que ?'}
-                {index === 1 && 'A ferramenta'}
-                {/* index === 2 && 'Os dados' */}
-              </button>
-            ))}
-          </div>
-          <DataProduct
-            {...productData.subsectionsArray.find(
-              (subsection) => subsection.subsectionTitle === changeData,
-            )}
-            subsectionTitle={subsectionTitles[currentProductIndex]}
-            textBtn={`Acessar ${productData.title}`}
-            url={productData.url}
-            thumbnailUrl={productData.thumbnailUrl}
-          />
         </article>
       )}
     </>

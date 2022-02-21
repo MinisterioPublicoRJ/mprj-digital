@@ -1,0 +1,121 @@
+.productPageOuter {
+  display: grid;
+  grid-template-columns: 50%;
+  /* fits the whole page in the fold but the footer under it */
+  height: calc(100vh - var(--navbarHeight) - 90px);
+  margin-bottom: 10vh;
+
+}
+.productPageImg {
+  grid-row: 1 / 3;
+  grid-column: 1 / 6;
+}
+.productPageImg img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.productPagePresentation {
+  grid-row: 1 / 1;
+  grid-column: 1 / 3;
+  padding: 10vh;
+  text-align: left;
+  margin-left: 13vh;
+}
+.productPagePresentationButton {
+  width: 128px;
+  height: 34px;
+  background: var(--mainRedColor);
+  opacity: 1;
+  letter-spacing: -0.5px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.productPageAccessLevel {
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+.productPageAccessLevel span {
+  font-weight: 600;
+  color: var(--colorWhite);
+}
+.productPageAccessLevel div{
+  width: 146px;
+  height: 24px;
+  background-color: #F06225;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.productPagePresentationButton a {
+  letter-spacing: -0.5px;
+  color: var(--colorWhite);
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.productPagePresentationThumbnailUrl{
+  grid-row: 1 / 1;
+  grid-column: 3/ 4;
+  padding: 10vh;
+  padding-top: 30vh;
+  margin-right: 70px;
+}
+.productPageTabNavigation{
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 13vw 12vw 12vw;
+}
+.productPageTabNavigation p{
+  max-width: 35vw;
+  height: calc(var(--exploreSectionHeight) - 20px);
+  margin-right: 40px;
+  color: var(--productsSubtitle);
+}
+.productPageTabNavigation h2{
+  color: var(--mainRedColor);
+}
+.productPageWrapTexts{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 0 6vw 30px 12vw;
+}
+.productPageWrapTexts h1{
+  font-style: normal;
+  font-weight: 600;
+}
+.productPageWrapTexts h4{
+  margin-top: 10px;
+}
+p.productPageTextService{
+  color: #7C7C7C;
+
+}
+.productPageWrapTexts > span{
+  font-style: normal;
+  font-weight: 600;
+  color: var(--mainRedColor);
+}
+.productPageWrap{
+  margin-bottom: 40px;
+}
+.productPagePresentationThumbnailUrl img{
+  width: 300px;
+  height: 270px;
+}
+.productPagePresentation h2 {
+  font-size: calc( 0.7 * var(--titleFontSize));
+  line-height: 30px;
+  color: var(--colorWhite);
+}
+.productPagePresentation p {
+  color: var(--colorWhite);
+  line-height: 24px;
+}
