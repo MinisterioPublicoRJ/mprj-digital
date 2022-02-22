@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 75%;
 }
 .partner-page-cards-solucoes-first{
   flex: 0 0 40%;
@@ -17,7 +18,7 @@
   margin-top: 20px;
 }
 .partner-page-section {
-  background: #f9f9f9 0% 0% no-repeat padding-box;
+  background: var(--colorWhite) 0% 0% no-repeat padding-box;
 }
 .partner-page-header {
   height: 390px;
@@ -64,14 +65,15 @@
   margin: 3px 12vw;
 }
 .partner-page-left {
-  width: 22vw;
+  width: 18vw;
   margin-top: -20vh;
   margin-bottom: 10vh;
+  margin-right: 3vw;
   background: var(--colorWhite) 0% 0% no-repeat padding-box;
   border-radius: 10px 10px 0px 0px;
 }
 .partner-page-logo {
-  width: 22vw;
+  width: 18vw;
   height: 35vh;
   background: var(--mainRedColor) 0% 0% no-repeat padding-box;
   background-position: center;
@@ -83,17 +85,21 @@
   color: var(--mainRedColor);
   font-weight: bold;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .partner-page-featured p,
 .partner-page-topics p {
+  line-height: 16px;
   text-align: justify;
-  color: #707070;
+  color: #5c5c5c;
   margin-bottom: 40px;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+.partner-page-featured p {
+  text-align: left;
 }
 .partner-page-topics p{
-  max-width: 550px;
+  max-width: 60vw;
 }
 .partner-page-topics-button{
   display: flex;
@@ -232,32 +238,25 @@ a.help-navButtons-active div {
   display: flex;
   flex-direction: row;
   height: auto;
+  width: 60vw;
 }
-.partner-SVG-styling{
-  margin-left:-35px;
-  margin-right:20px;
-  width: 45vw;
+.partner-SVG-solucoes-styling{
+  margin-left: -2%;
+  margin-right: 5%;
+  width: 15%;
   top: 0;
 }
-.partner-SVG-Solucoes-styling{
-  margin-left:-35px;
-  margin-right:20px;
-  margin-top: 40px;
-  width: 8vw;
+.partner-SVG-pilares-styling{
+  margin-right: 5%;
+  width: 10%;
+  top: 0;
 }
 .input-openData-Icon input{
   display: none;
 }
-.partner-SVG-sobre-nos-styling{
-  margin-top: 40px;
-  margin-left:-35px;
-  margin-right:20px;
-  margin-bottom: 20px;
-  width: 45vw;
-  top: 0;
-}
 .partner-products-wrapper{
   width:fit-content;
+  max-width: 75%;
 }
 
 @media (max-width: 1080px){
@@ -278,9 +277,6 @@ a.help-navButtons-active div {
   .partner-page-navigation{
     display: flex;
     width: 100%;
-  }
-  .partner-SVG-Solucoes-styling{
-    display: none;
   }
   .partner-SVG-styling{
     display: none;

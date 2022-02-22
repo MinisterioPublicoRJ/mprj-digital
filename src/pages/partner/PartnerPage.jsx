@@ -9,7 +9,7 @@ import ArrowIcon from '../../utils/ArrowIcon';
 import { getPartnerPageData, getProductComponentData } from '../../api/api';
 import ProductPartnerItem from './productsPartnerItem/ProductPartnerItem';
 import TeamPage from './teamPage/TeamPage';
-import { ImgAjuda, ImgSolucoes, ImgSobreNos } from '../../assets/verticalText';
+import { ImgSolucoes, ImgPilares } from '../../assets/verticalText';
 
 export default function PartnerPage() {
   const cardsPorPage = 8;
@@ -79,7 +79,7 @@ export default function PartnerPage() {
     case 'solucoes':
       titleSubpage = 'Soluções';
       subtitleSubpage =
-        ' Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.';
+        ' Painéis, estudos, relatórios, sistemas, aplicações e os mais variados formatos de soluções gerados pelos nossos parceiros. Fique à vontade para explorar cada um deles! Se puder nos enviar seu feedback, ficaremos muito felizes em recebê-lo.';
       break;
     case 'equipe':
       titleSubpage = 'Equipe';
@@ -160,7 +160,7 @@ export default function PartnerPage() {
                 </div>
                 {subpageId === 'solucoes' ? (
                   <div className="partner-page-subpage-Wrapper">
-                    <div className="partner-SVG-Solucoes-styling">
+                    <div className="partner-SVG-solucoes-styling">
                       <ImgSolucoes />
                     </div>
                     <div className="partner-products-wrapper">
@@ -175,8 +175,8 @@ export default function PartnerPage() {
                 ) : null}
                 {subpageId === 'sobre' && (
                   <div className="partner-page-subpage-Wrapper">
-                    <div className="partner-SVG-sobre-nos-styling">
-                      <ImgSobreNos />
+                    <div className="partner-SVG-pilares-styling">
+                      <ImgPilares />
                     </div>
                     <div className="partner-page-cards-solucoes">
                       {partnersList.sectionPilaresArray.map((partner) => (
