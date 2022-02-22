@@ -79,7 +79,7 @@ export default function PartnerPage() {
     case 'solucoes':
       titleSubpage = 'Soluções';
       subtitleSubpage =
-        ' Soluções que exigem análise e visualização de dados, principalmente para problemas próprios do MPRJ, mas também para fortalecer a relação de transparência entre poder público (MPRJ e outros órgãos, quando possível) e a sociedade.';
+        'Painéis, estudos, relatórios, sistemas, aplicações e os mais variados formatos de soluções gerados pelos nossos parceiros. Fique à vontade para explorar cada um deles! Se puder nos enviar seu feedback, ficaremos muito felizes em recebê-lo.';
       break;
     case 'equipe':
       titleSubpage = 'Equipe';

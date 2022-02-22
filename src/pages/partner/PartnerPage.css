@@ -149,7 +149,6 @@
   text-align: left;
   font-size: 16px;
   margin-top: 5px;
-  color: var(--mainRedColor);
   font-weight: 400;
   opacity: 1;
 }
@@ -201,8 +200,7 @@
 }
 a.partner-page-link {
   text-align: left;
-  font-size: var(--defaultFontSize);
-  color: #bbb8b8;
+  color: var(--colorWhite);
   opacity: 1;
   text-decoration: none;
 }

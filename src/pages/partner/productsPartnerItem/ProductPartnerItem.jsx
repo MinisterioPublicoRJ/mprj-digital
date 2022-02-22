@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductPartnerItem.css';
 import miniaturaDefault from '../../../assets/produto-miniatura-default.png';
+import { getProductPageData } from '../../../api/api';
 
 export default function ProductPartnerItem({ products }) {
+  async function accessProduct(productName) {
+    const product = await getProductPageData(productName);
+    window.open(product.url, '_blank');
+  }
+
   return (
     <div className="partner-page-cards">
       {products.map((card) => (
@@ -15,8 +21,28 @@ export default function ProductPartnerItem({ products }) {
               <img src={card.imageSrc} alt={card.title} />
             )}
           </a>
-          <h4 style={{ color: '#3E3D3D' }}>{card.title}</h4>
-          <p>{card.description}</p>
+          <h4 className="partner-page-card--title">{card.title}</h4>
+          <p className="partner-page-card--description">{card.description}</p>
+          <div className="partner-page-links">
+            <a
+              href={`/produto/${card.name}`}
+              className="partner-page-link partner-page-link--button"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Saiba Mais
+            </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                accessProduct(card.name);
+              }}
+              href="./"
+              className="partner-page-link--text"
+            >
+              Acessar
+            </a>
+          </div>
         </div>
       ))}
     </div>
