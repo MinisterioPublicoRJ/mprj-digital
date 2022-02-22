@@ -38,7 +38,7 @@ export default function ProductPartnerItem({ products }) {
                 accessProduct(card.name);
               }}
               href="./"
-              className="partner-page-link partner-page-link--text"
+              className="partner-page-link--text"
             >
               Acessar
             </a>
